@@ -1,0 +1,2018 @@
+{
+  "info": {
+    "_postman_id": "ac65d3ee-04c9-47c8-9319-f7efca0d9cc5",
+    "name": "Imburse API",
+    "description": "Welcome to the Imburse API. You can use our APIs to access Imburse portal and payment API endpoints.\r\n\r\nYou can view request, response, and code examples in the area to the right.\r\n\r\n\r\n# Authentication\r\n\r\nTo authorize, use this code:\r\n\r\n```shell\r\n# With shell, you can just pass the correct header with each request\r\n$ curl \"api_endpoint_here\"\r\n  -H \"Authorization: Hmac {token}\"\r\n```\r\n\r\nImburse issues API keys to allow access to the API.\r\n\r\nWe issue both `Client API Tokens`, for accessing client functionality, and `Account API Tokens` for accessing the clients' parent account.\r\n\r\nYou can manage your API keys in the Imburse Portal dashboard or via the API.\r\n\r\nYour API tokens carry many privileges, so be sure to keep them secret! Do not share your API `private keys` in publicly accessible areas such as GitHub, client-side code, and so forth.\r\n\r\nAll API requests must be made over `HTTPS`. API requests without authentication will fail.\r\n\r\n## HMAC Authentication\r\n\r\nEach request made to Imburse API's uses HMAC credentials and, with the signature, provides identity verification and in-transit data integrity.\r\n\r\nTo generate a HMAC for your requests, please see our full step by step guide which can be found on our open source account under the [HMAC examples page](https://github.com/Imburse-Payments/hmac-examples)\r\n\r\nTo complete the process you will need the `publicKey` and `privateKey` from a Client or Account API Token.\r\n\r\nTo configurure the request header for HMAC, use `Authorization: Hmac {token}`.\r\n\r\n<aside class=\"notice\">\r\nYou must replace <code>{token}</code> with your HMAC authentication token key.\r\n</aside>\r\n\r\n\r\n\r\n# Access Control\r\n\r\nAll API functions require an API token to authenticate - see [Authentication](#authentication). \r\n\r\nAs part of the request when creating [Client API Tokens](#client-api-tokens), you can specify the `roles` available to the token. \r\n\r\nEach API operation documents the exact role required so you can taylor your tokens to specific roles if required.\r\n\r\n#### Client Roles\r\n\r\nRole name | Description\r\n-|-\r\n`client-read` | Read Clients\r\n`client-write` | Read and write Clients\r\n`client-token-read` | Read Client API Tokens\r\n`client-token-write` | Read and write Client API Tokens\r\n`client-whitelabel-write` | Read and write Client Whitelabel Settings\r\n`collection-scheme-read` |  Read Collection Schemes\r\n`collection-scheme-write` | Read and write Collection Schemes\r\n`psp-configuration-read` | Read PSP Configurations\r\n`psp-configuration-write` | Read and write PSP Configurations\r\n\r\n\r\n#### Account Roles\r\n\r\n`Account API Tokens` are created by Imburse and cannot be changed. \r\n\r\nThe `roles` assigned to these tokens are shown for reference only.\r\n\r\nRole name | Function\r\n-|-\r\n`account-read` | Read Accounts\r\n`account-token-read` | Read Account API Tokens\r\n`client-token-write` | Write Client API Tokens\r\n\r\n\r\n\r\n# Errors\r\n\r\nImburse uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the **2xx** range indicate success, codes in the **4xx** range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.), and codes in the **5xx** range indicate an error with Imburse's servers,\r\n\r\n\r\nResponse Code | Meaning\r\n--------------| -------\r\n200 | **OK** - Everything worked as expected.\r\n400 | **Bad Request** - The request was unacceptable, often due to missing a required parameter.\r\n401 | **Unauthorized** - No valid API key provided.\r\n402 | **Request Failed** - The parameters were valid but the request failed.\r\n403 | **Forbidden** -- The request endpoint is not valid for your user or role.\r\n404 | **Not Found** - The requested resource doesn't exist.\r\n409 | **Conflict** - The request conflicts with another request (perhaps due to using the same idempotent key).\r\n429 | **Too Many Requests**\t- Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.\r\n500, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's end.\r\n\r\n\r\n\r\n# Countries\r\n\r\nAll API functions that reference a country will use the **ISO 3166-1 alpha-2** country code format. Use the list below to identify the country.\r\n\r\nAlpha 2 Code | Name\r\n-|-\r\nAF|Afghanistan\r\nAX|\u00c5land\r\nAL|Albania\r\nDZ|Algeria\r\nAS|American Samoa\r\nAD|Andorra\r\nAO|Angola\r\nAI|Anguilla\r\nAQ|Antarctica\r\nAG|Antigua and Barbuda\r\nAR|Argentina\r\nAM|Armenia\r\nAW|Aruba\r\nAU|Australia\r\nAT|Austria\r\nAZ|Azerbaijan\r\nBS|Bahamas\r\nBH|Bahrain\r\nBD|Bangladesh\r\nBB|Barbados\r\nBY|Belarus\r\nBE|Belgium\r\nBZ|Belize\r\nBJ|Benin\r\nBM|Bermuda\r\nBT|Bhutan\r\nBO|Bolivia\r\nBQ|Bonaire, Sint Eustatius and Saba\r\nBA|Bosnia and Herzegovina\r\nBW|Botswana\r\nBV|Bouvet Island\r\nBR|Brazil\r\nIO|British Indian Ocean Territory\r\nBN|Brunei Darussalam\r\nBG|Bulgaria\r\nBF|Burkina Faso\r\nBI|Burundi\r\nKH|Cambodia\r\nCM|Cameroon\r\nCA|Canada\r\nCV|Cape Verde\r\nKY|Cayman Islands\r\nCF|Central African Republic\r\nTD|Chad\r\nCL|Chile\r\nCN|China\r\nCX|Christmas Island\r\nCC|Cocos (Keeling) Islands\r\nCO|Colombia\r\nKM|Comoros\r\nCG|Congo (Brazzaville)\r\nCD|Congo (Kinshasa)\r\nCK|Cook Islands\r\nCR|Costa Rica\r\nCI|C\u00f4te d'Ivoire\r\nHR|Croatia\r\nCU|Cuba\r\nCW|Cura\u00e7ao\r\nCY|Cyprus\r\nCZ|Czech Republic\r\nDK|Denmark\r\nDJ|Djibouti\r\nDM|Dominica\r\nDO|Dominican Republic\r\nEC|Ecuador\r\nEG|Egypt\r\nSV|El Salvador\r\nGQ|Equatorial Guinea\r\nER|Eritrea\r\nEE|Estonia\r\nET|Ethiopia\r\nFK|Falkland Islands\r\nFO|Faroe Islands\r\nFJ|Fiji\r\nFI|Finland\r\nFR|France\r\nGF|French Guiana\r\nPF|French Polynesia\r\nTF|French Southern Territories\r\nGA|Gabon\r\nGM|Gambia\r\nGE|Georgia\r\nDE|Germany\r\nGH|Ghana\r\nGI|Gibraltar\r\nGR|Greece\r\nGL|Greenland\r\nGD|Grenada\r\nGP|Guadeloupe\r\nGU|Guam\r\nGT|Guatemala\r\nGG|Guernsey\r\nGN|Guinea\r\nGW|Guinea-Bissau\r\nGY|Guyana\r\nHT|Haiti\r\nHM|Heard Island and McDonald Islands\r\nHN|Honduras\r\nHK|Hong Kong\r\nHU|Hungary\r\nIS|Iceland\r\nIN|India\r\nID|Indonesia\r\nIR|Iran\r\nIQ|Iraq\r\nIE|Ireland\r\nIM|Isle of Man\r\nIL|Israel\r\nIT|Italy\r\nJM|Jamaica\r\nJP|Japan\r\nJE|Jersey\r\nJO|Jordan\r\nKZ|Kazakhstan\r\nKE|Kenya\r\nKI|Kiribati\r\nKP|Korea, North\r\nKR|Korea, South\r\nKW|Kuwait\r\nKG|Kyrgyzstan\r\nLA|Laos\r\nLV|Latvia\r\nLB|Lebanon\r\nLS|Lesotho\r\nLR|Liberia\r\nLY|Libya\r\nLI|Liechtenstein\r\nLT|Lithuania\r\nLU|Luxembourg\r\nMO|Macao\r\nMK|Macedonia\r\nMG|Madagascar\r\nMW|Malawi\r\nMY|Malaysia\r\nMV|Maldives\r\nML|Mali\r\nMT|Malta\r\nMH|Marshall Islands\r\nMQ|Martinique\r\nMR|Mauritania\r\nMU|Mauritius\r\nYT|Mayotte\r\nMX|Mexico\r\nFM|Micronesia\r\nMD|Moldova\r\nMC|Monaco\r\nMN|Mongolia\r\nME|Montenegro\r\nMS|Montserrat\r\nMA|Morocco\r\nMZ|Mozambique\r\nMM|Myanmar\r\nNA|Namibia\r\nNR|Nauru\r\nNP|Nepal\r\nNL|Netherlands\r\nNC|New Caledonia\r\nNZ|New Zealand\r\nNI|Nicaragua\r\nNE|Niger\r\nNG|Nigeria\r\nNU|Niue\r\nNF|Norfolk Island\r\nMP|Northern Mariana Islands\r\nNO|Norway\r\nOM|Oman\r\nPK|Pakistan\r\nPW|Palau\r\nPS|Palestine\r\nPA|Panama\r\nPG|Papua New Guinea\r\nPY|Paraguay\r\nPE|Peru\r\nPH|Philippines\r\nPN|Pitcairn\r\nPL|Poland\r\nPT|Portugal\r\nPR|Puerto Rico\r\nQA|Qatar\r\nRE|R\u00e9union\r\nRO|Romania\r\nRU|Russian Federation\r\nRW|Rwanda\r\nBL|Saint Barth\u00e9lemy\r\nSH|Saint Helena\r\nKN|Saint Kitts and Nevis\r\nLC|Saint Lucia\r\nMF|Saint Martin (French part)\r\nPM|Saint Pierre and Miquelon\r\nVC|Saint Vincent and the Grenadines\r\nWS|Samoa\r\nSM|San Marino\r\nST|Sao Tome and Principe\r\nSA|Saudi Arabia\r\nSN|Senegal\r\nRS|Serbia\r\nSC|Seychelles\r\nSL|Sierra Leone\r\nSG|Singapore\r\nSX|Sint Maarten (Dutch part)\r\nSK|Slovakia\r\nSI|Slovenia\r\nSB|Solomon Islands\r\nSO|Somalia\r\nZA|South Africa\r\nGS|South Georgia and the South Sandwich Islands\r\nSS|South Sudan\r\nES|Spain\r\nLK|Sri Lanka\r\nSD|Sudan\r\nSR|Suriname\r\nSJ|Svalbard and Jan Mayen\r\nSZ|Swaziland\r\nSE|Sweden\r\nCH|Switzerland\r\nSY|Syria\r\nTW|Taiwan\r\nTJ|Tajikistan\r\nTZ|Tanzania\r\nTH|Thailand\r\nTL|Timor-Leste\r\nTG|Togo\r\nTK|Tokelau\r\nTO|Tonga\r\nTT|Trinidad and Tobago\r\nTN|Tunisia\r\nTR|Turkey\r\nTM|Turkmenistan\r\nTC|Turks and Caicos Islands\r\nTV|Tuvalu\r\nUG|Uganda\r\nUA|Ukraine\r\nAE|United Arab Emirates\r\nGB|United Kingdom\r\nUS|United States of America\r\nUM|United States Minor Outlying Islands\r\nUY|Uruguay\r\nUZ|Uzbekistan\r\nVU|Vanuatu\r\nVA|Vatican City\r\nVE|Venezuela\r\nVN|Vietnam\r\nVG|Virgin Islands, British\r\nVI|Virgin Islands, U.S.\r\nWF|Wallis and Futuna\r\nEH|Western Sahara\r\nYE|Yemen\r\nZM|Zambia\r\nZW|Zimbabwe\r\n\r\n\r\n# Currencies\r\n\r\nAll API functions that reference a Currency Code will use the **ISO 4217 alphabetic code** format. Use the list below to identify the currency.\r\n\r\nAlphabetic Code | Name\r\n-|-\r\nCHF | Swiss Franc\r\nEUR | Euro\r\nGBP | Pound Sterling\r\nUSD | United States Dollar\r\n\r\n\r\nImburse's White Label integration offloads the need to provide payment method selection and collection features yourself. We do all the heavy lifting. It's the easiest way to integrate into Imburse. \r\n\r\n## Getting Started\r\n\r\nBefore you can successfully integrate the White Label solution into your site, you will need the following:\r\n\r\n- **Client Account and configuration**\r\n\r\n\tConfigure your White Label settings using the Client Portal or the API. See the [Customization](#customization) section for details.\r\n\r\n- **BearerToken**\r\n\r\n\tEach time you call the White Label URL, you will need to pass a valid `bearerToken` parameter. \r\n\tThe `bearerToken` is a secure token representing the requirements of the transaction (ie. `amount`, `currency`, `payment scheme`, etc). Please refer to the [Transaction API documentation](TransactionApi) for details of how to create this.\r\n\r\n## API Endpoints\r\n\r\nThe Imburse White Label interface can be reached via the following URL:\r\n\r\n`https://whitelabel.imbursepayments.com`\r\n\r\nTo test the interface, a sandbox test environment with the following endpoint is available. \r\n\r\n`https://sandbox-whitelabel.imbursepayments.com`\r\n\r\n<aside class=\"notice\">\r\nThe sandbox will not trigger any postings to any bank accounts, even with a test bank account.\r\n</aside>\r\n\r\n###Transport Layer Security\r\nImburse can only be accessed via encrypted endpoints (HTTPS). The Payment Card Industry Security Standards Council already recommends the use of TLS 1.2 for API connections. The following cipher suites are recommended for TLS 1.2: ECDHE-RSA-AES256-GCM-SHA384\r\n\r\nStatement:\r\n\r\n- This cipher suite is recommended by the BSI and can still be used until at least 2021 and beyond.\r\n- ECDHE offers Perfect Forward Secrecy.\r\n- ECDHE needs fewer resources than DHE.\r\n- AES256 is a strong encryption.\r\n- RSA is the underlying process for the private / public-key material.\r\n- SHA384 is a secure fast hash function for signatures.\r\n- SHA384 also provides protection against length extension attacks (as opposed to SHA256).\r\n- GCM is a modern cipher block mode for AES that prevents certain attack vectors that are possible with the alternative CBC.\r\n- GCM establishes Authenticated Encryption.\r\n\r\n## Localization\r\n\r\nThe White Label solution is designed with localization in mind and supports multiple languages. \r\n\r\nEach White Label workflow allows users to specify a `language` parameter to set the localized language, \r\nseen below in the `Language parameter` column.\r\n\r\n### Supported Languages\r\n\r\nLanguage | Language parameter\r\n---------|---------------\r\nEnglish  | en-GB\r\nGerman   | de-DE\r\n\r\n## How to host the White Label page\r\n\r\nUsers should host the White Label page within an **IFrame** element. \r\n\r\nThe example below will shows an `IFrame` hosting the sandbox site targeting the `collect` workflow. \r\n\r\n`\r\n <iframe src='https://sandbox.whitelabel.imbursepayments.com/?workflow=collect&bearerToken={bearerToken}&language=en-gb' />\r\n`\r\n\r\n## Events\r\n\r\n> Example of an Event Listener\r\n\r\n```javascript\r\n<script> \r\n\twindow.addEventListener(\"message\", function (e) {\r\n        // replace {url} in the line below with either the sandbox or production endpoint.\r\n \t\tif (e.origin !== '{url}') {\r\n  \t\t\treturn;\r\n        }\r\n\r\n        // e.data will contain the appropriate message object\r\n        console.log(e.data);\r\n\r\n\t},false); \r\n</script>\r\n```\r\n\r\n# White Label Integration\r\n\r\nThe White Label solution will raise Events during the workflow lifecycle. The API documentation for individual workflows, ie. `collect`, will cover the specific events. Listen for these events and take appropriate action in the host system. See the example on the right hand panel.\r\n\r\n##Customization\r\n\r\nOur White Label solution is built using `Bootstrap v4.1.3`, using the `container-fluid` container class. \r\n\r\nOur Client Portal and API provides the ability to upload a document containing a JSON formatted [White Label document object](#white-label-document). This object contains all the customization required by the White Label solution. Log on to the Client Portal and use the White Label settings menu option to manage this.\r\n\r\n## White Label document\r\n\r\n> Example White Label document\r\n\r\n```json\r\n{\r\n    \"stylesheet\": \"body{padding-top:20px;padding-bottom:20px}.header{margin-bottom:20px}.header img{float:left;height:50px}.header h1{position:relative;top:10px;left:10px;font-family:'Open Sans',sans-serif;color:#4c4e56}.form{background-color:#fff;overflow:hidden;color:#4c4e56;width:100%;float:left;font-size:14px;position:relative}label{white-space:nowrap}#cancel-button{margin-top:3px;font-size:20px;background-color:#808080;color:#fff}#continue-button{margin-top:3px;font-size:20px;background-color:#808080;color:#fff}#paynow-button{margin-top:3px;font-size:20px;background-color:#2ec4a5;color:#fff}.form-group{float:left;margin-bottom:10px}.form-control{line-height:30px;height:30px;padding:0 10px}.number{width:100%}.cvv{width:82px}.expiration-month{width:62px}.expiration-year{width:82px}.payment-methods{display:flex;flex-flow:row wrap;justify-content:center}.payment-method{padding:5px 5px;display:flex;justify-content:center;align-items:center}.payment-method img{max-height:60px;max-width:90px;height:auto;width:auto}.invalid{border-color:#dc3545 !important}#postalCode{border:1px solid #ced4da;-webkit-transition:border-color 160ms;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}#postalCode.braintree-hosted-fields-focused{border:1px solid #80bdff !important}#postalCode.braintree-hosted-fields-invalid{border:1px solid #dc3545 !important}#postalCode.braintree-hosted-fields-valid{border:1px solid #28a745 !important}#number{border:1px solid #ced4da;-webkit-transition:border-color 160ms;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}#number.braintree-hosted-fields-focused{border:1px solid #80bdff !important}#number.braintree-hosted-fields-invalid{border:1px solid #dc3545 !important}#number.braintree-hosted-fields-valid{border:1px solid #28a745 !important}#cvv{border:1px solid #ced4da;-webkit-transition:border-color 160ms;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}#cvv.braintree-hosted-fields-focused{border:1px solid #80bdff !important}#cvv.braintree-hosted-fields-invalid{border:1px solid #dc3545 !important}#cvv.braintree-hosted-fields-valid{border:1px solid #28a745 !important}#expirationMonth{border:1px solid #ced4da;-webkit-transition:border-color 160ms;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}#expirationMonth.braintree-hosted-fields-focused{border:1px solid #80bdff !important}#expirationMonth.braintree-hosted-fields-invalid{border:1px solid #dc3545 !important}#expirationMonth.braintree-hosted-fields-valid{border:1px solid #28a745 !important}#expirationYear{border:1px solid #ced4da;-webkit-transition:border-color 160ms;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}#expirationYear.braintree-hosted-fields-focused{border:1px solid #80bdff !important}#expirationYear.braintree-hosted-fields-invalid{border:1px solid #dc3545 !important}#expirationYear.braintree-hosted-fields-valid{border:1px solid #28a745 !important}\",\r\n    \"inputFieldStyles\": [\r\n        {\r\n            \"styleName\": \"input\",\r\n            \"styles\": [\r\n                {\r\n                    \"key\": \"font-family\",\r\n                    \"value\": \"Helvetica Neue, Helvetica, Arial, sans-serif\"\r\n                },\r\n                {\r\n                    \"key\": \"font-size\",\r\n                    \"value\": \"1rem\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"ccDataCollectionOptions\": {\r\n        \"cardholderName\": true,\r\n        \"billingAddress\": true\r\n    }\r\n}\r\n```\r\n\r\nThe White Label document is a JSON formatted document containing the following properties:\r\n\r\nProperty | Type | Required |Description\r\n---------|------|----------|------------\r\nstyleSheet | string | Optional | A complete CSS stylesheet. Once uploaded, this property will be minified for increased performance.\r\ninputFieldStyles | object array | Optional | An array of [InputFieldStyle](#inputFieldStyle object) objects. Only used for Credit Cards payment options.\r\nccDataCollectionOptions | object | Optional | A list of options for controlling which Credit Card data is to be collected.   \r\n\r\n\r\n### Stylesheet\r\n\r\nThe `styleSheet` can override all, or a subset of, the CSS classes used by the White Label solution. Using this property allows users to match the styling of the White Label solution to that of the host system.\r\n\r\n### InputFieldStyles\r\n\r\nThe `inputFieldStyles` property is only used for internal styling (ie. text) for the credit card fields (see field list below). You would typically use this to match the styling of these fields to the other fields in your page. If you're not collecting credit card details then this property is not used.\r\n\r\n- Card Number\r\n- CVV\r\n- Expiry Month and Year\r\n\r\nThe `inputFieldStyles` object is an `array` of `inputFieldStyle` objects.\r\n\r\n#### InputFieldStyle object\r\n\r\nThe Input Field Style object contains following properties:\r\n\r\nProperty | Type | Required | Description\r\n---------|------|----------|------------\r\nstyleName | string | Yes | A valid value of any of the following: `input` (for styling all fields), `.number`, `.css`, `.expiration-month`, `.expiration-year` (for styling specific fields)\r\nstyles | object array| Yes | An array of key value pair objects. Valid style key values are: `color`, `font`, `font-family`, `font-size`, `font-size-adjust`, `font-stretch`, `font-style`, `font-variant`, `font-variant-alternates`, `font-variant-caps`, `font-variant-east-asian`, `font-variant-ligatures`, `font-variant-numeric`, `font-weight`, `line-height`, `outline`, `opacity`, `text-shadow`, `transition-moz-osx-font-smoothing`, `-moz-transition`, `-webkit-font-smoothing`, `-webkit-transition`\r\n\r\n### ccDataCollectionOptions\r\n\r\nFor Credit Card payments, the minimum information your customers will be required to enter would be `card number`, `CVV`, and `expiration date`.\r\n\r\nDepending on specific use case scenarios, use the `ccDataCollectionOptions` parameter to optionally collect more or  information from your customers.\r\n\r\nKey Name | Type | Description\r\n---------|------|------------\r\ncardholderName | bool | `true` to collect the Cardholder Name, `false` to hide.  \r\nbillingAddress | bool | `true` to collect the Billing Address details, `false` to hide.<br/><br/>**Note**: The Billing Address details include `First name`, `Last name`, `Company name`, `Street`, `Locality`, `Region`, `Postcode`, and `Country`.\r\n\r\n<aside class=\"notice\">\r\nImburse will never store credit card details or any personal information from your customers. These details are only collected in your customers' browser and then securely transmitted directly to your PCI DSS compliant PSP partner.\r\n</aside>\r\n\r\n## Stylesheet Classes\r\n\r\n> Sample Stylesheet\r\n\r\n```css\r\nbody {\r\n    padding-top: 20px;\r\n    padding-bottom: 20px;\r\n}\r\n\r\n.header {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.header img {\r\n    float: left;\r\n    height: 50px;\r\n}\r\n\r\n.header h1 {\r\n    position: relative;\r\n    top: 10px;\r\n    left: 10px;\r\n    font-family: 'Open Sans', sans-serif;\r\n    color: #4c4e56;\r\n}\r\n\r\n.form {\r\n    background-color: #fff;\r\n    overflow: hidden;\r\n    color: #4c4e56;\r\n    width: 100%;\r\n    float: left;\r\n    font-size: 14px;\r\n    position: relative;\r\n}\r\n\r\nlabel {\r\n    white-space: nowrap;\r\n}\r\n\r\n#cancel-button {\r\n    margin-top: 3px;\r\n    font-size: 20px;\r\n    background-color: grey;\r\n    color: white;\r\n}\r\n\r\n#continue-button {\r\n    margin-top: 3px;\r\n    font-size: 20px;\r\n    background-color: grey;\r\n    color: white;\r\n}\r\n\r\n#paynow-button {\r\n    margin-top: 3px;\r\n    font-size: 20px;\r\n    background-color: #2ec4a5;\r\n    color: white;\r\n}\r\n\r\n.form-group {\r\n    float: left;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.form-control {\r\n    line-height: 30px;\r\n    height: 30px; /* height for hosted fields needs to be explicit */\r\n    padding: 0 10px;\r\n}\r\n\r\n.first-name {\r\n}\r\n\r\n.last-name {\r\n}\r\n\r\n.company-name {\r\n}\r\n\r\n.street-address {\r\n}\r\n\r\n.extended-address {\r\n}\r\n\r\n.locality {\r\n}\r\n\r\n.region {\r\n}\r\n\r\n.postal-code {\r\n}\r\n\r\n.country-name {\r\n}\r\n\r\n.cardholder-name {\r\n}\r\n\r\n.number {\r\n    width: 100%;\r\n}\r\n\r\n.cvv {\r\n    width: 82px;\r\n}\r\n\r\n.expiration-month {\r\n    width: 62px;\r\n}\r\n\r\n.expiration-year {\r\n    width: 82px;\r\n}\r\n\r\n.payment-methods {\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n    justify-content: center;\r\n}\r\n\r\n.payment-method {\r\n    padding: 5px 5px;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.payment-method img {\r\n    max-height: 60px;\r\n    max-width: 90px;\r\n    height: auto;\r\n    width: auto;\r\n}\r\n\r\n/* \r\nPayment method specific styles can also be used:\r\n    \r\n    .payment-method-logo-{payment method name}\r\n\r\nie. .payment-method-logo-visa-debit \r\n*/\r\n\r\n.invalid {\r\n    border-color: #dc3545 !important;\r\n}\r\n\r\n#postalCode {\r\n    border: 1px solid #ced4da;\r\n    -webkit-transition: border-color 160ms;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n}\r\n\r\n#postalCode.braintree-hosted-fields-focused {\r\n    border: 1px solid #80bdff !important;\r\n}\r\n\r\n#postalCode.braintree-hosted-fields-invalid {\r\n    border: 1px solid #dc3545 !important;\r\n}\r\n\r\n#postalCode.braintree-hosted-fields-valid {\r\n    border: 1px solid #28a745 !important;\r\n}\r\n\r\n#number {\r\n    border: 1px solid #ced4da;\r\n    -webkit-transition: border-color 160ms;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n}\r\n\r\n#number.braintree-hosted-fields-focused {\r\n    border: 1px solid #80bdff !important;\r\n}\r\n\r\n#number.braintree-hosted-fields-invalid {\r\n    border: 1px solid #dc3545 !important;\r\n}\r\n\r\n#number.braintree-hosted-fields-valid {\r\n    border: 1px solid #28a745 !important;\r\n}\r\n\r\n#cvv {\r\n    border: 1px solid #ced4da;\r\n    -webkit-transition: border-color 160ms;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n}\r\n\r\n#cvv.braintree-hosted-fields-focused {\r\n    border: 1px solid #80bdff !important;\r\n}\r\n\r\n#cvv.braintree-hosted-fields-invalid {\r\n    border: 1px solid #dc3545 !important;\r\n}\r\n\r\n#cvv.braintree-hosted-fields-valid {\r\n    border: 1px solid #28a745 !important;\r\n}\r\n\r\n#expirationMonth {\r\n    border: 1px solid #ced4da;\r\n    -webkit-transition: border-color 160ms;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n}\r\n\r\n#expirationMonth.braintree-hosted-fields-focused {\r\n    border: 1px solid #80bdff !important;\r\n}\r\n\r\n#expirationMonth.braintree-hosted-fields-invalid {\r\n    border: 1px solid #dc3545 !important;\r\n}\r\n\r\n#expirationMonth.braintree-hosted-fields-valid {\r\n    border: 1px solid #28a745 !important;\r\n}\r\n\r\n#expirationYear {\r\n    border: 1px solid #ced4da;\r\n    -webkit-transition: border-color 160ms;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n}\r\n\r\n#expirationYear.braintree-hosted-fields-focused {\r\n    border: 1px solid #80bdff !important;\r\n}\r\n\r\n#expirationYear.braintree-hosted-fields-invalid {\r\n    border: 1px solid #dc3545 !important;\r\n}\r\n\r\n#expirationYear.braintree-hosted-fields-valid {\r\n    border: 1px solid #28a745 !important;\r\n}\r\n```\r\nThe White Label solution loads a generic Stylesheet by default but this can be overridden. \r\n\r\nThe following classes and identifiers can be overridden in your own Stylesheet. See the example to the right for our default implementation of the CSS.\r\n\r\nCSS Property | Description\r\n-|-\r\n`.body` | Body tag\r\n`.header` | Logo and title container styling\r\n`.header img` | Logo styling\r\n`.header h1`  | Title styling\r\n`.form`  | Container class applied to to all steps in the White Label process\r\n`label` | Label styling\r\n`#cancel-button` | Cancel button styling\r\n`#continue-button` | Continue button styling \r\n`#paynow-button`  | Pay Now button styling\r\n`.form-group` | The `form-group` style is used to group the label and corresponding `input` or `select` boxes together  \r\n`.form-control` | Each `input` or `select` tag will have the `form-control` style applied\r\n`.first-name` |First name field and label styling\r\n`.last-name`  | Last name field and label styling\r\n`.company-name` | Company name field and label styling\r\n`.street-address` | Street address field and label styling\r\n`.extended-address` | First name field styling\r\n`.locality`  | Locality field and label styling\r\n`.region`  | Region field and label styling\r\n`.postal-code`  | Post code field and label styling\r\n`.country-name`  | Country name field and label styling\r\n`.cardholder-name` | Cardholder name field and label styling\r\n`.number` | Credit card number field and label styling\r\n`.cvv` | Credit card CVV number field and label styling\r\n`.expiration-month` | Expiration month field and label styling\r\n`.expiration-year`  | Expiration year field styling\r\n`.payment-methods` | List of available payment method icons styling \r\n`.payment-method`  | Styling for the payment method icon<br/><br/>Payment method specific styles are also available; just append the payment method name to the end of this class name.<br/></br>ie. `payment-method-visa-debit`, `payment-method-paypal`, etc.<br/><br/>For a complete list of available payment methods, see the [Payment Method Specific Styles](#payment-method-specific-styles) section below.\r\n`.payment-method img`  | Payment method styling for the `img` tag\r\n`.invalid` | Styling applied when a field has an invalid value\r\n\r\nThe following CSS properties are also used for styling the validation functionality of the following fields:\r\n\r\n- postalCode\r\n- number\r\n- css\r\n- expirationMonth\r\n- expirationYear\r\n\r\nThe table below shows the CSS properties for the `#postalCode`. Add CSS properties for any of the other fields by using the appropriate named field listed above as a prefix, ie.  `#number`, `number.braintree-hosted-fields-focused`, etc.\r\n\r\nCSS Property | Description\r\n-|-\r\n`#postalCode` | Generic styling for the `postalCode` field\r\n`#postalCode.braintree-hosted-fields-focused` | Styling to apply when field has the focus\r\n`#postalCode.braintree-hosted-fields-invalid` | Styling applied when the field has an invalid value\r\n`#postalCode.braintree-hosted-fields-valid` | Styling applied when the field has a valid value\r\n\r\n\r\n\r\n\r\n### Payment Method Specific Styles\r\n\r\nImburse currently support the following Payment Methods. Use the specific `class suffix` for payment method specific styling if required.\r\n\r\nPayment Method |  Class suffix\r\n-|-|-\r\nDiscover\t| discover\r\nMaestro\t\t| maestro\r\nMastercard\t| mastercard\r\nPayPal\t\t| paypal\r\nVisa\t\t| visa\r\nVisa Debit\t| visa-debit\r\n\r\n\r\n\r\n# White Label Workflows\r\n\r\nImburse's White Label Workflows are your entry points to using the White Label solution. The available workflows allow collection as well as paying out of money. Depending on your use cases, you could use either or both workflows in your solution.\r\n\r\n\r\n## Collect Workflow \r\n\r\nThe Collect workflow is used to initiate collection of money. The Collect workflow follows these steps:\r\n\r\n1.\t**Select Payment Method** - User selects the payment method they would like to use\r\n2.\t**Submit Payment Details** - Depending on the payment method chosen, a relevent work flow will be initiated ie. `Credit Card entry`, `PayPal authentication`, `PayDirekt logon`, etc.\r\n\r\n### Parameters\r\nParameter | Description\r\n---------------|-------------\r\nworkflow | Use `collect` for the *Collect Workflow*.\r\nbearerToken  | The `bearerToken` parameter value is obtained by calling the Transaction API. Refer to the [Transaction API](Transaction-API) for further details.\r\nlanguage       | The `language` parameter can be used to localize the site to the language of your choice. If the `language` parameter is not specified, localization will default to **English**. Refer to the [Localization](#localization) section for valid language parameter values.\r\n\r\n### Usage\r\n\r\n`https://whitelabel.imbursepayments.com/workflow=collect?bearerToken={bearerToken}&language={language}`\r\n\r\n### Events\r\n\r\nThe Collect workflow will raise Events during its lifecycle. Users would need to [add an event listener](#setting-up-an-event-listener) for these events and take appropriate action.\r\n\r\nEvent name | Trigger |  Description\r\n-----------|---------|---------|------------\r\n**imburse:payment_succeeded** | Successful payment submission. | Raised to indicate successful payment submission.<br/><br/>See [imburse:payment_succeeded](#imburse-payment_succeeded).\r\n**imburse:payment_failed** | Failed payment submission. | Raised to indicate an unsuccessful payment submission. The `messageDescription` property contains the failure reason or reasons.<br/><br/>See [imburse:payment_failed](#imburse-payment_failed).\r\n**imburse:invalid_token** | Bearer Token Invalid | The bearer token had expired, was invalid, or had already been submitted.<br/><br/>See [imburse:invalid_token](#imburse-invalid_token).\r\n**imburse:internal_server_error** | Unexpected Error | An error occurred internally when submitting the payment.<br/><br/>See [imburse:internal_server_error](#imburse-internal_server_error).\r\n**imburse:braintree_tokenization_error** | Tokenization error on Braintree server | Occurs when there is a tokenisation failure on Braintree server.<br/><br/>See [imburse:braintree_tokenization_error](#imburse-braintree_tokenization_error).\r\n**imburse:braintree_gateway_error** | Gateway error on Braintree server | Occurs when the Braintree gateway cannot be contacted.<br/><br/>See [imburse:braintree_gateway_error](#imburse-braintree_gateway_error).\r\n**imburse:braintree_unexpected_error** | Unexpected error on Braintree server | Occurs when there is an unexpected failure on Braintree server.<br/><br/>See [imburse:braintree_unexpected_error](#imburse-braintree_unexpected_error).\r\n\r\n\r\n\r\n####imburse:payment_succeeded\r\n\r\n> Example Payment Succeeded Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:payment_succeeded\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:payment_succeeded`.\r\n\r\n\r\n#### imburse:payment_failed\r\n\r\n> Example Payment Failed Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:payment_failed\", \r\n\t\"messageDescription\": \"{error message}\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:payment_failed`.\r\nmessageDescription | The failure reason or reasons.\r\n\r\n\r\n#### imburse:invalid_token\r\n\r\n> Example Invalid Token Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:invalid_token\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:invalid_token`.\r\n\r\n\r\n\r\n#### imburse:internal_server_error\r\n\r\n> Example Internal Server Error Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:internal_server_error\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:internal_server_error`.\r\n\r\n\r\n\r\n#### imburse:braintree_tokenization_error\r\n\r\n> Example Braintree Tokenization Error Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:braintree_tokenization_error\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:braintree_tokenization_error`.\r\n\r\n\r\n#### imburse:braintree_gateway_error\r\n\r\n> Example Braintree Gateway Error Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:braintree_gateway_error\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:braintree_gateway_error`.\r\n\r\n\r\n#### imburse:braintree_unexpected_error\r\n\r\n> Example Braintree Unexpected Error Message\r\n\r\n```json\r\n{ \r\n\t\"bearerToken\": \"{bearerToken}\", \r\n\t\"messageType\": \"imburse:braintree_unexpected_error\" \r\n}\r\n```\r\n\r\nProperty | Description\r\n---------|------------\r\nbearerToken | The `bearerToken` that was passed into the White Label url. Use this to correlate events to specific transactions in your host system.\r\nmessageType | Value will be `imburse:braintree_unexpected_error`.\r\n\r\n",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
+      "name": "API Reference",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "8af3c827-6bb6-434f-bdba-5dd27c7970c6",
+          "name": "Accounts",
+          "description": "Account objects allow you to perform updates to your account. Use the account object to update your contact address, as well as retrieve your account details. You can also retrieve a list of the clients attached to your account as well as create a new client for your account.\r\n\r\n## The account object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nbillingContactFirstName | string | First name of the billing contact\r\nbillingContactLastName | string | Last name of the billing contact\r\nbillingContactAddress | [address object](#the-address-object) | The billing contact address\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
+          "item": [
+            {
+              "_postman_id": "94468d94-bbf9-43e2-abfb-0874c3e46cdc",
+              "name": "Create a Client",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"name\": \"Rothchilds\" }"
+                },
+                "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients",
+                "description": "#### Description\n\nCreates a new client attached to your account.\n\n#### Role required\n\n`account-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\naccountId | The id of the account to create a client under"
+              },
+              "response": [
+                {
+                  "id": "947fd499-93da-4f60-b6f4-bd19536ba24c",
+                  "name": "Successful request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n\t\"name\": \"Supercharged Insurance\"\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "08e6aed5-7879-4a36-9f29-1c455d20eb4d",
+              "name": "Get an Account",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "http://{{clientApiUrl}}/v1/accounts/{{accountId}}",
+                "description": "#### Description\r\n\r\nRetrieves the details of an existing account.\r\n\r\n#### Role required\r\n\r\n`account-read`\r\n\r\n#### Params\r\nParameter | Description\r\n--------- | -----------\r\naccountId | The id of the account to retrieve"
+              },
+              "response": [
+                {
+                  "id": "2adea87c-1617-4f92-9f97-ae7bc850c408",
+                  "name": "Successful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n    \"id\": \"a814b6e2-0b43-4b24-87ef-0dd6c3bcadc4\",\r\n    \"billingContactFirstName\": \"Mark\",\r\n    \"billingContactLastName\": \"Turner\",\r\n    \"billingContactAddress\": {\r\n        \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n        \"extendedAddress\": \"\",\r\n        \"locality\": \"London\",\r\n        \"region\": \"Middlesex\",\r\n        \"postCode\": \"SW1 1LA\",\r\n        \"country\": \"GB\"\r\n    }\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "cd2ca210-35d3-4312-888b-d3981a8a500f",
+              "name": "Get list of Clients",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients",
+                "description": "#### Description\r\n\r\nRetrieves the details of an existing account.\r\n\r\n#### Role required\r\n\r\n`account-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\naccountId | The id of the account to retrieve"
+              },
+              "response": [
+                {
+                  "id": "28837bc4-c253-4f25-94ce-d92b6b56ae29",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n{\n    \"id\": \"a814b6e2-0b43-4b24-87ef-0dd6c3bcadc4\",\n    \"billingContactFirstName\": \"Mark\",\n    \"billingContactLastName\": \"Turner\",\n    \"billingContactAddress\": {\n        \"streetAddress\": \"Suite 19 Argeles Grove\",\n        \"extendedAddress\": \"\",\n        \"locality\": \"London\",\n        \"region\": \"Middlesex\",\n        \"postCode\": \"SW1 1LA\",\n        \"country\": \"GB\"\n    }\n}\n]"
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8d019c82-1244-4a3a-85a1-673028a5b608",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b6564671-2912-4892-9f09-0c2339a43792",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "fa814f73-ab79-41e7-b84f-bfa1a30f29cb",
+          "name": "Account API Tokens",
+          "description": "Account API Token objects allow you to manage your account tokens. The API allows you to create new tokens as well as retrieve tokens. You can also get the private key from a given public key.\r\n\r\n## The account API token object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npublicKey | string | The token's public key\r\nprivateKey | string | The token's private key (secret)\r\nname | string | The friendly name for this token\r\nscopes | array of [Scope](#the-scope-object) objects | Defines scopes that this token has permission to use\r\n\r\n### The scope object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nscopeName | string | The name of the scope. i.e `Client-API` or `Payments-API`. Scope name is **case-sensitive**.\r\nclaims | array of [Claim](#the-claim-object) objects | Defines the claims and roles for a given scope\r\n\r\n### The claim object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nroles | array of [Roles](#role-names) string | A list of roles permitted in the parent scope. Permitted roles names are: `client-read`, `client-write`, `client-token-read`, `client-token-write`, `collection-scheme-read`, `collection-scheme-write`, `psp-configuration-read`, `psp-configuration-write`",
+          "item": [
+            {
+              "_postman_id": "8ec0a906-e7e9-4b08-99ac-a000d9022b80",
+              "name": "Create a Client Token ",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"name\": \"\",\n\t\"scopes\":[\n\t\t{\n\t\t\t\"scopeName\":\"\",\n\t\t\t\"claims\":{\n\t\t\t\t\"roles\":[\n\t\t\t\t\t\"\",\n\t\t\t\t\t\"\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}"
+                },
+                "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients/{{clientId}}/tokens",
+                "description": "#### Description\r\n\r\nCreates a new Client API Token. \r\n\r\nUse this operation to create a new token for your client to use to access the client specific operations. \r\n\r\n**Note:** The response will return the newly generated `publicKey` and `privateKey`. You must **record** the `privateKey` after it has been created as it is **NOT** retrievable afterwards. \r\n\r\nIf you lose the `privateKey` for a token you will need to create a new token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\naccountId | The id of the account that owns the client specified below\r\nclientId | The id of the client that the token is to be created for. The client must be owned by the account id specified."
+              },
+              "response": [
+                {
+                  "id": "c107af19-e5d9-49af-9cfa-96b80d66d875",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/clients/{{clientId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"name\": \"\",\n    \"scopes\": [\n        {\n            \"scopeName\": \"\",\n            \"claims\": {\n                \"roles\": [\n                    \"\",\n                    \"\"\n                ]\n            }\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "4ddc0e4e-aa6f-48e6-b7c3-3638821519f2",
+              "name": "Get list of Account Tokens",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/tokens",
+                "description": "#### Description\r\n\r\nGets a list of Account Tokens.\r\n\r\n#### Role required\r\n\r\n`account-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\naccountId | The id of the account that owns the tokens"
+              },
+              "response": [
+                {
+                  "id": "9bd906d6-96ba-4c62-ba49-eeb70cdf5215",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\",\r\n    \"scopes\": [\r\n      {\r\n        \"scopeName\": \"\",\r\n        \"claims\": {\r\n          \"roles\": [\r\n            \"\",\r\n            \"\"\r\n          ]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "d0608c32-86b9-437f-8b62-8e84a8653ac0",
+              "name": "Get an Account Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/tokens/{publicKey}",
+                "description": "#### Description\r\n\r\nGets the details of an existing Account API Token.\r\n\r\n#### Role required\r\n\r\n`account-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\naccountId | The id of the account that owns the token\r\npublicKey | The `publicKey` of the token to retrieve"
+              },
+              "response": [
+                {
+                  "id": "6b212409-1fb4-4fe6-9d5b-dd1d0cf42fc7",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/accounts/{{accountId}}/tokens/{publicKey}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\",\r\n    \"scopes\": [\r\n      {\r\n        \"scopeName\": \"\",\r\n        \"claims\": {\r\n          \"roles\": [\r\n            \"\",\r\n            \"\"\r\n          ]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8f3fe1ee-cb33-4401-8f71-01ef6b2bc909",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2236f462-7223-424e-a622-08437c16341a",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "a6fecd5c-23df-4600-b447-0319fa9185ae",
+          "name": "Clients",
+          "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
+          "item": [
+            {
+              "_postman_id": "05ab037e-4973-4462-beed-5ffb8f7a3776",
+              "name": "Upload Whitelabel Logo",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "file",
+                  "file": {
+                    "src": "{ \r\n\t\"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n}"
+                  }
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/logo",
+                "description": "#### Description\n\nUploads a logo for the client white label settings.\n\n#### Role required\n\n`client-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client to update"
+              },
+              "response": [
+                {
+                  "id": "c187b930-4811-490f-b498-2318babf5743",
+                  "name": "Successful request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "file",
+                      "file": {}
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/logo"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "aa46aa82-58dd-4475-acc9-e3c97d89aedf",
+              "name": "Upload Whitelabel Styling",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "file",
+                  "file": {
+                    "src": null
+                  }
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/styling",
+                "description": "#### Description\n\nUploads a styling document for the client white label settings.\n\n#### Role required\n\n`client-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client to update"
+              },
+              "response": [
+                {
+                  "id": "5946f2cc-5680-4ab2-a9a0-978b560a922e",
+                  "name": "Successful request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "file",
+                      "file": {}
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/styling"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "d98e1b80-6766-4cff-ad53-04086ee43516",
+              "name": "Get a Client",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}",
+                "description": "#### Description\n\nRetrieves the details of an existing client.\n\n#### Role Required\n\n`client-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client to retrieve"
+              },
+              "response": [
+                {
+                  "id": "ac7c5c91-77ce-4e54-9939-c5bf43fb3951",
+                  "name": "Successful request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "5ecbd00a-07e0-4352-adf6-a4db6ef3e29e",
+              "name": "Update a Client Address",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"streetAddress\":\"Suite 19 Argeles Grove\",\"extendedAddress\":\"\",\"locality\":\"London\",\"region\":\"Middlesex\",\"postCode\":\"SW1 1LA\",\"country\":\"GB\"}"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/address",
+                "description": "#### Description\n\nUpdates the address of an existing client object.\n\n#### Role Required\n\n`client-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client to update"
+              },
+              "response": [
+                {
+                  "id": "44074ec8-43f5-48d1-9a8b-5c1e0d25451c",
+                  "name": "Successful request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "fd40b9f6-f0a7-4190-bb93-66e80fd039d8",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "d57342ab-7b4f-4df4-9bc3-eb3adc77d4ad",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "59dbbaa5-7b69-4041-94de-b8e3ba12a492",
+          "name": "Client API Tokens",
+          "description": "Client API Token objects allow you to manage your client tokens. The API allows you to create new tokens as well as retrieve tokens. You can also invalidate an existing token.\r\n\r\n## The client API token object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npublicKey | string | The token's public key\r\nprivateKey | string | The token's private key (secret)\r\nname | string | The friendly name for this token\r\nscopes | array of [Scope](#the-scope-object) objects | Defines scopes that this token has permission to use\r\n\r\n### The scope object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nscopeName | string | The name of the scope. i.e `Client-API` or `Payments-API`. Scope name is **case-sensitive**.\r\nclaims | array of [Claim](#the-claim-object) objects | Defines the claims and roles for a given scope\r\n\r\n### The claim object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nroles | array of [Roles](#role-names) string | A list of roles permitted in the parent scope. Permitted roles names are: `client-read`, `client-write`, `client-token-read`, `client-token-write`, `collection-scheme-read`, `collection-scheme-write`, `psp-configuration-read`, `psp-configuration-write`",
+          "item": [
+            {
+              "_postman_id": "e739b19b-2793-4281-9028-c108833f621a",
+              "name": "Create a Client Token ",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"name\": \"\",\n\t\"scopes\":[\n\t\t{\n\t\t\t\"scopeName\":\"\",\n\t\t\t\"claims\":{\n\t\t\t\t\"roles\":[\n\t\t\t\t\t\"\",\n\t\t\t\t\t\"\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}\n"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
+                "description": "#### Description\r\n\r\nCreates a new Client API Token. \r\n\r\nUse this operation to create a new token for your client.\r\n\r\n**Note:** The response will return the newly generated `publicKey` and `privateKey`. You must **record** the `privateKey` after it has been created as it is **NOT** retrievable afterwards. \r\n\r\nIf you lose the `privateKey` for a token you will need to create a new token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that the token is to be created for."
+              },
+              "response": [
+                {
+                  "id": "b97087b5-e0fa-4d17-8f58-ead6ef8d05fc",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"name\": \"\",\n    \"scopes\": [\n        {\n            \"scopeName\": \"\",\n            \"claims\": {\n                \"roles\": [\n                    \"\",\n                    \"\"\n                ]\n            }\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "fe5496a0-8c01-458a-8b0e-4ad866ca505b",
+              "name": "Get list of Client Tokens",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
+                "description": "#### Description\r\n\r\nGets a list of Client Tokens.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens"
+              },
+              "response": [
+                {
+                  "id": "90d032eb-17ed-4c27-b44b-49b3e6248eb2",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"publicKey\": \"\",\n        \"privateKey\": \"\",\n        \"name\": \"\",\n        \"scopes\": [\n            {\n                \"scopeName\": \"\",\n                \"claims\": {\n                    \"roles\": [\n                        \"\",\n                        \"\"\n                    ]\n                }\n            }\n        ]\n    }\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "075c7a92-2ee3-44b0-b1d1-707828065482",
+              "name": "Get a Client Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}",
+                "description": "#### Description\r\n\r\nGets the details of an existing Client API Token.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens\r\npublicKey | The `publicKey` of the token to retrieve"
+              },
+              "response": [
+                {
+                  "id": "f089e9dc-a6bf-4c40-8506-377b6a00b707",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\",\r\n    \"scopes\": [\r\n      {\r\n        \"scopeName\": \"\",\r\n        \"claims\": {\r\n          \"roles\": [\r\n            \"\",\r\n            \"\"\r\n          ]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "4b451db9-647e-4b16-8a8d-457f37cd2d10",
+              "name": "Invalidate a Client Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate",
+                "description": "#### Description\r\n\r\nInvalidating a token will render it unusable.\r\n\r\nUse this operation when you want to disable a token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The parent client id of the token.\r\npublicKey | The publicKey of the token you that you want to invalidate."
+              },
+              "response": [
+                {
+                  "id": "60b9c505-8243-433a-8c10-831011dc460d",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": ""
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8f3fe1ee-cb33-4401-8f71-01ef6b2bc909",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2236f462-7223-424e-a622-08437c16341a",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "445f76e8-0bd1-4674-89dc-f75f2945774a",
+          "name": "PSP Configurations",
+          "description": "*Payment Service Provider* (PSP) configuration objects hold the connnection details that Imburse needs to connect to your PSP. With these details, we can carry out instructions on your behalf - such as credit card authorization and/or settlement. PSP configuration objects allow you to manage your PSP configurations for a given client. The API allows you to create, retrieve, and update your configurations.\r\n\r\n## The PSP configuration object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspType | string | The name of the PSP. Currently only `BrainTree` is supported with these operations.\r\nconfiguration | [Configuration](#the-configuration-object) object | An object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`.\r\n\r\n## The configuration object\r\n\r\nThis object will vary depending on the `pspType` the PSP configuration is for.\r\n\r\nListed below are the all the configuration types that are currently supported.\r\n\r\n### The BrainTree configuration object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nmerchantId | string | The `merchantId` for your BrainTree account\r\npublicKey | string  | The `publicKey` for your BrainTree account\r\nprivateKey | string  | The `privateKey` for your BrainTree account\r\n",
+          "item": [
+            {
+              "_postman_id": "35804479-1edd-430c-98dd-e26ef96b18a2",
+              "name": "Create a PSP Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
+                "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Currently only `BrainTree` is supported with these operations.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
+              },
+              "response": [
+                {
+                  "id": "39e53238-c7f4-4f17-a461-741272ff8aa0",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "a987158b-22bf-4f3a-a09a-0736e3284eb4",
+              "name": "Get list of PSP Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
+                "description": "#### Description\r\n\r\nGets a list PSP configurations.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configurations"
+              },
+              "response": [
+                {
+                  "id": "2390da60-bf8a-4db8-ae6b-0bb7cf4a291d",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"pspType\": \"\"\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "b4986bf3-9f30-4b38-b13a-d916bb4a3b28",
+              "name": "Get a PSP Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}",
+                "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
+              },
+              "response": [
+                {
+                  "id": "11694f4b-91c1-468c-8917-9a0fe8e9436d",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"pspType\": \"\"\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "f07f1eff-a523-40e5-9c55-ba0825b47807",
+              "name": "Update a PSP Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}",
+                "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP Configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Currently only `BrainTree` is supported with these operations.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
+              },
+              "response": [
+                {
+                  "id": "850b69fd-5ce0-4ba3-8660-4e0b609efc36",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "4a062e0b-5c74-4437-b43e-e76481a5cb6f",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4cd754cc-0dba-4965-b2b9-553c9e36bedb",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "dc369f06-d58b-42ec-9390-592b206177ab",
+          "name": "Schemes",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "440d7aea-4e7d-4682-a7b8-d9da8d08e68b",
+              "name": "Collection Schemes",
+              "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
+              "item": [
+                {
+                  "_postman_id": "3f03c9ec-5c69-46bd-b2fc-a29e89205d2f",
+                  "name": "Create a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect",
+                    "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+                  },
+                  "response": [
+                    {
+                      "id": "b063d88c-35ff-4752-a6c2-20ffb0db6cf4",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"schemeSettings\": [\r\n    {\r\n      \"id\": \"\",\r\n      \"country\": \"\",\r\n      \"paymentMethods\": [\r\n        {\r\n          \"pspId\": \"\",\r\n          \"paymentMethodType\": \"\",\r\n          \"enabled\": true,\r\n          \"key\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "ff818f71-06ad-46f2-86a1-2d10821551fa",
+                  "name": "Create a Scheme Setting",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true,\r\n        \"key\": \"\"\r\n      }\r\n    ]\r\n  }"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings",
+                    "description": "#### Description \n\nCreate a new scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will own the new scheme setting"
+                  },
+                  "response": [
+                    {
+                      "id": "445f495e-b262-439c-83d9-d019c0f036ca",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"schemeSettings\": [\r\n    {\r\n      \"id\": \"\",\r\n      \"country\": \"\",\r\n      \"paymentMethods\": [\r\n        {\r\n          \"pspId\": \"\",\r\n          \"paymentMethodType\": \"\",\r\n          \"enabled\": true,\r\n          \"key\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "79f29b07-f40d-4a4e-a40b-806aed5e57ee",
+                  "name": "Get list of Schemes",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect",
+                    "description": "#### Description \n\nGet a list to collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+                  },
+                  "response": [
+                    {
+                      "id": "2e6a49b3-57a8-45b8-9e5c-1ec1d1775dd9",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {},
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "412a9177-c2f9-4171-b9d8-46d32c7e3cd5",
+                  "name": "Get a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}",
+                    "description": "#### Description \n\nGet a collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to get"
+                  },
+                  "response": [
+                    {
+                      "id": "baab2565-dcb0-4c9c-9114-bca1c3b20963",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {},
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "37a0b568-7d52-459b-9217-b93858495c99",
+                  "name": "Get a Scheme Setting",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
+                    "description": "#### Description \n\nGet a collection scheme setting\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to that owns the scheme setting\nschemeSettingId | The id of the scheme setting to get"
+                  },
+                  "response": [
+                    {
+                      "id": "6bdfe231-ec6b-4823-8612-1bcef221a1b8",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {},
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"id\": \"\",\n    \"name\": \"\",\n    \"schemeSettings\": [\n        {\n            \"id\": \"\",\n            \"country\": \"\",\n            \"paymentMethods\": [\n                {\n                    \"pspId\": \"\",\n                    \"paymentMethodType\": \"\",\n                    \"enabled\": true,\n                    \"key\": \"\"\n                }\n            ]\n        }\n    ]\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "bbf25b19-de47-4ba4-9ede-f8cd26f75368",
+                  "name": "Get available payment methods for new scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}",
+                    "description": "#### Description \n\nGets a list of payment methods that are available for a given country code. \n\nUse this operation when creating a new scheme to find the available payment methods. \n\nNot all PSP's operate in all territories so this methods will return a list of all the payment methods available to you from the PSP's you have configured for your client.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\ncountry | The country code that will filter the available payment methods"
+                  },
+                  "response": [
+                    {
+                      "id": "5688ac96-8c1e-4567-aa22-d4db82e4ba83",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {},
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "4e75c054-4341-40ae-bb9c-26fb6fcea4fa",
+                  "name": "Get available payment methods for new scheme setting",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}/available-payment-methods",
+                    "description": "#### Description \n\nGets a list of payment methods that are available to add to an existing scheme setting. \n\nUse this operation when your want to add extra payment methods to an existing scheme setting.\n\nNot all PSP's operate in all territories so this methods will return a list of all the payment methods available to you from the PSP's you have configured for your client plus it will filter out the payment methods that have already been added to the specified scheme setting.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that owns the scheme setting\nschemeSettingId | The id of the schemeSetting to find the availalbe payment methods for"
+                  },
+                  "response": [
+                    {
+                      "id": "7daa27ad-06ce-4410-b47b-9a6eaecce164",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {},
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}/available-payment-methods"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "62c4aed3-feb1-4740-bd10-c61e38555b00",
+                  "name": "Update a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}",
+                    "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to be updated"
+                  },
+                  "response": [
+                    {
+                      "id": "3ba11b0d-e166-4282-87fa-fb6a03640249",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                      },
+                      "status": "Accepted",
+                      "code": 202,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n        \"id\": \"\",\n        \"name\": \"\",\n        \"schemeSettings\": [\n            {\n                \"id\": \"\",\n                \"country\": \"\",\n                \"paymentMethods\": [\n                    {\n                        \"pspId\": \"\",\n                        \"paymentMethodType\": \"\",\n                        \"enabled\": true,\n                        \"key\": \"\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "48f96d01-a082-4a96-b848-16b20b0bbedd",
+                  "name": "Update a Scheme Setting",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true\r\n      }\r\n    ]\r\n  }"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
+                    "description": "#### Description \n\nUpdates a scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will owns the scheme setting\nschemeSettingId | The id of the scheme setting to update"
+                  },
+                  "response": [
+                    {
+                      "id": "426f5e97-d7ac-412f-9729-f902b5896238",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"id\": \"\",\n    \"country\": \"\",\n    \"paymentMethods\": [\n        {\n            \"pspId\": \"\",\n            \"paymentMethodType\": \"\",\n            \"enabled\": true,\n            \"key\": \"\"\n        }\n    ]\n}\n"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "aee516fd-ea68-4617-8a72-c299c25389a0",
+                  "name": "Delete a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}",
+                    "description": "#### Description \n\nDeletes a collection scheme.\n\n**Note:** You cannot delete a scheme that still has scheme settings. Delete the individual scheme settings before deleting the scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to delete"
+                  },
+                  "response": [
+                    {
+                      "id": "b05eff29-15ed-4dc5-b291-67501681bb2d",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "330f0c64-b501-4fbb-859f-a2d77a779e82",
+                  "name": "Delete a Scheme Setting",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
+                    "description": "#### Description \n\nDeletes a scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The parent scheme id of the scheme setting\nschemeSettingId | The id of the scheme setting to delete"
+                  },
+                  "response": [
+                    {
+                      "id": "f1cd3e31-2a78-40d1-a06c-0bb0a576b65c",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "e431af90-ea5d-468b-838f-64603b97999f",
+          "name": "Transactions",
+          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints exist. While the style is RESTful-like, the transaction API is not a fully REST service.\r\n\r\nScheme | URI | Description\r\n- | - | -\r\n`POST` | `/v1/collect` | <a href=\"#create-a-new-collect-transaction\">Create a new collect transaction</a>\r\n`GET` | `/v1/collect/{reference}` | <a href=\"#get-transaction-details\">Get transaction details</a>\r\n`POST` | `/v1/collect/{reference}/token` | <a href=\"#recreate-a-bearer-token\">Recreate bearer token</a>\r\n`POST` | `/v1/collect/{reference}/settle` | <a href=\"#settling-a-transaction\">Settling a transaction</a>\r\n`POST` | `/v1/collect/{reference}/void` | <a href=\"#voiding-a-transaction\">Voiding a transaction</a>\r\n\r\n##### Error Handling\r\n\r\nValidation or verification errors occuring during the life of a transaction will return a common `400 Bad Request` HTTP status code error in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n`reason` | string, _null_ | Optional descriptive reason for the failure. More commonly used to describe why a payment partner rejected a request.\r\n\r\n##### Server Errors\r\n\r\n> 500 Internal Server Error\r\n\r\n```json\r\n{\r\n  \"correlationId\": \"abc...xyz\",\r\n  \"timestamp\": 1535458649,\r\n  \"message\": null\r\n}\r\n```\r\n\r\n##### Authorization limitations\r\n\r\nWhen creating a transaction you can specify whether you wish to `AUTHORIZE` or `SETTLE` the payment as soon as the customer provides their payment information. This is handled through the `instruction` property.\r\n\r\nIf you choose to first hold the transaction in an `AUTHORIZED` state then you should be aware of the maximum length of time a transaction can be authorized for can differ based on the payment provider.\r\n\r\nProvider | Maximum held duration\r\n- | -\r\nAMEX | 7 days\r\nVISA | 10 days\r\nSWITCH | 30 days\r\nSOLO | 30 days\r\nMASTER CARD | 7 days\r\nMAESTRO | 30 days\r\nUK MAESTRO | 30 days\r\nLASER | 30 days\r\nJCB | 30 days\r\nDISCOVER | 30 days\r\nDINERS CLUB INTERNATIONAL | 30 days\r\nUNION PAY | 30 days\r\nCHINA UNION PAY | 30 days\r\nCARTE BLANCHE | 30 days\r\n\r\n#### Validation errors\r\n\r\nSubsequent settlement requests will result in the error code `AUTHORIZATION_HAS_EXPIRED`.\r\n\r\n#### Transaction Status\r\n\r\nThe transaction status will have changed to `PAYMENT_AUTHORIZATION_EXPIRED`.\r\n\r\n#### Additional payments\r\n\r\nIf you require additional payment you will need to <a href=\"#create-a-new-collect-transaction\">create a new transaction</a> and request your customer provide their card details again.\r\n\r\nA server error is identified by a `500 Internal Server Error` HTTP status code. If you're experiencing any server errors and require assistence then please include the server error response containing the `correlationId` property. This will help the team diagnose and trace the cause of any problems related to your transaction.\r\n\r\n##### Note\r\n\r\nWhen a transaction cannot be found we will return a `400 Bad Request` HTTP status code with the error code `TRANSACTION_NOT_FOUND` rather than a `404 Not Found` HTTP status code.\r\n",
+          "item": [
+            {
+              "_postman_id": "89ee242f-bbce-449f-bc64-251c0d7298d9",
+              "name": "Create new Transaction",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\",\r\n    \"customer\": {\r\n    \t\"firstName\": \"Lukas\",\r\n    \t\"lastName\": \"M\u00f6ller\",\r\n    \t\"companyName\": \"\",\r\n    \t\"addressLine1\": \"Pasewalker Stra\u00dfe 7\",\r\n    \t\"addressLine2\": \"\",\r\n    \t\"city\": \"Baden-Baden\",\r\n    \t\"state\": \"Baden-W\u00fcrttemberg\",\r\n    \t\"zipCode\": \"76534\",\r\n    \t\"country\": \"DE\"\r\n    }\r\n}"
+                },
+                "url": "https://{{transactionApiUrl}}/v1/collect",
+                "description": "This is the first stage required to create a new transaction.\r\n\r\nIf successful, the response to this request will return a new `bearer token` valid for the life of the transaction. This bearer token is used by the whitelabel page to allow the customer to make a payment. See the <a href=\"#white-label-workflows\">White Label Workflow</a> for more information.\r\n\r\nA collect transaction must be given a unique `reference`. The `reference` will be used throughout the transaction's life to query it's status, void or reconcile payment.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\nreference | string (50 char max) | A unique Client Reference to identify the collect transaction. This reference cannot be reused across transactions. This field has limited allowed characters (`a-z0-9-_.*+:@&=,!~;`).\r\namount | decimal | The amount to be collected.\r\ncurrency | ISO3 | The currency to collect the payment in.\r\ncountry | ISO2 | The country in which the customer resides to localize payment options.\r\nscheme | string | The identifier of the `Scheme` in which to use.\r\ninstruction | `AUTHORIZE` or `SETTLE` | Automatically Authorize or Settle the payment upon customer submission.\r\nttl | timestamp | The amount of time (in seconds) the collect token will live for. Must be between 60 seconds and 14 days (1209600).\r\ncustomer | customer | The customer's billing details.\r\n\r\n##### Customer Object\r\n\r\nParameter | Type | Required | Description\r\n- | - | - | -\r\nfirstName | string | Required | The customer's first name.\r\nlastName | string | Required | The customer's last name.\r\ncompanyName | string | Optional | The company name if associated with an address.\r\naddressLine1 | string | Required | The primary address line.\r\naddressLine2 | string | Optional | The secondary address line.\r\ncity | string | Required | The address City or Town.\r\nstate | string | Optional | The address State, County or Region.\r\nzipCode | string | Required | The address zip/postal code.\r\ncountry | ISO2 | Required | The address Country (in ISO2 format).\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`REFERENCE_IS_REQUIRED` | Reference is required.\r\n`REFERENCE_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`REFERENCE_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.*+:@&=,!~;`.\r\n`REFERENCE_ALREADY_IN_USE` | Reference must be unique when creating a transaction.\r\n`REFERENCE_DOES_NOT_MATCH_URI` | If the reference exists in both the `URI` and the `BODY` then they must match.\r\n`AMOUNT_IS_REQUIRED` | Amount is required.\r\n`AMOUNT_FORMAT_NOT_RECOGNISED` | Amount was not recognised as a valid decimal.\r\n`AMOUNT_MUST_BE_GREATER_THAN_ZERO` | Amount cannot be less than or equal to zero.\r\n`CURRENCY_IS_REQUIRED` | Currency is required.\r\n`CURRENCY_NOT_RECOGNISED` | Currency was not a recognised ISO3 currency code.\r\n`COUNTRY_IS_REQUIRED` | Country is required.\r\n`COUNTRY_NOT_RECOGNISED` | Country was not a recognised ISO2 country code.\r\n`SCHEME_IS_REQUIRED` | Scheme is required.\r\n`SCHEME_FORMAT_NOT_RECOGNISED` | Scheme was not recognised as a valid `GUID`.\r\n`INSTRUCTION_IS_REQUIRED` | Instruction is required.\r\n`INSTRUCTION_NOT_RECOGNISED` | Instruction must be either `AUTHORIZE` or `SETTLE`.\r\n`TTL_IS_REQUIRED` | Token TTL is required.\r\n`TTL_FORMAT_NOT_RECOGNISED` | Token TTL must be a number representing how many seconds the token is to live for.\r\n`TTL_OUTSIDE_OF_ALLOWED_RANGE` | Token must have a life between 60 seconds and 14 days (1209600).\r\n`FIRST_NAME_IS_REQUIRED` | Customer first name is required.\r\n`LAST_NAME_IS_REQUIRED` | Customer last name is required.\r\n`ADDRESS_LINE_1_IS_REQUIRED` | Customer address line 1 is required.\r\n`CITY_IS_REQUIRED` | Customer city is required.\r\n`ZIP_CODE_IS_REQUIRED` | Customer zip code is required.\r\n\r\n#### Notes\r\n\r\nYou can recreate a `bearer token` without needing to create a new collect transaction. It's important to remember that creating a new `bearer token` wont extend the life of the token. See <a href=\"#recreate-a-bearer-token\">Recreate a bearer token</a>."
+              },
+              "response": [
+                {
+                  "id": "19469d43-4462-4c69-a823-ec9864ee9291",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\",\r\n    \"customer\": {\r\n    \t\"firstName\": \"Lukas\",\r\n    \t\"lastName\": \"M\u00f6ller\",\r\n    \t\"companyName\": \"\",\r\n    \t\"addressLine1\": \"Pasewalker Stra\u00dfe 7\",\r\n    \t\"addressLine2\": \"\",\r\n    \t\"city\": \"Baden-Baden\",\r\n    \t\"state\": \"Baden-W\u00fcrttemberg\",\r\n    \t\"zipCode\": \"76534\",\r\n    \t\"country\": \"DE\"\r\n    }\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"bearerToken\": \"eyJhbG.....jYyEAho\"\r\n}"
+                },
+                {
+                  "id": "a160c63f-0460-41f0-98c8-02cd77e357cd",
+                  "name": "Bad Request Example",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\",\r\n    \"customer\": {\r\n    \t\"firstName\": \"Lukas\",\r\n    \t\"lastName\": \"M\u00f6ller\",\r\n    \t\"companyName\": \"\",\r\n    \t\"addressLine1\": \"Pasewalker Stra\u00dfe 7\",\r\n    \t\"addressLine2\": \"\",\r\n    \t\"city\": \"Baden-Baden\",\r\n    \t\"state\": \"Baden-W\u00fcrttemberg\",\r\n    \t\"zipCode\": \"76534\",\r\n    \t\"country\": \"DE\"\r\n    }\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect"
+                  },
+                  "status": "BAD REQUEST",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"REFERENCE_CONTAINS_INVALID_CHARACTERS\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "96edbd97-5e3f-4f2d-8dfd-542e5636a89e",
+              "name": "Recreate a Bearer Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                },
+                "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/token",
+                "description": "It is possible to recreate a `bearer token` for a transaction as long as the transaction is not `EXPIRED` or `VOIDED`.\r\n\r\nCreating a new `bearer token` will not extend the life of the transaction, nor the `bearer token` itself. A `bearer token` will be invalidated at the same time the transaction is due to expire.\r\n\r\n\r\n#### URL Parameters\r\n\r\nThe following parameters are to be sent in the URL\r\n\r\nParameter | Type | Description\r\n- | - | -\r\nreference | string (50 char max) | The unique transaction reference given during creation.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`REFERENCE_IS_REQUIRED` | Reference is required.\r\n`REFERENCE_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`REFERENCE_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.*+:@&=,!~;`.\r\n`TRANSACTION_NOT_FOUND` | Reference didn't match a known transaction.\r\n`TRANSACTION_IS_EXPIRED` | Cannot recreate a token for an `EXPIRED` transaction.\r\n`TRANSACTION_IS_VOIDED` | Cannot recreate a token for a `VOIDED` transaction.\r\n\r\n#### Settlement errors\r\n\r\nThe following error may occur if there were issues settling the payment.\r\n\r\nMore information is available in the `reason` property.\r\n\r\nCode | Description\r\n- | - \r\n`PROVIDER_FAILED` | There was an issue settling the payment with the provider. Additional information will be available in the `reason` property."
+              },
+              "response": [
+                {
+                  "id": "3745fa50-e8c0-479f-a734-3659eecc8780",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/token"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"bearerToken\": \"eyJhbG.....jYyEAho\"\r\n}"
+                },
+                {
+                  "id": "54b83626-0955-4938-9c03-1a7ef8e1ae2f",
+                  "name": "Bad Request - Validation Error",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/token"
+                  },
+                  "status": "BAD REQUEST",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                },
+                {
+                  "id": "f9dfcaa6-c01a-4377-b4fa-8bc1e4bb0bbd",
+                  "name": "Bad Request - Settlement Error",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/token"
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"PROVIDER_FAILED\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "303484e0-6082-4b58-a5ef-f12c34c4d108",
+              "name": "Settle a Transaction",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/settle",
+                "description": "If a transaction is `AUTHORIZED` and requires manual settlement then you can do so using the following API.\r\n\r\n\r\n#### URL Parameters\r\n\r\nThe following parameters are to be sent in the URL\r\n\r\nParameter | Type | Description\r\n- | - | -\r\nreference | string (50 char max) | The unique transaction reference given during creation.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`REFERENCE_IS_REQUIRED` | Reference is required.\r\n`REFERENCE_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`REFERENCE_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.*+:@&=,!~;`.\r\n`TRANSACTION_NOT_FOUND` | Reference didn't match a known transaction.\r\n`TRANSACTION_NOT_AUTHORIZED` | The transaction has not been authorized by the customer yet.\r\n`TRANSACTION_IS_SETTLING` | The transaction is already settling.\r\n`TRANSACTION_HAS_SETTLED` | The transaction has settled.\r\n`AUTHORIZATION_HAS_EXPIRED` | The card provider has expired the authorized payment.<br>See <a href=\"#authorization-limitations\">Authorization limitations</a>.\r\n\r\n#### Settlement errors\r\n\r\nThe following error may occur if there were issues settling the payment.\r\n\r\nMore information is available in the `reason` property.\r\n\r\nCode | Description\r\n- | - \r\n`PROVIDER_FAILED` | There was an issue settling the payment with the provider. Additional information will be available in the `reason` property."
+              },
+              "response": [
+                {
+                  "id": "2ba7a134-f5f7-4df3-b028-2451fdc92925",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/settle"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": ""
+                },
+                {
+                  "id": "8090fbed-de15-44dd-8f6a-4022f293fcfd",
+                  "name": "Bad Request - Settlement Error",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/settle"
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"PROVIDER_FAILED\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                },
+                {
+                  "id": "fb38ce77-0c1b-4b4f-bb30-3d491bc21d4b",
+                  "name": "Bad Request - Validation Error",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/settle"
+                  },
+                  "status": "BAD REQUEST",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "7c8215c8-1a82-4bd3-8bb2-62816c175efa",
+              "name": "Void a Transaction",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/void",
+                "description": "A transaction can be voided at any time before it enters a `SETTLING` OR `SETTLED` state.\r\n\r\n\r\n#### URL Parameters\r\n\r\nThe following parameters are to be sent in the URL\r\n\r\nParameter | Type | Description\r\n- | - | -\r\nreference | string (50 char max) | The unique transaction reference given during creation.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`REFERENCE_IS_REQUIRED` | Reference is required.\r\n`REFERENCE_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`REFERENCE_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.*+:@&=,!~;`.\r\n`TRANSACTION_NOT_FOUND` | Reference didn't match a known transaction.\r\n`TRANSACTION_IS_SETTLING` | A `SETTLING` transaction cannot be voided.\r\n`TRANSACTION_HAS_SETTLED` | A `SETTLED` transaction cannot be voided.\r\n`TRANSACTION_IS_VOIDED` | The transaction is already `VOIDED`."
+              },
+              "response": [
+                {
+                  "id": "40e12d3c-ca23-4025-b457-f2f6ed57ab6f",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/void"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": ""
+                },
+                {
+                  "id": "f8e34630-5892-421d-bbc7-bc3d38901783",
+                  "name": "Bad Request - Validation Error",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"reference\": \"156985563\",\r\n    \"amount\": \"100.00\",\r\n    \"currency\": \"EUR\",\r\n    \"country\": \"DE\",\r\n    \"scheme\": \"6c5a81f4-36ba-407a-b986-fe6d7c652a13\",\r\n    \"instruction\": \"SETTLE\",\r\n    \"ttl\": \"14400\"\r\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}/void"
+                  },
+                  "status": "BAD REQUEST",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "3f5f9a4b-9291-43ec-934a-c03d59f6ac9e",
+              "name": "Get a Transaction",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{transactionApiUrl}}/v1/collect/{reference}",
+                "description": "Should you need to query a transaction status, or identify the values a transaction was created with, then you can do so using the following API.\n\n#### URL Parameters\n\nThe following parameters are to be sent in the URL\n\nParameter | Type | Description\n- | - | -\nreference | string (50 char max) | The unique transaction reference given during creation.\n\n#### Status Codes\n\nCode | Description\n---  | ---\n`TRANSACTION_OPEN` | Payment has yet to be submitted.\n`PAYMENT_AUTHORIZED` | Payment has been authorized for settlement.\n`PAYMENT_AUTHORIZATION_EXPIRED` | Authorized payment was not manually settled within the allowed time by the card provider.\n`PAYMENT_SETTLING` | Payment is settling. Transaction will be reconciled at a later date.\n`PAYMENT_SETTLED` | Payment has settled.\n`PAYMENT_FAILED` | Payment has failed.\n`TRANSACTION_VOIDED` | Transaction has been explicitly voided.\n`TRANSACTION_EXPIRED` | Transaction was not settled within the given time to live.\n\n#### Validation errors\n\nOne or many of the following errors may be returned if there were issues validating the request.\n\nCode | Description\n- | - \n`TRANSACTION_NOT_FOUND` | Reference didn't match a known transaction.\n`REFERENCE_IS_REQUIRED` | Reference is required.\n`REFERENCE_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\n`REFERENCE_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.*+:@&=,!~;`."
+              },
+              "response": [
+                {
+                  "id": "7cf99915-d049-4a2e-bdd1-5e62cbdc62b1",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"reference\": \"9237498274\",\r\n  \"status\": \"OPEN\",\r\n  \"amount\": 100.00,\r\n  \"currency\": \"EUR\",\r\n  \"country\": \"DE\",\r\n  \"instruction\": \"AUTHORIZE\",\r\n  \"scheme\": \"853ce7a8-3168-465c-baae-54aea6009698\",\r\n  \"expiry\": 1535458649\r\n}"
+                },
+                {
+                  "id": "1d2a6f91-4397-4d80-b1f3-2b11df1982f8",
+                  "name": "Bad Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {},
+                    "url": "https://{{transactionApiUrl}}/v1/collect/{reference}"
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "7737b2e2-4b03-4a69-be26-4a37d2c57250",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "b217333c-bf6a-427c-a1fd-da42c032f13f",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "a7688ccc-61d4-4ff6-9e15-bbb7186f3915",
+        "type": "text/javascript",
+        "exec": [
+          "var CryptoJS = require(\"crypto-js\");",
+          "",
+          "var publicKey = pm.environment.get(\"publicKey\");",
+          "var privateKey = CryptoJS.enc.Base64.parse(pm.environment.get(\"privateKey\"));",
+          "",
+          "var timestamp = (new Date).getTime() / 1000;",
+          "",
+          "var nonce = timestamp;",
+          "    ",
+          "var body = request.data;",
+          "",
+          "if (body.length > 0){",
+          "    var utf8Body = CryptoJS.enc.Utf8.parse(body);",
+          "    var hashedBody = CryptoJS.SHA256(utf8Body);",
+          "    var bodySignature = CryptoJS.enc.Base64.stringify(hashedBody);",
+          "}",
+          "else {",
+          "    var bodySignature = \"\";",
+          "}",
+          "",
+          "var unsignedSignature = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + bodySignature;",
+          "",
+          "var utf8Signature = CryptoJS.enc.Utf8.parse(unsignedSignature);",
+          "var hashedSignature = CryptoJS.HmacSHA256(utf8Signature, privateKey);",
+          "var signedSignature = CryptoJS.enc.Base64.stringify(hashedSignature);",
+          "",
+          "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;",
+          "",
+          "pm.variables.set(\"token\", hmac);"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "38581210-06a1-4804-a74f-878b9511e8aa",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
