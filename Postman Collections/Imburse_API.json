@@ -2051,6 +2051,31 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
+            },
+            {
+              "_postman_id": "63f350c1-665a-4010-ab7c-00f30fe89e62",
+              "name": "Get Instruction Copy",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+              },
+              "response": []
             }
           ],
           "event": [
