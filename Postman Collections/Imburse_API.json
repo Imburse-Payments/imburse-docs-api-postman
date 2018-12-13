@@ -1504,6 +1504,11 @@
                     "key": "Authorization",
                     "type": "text",
                     "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
                 "body": {
@@ -1624,20 +1629,20 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
+                    "type": "text",
+                    "value": "application/json"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}/instruction/{instructionRef}"
               },
               "response": []
             },
