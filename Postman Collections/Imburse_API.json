@@ -1511,7 +1511,7 @@
             },
             {
               "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
-              "name": "Get Customer Copy",
+              "name": "Get Order",
               "request": {
                 "method": "GET",
                 "header": [
