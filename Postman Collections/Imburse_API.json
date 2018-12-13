@@ -1672,7 +1672,8 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}",
+                "description": "The following endpoint will return an unstructured list of instruction events."
               },
               "response": []
             },
