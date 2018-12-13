@@ -1536,7 +1536,7 @@
             },
             {
               "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
-              "name": "Get Order Copy",
+              "name": "Get Order Audit History",
               "request": {
                 "method": "GET",
                 "header": [
