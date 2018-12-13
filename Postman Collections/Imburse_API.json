@@ -1519,13 +1519,18 @@
                     "key": "Authorization",
                     "value": "Bearer {{token}}",
                     "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
               },
               "response": []
             },
@@ -1996,6 +2001,31 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
+            },
+            {
+              "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
+              "name": "Get Order Copy",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+              },
+              "response": []
             }
           ],
           "event": [
