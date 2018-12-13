@@ -1490,6 +1490,26 @@
               "response": []
             },
             {
+              "_postman_id": "e459f1de-3fd0-4a99-b365-1034e593fda2",
+              "name": "Get Customer Audit History",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "89ee242f-bbce-449f-bc64-251c0d7298d9",
               "name": "Create new Transaction",
               "request": {
@@ -1956,26 +1976,6 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
-            },
-            {
-              "_postman_id": "e459f1de-3fd0-4a99-b365-1034e593fda2",
-              "name": "Get Customer Copy",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
-              },
-              "response": []
             }
           ],
           "event": [
