@@ -1511,24 +1511,24 @@
             },
             {
               "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
-              "name": "Get Order Copy",
+              "name": "Create new Order",
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
+                    "type": "text",
+                    "value": "application/json"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": ""
+                  "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
                 },
                 "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
               },
