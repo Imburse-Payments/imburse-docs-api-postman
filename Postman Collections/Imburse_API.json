@@ -1585,6 +1585,31 @@
               "response": []
             },
             {
+              "_postman_id": "62bfc7fb-172f-4a10-ae9d-1c82be2e413b",
+              "name": "Create Instruction",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "5ef8499d-5779-408f-9380-eb5190612d35",
               "name": "Get Instruction",
               "request": {
@@ -2101,31 +2126,6 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
-            },
-            {
-              "_postman_id": "62bfc7fb-172f-4a10-ae9d-1c82be2e413b",
-              "name": "Create new Order Copy",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
-                },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
-              },
-              "response": []
             }
           ],
           "event": [
