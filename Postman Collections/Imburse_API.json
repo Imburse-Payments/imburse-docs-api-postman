@@ -1646,7 +1646,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}/instruction/{instructionRef}",
+                "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "The following endpoint will return the current state of an instruction.\n\nInstructions must be created before they can be queried.\n\nThe instruction is identified by a `customerRef`, an `orderRef` and an `instructionRef`. These values are provided from your own system to ours.\n\nAn `instructionRef` needs to be unique to the order but does not need to be globally unique."
               },
               "response": []
@@ -1672,7 +1672,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
+                "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return an unstructured list of instruction events."
               },
               "response": []
@@ -1698,7 +1698,7 @@
                   "mode": "raw",
                   "raw": "{\r\n\t\"customerRef\": \"\",\r\n    \"orderRef\": \"\",\r\n    \"instructionRef\": \"\",\r\n    \"capture\": \"\",\r\n    \"successUri\": \"\",\r\n    \"rejectedUri\": \"\",\r\n    \"cancelledUri\": \"\"\r\n}"
                 },
-                "url": "https://{{transactionApiUrl}}/v1/token",
+                "url": "https://{{collectApiUrl}}/v1/token",
                 "description": "Once you have created an Order and an Instruction for a Customer you are ready to generate a customer payment token.\r\n\r\nThe following request will generate a single-use bearer token, allowing your customer to either capture a single payment (called a `DIRECT_SALE`) or to capture a customer's billing details (called `BILLING_DETAILS`) for recurring payments.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\ncustomerRef | string (50 char max) | The unique reference used to represent a customer.\r\norderRef | string (50 char max) | The unique reference used to represent an order.\r\ninstructionRef | string (50 char max) | The unique reference used to represent a payment instruction.\r\ncapture | Type | `DIRECT_SALE` or `BILLING_DETAILS`.\r\nsuccessUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\nrejectedUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\ncancelledUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`INSTRUCTION_REF_IS_REQUIRED` | Reference is required.\r\n`INSTRUCTION_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`INSTRUCTION_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`CAPTURE_IS_REQUIRED` | Capture is required.\r\n`CAPTURE_NOT_RECOGNISED` | Capture must be either `DIRECT_SALE` or `BILLING_DETAILS`.\r\n`SUCCESS_URI_IS_REQUIRED` | Success URI is required.\r\n`SUCCESS_URI_LENGTH_OUT_OF_RANGE` | Success URI cannot exceed 128 characters.\r\n`SUCCESS_URI_FORMAT_NOT_RECOGNISED` | Success URI format is invalid.\r\n`REJECTED_URI_IS_REQUIRED` | Rejected URI is required.\r\n`REJECTED_URI_LENGTH_OUT_OF_RANGE` | Rejected URI cannot exceed 128 characters.\r\n`REJECTED_URI_FORMAT_NOT_RECOGNISED` | Rejected URI format is invalid.\r\n`CANCELLED_URI_IS_REQUIRED` | Cancelled URI is required.\r\n`CANCELLED_URI_LENGTH_OUT_OF_RANGE` | Cancelled URI cannot exceed 128 characters.\r\n`CANCELLED_URI_FORMAT_NOT_RECOGNISED` | Cancelled URI format is invalid."
               },
               "response": [
