@@ -1490,7 +1490,8 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}",
+                "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
               },
               "response": []
             },
@@ -1566,7 +1567,8 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}",
+                "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
               },
               "response": []
             },
@@ -1693,9 +1695,41 @@
                   "raw": "{\r\n\t\"customerRef\": \"\",\r\n    \"orderRef\": \"\",\r\n    \"instructionRef\": \"\",\r\n    \"capture\": \"\",\r\n    \"successUri\": \"\",\r\n    \"rejectedUri\": \"\",\r\n    \"cancelledUri\": \"\"\r\n}"
                 },
                 "url": "https://{{transactionApiUrl}}/v1/token",
-                "description": "Once you have created an Order and an Instruction for a Customer you are ready to generate a customer payment token.\r\n\r\nThe following request will generate a single-use bearer token, allowing your customer to either capture a single payment (called a `DIRECT_SALE`) or to capture a customer's billing details (called `BILLING_DETAILS`).\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\ninstructionRef | string (50 char max) | A unique identifier used to represent a single payment instruction.\r\namount | Decimal | The amount to collect.\r\nopenDate | Date (YYYY-MM-DD) | The date in which a manual payment can be made from.\r\ndueDate | Date (YYYY-MM-DD) | The date in which a manual payment is to be settled by, or if automated will be taken on.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`INSTRUCTION_REF_IS_REQUIRED` | Reference is required.\r\n`INSTRUCTION_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`INSTRUCTION_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`AMOUNT_IS_REQUIRED` | Amount is required.\r\n`AMOUNT_FORMAT_NOT_RECOGNISED` | Amount must be in decimal form.\r\n`AMOUNT_OUT_OF_RANGE` | Amount must be greater than zero.\r\n`OPEN_DATE_IS_REQUIRED` | Open Date is required.\r\n`OPEN_DATE_FORMAT_NOT_RECOGNISED` | Open Date could not be read as a valid date.\r\n`DUE_DATE_IS_REQUIRED` | Due Date is required.\r\n`DUE_DATE_FORMAT_NOT_RECOGNISED` | Due Date could not be read as a valid date."
+                "description": "Once you have created an Order and an Instruction for a Customer you are ready to generate a customer payment token.\r\n\r\nThe following request will generate a single-use bearer token, allowing your customer to either capture a single payment (called a `DIRECT_SALE`) or to capture a customer's billing details (called `BILLING_DETAILS`) for recurring payments.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\ncustomerRef | string (50 char max) | The unique reference used to represent a customer.\r\norderRef | string (50 char max) | The unique reference used to represent an order.\r\ninstructionRef | string (50 char max) | The unique reference used to represent a payment instruction.\r\ncapture | Type | `DIRECT_SALE` or `BILLING_DETAILS`.\r\nsuccessUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\nrejectedUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\ncancelledUri | string (128 char max) | The URI the user journey should be redirected to in the event of an off-site payment.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`INSTRUCTION_REF_IS_REQUIRED` | Reference is required.\r\n`INSTRUCTION_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`INSTRUCTION_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`CAPTURE_IS_REQUIRED` | Capture is required.\r\n`CAPTURE_NOT_RECOGNISED` | Capture must be either `DIRECT_SALE` or `BILLING_DETAILS`.\r\n`SUCCESS_URI_IS_REQUIRED` | Success URI is required.\r\n`SUCCESS_URI_LENGTH_OUT_OF_RANGE` | Success URI cannot exceed 128 characters.\r\n`SUCCESS_URI_FORMAT_NOT_RECOGNISED` | Success URI format is invalid.\r\n`REJECTED_URI_IS_REQUIRED` | Rejected URI is required.\r\n`REJECTED_URI_LENGTH_OUT_OF_RANGE` | Rejected URI cannot exceed 128 characters.\r\n`REJECTED_URI_FORMAT_NOT_RECOGNISED` | Rejected URI format is invalid.\r\n`CANCELLED_URI_IS_REQUIRED` | Cancelled URI is required.\r\n`CANCELLED_URI_LENGTH_OUT_OF_RANGE` | Cancelled URI cannot exceed 128 characters.\r\n`CANCELLED_URI_FORMAT_NOT_RECOGNISED` | Cancelled URI format is invalid."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "a6865927-435a-43b6-8c47-4c22cf9ca2ce",
+                  "name": "Create Payment Token",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"customerRef\": \"\",\n    \"orderRef\": \"\",\n    \"instructionRef\": \"\",\n    \"capture\": \"\",\n    \"successUri\": \"\",\n    \"rejectedUri\": \"\",\n    \"cancelledUri\": \"\"\n}"
+                    },
+                    "url": "https://{{transactionApiUrl}}/v1/token"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n\t\"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\",\r\n\t\"expires\": 1544717374\r\n}"
+                }
+              ]
             }
           ],
           "event": [
