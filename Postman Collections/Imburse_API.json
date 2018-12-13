@@ -1530,7 +1530,7 @@
                   "mode": "raw",
                   "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
                 },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order"
               },
               "response": []
             },
@@ -1603,7 +1603,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+                  "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
                 },
                 "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}/instruction"
               },
@@ -2126,6 +2126,31 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
+            },
+            {
+              "_postman_id": "d306ef84-da1b-4970-91b1-403f178c0af7",
+              "name": "Create Instruction Copy",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}/instruction"
+              },
+              "response": []
             }
           ],
           "event": [
