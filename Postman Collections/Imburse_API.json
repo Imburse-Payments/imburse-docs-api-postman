@@ -1597,6 +1597,26 @@
               ]
             },
             {
+              "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
+              "name": "Get Customer Copy",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "96edbd97-5e3f-4f2d-8dfd-542e5636a89e",
               "name": "Recreate a Bearer Token",
               "request": {
@@ -1976,26 +1996,6 @@
                   "body": "{\r\n  \"errors\": [\r\n    \"TRANSACTION_NOT_FOUND\"\r\n  ],\r\n  \"reason\": null\r\n}"
                 }
               ]
-            },
-            {
-              "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
-              "name": "Get Customer Copy",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}"
-              },
-              "response": []
             }
           ],
           "event": [
