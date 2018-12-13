@@ -1510,6 +1510,31 @@
               "response": []
             },
             {
+              "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
+              "name": "Get Order Copy",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{transactionApiUrl}}/v1/customer/{customerRef}/order/{orderRef}"
+              },
+              "response": []
+            },
+            {
               "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
               "name": "Get Order",
               "request": {
@@ -1586,7 +1611,7 @@
             },
             {
               "_postman_id": "63f350c1-665a-4010-ab7c-00f30fe89e62",
-              "name": "Get Instruction Copy",
+              "name": "Get Instruction Audit History",
               "request": {
                 "method": "GET",
                 "header": [
