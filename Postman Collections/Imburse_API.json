@@ -1561,7 +1561,7 @@
             },
             {
               "_postman_id": "5ef8499d-5779-408f-9380-eb5190612d35",
-              "name": "Get Order Copy",
+              "name": "Get Instruction",
               "request": {
                 "method": "GET",
                 "header": [
