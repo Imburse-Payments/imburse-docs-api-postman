@@ -1779,6 +1779,21 @@
                 "description": "Gets a list of a client's webhooks"
               },
               "response": []
+            },
+            {
+              "_postman_id": "a4ba4ba4-5462-4a8b-8548-164f8d4afb5a",
+              "name": "Create a Client Webhook",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "",
+                "description": "Creates a new Client Webhook"
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
