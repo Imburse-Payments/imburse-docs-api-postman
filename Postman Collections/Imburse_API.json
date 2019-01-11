@@ -1782,7 +1782,7 @@
                   "raw": ""
                 },
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks",
-                "description": "#### Description\r\n\r\nGets a list of a client's Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\n`clientId` | The id of the client that owns the Webhooks."
+                "description": "#### Description\r\n\r\nGets a list of a client's Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | - | -\r\nclientId | The id of the client that owns the Webhooks"
               },
               "response": []
             },
