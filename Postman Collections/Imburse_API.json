@@ -1764,7 +1764,23 @@
           "_postman_id": "44784cc1-9cf8-4ca5-9285-0652616e2614",
           "name": "Client Webhooks",
           "description": "",
-          "item": [],
+          "item": [
+            {
+              "_postman_id": "6998082a-d357-44c9-9f2d-4a1868887b3b",
+              "name": "Get list of Client Webhooks",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "",
+                "description": "Gets a list of a client's webhooks"
+              },
+              "response": []
+            }
+          ],
           "_postman_isSubFolder": true
         }
       ]
