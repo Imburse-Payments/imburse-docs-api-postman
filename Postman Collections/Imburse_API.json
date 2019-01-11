@@ -1799,7 +1799,7 @@
               "_postman_id": "6f26962d-c031-47f2-bb8a-aa48084e6387",
               "name": "Update a Webhook",
               "request": {
-                "method": "GET",
+                "method": "PUT",
                 "header": [],
                 "body": {
                   "mode": "raw",
