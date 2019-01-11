@@ -1776,7 +1776,7 @@
                   "raw": ""
                 },
                 "url": "",
-                "description": "Gets a list of a client's webhooks"
+                "description": "#### Description\r\n\r\nGets a list of a client's Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the Webhooks."
               },
               "response": []
             },
@@ -1784,14 +1784,28 @@
               "_postman_id": "a4ba4ba4-5462-4a8b-8548-164f8d4afb5a",
               "name": "Create a Client Webhook",
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
                 "url": "",
-                "description": "Creates a new Client Webhook"
+                "description": "# Description\r\n\r\nCreate a Client Webhook.\r\n\r\n## Role required\r\n\r\n`client-webhook-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the Webhook\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "6f26962d-c031-47f2-bb8a-aa48084e6387",
+              "name": "Update a Webhook",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
               },
               "response": []
             }
