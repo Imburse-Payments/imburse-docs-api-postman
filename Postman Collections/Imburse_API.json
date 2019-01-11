@@ -1821,7 +1821,7 @@
                   "raw": ""
                 },
                 "url": "",
-                "description": "# Description\r\n\r\nDelete a Webhook.\r\n\r\n## Role required\r\n\r\n`client-webhook-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that own's the Webhook\r\nclientWebhookId | The id of the Webhook to Delete"
+                "description": "# Description\r\n\r\nDeletes a Webhook.\r\n\r\n## Role required\r\n\r\n`client-webhook-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that own's the Webhook\r\nclientWebhookId | The id of the Webhook to Delete"
               },
               "response": []
             }
