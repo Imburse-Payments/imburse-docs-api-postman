@@ -1467,7 +1467,7 @@
         {
           "_postman_id": "e431af90-ea5d-468b-838f-64603b97999f",
           "name": "Collect Payments",
-          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints exist. While the style is RESTful-like, the transaction API is not a fully REST service.\r\n\r\nScheme | URI | Description\r\n- | - | -\r\n`POST` | `/v1/collect` | <a href=\"#create-a-new-collect-transaction\">Create a new collect transaction</a>\r\n`GET` | `/v1/collect/{reference}` | <a href=\"#get-transaction-details\">Get transaction details</a>\r\n`POST` | `/v1/collect/{reference}/token` | <a href=\"#recreate-a-bearer-token\">Recreate bearer token</a>\r\n`POST` | `/v1/collect/{reference}/settle` | <a href=\"#settling-a-transaction\">Settling a transaction</a>\r\n`POST` | `/v1/collect/{reference}/void` | <a href=\"#voiding-a-transaction\">Voiding a transaction</a>\r\n\r\n##### Error Handling\r\n\r\nValidation or verification errors occuring during the life of a transaction will return a common `400 Bad Request` HTTP status code error in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n`reason` | string, _null_ | Optional descriptive reason for the failure. More commonly used to describe why a payment partner rejected a request.\r\n\r\n##### Server Errors\r\n\r\n> 500 Internal Server Error\r\n\r\n```json\r\n{\r\n  \"correlationId\": \"abc...xyz\",\r\n  \"timestamp\": 1535458649,\r\n  \"message\": null\r\n}\r\n```\r\n\r\n##### Authorization limitations\r\n\r\nWhen creating a transaction you can specify whether you wish to `AUTHORIZE` or `SETTLE` the payment as soon as the customer provides their payment information. This is handled through the `instruction` property.\r\n\r\nIf you choose to first hold the transaction in an `AUTHORIZED` state then you should be aware of the maximum length of time a transaction can be authorized for can differ based on the payment provider.\r\n\r\nProvider | Maximum held duration\r\n- | -\r\nAMEX | 7 days\r\nVISA | 10 days\r\nSWITCH | 30 days\r\nSOLO | 30 days\r\nMASTER CARD | 7 days\r\nMAESTRO | 30 days\r\nUK MAESTRO | 30 days\r\nLASER | 30 days\r\nJCB | 30 days\r\nDISCOVER | 30 days\r\nDINERS CLUB INTERNATIONAL | 30 days\r\nUNION PAY | 30 days\r\nCHINA UNION PAY | 30 days\r\nCARTE BLANCHE | 30 days\r\n\r\n#### Validation errors\r\n\r\nSubsequent settlement requests will result in the error code `AUTHORIZATION_HAS_EXPIRED`.\r\n\r\n#### Transaction Status\r\n\r\nThe transaction status will have changed to `PAYMENT_AUTHORIZATION_EXPIRED`.\r\n\r\n#### Additional payments\r\n\r\nIf you require additional payment you will need to <a href=\"#create-a-new-collect-transaction\">create a new transaction</a> and request your customer provide their card details again.\r\n\r\nA server error is identified by a `500 Internal Server Error` HTTP status code. If you're experiencing any server errors and require assistence then please include the server error response containing the `correlationId` property. This will help the team diagnose and trace the cause of any problems related to your transaction.\r\n\r\n##### Note\r\n\r\nWhen a transaction cannot be found we will return a `400 Bad Request` HTTP status code with the error code `TRANSACTION_NOT_FOUND` rather than a `404 Not Found` HTTP status code.\r\n",
+          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "item": [
             {
               "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
@@ -1758,6 +1758,13 @@
               }
             }
           ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "44784cc1-9cf8-4ca5-9285-0652616e2614",
+          "name": "Client Webhooks",
+          "description": "",
+          "item": [],
           "_postman_isSubFolder": true
         }
       ]
