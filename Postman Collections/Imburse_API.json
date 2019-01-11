@@ -1796,6 +1796,11 @@
                     "key": "Authorization",
                     "value": "Hmac {{token}}",
                     "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
                 "body": {
@@ -1816,6 +1821,11 @@
                   {
                     "key": "Authorization",
                     "value": "Hmac {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
                     "type": "text"
                   }
                 ],
