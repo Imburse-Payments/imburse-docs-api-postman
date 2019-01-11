@@ -1767,7 +1767,7 @@
           "item": [
             {
               "_postman_id": "6998082a-d357-44c9-9f2d-4a1868887b3b",
-              "name": "Get list of Client Webhooks",
+              "name": "Get list of Webhooks",
               "request": {
                 "method": "GET",
                 "header": [],
@@ -1782,7 +1782,7 @@
             },
             {
               "_postman_id": "a4ba4ba4-5462-4a8b-8548-164f8d4afb5a",
-              "name": "Create a Client Webhook",
+              "name": "Create a Webhook",
               "request": {
                 "method": "POST",
                 "header": [],
