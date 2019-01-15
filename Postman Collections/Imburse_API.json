@@ -749,7 +749,7 @@
                   "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
                 },
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
-                "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Currently only `BrainTree` is supported with these operations.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
+                "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Either `BRAINTREE_CREDITCARD`, `BRAINTREE_PAYPAL`, or `PAYDIREKT_PAYDIREKT` is supported with these operations.\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
               },
               "response": [
                 {
@@ -1784,7 +1784,34 @@
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks",
                 "description": "#### Description\r\n\r\nGets a list of a client's Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientId | The id of the client that owns the Webhooks."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "49667fd0-cb1a-40ea-a1bd-3407a8c15ca7",
+                  "name": "Successful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"id\": \"\",\n        \"eventType\": \"\",\n        \"url\": \"\",\n        \"isEnabled\": true\n    }\n]"
+                }
+              ]
             },
             {
               "_postman_id": "a4ba4ba4-5462-4a8b-8548-164f8d4afb5a",
@@ -1810,7 +1837,39 @@
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks",
                 "description": "# Description\r\n\r\nCreates a Webhook.\r\n\r\n## Role required\r\n\r\n`client-webhook-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientId | The id of the client that will own the Webhook\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "ca080b5a-1d4d-428e-8848-f013c016c57b",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks"
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
+                }
+              ]
             },
             {
               "_postman_id": "6f26962d-c031-47f2-bb8a-aa48084e6387",
@@ -1836,7 +1895,39 @@
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}",
                 "description": "# Description\r\n\r\nUpdates a Webhook.\r\n\r\n## Role required\r\n\r\n`client-webhook-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientId | The id of the client that own's the Webhook.\r\nclientWebhookId | The id of the Webhook to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "46059bef-8a1e-42e9-920c-82382e833122",
+                  "name": "Successful Request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}"
+                  },
+                  "status": "Accepted",
+                  "code": 202,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
+                }
+              ]
             },
             {
               "_postman_id": "12bc5c22-5a33-4834-96fa-58876abdab63",
@@ -1846,8 +1937,8 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Hmac {{token}}"
                   }
                 ],
                 "body": {
@@ -1855,9 +1946,36 @@
                   "raw": ""
                 },
                 "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}",
-                "description": "# Description\r\n\r\nDeletes a Webhook.\r\n\r\n## Role required\r\n\r\nclient-webhook-write\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientId | The id of the client that own's the Webhook.\r\nclientWebhookId | The id of the Webhook to Delete."
+                "description": "# Description\r\n\r\nDeletes a Webhook.\r\n\r\n## Role required\r\n\r\nclient-webhook-write\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientId | The id of the client that own's the Webhook.\r\nclientWebhookId | The id of the Webhook to delete."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "4689ca68-0aa0-4b3c-b372-7cb9dfacad23",
+                  "name": "Successful Request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_isSubFolder": true
