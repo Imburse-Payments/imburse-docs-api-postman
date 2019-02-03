@@ -2283,6 +2283,20 @@
                     "url": ""
                   },
                   "response": []
+                },
+                {
+                  "_postman_id": "aed6edd9-25f1-45be-9232-da62d9bbdb26",
+                  "name": "Assign User",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_isSubFolder": true
