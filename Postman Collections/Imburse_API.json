@@ -2296,7 +2296,7 @@
                   "_postman_id": "ec7356aa-67d2-48df-844e-3c142332b333",
                   "name": "Remove Client Key by Public Key",
                   "request": {
-                    "method": "GET",
+                    "method": "DELETE",
                     "header": [],
                     "body": {
                       "mode": "raw",
