@@ -2475,7 +2475,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/keys/",
+                    "url": "{{orgApiIUrl}}v1/client/keys/62e28228-5971-4a5d-b053-8b160e845153",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -2497,22 +2497,22 @@
                 },
                 {
                   "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
-                  "name": "Create Key for Client Copy",
+                  "name": "Create Key",
                   "request": {
                     "method": "POST",
                     "header": [
                       {
                         "key": "Content-Type",
                         "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
+                        "type": "text",
+                        "value": "application/json"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": "[\n\t\"cl.g.super\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "url": "{{orgApiIUrl}}v1/client/keys/",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
