@@ -2451,36 +2451,6 @@
               "description": "",
               "item": [
                 {
-                  "_postman_id": "175b7a72-52d5-4422-9fec-ee7a1193c11e",
-                  "name": "Get Key by Public Key",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "22ac81fb-7805-41f4-be7c-4ef3b69280d5",
-                  "name": "Create a new Key",
-                  "request": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/account/keys/",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
                   "_postman_id": "6afbc0da-454e-49ea-a0f6-e7985900862b",
                   "name": "Delete a Key",
                   "request": {
