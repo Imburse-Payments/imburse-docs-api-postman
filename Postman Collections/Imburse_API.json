@@ -2279,7 +2279,22 @@
                 },
                 {
                   "_postman_id": "1b6a99c3-f709-4737-bca1-feca2249487f",
-                  "name": "Get Client Keys Copy",
+                  "name": "Get Client Keys By PublicKey",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "ec7356aa-67d2-48df-844e-3c142332b333",
+                  "name": "Remove Client Key by Public Key",
                   "request": {
                     "method": "GET",
                     "header": [],
