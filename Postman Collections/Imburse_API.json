@@ -2449,23 +2449,7 @@
               "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
               "name": "Security Keys",
               "description": "",
-              "item": [
-                {
-                  "_postman_id": "6afbc0da-454e-49ea-a0f6-e7985900862b",
-                  "name": "Delete a Key",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
-                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
-                  },
-                  "response": []
-                }
-              ],
+              "item": [],
               "_postman_isSubFolder": true
             },
             {
