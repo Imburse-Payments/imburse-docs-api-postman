@@ -2183,7 +2183,23 @@
               "_postman_id": "b195ab08-dd5a-4639-b975-f9842b87e7b5",
               "name": "Clients",
               "description": "",
-              "item": [],
+              "item": [
+                {
+                  "_postman_id": "1e482fce-e553-4077-aa21-e7901ba6b85f",
+                  "name": "Get Clients",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
