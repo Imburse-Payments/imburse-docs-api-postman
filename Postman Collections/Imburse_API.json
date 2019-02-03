@@ -2304,6 +2304,20 @@
                     "url": "{{orgApiIUrl}}v1/account/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
                   },
                   "response": []
+                },
+                {
+                  "_postman_id": "7eb50f74-570e-4482-9747-700f69afc9c2",
+                  "name": "Remove user",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": ""
+                  },
+                  "response": []
                 }
               ],
               "_postman_isSubFolder": true
