@@ -1997,13 +1997,13 @@
           "_postman_id": "82d60d32-5a80-4004-a894-16ad04666a32",
           "name": "Create New Token",
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "",
+            "url": "{{identityApiUrl}}v1/auth/hmac",
             "description": "Creates a new bearer token."
           },
           "response": []
