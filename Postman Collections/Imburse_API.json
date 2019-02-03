@@ -900,7 +900,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"pspType\": \"\",\r\n  \"currencies\": [],\r\n  \"configuration\": {\r\n  }\r\n}"
                 }
               ]
             }
@@ -1985,6 +1985,28 @@
             }
           ],
           "_postman_isSubFolder": true
+        }
+      ]
+    },
+    {
+      "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
+      "name": "Authentication API Reference",
+      "description": "This API describes how to create a Bearer token for API.\n\nIt is based on the HMAC authentication scheme.",
+      "item": [
+        {
+          "_postman_id": "82d60d32-5a80-4004-a894-16ad04666a32",
+          "name": "Create New Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "",
+            "description": "Creates a new bearer token."
+          },
+          "response": []
         }
       ]
     }
