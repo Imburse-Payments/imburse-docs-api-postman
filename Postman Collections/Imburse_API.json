@@ -1996,9 +1996,55 @@
         {
           "_postman_id": "82d60d32-5a80-4004-a894-16ad04666a32",
           "name": "Create New Token",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "bebb259f-e09d-4eef-87ce-010ad3c573fd",
+                "exec": [
+                  "var CryptoJS = require(\"crypto-js\");\r",
+                  "\r",
+                  "var publicKey = pm.environment.get(\"publicKey\");\r",
+                  "var privateKey = CryptoJS.enc.Base64.parse(pm.environment.get(\"privateKey\"));\r",
+                  "\r",
+                  "var timestamp = (new Date).getTime() / 1000;\r",
+                  "\r",
+                  "var nonce = timestamp;\r",
+                  "    \r",
+                  "var body = request.data;\r",
+                  "\r",
+                  "if (body.length > 0){\r",
+                  "    var utf8Body = CryptoJS.enc.Utf8.parse(body);\r",
+                  "    var hashedBody = CryptoJS.SHA256(utf8Body);\r",
+                  "    var bodySignature = CryptoJS.enc.Base64.stringify(hashedBody);\r",
+                  "}\r",
+                  "else {\r",
+                  "    var bodySignature = \"\";\r",
+                  "}\r",
+                  "\r",
+                  "var unsignedSignature = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + bodySignature;\r",
+                  "\r",
+                  "var utf8Signature = CryptoJS.enc.Utf8.parse(unsignedSignature);\r",
+                  "var hashedSignature = CryptoJS.HmacSHA256(utf8Signature, privateKey);\r",
+                  "var signedSignature = CryptoJS.enc.Base64.stringify(hashedSignature);\r",
+                  "\r",
+                  "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;\r",
+                  "\r",
+                  "pm.variables.set(\"token\", hmac);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Hmac {{token}}",
+                "type": "text"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
