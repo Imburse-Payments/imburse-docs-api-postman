@@ -2111,7 +2111,7 @@
                 },
                 {
                   "_postman_id": "d3b41786-ed54-4c1f-ac63-3e1abebbb7a3",
-                  "name": "Get All Keys Copy",
+                  "name": "Get Key by Public Key",
                   "request": {
                     "method": "GET",
                     "header": [],
