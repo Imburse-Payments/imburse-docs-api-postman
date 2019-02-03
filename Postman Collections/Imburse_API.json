@@ -2183,15 +2183,7 @@
               "_postman_id": "b195ab08-dd5a-4639-b975-f9842b87e7b5",
               "name": "Clients",
               "description": "",
-              "item": [
-                {
-                  "_postman_id": "995f5d59-0b3a-4d08-bd9f-41a39a62f6a0",
-                  "name": "Get Clients",
-                  "description": "",
-                  "item": [],
-                  "_postman_isSubFolder": true
-                }
-              ],
+              "item": [],
               "_postman_isSubFolder": true
             }
           ],
