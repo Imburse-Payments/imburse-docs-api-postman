@@ -2093,7 +2093,38 @@
               "_postman_id": "09e70593-2a88-4c91-a7cb-1b6d3934b979",
               "name": "Account Keys",
               "description": "",
-              "item": [],
+              "item": [
+                {
+                  "_postman_id": "75d7c37d-24f0-48c2-bdd7-48b1ad2fc463",
+                  "name": "Get All Keys",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "d3b41786-ed54-4c1f-ac63-3e1abebbb7a3",
+                  "name": "Get All Keys Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
