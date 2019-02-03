@@ -2067,6 +2067,13 @@
           "description": "",
           "item": [
             {
+              "_postman_id": "31794e93-b12f-4a30-acee-59a5ca4becb6",
+              "name": "Account Details",
+              "description": "",
+              "item": [],
+              "_postman_isSubFolder": true
+            },
+            {
               "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
               "name": "Get Account",
               "request": {
