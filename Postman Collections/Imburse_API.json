@@ -2125,21 +2125,6 @@
                   "response": []
                 },
                 {
-                  "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
-                  "name": "Delete a Key",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
-                  },
-                  "response": []
-                },
-                {
                   "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
                   "name": "Get Key by Public Key Copy",
                   "request": {
@@ -2151,6 +2136,21 @@
                     },
                     "url": "",
                     "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
+                  "name": "Delete a Key",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": []
                 }
