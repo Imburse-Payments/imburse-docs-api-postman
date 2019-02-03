@@ -2567,7 +2567,7 @@
                 },
                 {
                   "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
-                  "name": "Get Users Copy",
+                  "name": "Get Users By Id",
                   "request": {
                     "method": "GET",
                     "header": [],
@@ -2575,33 +2575,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": {
-                      "raw": "{{orgApiIUrl}}v1/client/users?from=0&take=20&email=",
-                      "host": [
-                        "{{orgApiIUrl}}v1"
-                      ],
-                      "path": [
-                        "client",
-                        "users"
-                      ],
-                      "query": [
-                        {
-                          "key": "from",
-                          "value": "0",
-                          "equals": true
-                        },
-                        {
-                          "key": "take",
-                          "value": "20",
-                          "equals": true
-                        },
-                        {
-                          "key": "email",
-                          "value": "",
-                          "equals": true
-                        }
-                      ]
-                    }
+                    "url": "{{orgApiIUrl}}v1/client/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
                   },
                   "response": []
                 },
@@ -2636,7 +2610,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/account/users/a6d39e8a-4cee-4ee0-a99a-93e5203c6a25"
+                    "url": "{{orgApiIUrl}}v1/client/users/a6d39e8a-4cee-4ee0-a99a-93e5203c6a25"
                   },
                   "response": []
                 }
