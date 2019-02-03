@@ -2308,6 +2308,21 @@
                   "response": []
                 },
                 {
+                  "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
+                  "name": "Remove Client Key by Public Key Copy",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/cdc4f59f-5c43-4f02-9b39-99a7d1d6d28c",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
                   "_postman_id": "27c321c6-f5be-4d84-9a65-f23337c04a7f",
                   "name": "Create Key for Client",
                   "request": {
@@ -2476,21 +2491,6 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
-                  "name": "Remove Client Key by Public Key Copy",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/cdc4f59f-5c43-4f02-9b39-99a7d1d6d28c",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
