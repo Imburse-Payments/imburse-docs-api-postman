@@ -2375,54 +2375,9 @@
         },
         {
           "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
-          "name": "Accounts Copy",
+          "name": "Clients",
           "description": "",
           "item": [
-            {
-              "_postman_id": "7f6b4a2b-6ce8-4c60-8deb-f11bcedcc57a",
-              "name": "General Info",
-              "description": "",
-              "item": [
-                {
-                  "_postman_id": "c0b561a5-627f-4371-ac96-fdd88a4e4828",
-                  "name": "Get Account",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/account",
-                    "description": "Gets the account information."
-                  },
-                  "response": []
-                }
-              ],
-              "event": [
-                {
-                  "listen": "prerequest",
-                  "script": {
-                    "id": "31ef9369-14ea-44bb-a91a-582c84aa056a",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                },
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "8ea2a464-9b3c-4022-946b-74e1cf23e5ad",
-                    "type": "text/javascript",
-                    "exec": [
-                      ""
-                    ]
-                  }
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
             {
               "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
               "name": "Security Keys",
