@@ -2067,19 +2067,27 @@
           "description": "",
           "item": [
             {
-              "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
-              "name": "Get Account",
-              "request": {
-                "method": "GET",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{orgApiIUrl}}v1/account",
-                "description": "Gets the account information."
-              },
-              "response": []
+              "_postman_id": "53e94c1d-bcfd-472d-b4e7-14289ab131c6",
+              "name": "Account Info",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
+                  "name": "Get Account",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account",
+                    "description": "Gets the account information."
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
             }
           ],
           "event": [
