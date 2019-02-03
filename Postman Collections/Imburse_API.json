@@ -2276,6 +2276,21 @@
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
+                },
+                {
+                  "_postman_id": "27c321c6-f5be-4d84-9a65-f23337c04a7f",
+                  "name": "Get Client Keys Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
                 }
               ],
               "_postman_isSubFolder": true
