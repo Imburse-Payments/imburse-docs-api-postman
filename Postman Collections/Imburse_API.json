@@ -2065,16 +2065,76 @@
           "_postman_id": "d4a8fee4-7343-464f-9b3f-bf42e81619e2",
           "name": "Accounts",
           "description": "",
-          "item": [],
+          "item": [
+            {
+              "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
+              "name": "Get Account",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "",
+                "description": "Gets the account information."
+              },
+              "response": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "3d3ef99c-2ae8-4cec-8eab-c2034155fcd1",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4b1e4156-1309-416d-ba90-fd32a5e0b00c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "{{bearerToken}}"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "f254ad29-49ef-47df-9dac-6a5e8644ebb3",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "6d9d08e4-674c-4145-a716-97057dca1901",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
       ]
-    },
-    {
-      "_postman_id": "ac47d802-ba5f-4f75-9864-7b8ed1bc8d4e",
-      "name": "Organisation API Reference Copy",
-      "description": "",
-      "item": []
     }
   ],
   "event": [
