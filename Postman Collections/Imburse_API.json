@@ -2200,8 +2200,8 @@
                   "response": []
                 },
                 {
-                  "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
-                  "name": "Get Clients Copy",
+                  "_postman_id": "6e2b30b7-bbb6-430b-b3fd-6b8451a37893",
+                  "name": "Get Client By Id",
                   "request": {
                     "method": "GET",
                     "header": [],
@@ -2211,6 +2211,283 @@
                     },
                     "url": "",
                     "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
+                  "name": "Create new client",
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
+                        "exec": [
+                          "pm.environment.set(\"newClientName\", Math.random().toString(36).substring(7));"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/clients",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "94282eb1-d0e4-4ad4-88a6-10f82b9ba66e",
+                  "name": "Update Client",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "3d3ef99c-2ae8-4cec-8eab-c2034155fcd1",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4b1e4156-1309-416d-ba90-fd32a5e0b00c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "768dd283-ddbe-432a-ab89-d753bb287059",
+          "name": "Accounts Copy",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "8efad264-25b8-49a2-890b-10eb1f6dbbf4",
+              "name": "General Info",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "9435da4e-beb9-4302-a491-700260213278",
+                  "name": "Get Account",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account",
+                    "description": "Gets the account information."
+                  },
+                  "response": []
+                }
+              ],
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "31ef9369-14ea-44bb-a91a-582c84aa056a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8ea2a464-9b3c-4022-946b-74e1cf23e5ad",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "7b8fb2ce-cf23-4796-b6ab-325cabf9855d",
+              "name": "Security Keys",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "bbfd49ef-b5e7-4774-9ccf-9684656511f3",
+                  "name": "Get All Keys",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "8f879131-d688-43af-adf3-f416a6792202",
+                  "name": "Get Key by Public Key",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "f162a6c1-8a6d-48c0-a914-8b5f2150d9da",
+                  "name": "Create a new Key",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys/",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "49beb076-914b-427e-a939-dccb5a68cd2e",
+                  "name": "Delete a Key",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
+                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "3aa9ab85-1e98-4510-9610-76ae635b08e7",
+              "name": "Clients",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "2efdda2c-3d3e-406b-8186-a58090cdfa6c",
+                  "name": "Get Clients",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "d02db331-2fb5-482d-afc6-ba4e517cd8b9",
+                  "name": "Get Client By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "5ce627fd-456a-469b-b907-705b0da71757",
+                  "name": "Create new client",
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
+                        "exec": [
+                          "pm.environment.set(\"newClientName\", Math.random().toString(36).substring(7));"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/clients",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "14bfa8cc-c042-4414-9382-fd58b8745d71",
+                  "name": "Update Client",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": ""
                   },
                   "response": []
                 }
