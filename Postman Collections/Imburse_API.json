@@ -2288,13 +2288,20 @@
                   "_postman_id": "aed6edd9-25f1-45be-9232-da62d9bbdb26",
                   "name": "Assign User",
                   "request": {
-                    "method": "GET",
-                    "header": [],
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "{\n\t\"acc.g.super\"\n}"
                     },
-                    "url": ""
+                    "url": "{{orgApiIUrl}}v1/account/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
                   },
                   "response": []
                 }
