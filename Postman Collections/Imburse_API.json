@@ -2280,7 +2280,33 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": ""
+                    "url": {
+                      "raw": "{{orgApiIUrl}}v1/account/users?from=0&take=20&email=",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "account",
+                        "users"
+                      ],
+                      "query": [
+                        {
+                          "key": "from",
+                          "value": "0",
+                          "equals": true
+                        },
+                        {
+                          "key": "take",
+                          "value": "20",
+                          "equals": true
+                        },
+                        {
+                          "key": "email",
+                          "value": "",
+                          "equals": true
+                        }
+                      ]
+                    }
                   },
                   "response": []
                 },
@@ -2299,7 +2325,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"acc.g.super\"\n}"
+                      "raw": "[\n\t\"acc.g.super\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/account/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
                   },
