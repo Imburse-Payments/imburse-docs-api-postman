@@ -2269,7 +2269,22 @@
               "_postman_id": "ac94da31-9efc-4702-b3b0-1f2aac7c82a8",
               "name": "Users",
               "description": "",
-              "item": [],
+              "item": [
+                {
+                  "_postman_id": "379663a6-4847-41b5-b5b4-d3afe24914d5",
+                  "name": "Get Users",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": ""
+                  },
+                  "response": []
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
