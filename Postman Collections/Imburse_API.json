@@ -2566,6 +2566,46 @@
                   "response": []
                 },
                 {
+                  "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
+                  "name": "Get Users Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{orgApiIUrl}}v1/client/users?from=0&take=20&email=",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "client",
+                        "users"
+                      ],
+                      "query": [
+                        {
+                          "key": "from",
+                          "value": "0",
+                          "equals": true
+                        },
+                        {
+                          "key": "take",
+                          "value": "20",
+                          "equals": true
+                        },
+                        {
+                          "key": "email",
+                          "value": "",
+                          "equals": true
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
                   "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
                   "name": "Assign User",
                   "request": {
