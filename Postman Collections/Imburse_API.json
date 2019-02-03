@@ -2521,92 +2521,6 @@
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "dc882d2f-970d-4bdc-98e9-50cdf8b2543e",
-              "name": "Clients",
-              "description": "",
-              "item": [
-                {
-                  "_postman_id": "64141e1a-27f9-4b3f-bb65-d52ba48ade2a",
-                  "name": "Get Clients",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "79b2a1df-afa8-4660-a50a-80647dc2790f",
-                  "name": "Get Client By Id",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "3c40a29b-b858-427f-aaa1-b11369bc1e9a",
-                  "name": "Create new client",
-                  "event": [
-                    {
-                      "listen": "prerequest",
-                      "script": {
-                        "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
-                        "exec": [
-                          "pm.environment.set(\"newClientName\", Math.random().toString(36).substring(7));"
-                        ],
-                        "type": "text/javascript"
-                      }
-                    }
-                  ],
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
-                    },
-                    "url": "{{orgApiIUrl}}v1/account/clients",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "78c734a3-b54c-439a-9666-ba7779f5fb4f",
-                  "name": "Update Client",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": ""
-                  },
-                  "response": []
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
               "_postman_id": "ec09be74-4f68-4b14-bad4-631c112467b2",
               "name": "Users",
               "description": "",
@@ -2622,12 +2536,12 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "{{orgApiIUrl}}v1/account/users?from=0&take=20&email=",
+                      "raw": "{{orgApiIUrl}}v1/client/users?from=0&take=20&email=",
                       "host": [
                         "{{orgApiIUrl}}v1"
                       ],
                       "path": [
-                        "account",
+                        "client",
                         "users"
                       ],
                       "query": [
@@ -2666,9 +2580,9 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "[\n\t\"acc.g.super\"\n]"
+                      "raw": "[\n\t\"cl.g.super\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/account/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
+                    "url": "{{orgApiIUrl}}v1/client/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
                   },
                   "response": []
                 },
