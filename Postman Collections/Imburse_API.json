@@ -2076,7 +2076,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "",
+                "url": "{{orgApiIUrl}}v1/account",
                 "description": "Gets the account information."
               },
               "response": []
