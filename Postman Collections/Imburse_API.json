@@ -2335,6 +2335,235 @@
                   "_postman_id": "7eb50f74-570e-4482-9747-700f69afc9c2",
                   "name": "Remove user",
                   "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/users/a6d39e8a-4cee-4ee0-a99a-93e5203c6a25"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "3d3ef99c-2ae8-4cec-8eab-c2034155fcd1",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4b1e4156-1309-416d-ba90-fd32a5e0b00c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
+          "name": "Accounts Copy",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "7f6b4a2b-6ce8-4c60-8deb-f11bcedcc57a",
+              "name": "General Info",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "c0b561a5-627f-4371-ac96-fdd88a4e4828",
+                  "name": "Get Account",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account",
+                    "description": "Gets the account information."
+                  },
+                  "response": []
+                }
+              ],
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "31ef9369-14ea-44bb-a91a-582c84aa056a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8ea2a464-9b3c-4022-946b-74e1cf23e5ad",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
+              "name": "Security Keys",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "e3594685-13a2-438b-8427-11828749405d",
+                  "name": "Get All Keys",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "175b7a72-52d5-4422-9fec-ee7a1193c11e",
+                  "name": "Get Key by Public Key",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "22ac81fb-7805-41f4-be7c-4ef3b69280d5",
+                  "name": "Create a new Key",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys/",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "6afbc0da-454e-49ea-a0f6-e7985900862b",
+                  "name": "Delete a Key",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
+                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "dc882d2f-970d-4bdc-98e9-50cdf8b2543e",
+              "name": "Clients",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "64141e1a-27f9-4b3f-bb65-d52ba48ade2a",
+                  "name": "Get Clients",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "79b2a1df-afa8-4660-a50a-80647dc2790f",
+                  "name": "Get Client By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "3c40a29b-b858-427f-aaa1-b11369bc1e9a",
+                  "name": "Create new client",
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
+                        "exec": [
+                          "pm.environment.set(\"newClientName\", Math.random().toString(36).substring(7));"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/clients",
+                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "78c734a3-b54c-439a-9666-ba7779f5fb4f",
+                  "name": "Update Client",
+                  "request": {
                     "method": "GET",
                     "header": [],
                     "body": {
@@ -2342,6 +2571,89 @@
                       "raw": ""
                     },
                     "url": ""
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "ec09be74-4f68-4b14-bad4-631c112467b2",
+              "name": "Users",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "dc71550f-7d85-40e5-987e-5f0579f919bb",
+                  "name": "Get Users",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{orgApiIUrl}}v1/account/users?from=0&take=20&email=",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "account",
+                        "users"
+                      ],
+                      "query": [
+                        {
+                          "key": "from",
+                          "value": "0",
+                          "equals": true
+                        },
+                        {
+                          "key": "take",
+                          "value": "20",
+                          "equals": true
+                        },
+                        {
+                          "key": "email",
+                          "value": "",
+                          "equals": true
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
+                  "name": "Assign User",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "[\n\t\"acc.g.super\"\n]"
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "2537f2ba-d886-40ce-8de2-50b24938d0b8",
+                  "name": "Remove user",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/users/a6d39e8a-4cee-4ee0-a99a-93e5203c6a25"
                   },
                   "response": []
                 }
