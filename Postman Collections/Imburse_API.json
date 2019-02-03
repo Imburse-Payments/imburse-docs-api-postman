@@ -2068,7 +2068,7 @@
           "item": [
             {
               "_postman_id": "53e94c1d-bcfd-472d-b4e7-14289ab131c6",
-              "name": "Account Info",
+              "name": "General Info",
               "description": "",
               "item": [
                 {
@@ -2087,11 +2087,33 @@
                   "response": []
                 }
               ],
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "31ef9369-14ea-44bb-a91a-582c84aa056a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8ea2a464-9b3c-4022-946b-74e1cf23e5ad",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             },
             {
               "_postman_id": "09e70593-2a88-4c91-a7cb-1b6d3934b979",
-              "name": "Account Keys",
+              "name": "Security Keys",
               "description": "",
               "item": [
                 {
@@ -2126,15 +2148,15 @@
                 },
                 {
                   "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
-                  "name": "Get Key by Public Key Copy",
+                  "name": "Create a new Key",
                   "request": {
-                    "method": "GET",
+                    "method": "POST",
                     "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
+                    "url": "{{orgApiIUrl}}v1/account/keys/",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -2143,13 +2165,13 @@
                   "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
                   "name": "Delete a Key",
                   "request": {
-                    "method": "GET",
+                    "method": "DELETE",
                     "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
+                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
                     "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": []
