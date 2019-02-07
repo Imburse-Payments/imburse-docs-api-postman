@@ -2041,7 +2041,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
+                "value": "Hmac 00000000-0f82-4905-9eba-eda935411111:1549541941.521:1549541941.521:w66tkGNZ8rXCkeYw54K/M89dmCJvExZh7pVCQbM4nPk=",
                 "type": "text"
               }
             ],
@@ -2049,7 +2049,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}v1/auth/hmac",
+            "url": "{{identityApiUrl}}/v1/auth/hmac",
             "description": "Creates a new bearer token."
           },
           "response": []
