@@ -314,6 +314,198 @@
           "_postman_isSubFolder": true
         },
         {
+          "_postman_id": "59dbbaa5-7b69-4041-94de-b8e3ba12a492",
+          "name": "DELETE - Client API Tokens",
+          "description": "Client API Token objects allow you to manage your client tokens. The API allows you to create new tokens as well as retrieve tokens. You can also invalidate an existing token.\r\n\r\n## The client API token object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npublicKey | string | The token's public key\r\nprivateKey | string | The token's private key (secret)\r\nname | string | The friendly name for this token\r\nscopes | array of [Scope](#the-scope-object) objects | Defines scopes that this token has permission to use\r\n\r\n### The scope object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nscopeName | string | The name of the scope. i.e `Client-API` or `Payments-API`. Scope name is **case-sensitive**.\r\nclaims | array of [Claim](#the-claim-object) objects | Defines the claims and roles for a given scope\r\n\r\n### The claim object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nroles | array of [Roles](#role-names) string | A list of roles permitted in the parent scope. Permitted roles names are: `client-read`, `client-write`, `client-token-read`, `client-token-write`, `collection-scheme-read`, `collection-scheme-write`, `psp-configuration-read`, `psp-configuration-write`",
+          "item": [
+            {
+              "_postman_id": "e739b19b-2793-4281-9028-c108833f621a",
+              "name": "Create a Client Token ",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"name\": \"\",\n\t\"scopes\":[\n\t\t{\n\t\t\t\"scopeName\":\"\",\n\t\t\t\"claims\":{\n\t\t\t\t\"roles\":[\n\t\t\t\t\t\"\",\n\t\t\t\t\t\"\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}\n"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
+                "description": "#### Description\r\n\r\nCreates a new Client API Token. \r\n\r\nUse this operation to create a new token for your client.\r\n\r\n**Note:** The response will return the newly generated `publicKey` and `privateKey`. You must **record** the `privateKey` after it has been created as it is **NOT** retrievable afterwards. \r\n\r\nIf you lose the `privateKey` for a token you will need to create a new token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that the token is to be created for."
+              },
+              "response": [
+                {
+                  "id": "b97087b5-e0fa-4d17-8f58-ead6ef8d05fc",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"name\": \"\",\n    \"scopes\": [\n        {\n            \"scopeName\": \"\",\n            \"claims\": {\n                \"roles\": [\n                    \"\",\n                    \"\"\n                ]\n            }\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "fe5496a0-8c01-458a-8b0e-4ad866ca505b",
+              "name": "Get list of Client Tokens",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
+                "description": "#### Description\r\n\r\nGets a list of Client Tokens.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens"
+              },
+              "response": [
+                {
+                  "id": "90d032eb-17ed-4c27-b44b-49b3e6248eb2",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"publicKey\": \"\",\n        \"privateKey\": \"\",\n        \"name\": \"\",\n        \"scopes\": [\n            {\n                \"scopeName\": \"\",\n                \"claims\": {\n                    \"roles\": [\n                        \"\",\n                        \"\"\n                    ]\n                }\n            }\n        ]\n    }\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "075c7a92-2ee3-44b0-b1d1-707828065482",
+              "name": "Get a Client Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {},
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}",
+                "description": "#### Description\r\n\r\nGets the details of an existing Client API Token.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens\r\npublicKey | The `publicKey` of the token to retrieve"
+              },
+              "response": [
+                {
+                  "id": "f089e9dc-a6bf-4c40-8506-377b6a00b707",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\",\r\n    \"scopes\": [\r\n      {\r\n        \"scopeName\": \"\",\r\n        \"claims\": {\r\n          \"roles\": [\r\n            \"\",\r\n            \"\"\r\n          ]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "4b451db9-647e-4b16-8a8d-457f37cd2d10",
+              "name": "Invalidate a Client Token",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate",
+                "description": "#### Description\r\n\r\nInvalidating a token will render it unusable.\r\n\r\nUse this operation when you want to disable a token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The parent client id of the token.\r\npublicKey | The publicKey of the token you that you want to invalidate."
+              },
+              "response": [
+                {
+                  "id": "60b9c505-8243-433a-8c10-831011dc460d",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {},
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": ""
+                }
+              ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8f3fe1ee-cb33-4401-8f71-01ef6b2bc909",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "2236f462-7223-424e-a622-08437c16341a",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "a6fecd5c-23df-4600-b447-0319fa9185ae",
           "name": "Clients",
           "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
@@ -520,198 +712,6 @@
               "listen": "test",
               "script": {
                 "id": "d57342ab-7b4f-4df4-9bc3-eb3adc77d4ad",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "59dbbaa5-7b69-4041-94de-b8e3ba12a492",
-          "name": "DELETE - Client API Tokens",
-          "description": "Client API Token objects allow you to manage your client tokens. The API allows you to create new tokens as well as retrieve tokens. You can also invalidate an existing token.\r\n\r\n## The client API token object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npublicKey | string | The token's public key\r\nprivateKey | string | The token's private key (secret)\r\nname | string | The friendly name for this token\r\nscopes | array of [Scope](#the-scope-object) objects | Defines scopes that this token has permission to use\r\n\r\n### The scope object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nscopeName | string | The name of the scope. i.e `Client-API` or `Payments-API`. Scope name is **case-sensitive**.\r\nclaims | array of [Claim](#the-claim-object) objects | Defines the claims and roles for a given scope\r\n\r\n### The claim object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nroles | array of [Roles](#role-names) string | A list of roles permitted in the parent scope. Permitted roles names are: `client-read`, `client-write`, `client-token-read`, `client-token-write`, `collection-scheme-read`, `collection-scheme-write`, `psp-configuration-read`, `psp-configuration-write`",
-          "item": [
-            {
-              "_postman_id": "e739b19b-2793-4281-9028-c108833f621a",
-              "name": "Create a Client Token ",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"name\": \"\",\n\t\"scopes\":[\n\t\t{\n\t\t\t\"scopeName\":\"\",\n\t\t\t\"claims\":{\n\t\t\t\t\"roles\":[\n\t\t\t\t\t\"\",\n\t\t\t\t\t\"\"\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}\n"
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
-                "description": "#### Description\r\n\r\nCreates a new Client API Token. \r\n\r\nUse this operation to create a new token for your client.\r\n\r\n**Note:** The response will return the newly generated `publicKey` and `privateKey`. You must **record** the `privateKey` after it has been created as it is **NOT** retrievable afterwards. \r\n\r\nIf you lose the `privateKey` for a token you will need to create a new token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that the token is to be created for."
-              },
-              "response": [
-                {
-                  "id": "b97087b5-e0fa-4d17-8f58-ead6ef8d05fc",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {},
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"name\": \"\",\n    \"scopes\": [\n        {\n            \"scopeName\": \"\",\n            \"claims\": {\n                \"roles\": [\n                    \"\",\n                    \"\"\n                ]\n            }\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "fe5496a0-8c01-458a-8b0e-4ad866ca505b",
-              "name": "Get list of Client Tokens",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  }
-                ],
-                "body": {},
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens",
-                "description": "#### Description\r\n\r\nGets a list of Client Tokens.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens"
-              },
-              "response": [
-                {
-                  "id": "90d032eb-17ed-4c27-b44b-49b3e6248eb2",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {},
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\n    {\n        \"publicKey\": \"\",\n        \"privateKey\": \"\",\n        \"name\": \"\",\n        \"scopes\": [\n            {\n                \"scopeName\": \"\",\n                \"claims\": {\n                    \"roles\": [\n                        \"\",\n                        \"\"\n                    ]\n                }\n            }\n        ]\n    }\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "075c7a92-2ee3-44b0-b1d1-707828065482",
-              "name": "Get a Client Token",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  }
-                ],
-                "body": {},
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}",
-                "description": "#### Description\r\n\r\nGets the details of an existing Client API Token.\r\n\r\n#### Role required\r\n\r\n`client-token-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the tokens\r\npublicKey | The `publicKey` of the token to retrieve"
-              },
-              "response": [
-                {
-                  "id": "f089e9dc-a6bf-4c40-8506-377b6a00b707",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {},
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\r\n  {\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\",\r\n    \"scopes\": [\r\n      {\r\n        \"scopeName\": \"\",\r\n        \"claims\": {\r\n          \"roles\": [\r\n            \"\",\r\n            \"\"\r\n          ]\r\n        }\r\n      }\r\n    ]\r\n  }\r\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "4b451db9-647e-4b16-8a8d-457f37cd2d10",
-              "name": "Invalidate a Client Token",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate",
-                "description": "#### Description\r\n\r\nInvalidating a token will render it unusable.\r\n\r\nUse this operation when you want to disable a token.\r\n\r\n#### Role required\r\n\r\n`client-token-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The parent client id of the token.\r\npublicKey | The publicKey of the token you that you want to invalidate."
-              },
-              "response": [
-                {
-                  "id": "60b9c505-8243-433a-8c10-831011dc460d",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {},
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/tokens/{publicKey}/invalidate"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
-                }
-              ]
-            }
-          ],
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "8f3fe1ee-cb33-4401-8f71-01ef6b2bc909",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "2236f462-7223-424e-a622-08437c16341a",
                 "type": "text/javascript",
                 "exec": [
                   ""
