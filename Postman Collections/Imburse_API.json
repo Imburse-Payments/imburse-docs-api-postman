@@ -3336,64 +3336,64 @@
                       "body": "{\n\t\"rewardConfigurationId\": \"\",\n    \"name\": \"\",\n}"
                     }
                   ]
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
-              "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
-              "name": "Update a Tangocard Configuration",
-              "request": {
-                "auth": {
-                  "type": "noauth"
                 },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"name\": \"\"\r\n}"
-                },
-                "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{pspConfigurationId}}",
-                "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP Configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
-              },
-              "response": [
                 {
-                  "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
+                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
+                  "name": "Update a Tangocard Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "PUT",
                     "header": [
                       {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
                         "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
+                        "value": "application/json"
                       }
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"rewardConfigurationId\": \"\",\n\t\"name\": \"\"\n}"
+                      "raw": "{\r\n  \"name\": \"\"\r\n}"
                     },
-                    "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{pspConfigurationId}}"
+                    "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{pspConfigurationId}}",
+                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP Configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
                   },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
+                  "response": [
+                    {
+                      "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"rewardConfigurationId\": \"\",\n\t\"name\": \"\"\n}"
+                        },
+                        "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{pspConfigurationId}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
                 }
-              ]
+              ],
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_isSubFolder": true
