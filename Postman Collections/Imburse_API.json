@@ -2926,7 +2926,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
@@ -3093,7 +3093,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
@@ -3141,7 +3141,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
