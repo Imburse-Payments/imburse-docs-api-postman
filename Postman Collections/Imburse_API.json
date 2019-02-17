@@ -3949,6 +3949,422 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
+          "name": "Collection Schemes Copy",
+          "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
+          "item": [
+            {
+              "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
+              "name": "Create a Scheme",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                },
+                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+              },
+              "response": [
+                {
+                  "id": "bddcd0fe-28fb-417f-b736-941da7fedd8d",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"schemeSettings\": [\r\n    {\r\n      \"id\": \"\",\r\n      \"country\": \"\",\r\n      \"paymentMethods\": [\r\n        {\r\n          \"pspId\": \"\",\r\n          \"paymentMethodType\": \"\",\r\n          \"enabled\": true,\r\n          \"key\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
+              "name": "Get list of Schemes",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "description": "#### Description \n\nGet a list to collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+              },
+              "response": [
+                {
+                  "id": "cc23e532-4f07-4ea8-bea9-f517602a9e3c",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
+              "name": "Get a Scheme",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "description": "#### Description \n\nGet a collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to get"
+              },
+              "response": [
+                {
+                  "id": "ca089b62-52a4-46b4-9b90-ecd1c0d4accb",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "572fcf49-8e43-43b9-8fcc-6e99e45bfed2",
+              "name": "Get available payment methods for new scheme",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}",
+                "description": "#### Description \n\nGets a list of payment methods that are available for a given country code. \n\nUse this operation when creating a new scheme to find the available payment methods. \n\nNot all PSP's operate in all territories so this methods will return a list of all the payment methods available to you from the PSP's you have configured for your client.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\ncountry | The country code that will filter the available payment methods"
+              },
+              "response": [
+                {
+                  "id": "04ae900c-b708-40db-8f9e-5834982e1a2c",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
+              "name": "Update a Scheme",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                },
+                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to be updated"
+              },
+              "response": [
+                {
+                  "id": "eeb75375-25cd-4b52-b855-8eefbe51476b",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                  },
+                  "status": "Accepted",
+                  "code": 202,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"id\": \"\",\n        \"name\": \"\",\n        \"schemeSettings\": [\n            {\n                \"id\": \"\",\n                \"country\": \"\",\n                \"paymentMethods\": [\n                    {\n                        \"pspId\": \"\",\n                        \"paymentMethodType\": \"\",\n                        \"enabled\": true,\n                        \"key\": \"\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+                }
+              ]
+            },
+            {
+              "_postman_id": "c77b8b8b-99e2-4622-9f90-85247af68fae",
+              "name": "Update a Scheme Setting",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true\r\n      }\r\n    ]\r\n  }"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
+                "description": "#### Description \n\nUpdates a scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will owns the scheme setting\nschemeSettingId | The id of the scheme setting to update"
+              },
+              "response": [
+                {
+                  "id": "7a9b93f0-6f9f-4fb3-9559-e012b55f3dd2",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"country\": \"\",\n    \"paymentMethods\": [\n        {\n            \"pspId\": \"\",\n            \"paymentMethodType\": \"\",\n            \"enabled\": true,\n            \"key\": \"\"\n        }\n    ]\n}\n"
+                }
+              ]
+            },
+            {
+              "_postman_id": "375cfede-f38f-40a7-b828-b9589e42a221",
+              "name": "Update a Scheme Setting Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true\r\n      }\r\n    ]\r\n  }"
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
+                "description": "#### Description \n\nUpdates a scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will owns the scheme setting\nschemeSettingId | The id of the scheme setting to update"
+              },
+              "response": [
+                {
+                  "id": "b5b94bd7-f118-42f8-a5d4-559fb0ba7ba0",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"country\": \"\",\n    \"paymentMethods\": [\n        {\n            \"pspId\": \"\",\n            \"paymentMethodType\": \"\",\n            \"enabled\": true,\n            \"key\": \"\"\n        }\n    ]\n}\n"
+                }
+              ]
+            },
+            {
+              "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
+              "name": "Delete a Scheme",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "description": "#### Description \n\nDeletes a collection scheme.\n\n**Note:** You cannot delete a scheme that still has scheme settings. Delete the individual scheme settings before deleting the scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to delete"
+              },
+              "response": [
+                {
+                  "id": "342f2685-1982-49f3-82d6-faa5ca14e8f4",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": ""
+                }
+              ]
+            }
+          ],
+          "_postman_isSubFolder": true
         }
       ]
     },
