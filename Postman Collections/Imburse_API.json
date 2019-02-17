@@ -2925,6 +2925,13 @@
               "_postman_isSubFolder": true
             },
             {
+              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
+              "name": "Paydirekt OneKlick",
+              "description": "",
+              "item": [],
+              "_postman_isSubFolder": true
+            },
+            {
               "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
               "name": "Get list of Payment Provider Configurations",
               "request": {
