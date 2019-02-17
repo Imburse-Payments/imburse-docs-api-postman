@@ -3069,7 +3069,7 @@
                 },
                 {
                   "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
-                  "name": "Update a Braintree SDK Configuration Copy",
+                  "name": "Update a Paydirekt Merchant Configuration",
                   "request": {
                     "auth": {
                       "type": "noauth"
