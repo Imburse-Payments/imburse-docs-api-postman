@@ -3531,7 +3531,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
@@ -3590,7 +3590,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   }
                 ],
                 "body": {
@@ -3616,7 +3616,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
+                    "url": "https://{{schemesApiUrl}}/v1/collect"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3624,7 +3624,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                  "body": "[\n    {\n    \t\"id\": \"\",\n        \"name\": \"\",\n        \"clientPspConfigurations\": [],\n        \"collectSchemeOverrides\": [\n            {\n                \"isGlobal\": \"\",\n                \"country\": \"\",\n                \"clientPspConfigurationId\": \"\",\n                \"paymentMethod\": \"\",\n                \"enabled\": \"\"\n            }\n        ]\n    }\n]"
                 }
               ]
             },
@@ -3639,7 +3639,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   }
                 ],
                 "body": {
@@ -3665,7 +3665,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                    "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3673,7 +3673,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\r\n  {\r\n    \"id\": \"\",\r\n    \"name\": \"\",\r\n    \"schemeSettings\": [\r\n      {\r\n        \"id\": \"\",\r\n        \"country\": \"\",\r\n          \"paymentMethods\": [\r\n            {\r\n            \"pspId\": \"\",\r\n            \"paymentMethodType\": \"\",\r\n            \"enabled\": true,\r\n            \"key\": \"\"\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n]"
+                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}\r\n"
                 }
               ]
             },
@@ -3737,7 +3737,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
@@ -3746,7 +3746,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
                 "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to be updated"
@@ -3760,14 +3760,20 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
                       }
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}"
+                    "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}"
                   },
                   "status": "Accepted",
                   "code": 202,
@@ -3775,7 +3781,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n    {\n        \"id\": \"\",\n        \"name\": \"\",\n        \"schemeSettings\": [\n            {\n                \"id\": \"\",\n                \"country\": \"\",\n                \"paymentMethods\": [\n                    {\n                        \"pspId\": \"\",\n                        \"paymentMethodType\": \"\",\n                        \"enabled\": true,\n                        \"key\": \"\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 }
               ]
             },
@@ -3790,7 +3796,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   }
                 ],
                 "body": {
@@ -3847,7 +3853,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
@@ -3856,7 +3862,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
+                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "https://{{schemesApiUrl}}/v1/payout",
                 "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
