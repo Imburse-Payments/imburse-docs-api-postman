@@ -2953,6 +2953,50 @@
                   "body": "[\n\t{\n\t    \"id\": \"\",\n\t    \"pspType\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"configuration\": {}\n\t}\n]"
                 }
               ]
+            },
+            {
+              "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
+              "name": "Get a PSP Configurations Copy",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}",
+                "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
+              },
+              "response": [
+                {
+                  "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                }
+              ]
             }
           ],
           "_postman_isSubFolder": true
@@ -3080,50 +3124,6 @@
           "response": [
             {
               "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
-              "name": "Sucessful Request",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
-          "name": "Get a PSP Configurations Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Hmac {{token}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}",
-            "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
-          },
-          "response": [
-            {
-              "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
               "name": "Sucessful Request",
               "originalRequest": {
                 "method": "GET",
