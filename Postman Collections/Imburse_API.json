@@ -3018,7 +3018,15 @@
                       "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
                     }
                   ]
-                },
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
+              "name": "Paydirekt OneKlick",
+              "description": "",
+              "item": [
                 {
                   "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
                   "name": "Create a Braintree SDK Configuration Copy Copy",
@@ -3068,13 +3076,6 @@
                   ]
                 }
               ],
-              "_postman_isSubFolder": true
-            },
-            {
-              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
-              "name": "Paydirekt OneKlick",
-              "description": "",
-              "item": [],
               "_postman_isSubFolder": true
             },
             {
