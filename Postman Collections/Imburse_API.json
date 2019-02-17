@@ -1473,14 +1473,7 @@
             }
           ],
           "_postman_isSubFolder": true
-        }
-      ]
-    },
-    {
-      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
-      "name": "API Reference",
-      "description": "",
-      "item": [
+        },
         {
           "_postman_id": "a6fecd5c-23df-4600-b447-0319fa9185ae",
           "name": "Clients",
@@ -1696,7 +1689,14 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
+        }
+      ]
+    },
+    {
+      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
+      "name": "API Reference",
+      "description": "",
+      "item": [
         {
           "_postman_id": "cf290393-bf52-4b01-adf9-7273a3e3795a",
           "name": "Whitelabel API Reference",
@@ -1921,7 +1921,7 @@
         },
         {
           "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
-          "name": "PSP Configurations Copy",
+          "name": "Providers API Reference",
           "description": "*Payment Service Provider* (PSP) configuration objects hold the connnection details that Imburse needs to connect to your PSP. With these details, we can carry out instructions on your behalf - such as credit card authorization and/or settlement. PSP configuration objects allow you to manage your PSP configurations for a given client. The API allows you to create, retrieve, and update your configurations.\r\n\r\n## The PSP configuration object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspType | string | The name of the PSP. Currently only `BrainTree` is supported with these operations.\r\nconfiguration | [Configuration](#the-configuration-object) object | An object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`.\r\n\r\n## The configuration object\r\n\r\nThis object will vary depending on the `pspType` the PSP configuration is for.\r\n\r\nListed below are the all the configuration types that are currently supported.\r\n\r\n### The BrainTree configuration object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nmerchantId | string | The `merchantId` for your BrainTree account\r\npublicKey | string  | The `publicKey` for your BrainTree account\r\nprivateKey | string  | The `privateKey` for your BrainTree account\r\n",
           "item": [
             {
@@ -2135,7 +2135,7 @@
         },
         {
           "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
-          "name": "Schemes Copy",
+          "name": "Schemes API Reference",
           "description": "",
           "item": [
             {
@@ -3002,7 +3002,7 @@
         },
         {
           "_postman_id": "2d3ce1f5-408c-461c-ab73-f2ffb2f3cf35",
-          "name": "Client Webhooks Copy",
+          "name": "Notifications API Reference",
           "description": "",
           "item": [
             {
