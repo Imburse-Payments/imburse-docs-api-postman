@@ -4071,7 +4071,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"new name\"\r\n}"
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "url": "https://{{schemesApiUrl}}/v1/payout/{schemeId}",
                 "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to be updated"
               },
               "response": [
@@ -4120,7 +4120,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "url": "https://{{schemesApiUrl}}/v1/payout/{schemeId}",
                 "description": "#### Description \n\nDeletes a collection scheme.\n\n**Note:** You cannot delete a scheme that still has scheme settings. Delete the individual scheme settings before deleting the scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to delete"
               },
               "response": [
