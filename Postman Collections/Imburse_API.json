@@ -3397,7 +3397,7 @@
             },
             {
               "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
-              "name": "Get list of PSP Configurations",
+              "name": "Get list of Reward Provider Configurations",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -3413,7 +3413,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/payment-providers",
+                "url": "https://{{providersApiUrl}}/v1/reward-providers",
                 "description": "#### Description\r\n\r\nGets a list PSP configurations.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configurations"
               },
               "response": [
@@ -3441,7 +3441,7 @@
             },
             {
               "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-              "name": "Get a PSP Configurations",
+              "name": "Get a Reward Provider Configuration",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -3457,7 +3457,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/payment-providers/{{pspConfigurationId}}",
+                "url": "https://{{providersApiUrl}}/v1/reward-providers/{{pspConfigurationId}}",
                 "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
               },
               "response": [
