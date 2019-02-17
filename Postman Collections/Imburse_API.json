@@ -2913,6 +2913,13 @@
           "_postman_isSubFolder": true
         },
         {
+          "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
+          "name": "Reward Providers",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
+        },
+        {
           "_postman_id": "af5adb9b-c05b-4e47-b61d-70d5a9eb801c",
           "name": "Create a PSP Configurations",
           "request": {
