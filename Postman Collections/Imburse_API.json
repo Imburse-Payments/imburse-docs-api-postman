@@ -1462,7 +1462,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n    {\n    \t\"id\": \"\",\n        \"name\": \"\",\n        \"clientPspConfigurations\": [],\n        \"collectSchemeOverrides\": [\n            {\n                \"isGlobal\": \"\",\n                \"country\": \"\",\n                \"clientPspConfigurationId\": \"\",\n                \"paymentMethod\": \"\",\n                \"enabled\": \"\"\n            }\n        ]\n    }\n]"
+                  "body": "[\n    {\n    \t\"id\": \"\",\n        \"name\": \"\",\n        \"paymentProviderConfigurations\": [],\n        \"collectSchemeOverrides\": [\n            {\n                \"isGlobal\": \"\",\n                \"country\": \"\",\n                \"paymentProviderConfigurationId\": \"\",\n                \"paymentMethod\": \"\",\n                \"enabled\": \"\"\n            }\n        ]\n    }\n]"
                 }
               ]
             },
@@ -1511,7 +1511,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}\r\n"
+                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}\r\n"
                 }
               ]
             },
@@ -1584,7 +1584,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
                 "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
