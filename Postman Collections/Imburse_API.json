@@ -3320,7 +3320,7 @@
           "item": [
             {
               "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
-              "name": "Create a Tangocard Configuration",
+              "name": "Create a Paydirekt OneKlick Configuration Copy",
               "request": {
                 "auth": {
                   "type": "noauth"
