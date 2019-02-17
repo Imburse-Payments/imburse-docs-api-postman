@@ -13,7 +13,7 @@
       "item": [
         {
           "_postman_id": "8af3c827-6bb6-434f-bdba-5dd27c7970c6",
-          "name": "Accounts",
+          "name": "DELETE - Accounts",
           "description": "Account objects allow you to perform updates to your account. Use the account object to update your contact address, as well as retrieve your account details. You can also retrieve a list of the clients attached to your account as well as create a new client for your account.\r\n\r\n## The account object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nbillingContactFirstName | string | First name of the billing contact\r\nbillingContactLastName | string | Last name of the billing contact\r\nbillingContactAddress | [address object](#the-address-object) | The billing contact address\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
           "item": [
             {
@@ -2041,7 +2041,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac 00000000-0f82-4905-9eba-eda935411111:1549541941.521:1549541941.521:w66tkGNZ8rXCkeYw54K/M89dmCJvExZh7pVCQbM4nPk=",
+                "value": "Hmac {{token}}",
                 "type": "text"
               }
             ],
@@ -2049,7 +2049,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "url": "{{identityApiUrl}}v1/auth/hmac",
             "description": "Creates a new bearer token."
           },
           "response": []
