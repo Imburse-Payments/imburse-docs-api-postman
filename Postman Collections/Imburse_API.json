@@ -3952,7 +3952,7 @@
         },
         {
           "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
-          "name": "Collection Schemes Copy",
+          "name": "Payout Schemes",
           "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
           "item": [
             {
@@ -3977,7 +3977,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "url": "https://{{schemesApiUrl}}/v1/payout",
                 "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
               },
               "response": [
@@ -4026,7 +4026,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "url": "https://{{schemesApiUrl}}/v1/payout",
                 "description": "#### Description \n\nGet a list to collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
               },
               "response": [
