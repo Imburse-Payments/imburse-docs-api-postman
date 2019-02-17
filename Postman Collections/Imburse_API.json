@@ -2914,7 +2914,104 @@
               "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
               "name": "Braintree SDK",
               "description": "",
-              "item": [],
+              "item": [
+                {
+                  "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
+                  "name": "Create a Braintree SDK Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
+                    "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Either `BRAINTREE_CREDITCARD`, `BRAINTREE_PAYPAL`, or `PAYDIREKT_PAYDIREKT` is supported with these operations.\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
+                  },
+                  "response": [
+                    {
+                      "id": "cd15bd41-7063-4806-b4c8-1cbdfd2aad3f",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
+                  "name": "Create a Braintree SDK Configuration Copy",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Hmac {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
+                    "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Either `BRAINTREE_CREDITCARD`, `BRAINTREE_PAYPAL`, or `PAYDIREKT_PAYDIREKT` is supported with these operations.\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
+                  },
+                  "response": [
+                    {
+                      "id": "7783cfb6-7426-4b24-99a2-5fa499156ccf",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                        },
+                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                    }
+                  ]
+                }
+              ],
               "_postman_isSubFolder": true
             },
             {
@@ -3057,54 +3154,6 @@
           "response": [
             {
               "id": "9a85973e-48e8-406e-8a90-ccb1405d95c3",
-              "name": "Sucessful Request",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
-          "name": "Create a PSP Configurations Copy",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Hmac {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
-            },
-            "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations",
-            "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Either `BRAINTREE_CREDITCARD`, `BRAINTREE_PAYPAL`, or `PAYDIREKT_PAYDIREKT` is supported with these operations.\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
-          },
-          "response": [
-            {
-              "id": "cd15bd41-7063-4806-b4c8-1cbdfd2aad3f",
               "name": "Sucessful Request",
               "originalRequest": {
                 "method": "POST",
