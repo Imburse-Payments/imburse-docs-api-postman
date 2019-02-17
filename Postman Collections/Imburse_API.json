@@ -2973,7 +2973,7 @@
               "item": [
                 {
                   "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
-                  "name": "Create a Braintree SDK Configuration Copy",
+                  "name": "Create a Paydirekt Merchant Configuration",
                   "request": {
                     "auth": {
                       "type": "noauth"
