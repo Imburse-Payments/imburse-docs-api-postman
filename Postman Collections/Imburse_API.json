@@ -1381,7 +1381,7 @@
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "https://{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+                "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`collection-scheme-read`"
               },
               "response": [
                 {
@@ -1436,7 +1436,7 @@
                   "raw": ""
                 },
                 "url": "https://{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nGet a list to collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
+                "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`collection-scheme-read`"
               },
               "response": [
                 {
@@ -1485,7 +1485,7 @@
                   "raw": ""
                 },
                 "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
-                "description": "#### Description \n\nGet a collection schemes\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to get"
+                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
               },
               "response": [
                 {
