@@ -312,7 +312,14 @@
             }
           ],
           "_postman_isSubFolder": true
-        },
+        }
+      ]
+    },
+    {
+      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
+      "name": "API Reference",
+      "description": "",
+      "item": [
         {
           "_postman_id": "59dbbaa5-7b69-4041-94de-b8e3ba12a492",
           "name": "DELETE - Client API Tokens",
@@ -504,14 +511,7 @@
             }
           ],
           "_postman_isSubFolder": true
-        }
-      ]
-    },
-    {
-      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
-      "name": "API Reference",
-      "description": "",
-      "item": [
+        },
         {
           "_postman_id": "a6fecd5c-23df-4600-b447-0319fa9185ae",
           "name": "Clients",
