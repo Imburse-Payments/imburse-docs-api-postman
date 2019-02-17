@@ -4073,7 +4073,7 @@
     },
     {
       "_postman_id": "e431af90-ea5d-468b-838f-64603b97999f",
-      "name": "Collect Payments",
+      "name": "Payment Collection API Reference",
       "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
       "item": [
         {
