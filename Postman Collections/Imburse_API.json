@@ -995,10 +995,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentApiProductConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
+                      "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
                     },
-                    "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{pspConfigurationId}}",
-                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentApiProductConfigurationId | Yes | The account-level parent configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
+                    "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{paymentProviderConfigurationId}}",
+                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent payment provider configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
                   },
                   "response": [
                     {
@@ -1009,9 +1009,9 @@
                         "header": [],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentApiProductConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{pspConfigurationId}}"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{paymentProviderConfigurationId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -1066,7 +1066,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentApiProductConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"merchantId\": \"\",\n\t    \"publicKey\": \"\",\n\t    \"merchantAccountId\": \"\"\n\t}, \n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"PAYDIREKT\",\n\t\t\t\"name\": \"Paydirekt\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"PAYDIREKT_MERCHANT\",\n\t\t\t\"name\": \"Paydirekt Merchant\"\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentApiProductConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"publicKey\": \"\",\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentProviderConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"merchantId\": \"\",\n\t    \"publicKey\": \"\",\n\t    \"merchantAccountId\": \"\"\n\t}, \n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"PAYDIREKT\",\n\t\t\t\"name\": \"Paydirekt\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"PAYDIREKT_MERCHANT\",\n\t\t\t\"name\": \"Paydirekt Merchant\"\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentProviderConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"publicKey\": \"\",\n\t}\n]"
                 }
               ]
             },
@@ -1088,8 +1088,8 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/payment-providers/{{pspConfigurationId}}",
-                "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npspConfigurationId | The id of the PSP configuration to retrieve"
+                "url": "https://{{providersApiUrl}}/v1/payment-providers/{{paymentProviderConfigurationId}}",
+                "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to retrieve"
               },
               "response": [
                 {
