@@ -2786,7 +2786,7 @@
         },
         {
           "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
-          "name": "Get a Client",
+          "name": "Get a Whitelabel Settings",
           "request": {
             "auth": {
               "type": "noauth"
@@ -2825,54 +2825,6 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "000fc84a-4abb-4a9b-8c51-7266890b29df",
-          "name": "Update a Client Address",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Hmac {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"streetAddress\":\"Suite 19 Argeles Grove\",\"extendedAddress\":\"\",\"locality\":\"London\",\"region\":\"Middlesex\",\"postCode\":\"SW1 1LA\",\"country\":\"GB\"}"
-            },
-            "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/address",
-            "description": "#### Description\n\nUpdates the address of an existing client object.\n\n#### Role Required\n\n`client-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client to update"
-          },
-          "response": [
-            {
-              "id": "c6ecfda4-9b4d-4cbc-9973-5d79d556b27c",
-              "name": "Successful request",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
             }
           ]
         }
