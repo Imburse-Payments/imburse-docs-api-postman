@@ -3740,55 +3740,6 @@
               ]
             },
             {
-              "_postman_id": "e729b456-a08a-4784-b758-c5cd39a64e38",
-              "name": "Get available payment methods for new scheme setting",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}/available-payment-methods",
-                "description": "#### Description \n\nGets a list of payment methods that are available to add to an existing scheme setting. \n\nUse this operation when your want to add extra payment methods to an existing scheme setting.\n\nNot all PSP's operate in all territories so this methods will return a list of all the payment methods available to you from the PSP's you have configured for your client plus it will filter out the payment methods that have already been added to the specified scheme setting.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that owns the scheme setting\nschemeSettingId | The id of the schemeSetting to find the availalbe payment methods for"
-              },
-              "response": [
-                {
-                  "id": "02574d8a-98eb-4654-9180-6e9dc9187101",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}/available-payment-methods"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
-                }
-              ]
-            },
-            {
               "_postman_id": "3ecf0965-9615-4242-b441-10f2d476496c",
               "name": "Update a Scheme",
               "request": {
@@ -3965,7 +3916,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}",
+                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
                 "description": "#### Description \n\nDeletes a collection scheme.\n\n**Note:** You cannot delete a scheme that still has scheme settings. Delete the individual scheme settings before deleting the scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme to delete"
               },
               "response": [
