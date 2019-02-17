@@ -2982,7 +2982,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
@@ -3002,10 +3002,17 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "POST",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                          "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
                         },
                         "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{pspConfigurationId}}"
                       },
@@ -3053,17 +3060,17 @@
                         "header": [],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                          "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
                         },
-                        "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations/{{pspConfigurationId}}"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{pspConfigurationId}}"
                       },
-                      "status": "OK",
-                      "code": 200,
+                      "status": "No Content",
+                      "code": 204,
                       "_postman_previewlanguage": "json",
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"pspType\": \"\",\r\n  \"currencies\": [],\r\n  \"configuration\": {\r\n  }\r\n}"
+                      "body": ""
                     }
                   ]
                 }
