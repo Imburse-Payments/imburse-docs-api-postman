@@ -4156,59 +4156,6 @@
               ]
             },
             {
-              "_postman_id": "c77b8b8b-99e2-4622-9f90-85247af68fae",
-              "name": "Update a Scheme Setting",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true\r\n      }\r\n    ]\r\n  }"
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}",
-                "description": "#### Description \n\nUpdates a scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will owns the scheme setting\nschemeSettingId | The id of the scheme setting to update"
-              },
-              "response": [
-                {
-                  "id": "7a9b93f0-6f9f-4fb3-9559-e012b55f3dd2",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
-                    },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings/{schemeSettingId}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"id\": \"\",\n    \"country\": \"\",\n    \"paymentMethods\": [\n        {\n            \"pspId\": \"\",\n            \"paymentMethodType\": \"\",\n            \"enabled\": true,\n            \"key\": \"\"\n        }\n    ]\n}\n"
-                }
-              ]
-            },
-            {
               "_postman_id": "375cfede-f38f-40a7-b828-b9589e42a221",
               "name": "Update a Scheme Setting Copy",
               "request": {
