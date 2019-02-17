@@ -3431,7 +3431,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}"
+                "value": "Bearer {{token}}"
               }
             ],
             "body": {
