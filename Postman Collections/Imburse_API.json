@@ -7,6 +7,12 @@
   },
   "item": [
     {
+      "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
+      "name": "DELETE",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
       "name": "API Reference",
       "description": "",
@@ -16,13 +22,6 @@
           "name": "DELETE - Accounts",
           "description": "Account objects allow you to perform updates to your account. Use the account object to update your contact address, as well as retrieve your account details. You can also retrieve a list of the clients attached to your account as well as create a new client for your account.\r\n\r\n## The account object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nbillingContactFirstName | string | First name of the billing contact\r\nbillingContactLastName | string | Last name of the billing contact\r\nbillingContactAddress | [address object](#the-address-object) | The billing contact address\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
           "item": [
-            {
-              "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
-              "name": "DELETE",
-              "description": "",
-              "item": [],
-              "_postman_isSubFolder": true
-            },
             {
               "_postman_id": "94468d94-bbf9-43e2-abfb-0874c3e46cdc",
               "name": "Create a Client",
