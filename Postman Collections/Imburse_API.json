@@ -1693,12 +1693,6 @@
       ]
     },
     {
-      "_postman_id": "316f18a4-f159-4f2e-8000-fff625c09add",
-      "name": "API Reference",
-      "description": "",
-      "item": []
-    },
-    {
       "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
       "name": "Authentication API Reference",
       "description": "This API describes how to create a Bearer token for API.\n\nIt is based on the HMAC authentication scheme.",
