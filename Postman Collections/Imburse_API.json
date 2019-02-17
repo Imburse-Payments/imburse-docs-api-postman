@@ -164,7 +164,7 @@
         },
         {
           "_postman_id": "fa814f73-ab79-41e7-b84f-bfa1a30f29cb",
-          "name": "Account API Tokens",
+          "name": "DELETE - Account API Tokens",
           "description": "Account API Token objects allow you to manage your account tokens. The API allows you to create new tokens as well as retrieve tokens. You can also get the private key from a given public key.\r\n\r\n## The account API token object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npublicKey | string | The token's public key\r\nprivateKey | string | The token's private key (secret)\r\nname | string | The friendly name for this token\r\nscopes | array of [Scope](#the-scope-object) objects | Defines scopes that this token has permission to use\r\n\r\n### The scope object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nscopeName | string | The name of the scope. i.e `Client-API` or `Payments-API`. Scope name is **case-sensitive**.\r\nclaims | array of [Claim](#the-claim-object) objects | Defines the claims and roles for a given scope\r\n\r\n### The claim object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nroles | array of [Roles](#role-names) string | A list of roles permitted in the parent scope. Permitted roles names are: `client-read`, `client-write`, `client-token-read`, `client-token-write`, `collection-scheme-read`, `collection-scheme-write`, `psp-configuration-read`, `psp-configuration-write`",
           "item": [
             {
