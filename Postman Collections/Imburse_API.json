@@ -3561,7 +3561,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect",
+                "url": "https://{{schemesApiUrl}}/v1/collect",
                 "description": "#### Description \n\nCreates a new collection scheme. This will also create a scheme setting for this scheme at the same time.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes"
               },
               "response": [
@@ -3581,59 +3581,6 @@
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
                     },
                     "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"schemeSettings\": [\r\n    {\r\n      \"id\": \"\",\r\n      \"country\": \"\",\r\n      \"paymentMethods\": [\r\n        {\r\n          \"pspId\": \"\",\r\n          \"paymentMethodType\": \"\",\r\n          \"enabled\": true,\r\n          \"key\": \"\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "424169d0-c1a4-47cb-9d6c-0886d5a5ed76",
-              "name": "Create a Scheme Setting",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n    \"country\": \"\",\r\n    \"paymentMethods\": [\r\n      {\r\n        \"pspId\": \"\",\r\n        \"paymentMethodType\": \"\",\r\n        \"enabled\": true,\r\n        \"key\": \"\"\r\n      }\r\n    ]\r\n  }"
-                },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings",
-                "description": "#### Description \n\nCreate a new scheme setting.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\nschemeId | The id of the scheme that will own the new scheme setting"
-              },
-              "response": [
-                {
-                  "id": "f573bc00-252b-4924-80fa-daf804fdcadc",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"country\": \"\",\r\n\t\"paymentMethods\": [\r\n\t  {\r\n\t    \"pspId\": \"\",\r\n\t    \"paymentMethodType\": \"\",\r\n\t    \"enabled\": true,\r\n\t    \"key\": \"\"\r\n\t  }\r\n\t]\r\n}"
-                    },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/{schemeId}/scheme-settings"
                   },
                   "status": "OK",
                   "code": 200,
