@@ -3438,53 +3438,53 @@
                   "body": "[\n\t{\n\t    \"id\": \"\",\n\t    \"pspType\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"configuration\": {}\n\t}\n]"
                 }
               ]
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-          "name": "Get a PSP Configurations",
-          "request": {
-            "auth": {
-              "type": "noauth"
             },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{token}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://{{providersApiUrl}}/v1/payment-providers/{{pspConfigurationId}}",
-            "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
-          },
-          "response": [
             {
-              "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
-              "name": "Sucessful Request",
-              "originalRequest": {
+              "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
+              "name": "Get a PSP Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                "url": "https://{{providersApiUrl}}/v1/payment-providers/{{pspConfigurationId}}",
+                "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configuration\r\npspConfigurationId | The id of the PSP configuration to retrieve"
               },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+              "response": [
+                {
+                  "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/psp-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"pspType\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"configuration\": {}\n}"
+                }
+              ]
             }
-          ]
+          ],
+          "_postman_isSubFolder": true
         }
       ],
       "event": [
