@@ -2009,7 +2009,7 @@
               "raw": ""
             },
             "url": "https://{{notificationsApiUrl}}/v1/webhooks",
-            "description": "#### Description\r\n\r\nGets a list of a tenant's Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`"
+            "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`client-webhook-read`"
           },
           "response": [
             {
