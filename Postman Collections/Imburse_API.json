@@ -1802,10 +1802,6 @@
                   {
                     "key": "Authorization",
                     "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
                   }
                 ],
                 "body": {
