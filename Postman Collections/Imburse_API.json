@@ -1525,7 +1525,7 @@
             },
             {
               "_postman_id": "9962a1c8-2fdf-4c1e-b17b-ee70d5fb16fb",
-              "name": "Get available payment methods for new scheme",
+              "name": "Get payment methods",
               "request": {
                 "auth": {
                   "type": "noauth"
