@@ -1541,8 +1541,31 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}",
-                "description": "#### Description \n\nGets a list of payment methods that are available for a given country code. \n\nUse this operation when creating a new scheme to find the available payment methods. \n\nNot all PSP's operate in all territories so this methods will return a list of all the payment methods available to you from the PSP's you have configured for your client.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nclientId | The id of the client that owns the schemes\ncountry | The country code that will filter the available payment methods"
+                "url": {
+                  "raw": "https://{{clientApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
+                  "protocol": "https",
+                  "host": [
+                    "{{clientApiUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "collect",
+                    "payment-methods"
+                  ],
+                  "query": [
+                    {
+                      "key": "currency",
+                      "value": "{{currency}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "country",
+                      "value": "{{country}}",
+                      "equals": true
+                    }
+                  ]
+                },
+                "description": "#### Description \n\nGets a list of available payout methods for a given collection scheme, currency, and country combination.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n-|-\ncurrency | The currency code that will filter the available payment methods\ncountry | The country code that will filter the available payment methods"
               },
               "response": [
                 {
