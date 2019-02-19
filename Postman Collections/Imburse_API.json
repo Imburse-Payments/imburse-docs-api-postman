@@ -20,35 +20,7 @@
               "script": {
                 "id": "bebb259f-e09d-4eef-87ce-010ad3c573fd",
                 "exec": [
-                  "var CryptoJS = require(\"crypto-js\");\r",
-                  "\r",
-                  "var publicKey = pm.environment.get(\"publicKey\");\r",
-                  "var privateKey = CryptoJS.enc.Base64.parse(pm.environment.get(\"privateKey\"));\r",
-                  "\r",
-                  "var timestamp = (new Date).getTime() / 1000;\r",
-                  "\r",
-                  "var nonce = timestamp;\r",
-                  "    \r",
-                  "var body = request.data;\r",
-                  "\r",
-                  "if (body.length > 0){\r",
-                  "    var utf8Body = CryptoJS.enc.Utf8.parse(body);\r",
-                  "    var hashedBody = CryptoJS.SHA256(utf8Body);\r",
-                  "    var bodySignature = CryptoJS.enc.Base64.stringify(hashedBody);\r",
-                  "}\r",
-                  "else {\r",
-                  "    var bodySignature = \"\";\r",
-                  "}\r",
-                  "\r",
-                  "var unsignedSignature = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + bodySignature;\r",
-                  "\r",
-                  "var utf8Signature = CryptoJS.enc.Utf8.parse(unsignedSignature);\r",
-                  "var hashedSignature = CryptoJS.HmacSHA256(utf8Signature, privateKey);\r",
-                  "var signedSignature = CryptoJS.enc.Base64.stringify(hashedSignature);\r",
-                  "\r",
-                  "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;\r",
-                  "\r",
-                  "pm.variables.set(\"token\", hmac);"
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -59,15 +31,22 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ByaW1hcnlncm91cHNpZCI6IjAwMDAwMDAwLTBmODItNDkwNS05ZWJhLWVkYTkzNTQxZTRhMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcHJpbWFyeXNpZCI6IjAwMDAwMDAwLTBmODItNDkwNS05ZWJhLWVkYTkzNTQxMTExMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFjYy5nLnN1cGVyIiwiYXVkIjpbImFjY291bnQtYXBpIiwidGVuYW50LWFwaSJdLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIiLCJleHAiOjE1NDk5OTgzMzUsImlzcyI6Imh0dHBzOi8vbG9jYWwtaW1idXJzZXBheW1lbnRzLmNvbS8ifQ.zjiMCMr9_MCPSDwtm0-nSIIgLgf8QKiRu428s2ZE3Bc",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
                 "type": "text"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "{\n\t\"orderRef\": \"ordertest1\",\n\t\"currency\": \"EUR\",\n\t\"country\": \"CH\",\n\t\"scheme\": \"00000000-0f82-4905-9eba-eda935411111\",\n\t\"Metadata\": []\n}"
             },
-            "url": "{{identityApiUrl}}v1/auth/hmac",
+            "url": "http://localhost:6009/v1/customer/david/order",
             "description": "Creates a new bearer token."
           },
           "response": []
@@ -1742,7 +1721,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}"
+                    "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}"
                   },
                   "status": "No Content",
                   "code": 204,
