@@ -736,12 +736,19 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "POST",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                          "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/braintree-sdk"
                       },
                       "status": "OK",
                       "code": 200,
@@ -784,12 +791,19 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "PUT",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
+                          "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{pspConfigurationId}}"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{paymentProviderConfigurationId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -852,7 +866,7 @@
                           "mode": "raw",
                           "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{pspConfigurationId}}"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant"
                       },
                       "status": "OK",
                       "code": 200,
@@ -895,10 +909,17 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "PUT",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                         },
                         "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{paymentProviderConfigurationId}}"
                       },
@@ -963,7 +984,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentApiProductConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{pspConfigurationId}}"
+                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick"
                       },
                       "status": "OK",
                       "code": 200,
@@ -1908,10 +1929,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{clientApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
+                  "raw": "https://{{schemesApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
                   "protocol": "https",
                   "host": [
-                    "{{clientApiUrl}}"
+                    "{{schemesApiUrl}}"
                   ],
                   "path": [
                     "v1",
@@ -1951,10 +1972,10 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "https://{{clientApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
+                      "raw": "https://{{schemesApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
                       "protocol": "https",
                       "host": [
-                        "{{clientApiUrl}}"
+                        "{{schemesApiUrl}}"
                       ],
                       "path": [
                         "v1",
@@ -2149,14 +2170,14 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks"
+                "url": "https://{{notificationsApiUrl}}/v1/webhooks"
               },
               "status": "OK",
               "code": 200,
@@ -2202,7 +2223,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   },
                   {
                     "key": "Content-Type",
@@ -2214,7 +2235,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks"
+                "url": "https://{{notificationsApiUrl}}/v1/webhooks"
               },
               "status": "Created",
               "code": 201,
@@ -2259,7 +2280,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}",
+                    "value": "Bearer {{token}}",
                     "type": "text"
                   },
                   {
@@ -2272,7 +2293,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}"
+                "url": "https://{{notificationsApiUrl}}/v1/webhooks/{{clientWebhookId}}"
               },
               "status": "Accepted",
               "code": 202,
@@ -2313,14 +2334,14 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Hmac {{token}}"
+                    "value": "Bearer {{token}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/webhooks/{{clientWebhookId}}"
+                "url": "https://{{notificationsApiUrl}}/v1/webhooks/{{clientWebhookId}}"
               },
               "status": "No Content",
               "code": 204,
