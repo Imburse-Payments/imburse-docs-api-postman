@@ -1027,7 +1027,14 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "PUT",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
@@ -1413,7 +1420,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
@@ -1472,7 +1479,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
@@ -1513,7 +1520,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}",
                 "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
               },
               "response": [
@@ -1525,14 +1532,14 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}"
+                    "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1597,7 +1604,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
@@ -1661,7 +1668,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect/{schemeId}",
+                "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}",
                 "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
               },
               "response": [
@@ -1728,7 +1735,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Hmac {{token}}"
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
