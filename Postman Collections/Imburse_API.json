@@ -1678,7 +1678,7 @@
         {
           "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
           "name": "Payout Schemes",
-          "description": "Payout Scheme objects allow you to perform updates to your payout scheme settings. The API allows you to create and update schemes, retrieve individual schemes, as well as a list of all schemes for your tenant.\r\n\r\n## The payout scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of `reward` objects defining the rewards for this scheme \r\n\r\n## The reward object\r\n\r\nThe reward object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ngeneralRewards | guid array | An array of reward ids that could apply to any country.\r\ncountryRewards | country reward array | An array of `country reward` objects\r\n\r\n## The country reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nkey | string | The `country` code the rewards apply to\r\nvalue | guid array | An array of reward ids that apply to this country\r\n",
+          "description": "Payout Scheme objects allow you to perform updates to your payout scheme settings. The API allows you to create and update schemes, retrieve individual schemes, as well as a list of all schemes for your tenant.\r\n\r\n## The payout scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of `reward` objects defining the rewards for this scheme \r\n\r\n## The reward object\r\n\r\nThe reward object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ngeneralRewards | guid array | An array of reward ids that could apply to any country.\r\ncountryRewards | country reward array | An array of `country reward` objects\r\n\r\n## The country reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n",
           "item": [
             {
               "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
@@ -1843,6 +1843,10 @@
                   {
                     "key": "Authorization",
                     "value": "Hmac {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
                   }
                 ],
                 "body": {
