@@ -1482,6 +1482,10 @@
                   {
                     "key": "Authorization",
                     "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
                   }
                 ],
                 "body": {
@@ -2305,10 +2309,6 @@
               {
                 "key": "Authorization",
                 "value": "Hmac {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
               }
             ],
             "body": {
