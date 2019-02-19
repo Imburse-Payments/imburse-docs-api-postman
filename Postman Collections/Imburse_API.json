@@ -2140,7 +2140,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
+                "value": "Bearer {{token}}",
                 "type": "text"
               },
               {
@@ -2199,7 +2199,7 @@
               {
                 "key": "Authorization",
                 "type": "text",
-                "value": "Hmac {{token}}"
+                "value": "Bearer {{token}}"
               }
             ],
             "body": {
