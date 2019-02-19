@@ -1841,7 +1841,7 @@
             },
             {
               "_postman_id": "572fcf49-8e43-43b9-8fcc-6e99e45bfed2",
-              "name": "Get payment methods scheme",
+              "name": "Get payment methods",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -1862,7 +1862,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{clientApiUrl}}/v1/payout/{{schemeId}}/payment-methods?country={{country}}&currency={{currency}}",
+                  "raw": "https://{{clientApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
                   "protocol": "https",
                   "host": [
                     "{{clientApiUrl}}"
@@ -1875,13 +1875,13 @@
                   ],
                   "query": [
                     {
-                      "key": "country",
-                      "value": "{{country}}",
+                      "key": "currency",
+                      "value": "{{currency}}",
                       "equals": true
                     },
                     {
-                      "key": "currency",
-                      "value": "{{currency}}",
+                      "key": "country",
+                      "value": "{{country}}",
                       "equals": true
                     }
                   ]
@@ -1904,7 +1904,31 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}"
+                    "url": {
+                      "raw": "https://{{clientApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
+                      "protocol": "https",
+                      "host": [
+                        "{{clientApiUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "payout",
+                        "{{schemeId}}",
+                        "payment-methods"
+                      ],
+                      "query": [
+                        {
+                          "key": "currency",
+                          "value": "{{currency}}",
+                          "equals": true
+                        },
+                        {
+                          "key": "country",
+                          "value": "{{country}}",
+                          "equals": true
+                        }
+                      ]
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -1912,7 +1936,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
+                  "body": ""
                 }
               ]
             },
