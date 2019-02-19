@@ -2695,6 +2695,12 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
+      "name": "Catalog API Reference",
+      "description": "",
+      "item": []
     }
   ],
   "event": [
