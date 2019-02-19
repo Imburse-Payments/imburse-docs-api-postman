@@ -1542,10 +1542,10 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{clientApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
+                  "raw": "https://{{schemesApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
                   "protocol": "https",
                   "host": [
-                    "{{clientApiUrl}}"
+                    "{{schemesApiUrl}}"
                   ],
                   "path": [
                     "v1",
@@ -1583,7 +1583,30 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/schemes/collect/available-payment-methods/{country}"
+                    "url": {
+                      "raw": "https://{{schemesApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
+                      "protocol": "https",
+                      "host": [
+                        "{{schemesApiUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "collect",
+                        "payment-methods"
+                      ],
+                      "query": [
+                        {
+                          "key": "currency",
+                          "value": "{{currency}}",
+                          "equals": true
+                        },
+                        {
+                          "key": "country",
+                          "value": "{{country}}",
+                          "equals": true
+                        }
+                      ]
+                    }
                   },
                   "status": "OK",
                   "code": 200,
@@ -1591,7 +1614,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[  \r\n  {\r\n    \"pspId\": \"\",\r\n    \"paymentMethodType\": \"\",\r\n    \"enabled\": true,\r\n    \"key\": \"\"\r\n  }\r\n]"
+                  "body": ""
                 }
               ]
             },
