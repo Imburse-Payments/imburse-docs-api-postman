@@ -216,7 +216,7 @@
             },
             {
               "_postman_id": "b195ab08-dd5a-4639-b975-f9842b87e7b5",
-              "name": "Clients",
+              "name": "Tenants",
               "description": "",
               "item": [
                 {
@@ -363,6 +363,28 @@
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
+                }
+              ],
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "38080366-1aef-41b1-b132-0264a98f1a8c",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "570280c6-3f62-4e60-8920-ac77cdc572da",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
                 }
               ],
               "_postman_isSubFolder": true
