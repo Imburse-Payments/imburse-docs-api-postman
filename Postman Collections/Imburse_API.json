@@ -251,7 +251,7 @@
                 },
                 {
                   "_postman_id": "6e2b30b7-bbb6-430b-b3fd-6b8451a37893",
-                  "name": "Get Client By Id",
+                  "name": "Get Tenant By Id",
                   "request": {
                     "method": "GET",
                     "header": [],
