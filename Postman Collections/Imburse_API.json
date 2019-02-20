@@ -221,7 +221,7 @@
               "item": [
                 {
                   "_postman_id": "1e482fce-e553-4077-aa21-e7901ba6b85f",
-                  "name": "Get Clients",
+                  "name": "Get Tenants",
                   "request": {
                     "method": "GET",
                     "header": [],
