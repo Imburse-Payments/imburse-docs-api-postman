@@ -230,7 +230,7 @@
                       "raw": ""
                     },
                     "url": "",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                    "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
                   },
                   "response": []
                 },
