@@ -224,12 +224,27 @@
                   "name": "Get Tenants",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
+                    "url": {
+                      "raw": "",
+                      "query": [
+                        {
+                          "key": "",
+                          "value": "",
+                          "type": "text"
+                        }
+                      ]
+                    },
                     "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
                   },
                   "response": []
@@ -251,7 +266,7 @@
                 },
                 {
                   "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
-                  "name": "Create new client",
+                  "name": "Create new tenant",
                   "event": [
                     {
                       "listen": "prerequest",
