@@ -283,10 +283,15 @@
                     "method": "POST",
                     "header": [
                       {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
                         "key": "Content-Type",
                         "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
+                        "type": "text",
+                        "value": "application/json"
                       }
                     ],
                     "body": {
@@ -294,7 +299,7 @@
                       "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
                     },
                     "url": "{{orgApiIUrl}}v1/account/clients",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                    "description": "Creates a new tenant for this account."
                   },
                   "response": []
                 },
