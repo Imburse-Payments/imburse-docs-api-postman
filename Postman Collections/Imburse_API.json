@@ -2971,7 +2971,7 @@
         },
         {
           "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
-          "name": "Search catalog for rewards",
+          "name": "Search Catalog for Rewards",
           "request": {
             "method": "GET",
             "header": [
@@ -2982,8 +2982,8 @@
               },
               {
                 "key": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               }
             ],
             "body": {
@@ -3023,7 +3023,7 @@
                 }
               ]
             },
-            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search rewards for.\ncountries | A comma seperated string of the countries to search rewards for.\ncurrencies | A comma seperated string of the currencies to search rewards for.\ntags | A comma seperated string of the tags to search rewards for."
+            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for.\ntags | A comma seperated string of the tags to search for."
           },
           "response": []
         }
