@@ -2916,6 +2916,27 @@
             "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
           "response": []
+        },
+        {
+          "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
+          "name": "Get a Reward Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
+            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+          },
+          "response": []
         }
       ]
     },
