@@ -2944,7 +2944,7 @@
         },
         {
           "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
-          "name": "Get a list of Rewards by IDs",
+          "name": "Get a list of Rewards",
           "request": {
             "method": "POST",
             "header": [
@@ -2956,8 +2956,8 @@
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               }
             ],
             "body": {
@@ -2965,7 +2965,7 @@
               "raw": "{\n    \"rewardIds\": []\n}"
             },
             "url": "https://{{rewardsApiUrl}}/v1/catalog/rewards",
-            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUIDs for the requested rewards."
+            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
           },
           "response": []
         },
@@ -2979,6 +2979,11 @@
                 "key": "Authorization",
                 "type": "text",
                 "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               }
             ],
             "body": {
@@ -3018,7 +3023,7 @@
                 }
               ]
             },
-            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search rewards for.\ncountries | A comma seperated string of the countries to search rewards for.\ncurrencies | A comma seperated string of the brand names to search rewards for.\ntags | A comma seperated string of the brand names thatto search rewards for."
+            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search rewards for.\ncountries | A comma seperated string of the countries to search rewards for.\ncurrencies | A comma seperated string of the currencies to search rewards for.\ntags | A comma seperated string of the tags to search rewards for."
           },
           "response": []
         }
