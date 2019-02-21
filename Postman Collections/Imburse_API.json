@@ -2943,6 +2943,27 @@
             "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUIDs for the requested rewards."
           },
           "response": []
+        },
+        {
+          "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
+          "name": "Get a Reward Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
+            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+          },
+          "response": []
         }
       ]
     },
