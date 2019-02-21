@@ -2901,12 +2901,18 @@
           "name": "Get a Reward",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://{{catalogApiUrl}}/v1/catalog/{rewardId}",
+            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
             "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
           "response": []
