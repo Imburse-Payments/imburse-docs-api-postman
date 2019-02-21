@@ -324,7 +324,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
                     },
-                    "url": "{{orgApiIUrl}}v1/account/clients",
+                    "url": "{{orgApiIUrl}}v1/account/tenants",
                     "description": "Creates a new tenant for this account."
                   },
                   "response": []
@@ -390,7 +390,7 @@
                 },
                 {
                   "_postman_id": "27c321c6-f5be-4d84-9a65-f23337c04a7f",
-                  "name": "Create Key for Client",
+                  "name": "Create Key for Tenant",
                   "request": {
                     "method": "POST",
                     "header": [
