@@ -12,46 +12,6 @@
       "description": "This API describes how to create a Bearer token for API.\n\nIt is based on the HMAC authentication scheme.",
       "item": [
         {
-          "_postman_id": "82d60d32-5a80-4004-a894-16ad04666a32",
-          "name": "Create New Token",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "bebb259f-e09d-4eef-87ce-010ad3c573fd",
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ByaW1hcnlncm91cHNpZCI6IjAwMDAwMDAwLTBmODItNDkwNS05ZWJhLWVkYTkzNTQxZTRhMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcHJpbWFyeXNpZCI6IjAwMDAwMDAwLTBmODItNDkwNS05ZWJhLWVkYTkzNTQxMTExMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6ImFjYy5nLnN1cGVyIiwiYXVkIjpbImFjY291bnQtYXBpIiwidGVuYW50LWFwaSJdLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiIiLCJleHAiOjE1NDk5OTgzMzUsImlzcyI6Imh0dHBzOi8vbG9jYWwtaW1idXJzZXBheW1lbnRzLmNvbS8ifQ.zjiMCMr9_MCPSDwtm0-nSIIgLgf8QKiRu428s2ZE3Bc",
-                "type": "text",
-                "disabled": true
-              },
-              {
-                "key": "Content-Type",
-                "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"orderRef\": \"ordertest1\",\n\t\"currency\": \"EUR\",\n\t\"country\": \"CH\",\n\t\"scheme\": \"00000000-0f82-4905-9eba-eda935411111\",\n\t\"metadata\": []\n}"
-            },
-            "url": "http://localhost:6009/v1/customer/david/order",
-            "description": "Creates a new bearer token."
-          },
-          "response": []
-        },
-        {
           "_postman_id": "7c24f4b5-5d1c-423a-a717-575943781e07",
           "name": "Create Bearer Token",
           "event": [
