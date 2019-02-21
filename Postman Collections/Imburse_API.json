@@ -254,13 +254,19 @@
                   "name": "Get Tenant By Id",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
                     "url": "",
-                    "description": "Gets all the clients for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name.\n \n"
+                    "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
                   },
                   "response": []
                 },
@@ -2888,6 +2894,28 @@
     {
       "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
       "name": "Catalog API Reference",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "318f17fc-5c2d-467d-8df9-641874e409da",
+          "name": "Get a Reward",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{catalogApiUrl}}/v1/catalog/{rewardId}",
+            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
+      "name": "DELETE",
       "description": "",
       "item": []
     }
