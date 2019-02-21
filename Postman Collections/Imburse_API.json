@@ -2919,22 +2919,28 @@
         },
         {
           "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
-          "name": "Get a Reward Copy",
+          "name": "Get a list of Rewards by IDs",
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "Bearer {{token}}",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
                 "type": "text"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "{\n    \"rewardIds\": []\n}"
             },
-            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
-            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+            "url": "https://{{rewardsApiUrl}}/v1/catalog/rewards",
+            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUIDs for the requested rewards."
           },
           "response": []
         }
