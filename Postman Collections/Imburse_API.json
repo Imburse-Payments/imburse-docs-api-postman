@@ -2926,6 +2926,11 @@
                 "key": "Authorization",
                 "value": "Bearer {{token}}",
                 "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               }
             ],
             "body": {
@@ -2972,16 +2977,48 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Bearer {{token}}",
-                "type": "text"
+                "type": "text",
+                "value": "Bearer {{token}}"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
-            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+            "url": {
+              "raw": "https://{{rewardsApiUrl}}/v1/catalog?{brandNames}&{countries}&{currencies}&{tags}",
+              "protocol": "https",
+              "host": [
+                "{{rewardsApiUrl}}"
+              ],
+              "path": [
+                "v1",
+                "catalog"
+              ],
+              "query": [
+                {
+                  "key": "{brandNames}",
+                  "value": "",
+                  "equals": false
+                },
+                {
+                  "key": "{countries}",
+                  "value": "",
+                  "equals": false
+                },
+                {
+                  "key": "{currencies}",
+                  "value": "",
+                  "equals": false
+                },
+                {
+                  "key": "{tags}",
+                  "value": "",
+                  "equals": false
+                }
+              ]
+            },
+            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search rewards for.\ncountries | A comma seperated string of the countries to search rewards for.\ncurrencies | A comma seperated string of the brand names to search rewards for.\ntags | A comma seperated string of the brand names thatto search rewards for."
           },
           "response": []
         }
