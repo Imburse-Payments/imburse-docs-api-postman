@@ -2334,7 +2334,7 @@
                   "mode": "file",
                   "file": {}
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/logo"
+                "url": "{{whitelabelApiUrl}}/v1/settings/logo"
               },
               "status": "OK",
               "code": 200,
@@ -2370,7 +2370,7 @@
                 "src": null
               }
             },
-            "url": "https://{{whitelabelApiUrl}}/v1/styling",
+            "url": "{{whitelabelApiUrl}}/v1/settings/styling",
             "description": "#### Description\n\nUploads a styling document for the tenant's white label settings.\n\n#### Role required\n\n`client-write`"
           },
           "response": [
