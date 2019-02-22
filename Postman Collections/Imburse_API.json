@@ -1262,7 +1262,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"\"\n}"
                     },
-                    "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard",
+                    "url": "{{providersApiUrl}}/v1/reward-providers/tangocard",
                     "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that will own the PSP Configuration\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\npspType | Yes | The name of the PSP. Either `BRAINTREE_CREDITCARD`, `BRAINTREE_PAYPAL`, or `PAYDIREKT_PAYDIREKT` is supported with these operations.\r\nname | Yes | A unique name of this PSP Configuration. \r\ncurrencies | Yes | An array of currency ISO codes that this PSP configuration supports. `BRAINTREE_CREDITCARD` and `BRAINTREE_PAYPAL` support a single currency per configuration. `PAYDIREKT_PAYDIREKT` can support multiple.\r\nconfiguration | Yes | A [Configuration](#the-configuration-object) object that represents the configuration for a PSP. The data in this object will vary depending on the `pspType`."
                   },
                   "response": [
@@ -1276,7 +1276,7 @@
                           "mode": "raw",
                           "raw": "{\r\n  \"id\": \"\",\r\n  \"pspType\": \"\",\r\n  \"configuration\": {\r\n  }\r\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard"
+                        "url": "{{providersApiUrl}}/v1/reward-providers/tangocard"
                       },
                       "status": "OK",
                       "code": 200,
@@ -1310,7 +1310,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"name\": \"\"\r\n}"
                     },
-                    "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{rewardProviderConfigurationId}}",
+                    "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{rewardProviderConfigurationId}}",
                     "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name of this reward provider configuration"
                   },
                   "response": [
@@ -1331,7 +1331,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"rewardConfigurationId\": \"\",\n\t\"name\": \"\"\n}"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/reward-providers/tangocard/{{rewardProviderConfigurationId}}"
+                        "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{rewardProviderConfigurationId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -1378,7 +1378,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{providersApiUrl}}/v1/reward-providers"
+                    "url": "{{providersApiUrl}}/v1/reward-providers"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1408,7 +1408,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/reward-providers/{{rewardProviderConfigurationId}}",
+                "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardProviderConfigurationId}}",
                 "description": "#### Description\r\n\r\nGets a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to retrieve"
               },
               "response": [
@@ -1422,7 +1422,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{providersApiUrl}}/v1/reward-providers/{{rewardConfigurationId}}"
+                    "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardConfigurationId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1493,7 +1493,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "url": "{{schemesApiUrl}}/v1/collect",
                 "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`collection-scheme-read`"
               },
               "response": [
@@ -1518,7 +1518,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect"
+                    "url": "{{schemesApiUrl}}/v1/collect"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1552,7 +1552,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect",
+                "url": "{{schemesApiUrl}}/v1/collect",
                 "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`collection-scheme-read`"
               },
               "response": [
