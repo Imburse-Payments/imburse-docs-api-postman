@@ -659,6 +659,66 @@
                       "body": null
                     }
                   ]
+                },
+                {
+                  "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
+                  "name": "Create Key Copy",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "[\n\t\"{{role1}}\"\n]"
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "317dfa2e-7ce9-44c4-b611-a6cb76f5fbc0",
+                      "name": "Create Key",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "[\n\t\"{{role1}}\"\n]"
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
                 }
               ],
               "event": [
@@ -1231,66 +1291,6 @@
                   "response": [
                     {
                       "id": "3514510b-3aa1-486d-8c17-cd880d55696d",
-                      "name": "Create Key",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\"\n]"
-                        },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
-                  "name": "Create Key Copy",
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "[\n\t\"{{role1}}\"\n]"
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": [
-                    {
-                      "id": "317dfa2e-7ce9-44c4-b611-a6cb76f5fbc0",
                       "name": "Create Key",
                       "originalRequest": {
                         "method": "POST",
