@@ -817,66 +817,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "139297ed-ecf9-4cc1-a60e-b2f66e4985e1",
-                  "name": "Create Key Copy",
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "[\n\t\"{{role1}}\"\n]"
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": [
-                    {
-                      "id": "72311631-f7c1-4bf9-b388-151702f5c675",
-                      "name": "Create Key",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\"\n]"
-                        },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
                   "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
                   "name": "Remove Key by Public Key",
                   "request": {
