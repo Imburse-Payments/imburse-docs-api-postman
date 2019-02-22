@@ -665,7 +665,13 @@
                   "name": "Get Tenant Keys",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
@@ -703,34 +709,49 @@
                   "response": []
                 },
                 {
+                  "_postman_id": "31a0c502-cfe0-4b05-b67a-abe6b546d40c",
+                  "name": "Create Key for Tenant Copy",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "[\n\t\"cl.g.super\"\n]"
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
                   "_postman_id": "1b6a99c3-f709-4737-bca1-feca2249487f",
                   "name": "Get Tenant Keys By PublicKey",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": {
-                      "raw": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}?Authorization=Bearer {{token}}",
-                      "host": [
-                        "{{orgApiIUrl}}v1"
-                      ],
-                      "path": [
-                        "tenant",
-                        "{{tenantId}}",
-                        "keys",
-                        "{{publicKey}}"
-                      ],
-                      "query": [
-                        {
-                          "key": "Authorization",
-                          "value": "Bearer {{token}}",
-                          "type": "text"
-                        }
-                      ]
-                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -740,7 +761,13 @@
                   "name": "Remove Tenant Key by Public Key",
                   "request": {
                     "method": "DELETE",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
