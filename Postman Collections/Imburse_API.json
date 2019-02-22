@@ -621,6 +621,112 @@
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
+                },
+                {
+                  "_postman_id": "b92ec633-349b-4f21-aa35-23983be80ed2",
+                  "name": "Get Tenants Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{orgApiIUrl}}v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "account",
+                        "tenants"
+                      ],
+                      "query": [
+                        {
+                          "key": "from",
+                          "value": "{{startingIndex}}",
+                          "equals": true,
+                          "description": "Index you want to take from. Default is 0."
+                        },
+                        {
+                          "key": "take",
+                          "value": "{{resultsToGet}}",
+                          "equals": true,
+                          "description": "How many results to bring back. Default is 20."
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{tenantName}}",
+                          "equals": true,
+                          "description": "Optional - Filter by a tenant name. Default is nothing."
+                        }
+                      ]
+                    },
+                    "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
+                  },
+                  "response": [
+                    {
+                      "id": "63b066a4-1984-448a-8131-97fca597f590",
+                      "name": "Get Tenants",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{orgApiIUrl}}v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
+                          "host": [
+                            "{{orgApiIUrl}}v1"
+                          ],
+                          "path": [
+                            "account",
+                            "tenants"
+                          ],
+                          "query": [
+                            {
+                              "key": "from",
+                              "value": "{{startingIndex}}",
+                              "equals": true,
+                              "description": "Index you want to take from. Default is 0."
+                            },
+                            {
+                              "key": "take",
+                              "value": "{{resultsToGet}}",
+                              "equals": true,
+                              "description": "How many results to bring back. Default is 20."
+                            },
+                            {
+                              "key": "name",
+                              "value": "{{tenantName}}",
+                              "equals": true,
+                              "description": "Optional - Filter by a tenant name. Default is nothing."
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"currentPage\": 1,\n\t\"pageCount\": 1,\n\t\"rowCount\": 1,\n\t\"results\": [\n\t\t{\n\t\t\t\"id\": \"\",\n\t\t\t\"accountId\": \"\",\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": \"\"\n\t\t}\n\t]\n}"
+                    }
+                  ]
                 }
               ],
               "event": [
