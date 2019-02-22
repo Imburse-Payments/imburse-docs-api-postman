@@ -625,7 +625,40 @@
                     },
                     "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "e0245da2-ae0d-44be-a0dc-005eb463f595",
+                      "name": "Update Tenant",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                        },
+                        "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "5e8965ac-44ac-40c0-aa88-ba7b4866ae5d",
