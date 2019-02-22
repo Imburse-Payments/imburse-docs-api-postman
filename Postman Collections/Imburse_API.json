@@ -934,7 +934,34 @@
                     "url": "{{orgApiIUrl}}v1/tenant/keys",
                     "description": "Gets all the keys for the account\n"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "cee7c56a-c24a-42d9-b71d-9c0a4592f8ee",
+                      "name": "Get All Keys",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n        \"tenantId\": \"\",\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
