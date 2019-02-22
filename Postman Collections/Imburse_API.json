@@ -661,27 +661,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "1b6a99c3-f709-4737-bca1-feca2249487f",
-                  "name": "Get Tenant Keys By PublicKey",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
                   "_postman_id": "ec7356aa-67d2-48df-844e-3c142332b333",
                   "name": "Remove Tenant Key by Public Key",
                   "request": {
