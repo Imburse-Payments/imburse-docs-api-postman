@@ -538,7 +538,7 @@
                       "script": {
                         "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
                         "exec": [
-                          "pm.environment.set(\"newClientName\", Math.random().toString(36).substring(7));"
+                          ""
                         ],
                         "type": "text/javascript"
                       }
@@ -587,7 +587,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         },
                         "url": "{{orgApiIUrl}}v1/account/tenants"
                       },
@@ -597,7 +597,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"id\", \"\",\n\t\"accountId\", \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                      "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     }
                   ]
                 },
