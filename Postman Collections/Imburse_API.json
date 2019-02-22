@@ -3690,7 +3690,7 @@
     {
       "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
       "name": "Transactions API Reference",
-      "description": "",
+      "description": "Use this API for getting the payment options to present to your users and to process the payment instructions.",
       "item": [
         {
           "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
@@ -3733,6 +3733,28 @@
             "description": "Submit a payout instruction for processing."
           },
           "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "6b830cb6-c43e-457a-80f6-cf0878582b3c",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "4248736c-140b-42fe-b8cb-97c97ac87565",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     }
