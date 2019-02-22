@@ -231,7 +231,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/account/keys",
+                    "url": "{{orgApiIUrl}}v1/account/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
@@ -251,7 +251,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}v1/account/keys"
+                        "url": "{{orgApiIUrl}}v1/account/keys/{{publicKey}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -259,7 +259,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"accountId\": \"\",\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
+                      "body": "{\n\t\"accountId\": \"\",\n\t\"publicKey\": \"\",\n\t\"roles\": []\n}\n"
                     }
                   ]
                 },
