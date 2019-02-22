@@ -968,12 +968,18 @@
                   "name": "Get Key By PublicKey",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/keys/62e28228-5971-4a5d-b053-8b160e845153",
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
