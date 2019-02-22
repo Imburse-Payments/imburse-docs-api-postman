@@ -3604,7 +3604,111 @@
             "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
             "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
-          "response": []
+          "response": [
+            {
+              "id": "c899a464-a8e1-4c7b-88b6-bb23bfe14f3f",
+              "name": "Successful request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8a",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"brand\": {\n        \"brandKey\": \"\",\n        \"brandName\": \"\",\n        \"createdDate\": \"\",\n        \"description\": \"\",\n        \"disclaimer\": \"\",\n        \"imageUrls\": [\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 80\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 130\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 200\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 278\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 300\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 1200\n            }\n        ],\n        \"lastUpdateDate\": \"\",\n        \"requirements\": {\n            \"alwaysShowDisclaimer\": false,\n            \"disclaimerInstructions\": \"\",\n            \"displayInstructions\": \"\",\n            \"termsAndConditionsInstructions\": \"\"\n        },\n        \"shortDescription\": \"\",\n        \"status\": \"\",\n        \"terms\": \"\"\n    },\n    \"countries\": [],\n    \"createdDate\": \"\",\n    \"credentialTypes\": [],\n    \"currencyCode\": \"\",\n    \"exchangeRateRule\": \"\",\n    \"isWholeAmountValueRequired\": false,\n    \"lastUpdateDate\": \"\",\n    \"provider\": {\n        \"id\": \"\",\n        \"name\": \"\"\n    },\n    \"redemptionInstructions\": \"\",\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"rewardType\": \"\",\n    \"status\": \"\",\n    \"tags\": [],\n    \"value\": {\n        \"greaterThan\": null,\n        \"greaterThanOrEqualTo\": 0,\n        \"lessThan\": null,\n        \"lessThanOrEqualTo\": 0\n    },\n    \"valueType\": \"\"\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "e7e3e0cd-5e7c-4c01-8168-48efaa0f8a2b",
+          "name": "Get a Reward Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
+            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+          },
+          "response": [
+            {
+              "id": "3b9e8680-6ae2-4d7a-9430-6c2b549cba33",
+              "name": "Successful request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8a",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"brand\": {\n        \"brandKey\": \"\",\n        \"brandName\": \"\",\n        \"createdDate\": \"\",\n        \"description\": \"\",\n        \"disclaimer\": \"\",\n        \"imageUrls\": [\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 80\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 130\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 200\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 278\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 300\n            },\n            {\n                \"ppi\": 326,\n                \"ratioHeight\": 5,\n                \"ratioWidth\": 8,\n                \"url\": \"\",\n                \"width\": 1200\n            }\n        ],\n        \"lastUpdateDate\": \"\",\n        \"requirements\": {\n            \"alwaysShowDisclaimer\": false,\n            \"disclaimerInstructions\": \"\",\n            \"displayInstructions\": \"\",\n            \"termsAndConditionsInstructions\": \"\"\n        },\n        \"shortDescription\": \"\",\n        \"status\": \"\",\n        \"terms\": \"\"\n    },\n    \"countries\": [],\n    \"createdDate\": \"\",\n    \"credentialTypes\": [],\n    \"currencyCode\": \"\",\n    \"exchangeRateRule\": \"\",\n    \"isWholeAmountValueRequired\": false,\n    \"lastUpdateDate\": \"\",\n    \"provider\": {\n        \"id\": \"\",\n        \"name\": \"\"\n    },\n    \"redemptionInstructions\": \"\",\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"rewardType\": \"\",\n    \"status\": \"\",\n    \"tags\": [],\n    \"value\": {\n        \"greaterThan\": null,\n        \"greaterThanOrEqualTo\": 0,\n        \"lessThan\": null,\n        \"lessThanOrEqualTo\": 0\n    },\n    \"valueType\": \"\"\n}"
+            }
+          ]
         },
         {
           "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
@@ -3631,7 +3735,47 @@
             "url": "{{rewardsApiUrl}}/v1/catalog/rewards",
             "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
           },
-          "response": []
+          "response": [
+            {
+              "id": "6655c8f7-bcfd-4935-83cd-1df70a17ca0c",
+              "name": "Successful request ",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"rewardIds\": []\n}"
+                },
+                "url": "{{rewardsApiUrl}}/v1/catalog/rewards"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"brand\": {\n            \"brandKey\": \"\",\n            \"brandName\": \"\",\n            \"createdDate\": \"\",\n            \"description\": \"\",\n            \"disclaimer\": \"\",\n            \"imageUrls\": [\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 80\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 130\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 200\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 278\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 300\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 1200\n                }\n            ],\n            \"lastUpdateDate\": \"\",\n            \"requirements\": {\n                \"alwaysShowDisclaimer\": false,\n                \"disclaimerInstructions\": \"\",\n                \"displayInstructions\": \"\",\n                \"termsAndConditionsInstructions\": \"\"\n            },\n            \"shortDescription\": \"\",\n            \"status\": \"\",\n            \"terms\": \"\"\n        },\n        \"countries\": [],\n        \"createdDate\": \"\",\n        \"credentialTypes\": [],\n        \"currencyCode\": \"\",\n        \"exchangeRateRule\": \"\",\n        \"isWholeAmountValueRequired\": false,\n        \"lastUpdateDate\": \"\",\n        \"provider\": {\n            \"id\": \"\",\n            \"name\": \"\"\n        },\n        \"redemptionInstructions\": \"\",\n        \"rewardId\": \"\",\n        \"rewardName\": \"\",\n        \"rewardType\": \"\",\n        \"status\": \"\",\n        \"tags\": [],\n        \"value\": {\n            \"greaterThan\": null,\n            \"greaterThanOrEqualTo\": 0,\n            \"lessThan\": null,\n            \"lessThanOrEqualTo\": 0\n        },\n        \"valueType\": \"\"\n    }\n]"
+            }
+          ]
         },
         {
           "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
@@ -3683,7 +3827,72 @@
             },
             "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for."
           },
-          "response": []
+          "response": [
+            {
+              "id": "7bc3759e-7e4a-4b7b-a10e-24e9984fb859",
+              "name": "Successful request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "{{rewardsApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                  "host": [
+                    "{{rewardsApiUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "catalog"
+                  ],
+                  "query": [
+                    {
+                      "key": "brandName",
+                      "value": "{{brandNames}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "countries",
+                      "value": "{{countries}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "currencies",
+                      "value": "{{currencies}}",
+                      "equals": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8a",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"brand\": {\n            \"brandKey\": \"\",\n            \"brandName\": \"\",\n            \"createdDate\": \"\",\n            \"description\": \"\",\n            \"disclaimer\": \"\",\n            \"imageUrls\": [\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 80\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 130\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 200\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 278\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 300\n                },\n                {\n                    \"ppi\": 326,\n                    \"ratioHeight\": 5,\n                    \"ratioWidth\": 8,\n                    \"url\": \"\",\n                    \"width\": 1200\n                }\n            ],\n            \"lastUpdateDate\": \"\",\n            \"requirements\": {\n                \"alwaysShowDisclaimer\": false,\n                \"disclaimerInstructions\": \"\",\n                \"displayInstructions\": \"\",\n                \"termsAndConditionsInstructions\": \"\"\n            },\n            \"shortDescription\": \"\",\n            \"status\": \"\",\n            \"terms\": \"\"\n        },\n        \"countries\": [],\n        \"createdDate\": \"\",\n        \"credentialTypes\": [],\n        \"currencyCode\": \"\",\n        \"exchangeRateRule\": \"\",\n        \"isWholeAmountValueRequired\": false,\n        \"lastUpdateDate\": \"\",\n        \"provider\": {\n            \"id\": \"\",\n            \"name\": \"\"\n        },\n        \"redemptionInstructions\": \"\",\n        \"rewardId\": \"\",\n        \"rewardName\": \"\",\n        \"rewardType\": \"\",\n        \"status\": \"\",\n        \"tags\": [],\n        \"value\": {\n            \"greaterThan\": null,\n            \"greaterThanOrEqualTo\": 0,\n            \"lessThan\": null,\n            \"lessThanOrEqualTo\": 0\n        },\n        \"valueType\": \"\"\n    }\n]"
+            }
+          ]
         }
       ]
     },
