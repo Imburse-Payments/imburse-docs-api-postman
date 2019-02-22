@@ -2384,7 +2384,7 @@
                   "mode": "file",
                   "file": {}
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}/whitelabel/styling"
+                "url": "{{whitelabelApiUrl}}/v1/settings/styling"
               },
               "status": "OK",
               "code": 200,
@@ -2741,7 +2741,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "https://{{rewardsApiUrl}}/v1/catalog/{rewardId}",
+            "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
             "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
           "response": []
