@@ -1571,7 +1571,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect"
+                    "url": "{{schemesApiUrl}}/v1/collect"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1605,7 +1605,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
                 "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`collection-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
               },
               "response": [
