@@ -2667,6 +2667,50 @@
               "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
             }
           ]
+        },
+        {
+          "_postman_id": "eae21ee2-6623-48b8-a327-c6f7aa7c9a71",
+          "name": "Get Whitelabel Settings Copy",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{whitelabelApiUrl}}/v1/settings",
+            "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
+          },
+          "response": [
+            {
+              "id": "a56b2a8e-b8a8-48c7-8c97-28e5e6e366b7",
+              "name": "Successful request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{whitelabelApiUrl}}/v1/settings"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            }
+          ]
         }
       ],
       "event": [
