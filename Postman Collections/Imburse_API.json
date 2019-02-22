@@ -2320,7 +2320,7 @@
                 "src": null
               }
             },
-            "url": "https://{{whitelabelApiUrl}}/v1/logo",
+            "url": "{{whitelabelApiUrl}}/v1/settings/logo",
             "description": "#### Description\n\nUploads a logo for the tenants white label settings.\n\n#### Role required\n\n`client-write`"
           },
           "response": [
