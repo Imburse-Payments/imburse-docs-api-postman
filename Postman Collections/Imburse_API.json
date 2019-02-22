@@ -709,33 +709,6 @@
                   "response": []
                 },
                 {
-                  "_postman_id": "31a0c502-cfe0-4b05-b67a-abe6b546d40c",
-                  "name": "Create Key for Tenant Copy",
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "[\n\t\"cl.g.super\"\n]"
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
                   "_postman_id": "1b6a99c3-f709-4737-bca1-feca2249487f",
                   "name": "Get Tenant Keys By PublicKey",
                   "request": {
