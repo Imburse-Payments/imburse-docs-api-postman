@@ -503,7 +503,7 @@
                   "response": [
                     {
                       "id": "63b066a4-1984-448a-8131-97fca597f590",
-                      "name": "Get Tenants",
+                      "name": "Get Tenant By Id",
                       "originalRequest": {
                         "method": "GET",
                         "header": [
@@ -517,36 +517,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": {
-                          "raw": "{{orgApiIUrl}}v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
-                          "host": [
-                            "{{orgApiIUrl}}v1"
-                          ],
-                          "path": [
-                            "account",
-                            "tenants"
-                          ],
-                          "query": [
-                            {
-                              "key": "from",
-                              "value": "{{startingIndex}}",
-                              "equals": true,
-                              "description": "Index you want to take from. Default is 0."
-                            },
-                            {
-                              "key": "take",
-                              "value": "{{resultsToGet}}",
-                              "equals": true,
-                              "description": "How many results to bring back. Default is 20."
-                            },
-                            {
-                              "key": "name",
-                              "value": "{{tenantName}}",
-                              "equals": true,
-                              "description": "Optional - Filter by a tenant name. Default is nothing."
-                            }
-                          ]
-                        }
+                        "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -554,30 +525,9 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"currentPage\": 1,\n\t\"pageCount\": 1,\n\t\"rowCount\": 1,\n\t\"results\": [\n\t\t{\n\t\t\t\"id\": \"\",\n\t\t\t\"accountId\": \"\",\n\t\t\t\"name\": \"\",\n\t\t\t\"address\": \"\"\n\t\t}\n\t]\n}"
+                      "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": \"\"\n}\n"
                     }
                   ]
-                },
-                {
-                  "_postman_id": "6e2b30b7-bbb6-430b-b3fd-6b8451a37893",
-                  "name": "Get Tenant By Id",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
-                  },
-                  "response": []
                 },
                 {
                   "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
