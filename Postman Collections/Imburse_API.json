@@ -697,7 +697,7 @@
                       "mode": "raw",
                       "raw": "[\n\t\"cl.g.super\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "url": "{{orgApiIUrl}}v1/tenant/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
