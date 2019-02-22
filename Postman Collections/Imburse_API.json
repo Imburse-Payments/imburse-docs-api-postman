@@ -1442,7 +1442,34 @@
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "4228da35-1137-4de2-818b-ad531197d28d",
+                      "name": "Get Users By Id",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"tenantId\": \"\",\n    \"userId\": \"\",\n    \"roles\": [],\n    \"enabled\": true,\n    \"deleted\": false\n}"
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
@@ -1466,7 +1493,7 @@
                       "mode": "raw",
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/users/"
+                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}"
                   },
                   "response": []
                 },
