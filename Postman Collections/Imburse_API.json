@@ -186,7 +186,82 @@
                     "url": "{{orgApiIUrl}}v1/account/keys",
                     "description": "Gets all the keys for the account\n"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "b010e01a-f779-4cfe-baa7-57b0abaf7809",
+                      "name": "Get All Keys",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/account/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n\t{\n\t\t\"accountId\": \"\",\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "45d621ca-c618-40e9-a4c1-7240d88269b6",
+                  "name": "Get All Keys Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "bed7ba38-801c-4aa2-bb0e-cb44b702d9dd",
+                      "name": "Get All Keys",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/account/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n\t{\n\t\t\"accountId\": \"\",\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "d3b41786-ed54-4c1f-ac63-3e1abebbb7a3",
@@ -206,6 +281,27 @@
                     },
                     "url": "",
                     "description": "Gets all the keys for the account\n"
+                  },
+                  "response": []
+                },
+                {
+                  "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
+                  "name": "Delete a Key",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
+                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": []
                 },
@@ -232,27 +328,6 @@
                     },
                     "url": "{{orgApiIUrl}}v1/account/keys/",
                     "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
-                  "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
-                  "name": "Delete a Key",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
-                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": []
                 }
