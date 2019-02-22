@@ -1124,7 +1124,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                         },
-                        "url": "https://{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{paymentProviderConfigurationId}}"
+                        "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{paymentProviderConfigurationId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -1157,7 +1157,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/payment-providers/",
+                "url": "{{providersApiUrl}}/v1/payment-providers/",
                 "description": "#### Description\r\n\r\nGets a list PSP configurations.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`"
               },
               "response": [
