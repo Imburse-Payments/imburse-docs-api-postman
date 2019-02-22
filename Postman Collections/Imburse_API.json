@@ -2274,7 +2274,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{whitelabelApiUrl}}/v1",
+            "url": "{{whitelabelApiUrl}}/v1/settings",
             "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
           },
           "response": [
@@ -2288,7 +2288,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{clientApiUrl}}/v1/clients/{{clientId}}"
+                "url": "{{whitelabelApiUrl}}/v1/settings"
               },
               "status": "OK",
               "code": 200,
