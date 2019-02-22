@@ -605,13 +605,25 @@
                   "_postman_id": "94282eb1-d0e4-4ad4-88a6-10f82b9ba66e",
                   "name": "Update Tenant",
                   "request": {
-                    "method": "GET",
-                    "header": [],
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     },
-                    "url": ""
+                    "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}"
                   },
                   "response": []
                 },
