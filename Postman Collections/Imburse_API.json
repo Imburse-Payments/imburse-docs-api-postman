@@ -110,7 +110,32 @@
                     "url": "{{orgApiIUrl}}v1/account",
                     "description": "Gets the account information."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "f31cf356-e1c9-4018-a915-73c57a911104",
+                      "name": "Get Account",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/account"
+                      },
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"Id\": \"\",\n\t\"ImburseAccountRef\": \"\",\n\t\"CompanyName\": \"\",\n\t\"BillingContactFirstName\": \"\",\n\t\"BillingContactLastName\": \"\"\n}"
+                    }
+                  ]
                 }
               ],
               "event": [
@@ -158,7 +183,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "",
+                    "url": "{{orgApiIUrl}}v1/account/keys",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -2870,7 +2895,7 @@
               "raw": ""
             },
             "url": "{{transactionsApiUrl}}/v1/payout/reward/{{rewardId}}",
-            "description": "Gets the payout options available filtered by the customer order contents in the supplied bearer token."
+            "description": "Submit a payout instruction for processing."
           },
           "response": []
         }
