@@ -3028,12 +3028,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
-      "name": "DELETE",
-      "description": "",
-      "item": []
     }
   ],
   "event": [
