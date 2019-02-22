@@ -1732,7 +1732,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}"
+                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
                   },
                   "status": "No Content",
                   "code": 204,
@@ -1774,7 +1774,7 @@
                   "mode": "raw",
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                 },
-                "url": "https://{{schemesApiUrl}}/v1/payout",
+                "url": "{{schemesApiUrl}}/v1/payout",
                 "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`payout-scheme-read`"
               },
               "response": [
@@ -1793,7 +1793,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/payout"
+                    "url": "{{schemesApiUrl}}/v1/payout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1823,7 +1823,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/payout",
+                "url": "{{schemesApiUrl}}/v1/payout",
                 "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`payout-scheme-read`"
               },
               "response": [
