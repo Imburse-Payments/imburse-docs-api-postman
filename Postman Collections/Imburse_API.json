@@ -662,7 +662,7 @@
                 },
                 {
                   "_postman_id": "de93b675-8cdd-4084-a530-0d0f80c9aee1",
-                  "name": "Get All Keys Copy",
+                  "name": "Get All Keys",
                   "request": {
                     "method": "GET",
                     "header": [
