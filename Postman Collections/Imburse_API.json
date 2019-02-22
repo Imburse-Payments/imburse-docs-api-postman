@@ -237,7 +237,7 @@
                   "response": [
                     {
                       "id": "bed7ba38-801c-4aa2-bb0e-cb44b702d9dd",
-                      "name": "Get All Keys",
+                      "name": "Get Key by Public Key",
                       "originalRequest": {
                         "method": "GET",
                         "header": [
@@ -262,27 +262,6 @@
                       "body": "{\n\t\"accountId\": \"\",\n\t\"publicKey\": \"\",\n\t\"roles\": []\n}\n"
                     }
                   ]
-                },
-                {
-                  "_postman_id": "d3b41786-ed54-4c1f-ac63-3e1abebbb7a3",
-                  "name": "-delete Get Key by Public Key",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
                 },
                 {
                   "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
