@@ -964,6 +964,54 @@
                   ]
                 },
                 {
+                  "_postman_id": "de93b675-8cdd-4084-a530-0d0f80c9aee1",
+                  "name": "Get All Keys Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "4dc1022e-d159-48ee-81df-11877a29cc02",
+                      "name": "Get All Keys",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n        \"tenantId\": \"\",\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
                   "name": "Get Key By PublicKey",
                   "request": {
@@ -985,6 +1033,54 @@
                   "response": [
                     {
                       "id": "8771bc08-d3a5-42f1-8e8c-ac97442d29ed",
+                      "name": "Get Key By PublicKey",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
+                  "name": "Get Key By PublicKey Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "3850a071-0fbc-4a96-b29a-b04d17b786b8",
                       "name": "Get Key By PublicKey",
                       "originalRequest": {
                         "method": "GET",
