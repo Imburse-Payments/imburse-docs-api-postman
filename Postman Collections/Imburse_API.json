@@ -483,14 +483,14 @@
                 },
                 {
                   "_postman_id": "b92ec633-349b-4f21-aa35-23983be80ed2",
-                  "name": "Get Tenants Copy",
+                  "name": "Get Tenant by Id",
                   "request": {
                     "method": "GET",
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
@@ -531,7 +531,7 @@
                 },
                 {
                   "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
-                  "name": "Create new tenant",
+                  "name": "Create new Tenant",
                   "event": [
                     {
                       "listen": "prerequest",
