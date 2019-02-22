@@ -758,7 +758,7 @@
                 },
                 {
                   "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
-                  "name": "Create Key Copy",
+                  "name": "Create Key",
                   "request": {
                     "method": "POST",
                     "header": [
