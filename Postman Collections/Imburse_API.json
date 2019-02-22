@@ -800,7 +800,35 @@
                     },
                     "url": "{{orgApiIUrl}}v1/account/users/{{userId}}"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "d50da06d-b4c2-4566-b641-5c601c264170",
+                      "name": "Assign User",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
+                        },
+                        "url": "{{orgApiIUrl}}v1/account/users/{{userId}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "7eb50f74-570e-4482-9747-700f69afc9c2",
@@ -812,7 +840,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/account/users/a6d39e8a-4cee-4ee0-a99a-93e5203c6a25"
+                    "url": "{{orgApiIUrl}}v1/account/users/{{userId}}"
                   },
                   "response": []
                 }
