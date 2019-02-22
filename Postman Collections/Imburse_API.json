@@ -709,6 +709,54 @@
                   ]
                 },
                 {
+                  "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
+                  "name": "Get Key By PublicKey Copy",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "3850a071-0fbc-4a96-b29a-b04d17b786b8",
+                      "name": "Get Key By PublicKey",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
                   "name": "Create Key Copy",
                   "request": {
@@ -813,54 +861,6 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": null
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
-                  "name": "Get Key By PublicKey Copy",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": [
-                    {
-                      "id": "3850a071-0fbc-4a96-b29a-b04d17b786b8",
-                      "name": "Get Key By PublicKey",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
                     }
                   ]
                 }
