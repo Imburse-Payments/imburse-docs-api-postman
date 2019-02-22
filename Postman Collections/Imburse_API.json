@@ -1891,7 +1891,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/payout/{{schemeId}}"
+                    "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1900,107 +1900,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "572fcf49-8e43-43b9-8fcc-6e99e45bfed2",
-              "name": "Get payment methods",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": {
-                  "raw": "https://{{schemesApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
-                  "protocol": "https",
-                  "host": [
-                    "{{schemesApiUrl}}"
-                  ],
-                  "path": [
-                    "v1",
-                    "payout",
-                    "{{schemeId}}",
-                    "payment-methods"
-                  ],
-                  "query": [
-                    {
-                      "key": "currency",
-                      "value": "{{currency}}",
-                      "equals": true
-                    },
-                    {
-                      "key": "country",
-                      "value": "{{country}}",
-                      "equals": true
-                    }
-                  ]
-                },
-                "description": "#### Description \n\nGets a list of available payout methods for a given payout scheme, currency, and country combination.\n\n#### Role required\n\n`payout-scheme-read`\n\n#### Params\n\nParameter | Description\n-|-\ncurrency | The currency code that will filter the available payment methods\ncountry | The country code that will filter the available payment methods"
-              },
-              "response": [
-                {
-                  "id": "04ae900c-b708-40db-8f9e-5834982e1a2c",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": {
-                      "raw": "https://{{schemesApiUrl}}/v1/payout/{{schemeId}}/payment-methods?currency={{currency}}&country={{country}}",
-                      "protocol": "https",
-                      "host": [
-                        "{{schemesApiUrl}}"
-                      ],
-                      "path": [
-                        "v1",
-                        "payout",
-                        "{{schemeId}}",
-                        "payment-methods"
-                      ],
-                      "query": [
-                        {
-                          "key": "currency",
-                          "value": "{{currency}}",
-                          "equals": true
-                        },
-                        {
-                          "key": "country",
-                          "value": "{{country}}",
-                          "equals": true
-                        }
-                      ]
-                    }
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
                 }
               ]
             },
