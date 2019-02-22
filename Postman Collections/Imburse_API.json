@@ -561,7 +561,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"name\": \"{{newClientName}}\"\n}"
+                      "raw": "{\n\t\"name\": \"\"\n}"
                     },
                     "url": "{{orgApiIUrl}}v1/account/tenants",
                     "description": "Creates a new tenant for this account."
