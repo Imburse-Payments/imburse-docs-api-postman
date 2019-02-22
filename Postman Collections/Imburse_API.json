@@ -1624,7 +1624,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/collect/{{schemeId}}"
+                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1655,8 +1655,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "https://{{schemesApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
-                  "protocol": "https",
+                  "raw": "{{schemesApiUrl}}/v1/collect/payment-methods?currency={{currency}}&country={{country}}",
                   "host": [
                     "{{schemesApiUrl}}"
                   ],
