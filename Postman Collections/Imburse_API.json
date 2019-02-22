@@ -920,12 +920,18 @@
                   "name": "Get All Keys",
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/keys/",
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -3138,58 +3144,6 @@
         {
           "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
           "name": "Search Catalog for Rewards",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "type": "text",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": {
-              "raw": "{{rewardsApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
-              "host": [
-                "{{rewardsApiUrl}}"
-              ],
-              "path": [
-                "v1",
-                "catalog"
-              ],
-              "query": [
-                {
-                  "key": "brandName",
-                  "value": "{{brandNames}}",
-                  "equals": true
-                },
-                {
-                  "key": "countries",
-                  "value": "{{countries}}",
-                  "equals": true
-                },
-                {
-                  "key": "currencies",
-                  "value": "{{currencies}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "95f6b8f0-9456-4b14-8a10-d87ae5657323",
-          "name": "Search Catalog for Rewards Copy",
           "request": {
             "method": "GET",
             "header": [
