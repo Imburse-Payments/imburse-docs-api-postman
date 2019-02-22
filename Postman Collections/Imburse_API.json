@@ -1241,6 +1241,11 @@
                     "method": "PUT",
                     "header": [
                       {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      },
+                      {
                         "key": "Content-Type",
                         "name": "Content-Type",
                         "value": "application/json",
@@ -1249,7 +1254,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "[\n\t\"cl.g.super\"\n]"
+                      "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/users/"
                   },
