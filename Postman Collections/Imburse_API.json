@@ -217,7 +217,7 @@
                 },
                 {
                   "_postman_id": "45d621ca-c618-40e9-a4c1-7240d88269b6",
-                  "name": "Get All Keys Copy",
+                  "name": "Get Key by Public Key",
                   "request": {
                     "method": "GET",
                     "header": [
@@ -265,7 +265,7 @@
                 },
                 {
                   "_postman_id": "d3b41786-ed54-4c1f-ac63-3e1abebbb7a3",
-                  "name": "Get Key by Public Key",
+                  "name": "-delete Get Key by Public Key",
                   "request": {
                     "method": "GET",
                     "header": [
