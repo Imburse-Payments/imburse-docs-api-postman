@@ -670,7 +670,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -704,7 +704,7 @@
                 },
                 {
                   "_postman_id": "1b6a99c3-f709-4737-bca1-feca2249487f",
-                  "name": "Get Client Keys By PublicKey",
+                  "name": "Get Tenant Keys By PublicKey",
                   "request": {
                     "method": "GET",
                     "header": [],
@@ -712,7 +712,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
@@ -727,7 +727,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/f11dc541-c5eb-4525-9ceb-6d263292b16c/keys/cdc4f59f-5c43-4f02-9b39-99a7d1d6d28c",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
