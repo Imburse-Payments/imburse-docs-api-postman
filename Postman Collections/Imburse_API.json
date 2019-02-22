@@ -2795,8 +2795,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "https://{{rewardsApiUrl}}/v1/catalog?{brandNames}&{countries}&{currencies}&{tags}",
-              "protocol": "https",
+              "raw": "{{rewardsApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
               "host": [
                 "{{rewardsApiUrl}}"
               ],
@@ -2806,24 +2805,19 @@
               ],
               "query": [
                 {
-                  "key": "{brandNames}",
-                  "value": "",
-                  "equals": false
+                  "key": "brandName",
+                  "value": "{{brandNames}}",
+                  "equals": true
                 },
                 {
-                  "key": "{countries}",
-                  "value": "",
-                  "equals": false
+                  "key": "countries",
+                  "value": "{{countries}}",
+                  "equals": true
                 },
                 {
-                  "key": "{currencies}",
-                  "value": "",
-                  "equals": false
-                },
-                {
-                  "key": "{tags}",
-                  "value": "",
-                  "equals": false
+                  "key": "currencies",
+                  "value": "{{currencies}}",
+                  "equals": true
                 }
               ]
             },
@@ -2843,12 +2837,39 @@
           "name": "Get Payout Options",
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "",
+            "url": "{{transactionsApiUrl}}/v1/payout/options",
+            "description": "Gets the payout options available filtered by the customer order contents in the supplied bearer token."
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
+          "name": "Process Reward Payout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{rewardId}}",
             "description": "Gets the payout options available filtered by the customer order contents in the supplied bearer token."
           },
           "response": []
