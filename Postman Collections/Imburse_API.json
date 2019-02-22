@@ -712,14 +712,32 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
+                    "url": {
+                      "raw": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}?Authorization=Bearer {{token}}",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "tenant",
+                        "{{tenantId}}",
+                        "keys",
+                        "{{publicKey}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "Authorization",
+                          "value": "Bearer {{token}}",
+                          "type": "text"
+                        }
+                      ]
+                    },
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
                 },
                 {
                   "_postman_id": "ec7356aa-67d2-48df-844e-3c142332b333",
-                  "name": "Remove Client Key by Public Key",
+                  "name": "Remove Tenant Key by Public Key",
                   "request": {
                     "method": "DELETE",
                     "header": [],
