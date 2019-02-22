@@ -710,7 +710,7 @@
                 },
                 {
                   "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
-                  "name": "Get Key By PublicKey Copy",
+                  "name": "Get Key By PublicKey",
                   "request": {
                     "method": "GET",
                     "header": [
