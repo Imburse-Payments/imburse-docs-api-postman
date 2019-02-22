@@ -764,8 +764,8 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
@@ -778,7 +778,7 @@
                       "mode": "raw",
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
@@ -818,7 +818,7 @@
                 },
                 {
                   "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
-                  "name": "Remove Key by Public Key Copy",
+                  "name": "Remove Key by Public Key",
                   "request": {
                     "method": "DELETE",
                     "header": [
