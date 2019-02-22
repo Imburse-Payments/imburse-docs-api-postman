@@ -1030,7 +1030,34 @@
                     "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "6a863216-e618-4b2d-8f0a-a3d6ba2856a6",
+                      "name": "Remove Key by Public Key",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
@@ -1047,9 +1074,9 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "[\n\t\"cl.g.super\"\n]"
+                      "raw": "[\n\t\"{{role1}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/client/keys/",
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
