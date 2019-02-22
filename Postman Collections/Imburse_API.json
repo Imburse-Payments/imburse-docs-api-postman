@@ -676,7 +676,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
@@ -724,7 +724,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
@@ -832,7 +832,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
@@ -1332,6 +1332,20 @@
               "description": "",
               "item": [
                 {
+                  "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
+                  "name": "Get Users By Id",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/client/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
+                  },
+                  "response": []
+                },
+                {
                   "_postman_id": "dc71550f-7d85-40e5-987e-5f0579f919bb",
                   "name": "Get Users",
                   "request": {
@@ -1423,20 +1437,6 @@
                       "body": "{\n    \"currentPage\": 1,\n    \"pageCount\": 1,\n    \"rowCount\": 1,\n    \"results\": [\n        {\n            \"tenantId\": \"\",\n            \"userId\": \"\",\n            \"roles\": [],\n            \"enabled\": true,\n            \"deleted\": false\n        }\n    ]\n}"
                     }
                   ]
-                },
-                {
-                  "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
-                  "name": "Get Users By Id",
-                  "request": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/client/users/A6D39E8A-4CEE-4EE0-A99A-93E5203C6A25"
-                  },
-                  "response": []
                 },
                 {
                   "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
