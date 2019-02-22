@@ -561,16 +561,49 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"name\": \"\"\n}"
+                      "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     },
                     "url": "{{orgApiIUrl}}v1/account/tenants",
                     "description": "Creates a new tenant for this account."
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "9d3ce5f9-02ad-4b41-9903-b9a61be375b4",
+                      "name": "Create new Tenant",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "type": "text",
+                            "value": "Bearer {{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                        },
+                        "url": "{{orgApiIUrl}}v1/account/tenants"
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"id\", \"\",\n\t\"accountId\", \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "94282eb1-d0e4-4ad4-88a6-10f82b9ba66e",
-                  "name": "Update Client",
+                  "name": "Update Tenant",
                   "request": {
                     "method": "GET",
                     "header": [],
