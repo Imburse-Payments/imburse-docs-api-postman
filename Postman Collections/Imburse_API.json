@@ -719,6 +719,54 @@
                       "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
                     }
                   ]
+                },
+                {
+                  "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
+                  "name": "Remove Key by Public Key Copy",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "facf90a9-89bd-44fa-b8ae-ec05374b00be",
+                      "name": "Remove Key by Public Key",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
                 }
               ],
               "event": [
@@ -1189,54 +1237,6 @@
                   "response": [
                     {
                       "id": "6a863216-e618-4b2d-8f0a-a3d6ba2856a6",
-                      "name": "Remove Key by Public Key",
-                      "originalRequest": {
-                        "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
-                      },
-                      "status": "No Content",
-                      "code": 204,
-                      "_postman_previewlanguage": null,
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": null
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
-                  "name": "Remove Key by Public Key Copy",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": [
-                    {
-                      "id": "facf90a9-89bd-44fa-b8ae-ec05374b00be",
                       "name": "Remove Key by Public Key",
                       "originalRequest": {
                         "method": "DELETE",
