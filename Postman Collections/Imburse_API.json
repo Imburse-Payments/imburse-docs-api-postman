@@ -659,27 +659,6 @@
                       "body": null
                     }
                   ]
-                },
-                {
-                  "_postman_id": "ec7356aa-67d2-48df-844e-3c142332b333",
-                  "name": "Remove Tenant Key by Public Key",
-                  "request": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
                 }
               ],
               "event": [
