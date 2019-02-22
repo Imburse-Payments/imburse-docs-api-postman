@@ -3033,7 +3033,23 @@
       "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
       "name": "Transactions API Reference",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
+          "name": "Get Payout Options",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "",
+            "description": "Gets the payout options available filtered by the customer order contents in the supplied bearer token."
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "event": [
