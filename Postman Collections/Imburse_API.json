@@ -561,7 +561,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\", \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                      "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     },
                     "url": "{{orgApiIUrl}}v1/account/tenants",
                     "description": "Creates a new tenant for this account."
