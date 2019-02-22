@@ -661,27 +661,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "5e8965ac-44ac-40c0-aa88-ba7b4866ae5d",
-                  "name": "Get Tenant Keys",
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
-                    "description": "Gets all the keys for the account\n"
-                  },
-                  "response": []
-                },
-                {
                   "_postman_id": "27c321c6-f5be-4d84-9a65-f23337c04a7f",
                   "name": "Create Key for Tenant",
                   "request": {
