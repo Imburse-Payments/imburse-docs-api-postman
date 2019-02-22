@@ -982,19 +982,52 @@
                     "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
-                  "response": []
+                  "response": [
+                    {
+                      "id": "8771bc08-d3a5-42f1-8e8c-ac97442d29ed",
+                      "name": "Get Key By PublicKey",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
                 },
                 {
                   "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
                   "name": "Remove Key by Public Key",
                   "request": {
                     "method": "DELETE",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/client/keys/62e28228-5971-4a5d-b053-8b160e845153",
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": []
