@@ -1842,7 +1842,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{schemesApiUrl}}/v1/payout"
+                    "url": "{{schemesApiUrl}}/v1/payout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1872,7 +1872,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{schemesApiUrl}}/v1/payout/{schemeId}",
+                "url": "{{schemesApiUrl}}/v1/payout/{schemeId}",
                 "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`payout-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
               },
               "response": [
