@@ -392,12 +392,32 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "",
+                      "raw": "{{orgApiIUrl}}v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
+                      "host": [
+                        "{{orgApiIUrl}}v1"
+                      ],
+                      "path": [
+                        "account",
+                        "tenants"
+                      ],
                       "query": [
                         {
-                          "key": "",
-                          "value": "",
-                          "type": "text"
+                          "key": "from",
+                          "value": "{{startingIndex}}",
+                          "equals": true,
+                          "description": "Index you want to take from. Default is 0."
+                        },
+                        {
+                          "key": "take",
+                          "value": "{{resultsToGet}}",
+                          "equals": true,
+                          "description": "How many results to bring back. Default is 20."
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{tenantName}}",
+                          "equals": true,
+                          "description": "Optional - Filter by a tenant name. Default is nothing."
                         }
                       ]
                     },
