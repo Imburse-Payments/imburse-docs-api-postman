@@ -1215,7 +1215,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "https://{{providersApiUrl}}/v1/payment-providers/{{paymentProviderConfigurationId}}"
+                    "url": "{{providersApiUrl}}/v1/payment-providers/{{paymentProviderConfigurationId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1364,7 +1364,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{providersApiUrl}}/v1/reward-providers",
+                "url": "{{providersApiUrl}}/v1/reward-providers",
                 "description": "#### Description\r\n\r\nGets a list PSP configurations.\r\n\r\n#### Role required\r\n\r\n`psp-configuration-read`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nclientId | The id of the client that owns the PSP Configurations"
               },
               "response": [
