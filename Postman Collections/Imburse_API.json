@@ -1156,6 +1156,54 @@
                   ]
                 },
                 {
+                  "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
+                  "name": "Remove Key by Public Key Copy",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "description": "Gets all the keys for the account\n"
+                  },
+                  "response": [
+                    {
+                      "id": "facf90a9-89bd-44fa-b8ae-ec05374b00be",
+                      "name": "Remove Key by Public Key",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
                   "name": "Create Key",
                   "request": {
@@ -1216,50 +1264,62 @@
                   ]
                 },
                 {
-                  "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
-                  "name": "Remove Key by Public Key Copy",
+                  "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
+                  "name": "Create Key Copy",
                   "request": {
-                    "method": "DELETE",
+                    "method": "POST",
                     "header": [
                       {
                         "key": "Authorization",
                         "value": "Bearer {{token}}",
                         "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
                       }
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": ""
+                      "raw": "[\n\t\"{{role1}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
                     "description": "Gets all the keys for the account\n"
                   },
                   "response": [
                     {
-                      "id": "facf90a9-89bd-44fa-b8ae-ec05374b00be",
-                      "name": "Remove Key by Public Key",
+                      "id": "317dfa2e-7ce9-44c4-b611-a6cb76f5fbc0",
+                      "name": "Create Key",
                       "originalRequest": {
-                        "method": "DELETE",
+                        "method": "POST",
                         "header": [
                           {
                             "key": "Authorization",
                             "value": "Bearer {{token}}",
                             "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
                           }
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": ""
+                          "raw": "[\n\t\"{{role1}}\"\n]"
                         },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}"
+                        "url": "{{orgApiIUrl}}v1/tenant/keys"
                       },
-                      "status": "No Content",
-                      "code": 204,
-                      "_postman_previewlanguage": null,
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": null
+                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
                     }
                   ]
                 }
