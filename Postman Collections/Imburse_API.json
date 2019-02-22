@@ -1066,6 +1066,11 @@
                     "method": "POST",
                     "header": [
                       {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      },
+                      {
                         "key": "Content-Type",
                         "name": "Content-Type",
                         "type": "text",
