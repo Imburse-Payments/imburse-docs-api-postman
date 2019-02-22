@@ -713,17 +713,20 @@
                         {
                           "key": "from",
                           "value": "0",
-                          "equals": true
+                          "equals": true,
+                          "description": "Amount of results to return"
                         },
                         {
                           "key": "take",
                           "value": "20",
-                          "equals": true
+                          "equals": true,
+                          "description": "The index to take from"
                         },
                         {
                           "key": "email",
                           "value": "",
-                          "equals": true
+                          "equals": true,
+                          "description": "Email to filter by"
                         }
                       ]
                     }
