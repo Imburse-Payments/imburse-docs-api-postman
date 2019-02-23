@@ -1670,7 +1670,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"currencies\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     },
                     "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk",
                     "description": "# Description\r\n\r\nCreate a PSP configuration.\r\n\r\n## Role required\r\n\r\n`psp-configuration-write`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
@@ -1691,7 +1691,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
                         "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk"
                       },
@@ -1701,7 +1701,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"BRAINTREE\",\n\t\t\"name\": \"Braintree\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\"name\": \"Braintree SDK\",\n\t\t\"description\": \"\"\n\t},\n\t\"paymentApiProductConfigurationId\": \"\",\n    \"name\": \"\",\n    \"currencies\": \"\",\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                      "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"BRAINTREE\",\n\t\t\"name\": \"Braintree\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\"name\": \"Braintree SDK\",\n\t\t\"description\": \"\"\n\t},\n\t\"paymentApiProductConfigurationId\": \"\",\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     }
                   ]
                 },
