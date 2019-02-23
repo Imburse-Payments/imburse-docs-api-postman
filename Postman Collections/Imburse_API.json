@@ -2062,7 +2062,7 @@
                   "raw": ""
                 },
                 "url": "{{providersApiUrl}}/v1/payment-providers/{{paymentProviderConfigurationId}}",
-                "description": "#### Description\r\n\r\nGets a Payment Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to retrieve\r\n\r\n#### Response\r\n\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. \r\nSee the response object documentation fo your particular provider ie. Braintree SDK, Paydirekt Merchant etc."
+                "description": "#### Description\r\n\r\nGets a Payment Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to retrieve\r\n\r\n#### Response Object\r\n\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. \r\nSee the response object documentation fo your particular provider ie. Braintree SDK, Paydirekt Merchant etc."
               },
               "response": [
                 {
