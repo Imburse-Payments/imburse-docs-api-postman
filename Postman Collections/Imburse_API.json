@@ -1244,7 +1244,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
-                    "description": "# Description\n\nGets a key for the current tenant by it's public key\n\n## Role required\n\n`t.key.r`"
+                    "description": "# Description\n\nGets a key for the current tenant by it's public key\n\n## Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired tenant key"
                   },
                   "response": [
                     {
