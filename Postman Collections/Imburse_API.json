@@ -3173,7 +3173,7 @@
               "raw": ""
             },
             "url": "{{notificationsApiUrl}}/v1/webhooks/{{id}}",
-            "description": "# Description\r\n\r\nDeletes a Webhook.\r\n\r\n## Role required\r\n\r\n`t.whk.a`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nclientWebhookId | The id of the Webhook to delete."
+            "description": "# Description\r\n\r\nDeletes a Webhook.\r\n\r\n## Role required\r\n\r\n`t.whk.a`\r\n\r\n### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to delete."
           },
           "response": [
             {
