@@ -2212,7 +2212,7 @@
                 },
                 {
                   "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-                  "name": "Get a Reward Provider Configuration",
+                  "name": "Get a Tangocard Provider Configuration",
                   "request": {
                     "auth": {
                       "type": "noauth"
