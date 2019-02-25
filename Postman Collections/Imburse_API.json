@@ -1005,7 +1005,8 @@
                       "mode": "raw",
                       "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/account/users/{{userId}}"
+                    "url": "{{orgApiIUrl}}v1/account/users/{{userId}}",
+                    "description": "# Description\n\nUpdates an associated users roles for the account.\n\n## Role required\n\n`acc.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#account-roles) to assign the user."
                   },
                   "response": [
                     {
@@ -1053,7 +1054,8 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/account/users/{{userId}}"
+                    "url": "{{orgApiIUrl}}v1/account/users/{{userId}}",
+                    "description": "# Description\n\nRemoves a user from the account.\n\n## Role required\n\n`acc.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                   },
                   "response": [
                     {
@@ -1373,7 +1375,8 @@
                           "description": "Email to filter by"
                         }
                       ]
-                    }
+                    },
+                    "description": "# Description\n\nGets a list of users associated to the tenant.\n\n## Role required\n\n`t.usr.r`\n\n### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
                   },
                   "response": [
                     {
@@ -2189,7 +2192,7 @@
             {
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
               "name": "Tangocard",
-              "description": "# The Tangocard configuration object\n\nName | Type | Description\n-|-|-\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
               "item": [
                 {
                   "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
@@ -2214,7 +2217,7 @@
                       "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                     },
                     "url": "{{providersApiUrl}}/v1/reward-providers/tangocard",
-                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n## Role required\r\n\r\n`t.rew.a`\r\n\r\n## Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you"
+                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you"
                   },
                   "response": [
                     {
