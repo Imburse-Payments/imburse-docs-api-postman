@@ -1637,7 +1637,7 @@
     },
     {
       "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
-      "name": "Providers API Reference",
+      "name": "Provider Configurations API Reference",
       "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your providers - be they Payment or Reward providers. With these details, we can carry out instructions on your behalf; such as credit card authorization and/or settlement. \r\n",
       "item": [
         {
