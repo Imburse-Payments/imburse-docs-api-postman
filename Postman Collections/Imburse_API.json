@@ -1006,7 +1006,7 @@
                       "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/account/users/{{userId}}",
-                    "description": "# Description\n\nUpdates an associated users roles for the account.\n\n## Role required\n\n`acc.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#account-roles) to assign the user."
+                    "description": "# Description\n\nUpdates an associated users roles for the account.\n\n## Role required\n\n`acc.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#account-roles) to assign the user."
                   },
                   "response": [
                     {
@@ -1055,7 +1055,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/account/users/{{userId}}",
-                    "description": "# Description\n\nRemoves a user from the account.\n\n## Role required\n\n`acc.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
+                    "description": "# Description\n\nRemoves a user from the account.\n\n## Role required\n\n`acc.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                   },
                   "response": [
                     {
