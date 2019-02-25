@@ -2881,7 +2881,7 @@
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}",
-                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Description\n-|-|-\nname | Yes | The scheme name \ncurrencies | Yes | An array of `currency` codes this scheme supports\nrewardProviders | No | An array of reward provider configuration ids linked to this scheme\nrewards | No | An array of [reward configuration](#the-reward-configuration-object) objects defining the rewards for this scheme"
+                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
               },
               "response": [
                 {
