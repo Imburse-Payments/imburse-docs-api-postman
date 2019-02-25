@@ -1351,7 +1351,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}/v1/tenant/keys/{{publicKey}}",
-                    "description": "# Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n## Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
+                    "description": "#### Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
                     {
@@ -1431,7 +1431,7 @@
                         }
                       ]
                     },
-                    "description": "# Description\n\nGets a list of users associated to the tenant.\n\n## Role required\n\n`t.usr.r`\n\n#### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
+                    "description": "#### Description\n\nGets a list of users associated to the tenant.\n\n#### Role required\n\n`t.usr.r`\n\n#### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
                   },
                   "response": [
                     {
@@ -1556,7 +1556,7 @@
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
-                    "description": "# Description\n\nUpdates an associated users roles for the tenant.\n\n## Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
+                    "description": "#### Description\n\nUpdates an associated users roles for the tenant.\n\n#### Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
                   },
                   "response": [
                     {
