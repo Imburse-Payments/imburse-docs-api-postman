@@ -2229,7 +2229,7 @@
                       "raw": ""
                     },
                     "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardProviderConfigurationId}}",
-                    "description": "#### Description\r\n\r\nGets a Reward Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to retrieve\r\n\r\n##### Response Object\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. See the response object documentation for your particular provider ie. Tangocard etc."
+                    "description": "#### Description\r\n\r\nGets a Reward Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to retrieve"
                   },
                   "response": [
                     {
