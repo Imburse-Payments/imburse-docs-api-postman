@@ -1120,6 +1120,66 @@
               "description": "",
               "item": [
                 {
+                  "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
+                  "name": "Create Key",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "[\n\t\"{{role1}}\"\n]"
+                    },
+                    "url": "{{orgApiIUrl}}v1/tenant/keys",
+                    "description": "Create a key for the current tenant"
+                  },
+                  "response": [
+                    {
+                      "id": "3514510b-3aa1-486d-8c17-cd880d55696d",
+                      "name": "Create Key",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "[\n\t\"{{role1}}\"\n]"
+                        },
+                        "url": "{{orgApiIUrl}}v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "59d00071-d648-48e0-90e1-1ec41175c862",
                   "name": "Get All Keys",
                   "request": {
@@ -1260,66 +1320,6 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": null
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
-                  "name": "Create Key",
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "[\n\t\"{{role1}}\"\n]"
-                    },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys",
-                    "description": "Create a key for the current tenant"
-                  },
-                  "response": [
-                    {
-                      "id": "3514510b-3aa1-486d-8c17-cd880d55696d",
-                      "name": "Create Key",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\"\n]"
-                        },
-                        "url": "{{orgApiIUrl}}v1/tenant/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"primaryGroupSid\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
                     }
                   ]
                 }
