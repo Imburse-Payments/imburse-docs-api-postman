@@ -2364,7 +2364,7 @@
                   "raw": ""
                 },
                 "url": "{{providersApiUrl}}/v1/reward-providers",
-                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n##### Response Object\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. See the response object documentation for your particular provider ie. Tangocard etc."
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n"
               },
               "response": [
                 {
