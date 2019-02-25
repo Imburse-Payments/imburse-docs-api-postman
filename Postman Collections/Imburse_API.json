@@ -109,7 +109,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/account",
-                    "description": "# Description\n\nGets the current account assigned to the access token.\n\n### Role required\n\n`acc.r`"
+                    "description": "# Description\n\nGets the current account assigned to the access token.\n\n\n### Role required\n\n`acc.r`"
                   },
                   "response": [
                     {
