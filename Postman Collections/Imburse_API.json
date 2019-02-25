@@ -2929,7 +2929,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}",
+                "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
                 "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to delete"
               },
               "response": [
