@@ -725,7 +725,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "Gets a key for a given tenant by it's public key"
+                    "description": "# Description\n\nGets a key for a given tenant by it's public key\n\n## Role required\n\n`t.key.r`"
                   },
                   "response": [
                     {
