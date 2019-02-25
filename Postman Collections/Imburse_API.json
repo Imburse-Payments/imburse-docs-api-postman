@@ -564,7 +564,7 @@
                       "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     },
                     "url": "{{orgApiIUrl}}v1/account/tenants",
-                    "description": "Creates a new tenant for this account."
+                    "description": "# Description\n\nCreates a new tentant.\n\n## Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
                   },
                   "response": [
                     {
@@ -623,7 +623,8 @@
                       "mode": "raw",
                       "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                     },
-                    "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}"
+                    "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}",
+                    "description": "# Description\n\nUpdates a tenant.\n\n## Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the tenant.\naddress | No | An [address](address-object) for the tenant."
                   },
                   "response": [
                     {
@@ -4363,12 +4364,6 @@
           }
         }
       ]
-    },
-    {
-      "_postman_id": "841ee724-8d06-479c-acdc-0a949f570ce6",
-      "name": "Models",
-      "description": "",
-      "item": []
     }
   ],
   "event": [
