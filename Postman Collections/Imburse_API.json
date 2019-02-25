@@ -3433,6 +3433,32 @@
           "response": []
         },
         {
+          "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
+          "name": "Get Order Audit History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
+            "description": "The following endpoint will return an unstructured list of order events."
+          },
+          "response": []
+        },
+        {
           "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
           "name": "Get Customer",
           "request": {
@@ -3481,32 +3507,6 @@
             },
             "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/audit-history",
             "description": "The following endpoint will return an unstructured list of customer events."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
-          "name": "Get Order Audit History",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "type": "text",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
-            "description": "The following endpoint will return an unstructured list of order events."
           },
           "response": []
         },
