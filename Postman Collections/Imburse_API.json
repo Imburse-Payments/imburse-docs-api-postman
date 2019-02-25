@@ -1244,7 +1244,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
-                    "description": "Gets a key for the current tenant by it's public key"
+                    "description": "# Description\n\nGets a key for the current tenant by it's public key\n\n## Role required\n\n`t.key.r`"
                   },
                   "response": [
                     {
@@ -4267,7 +4267,32 @@
             "url": "{{transactionsApiUrl}}/v1/payout/options",
             "description": "Gets the payout options available filtered by the customer order contents in the supplied bearer token."
           },
-          "response": []
+          "response": [
+            {
+              "id": "816caa62-b875-41c8-9787-5454473ef6d7",
+              "name": "Get Payout Options",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/options"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"rewards\": [\n\t\t\n\t]\n}"
+            }
+          ]
         },
         {
           "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
