@@ -2047,7 +2047,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}",
+                    "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
                   "response": [
