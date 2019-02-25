@@ -4078,7 +4078,7 @@
               "raw": ""
             },
             "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
-            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+            "description": "#### Description\n\nGets a reward from the catalog by it's ID\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
           "response": [
             {
@@ -4144,7 +4144,7 @@
               "raw": "{\n    \"rewardIds\": []\n}"
             },
             "url": "{{rewardsApiUrl}}/v1/catalog/rewards",
-            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
+            "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's\n\n#### Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
           },
           "response": [
             {
@@ -4236,7 +4236,7 @@
                 }
               ]
             },
-            "description": "# Description\n\nSearches the catalog for rewards that match the given parameters\n\n## Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for."
+            "description": "#### Description\n\nSearches the catalog for rewards that match the given parameters\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for."
           },
           "response": [
             {
@@ -4454,7 +4454,29 @@
       "_postman_id": "23a28563-9813-4641-8c3c-d7caa520815f",
       "name": "Models",
       "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n",
-      "item": []
+      "item": [],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "d97746e3-0b59-4f70-9aee-20a99dbc8ab1",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "c24d9b1f-6683-4915-a630-876b50a1383e",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     }
   ],
   "event": [
