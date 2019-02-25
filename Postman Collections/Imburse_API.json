@@ -1232,7 +1232,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
-                    "description": "Gets all the keys for the account\n"
+                    "description": "Removes a key from the system for the current tenant by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": [
                     {
