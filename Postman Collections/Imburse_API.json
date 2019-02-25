@@ -3602,7 +3602,7 @@
               "raw": ""
             },
             "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
-            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`catalog-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
+            "description": "# Description\n\nGets a reward from the catalog by it's ID\n\n## Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
           },
           "response": [
             {
