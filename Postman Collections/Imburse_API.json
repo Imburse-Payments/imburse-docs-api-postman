@@ -779,7 +779,7 @@
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
-                    "description": "# Description\n\nCreates a new key for a specific tenant.\n\n## Role required\n\n`t.whk.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the specific tenant.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
+                    "description": "# Description\n\nCreates a new key for a specific tenant.\n\n## Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the specific tenant.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
                   },
                   "response": [
                     {
