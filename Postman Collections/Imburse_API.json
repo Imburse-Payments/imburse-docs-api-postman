@@ -3258,50 +3258,6 @@
           ]
         },
         {
-          "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
-          "name": "Get Whitelabel Settings",
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{token}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{whitelabelApiUrl}}/v1/settings",
-            "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
-          },
-          "response": [
-            {
-              "id": "63960dfe-bec2-4459-be49-fc5ba50d502f",
-              "name": "Successful request",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{whitelabelApiUrl}}/v1/settings"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
-            }
-          ]
-        },
-        {
           "_postman_id": "106629ab-3716-4fd7-ba3b-a44a6c9a9606",
           "name": "Upload Whitelabel Styling",
           "request": {
@@ -3350,6 +3306,50 @@
               "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
             }
           ]
+        },
+        {
+          "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
+          "name": "Get Whitelabel Settings",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{whitelabelApiUrl}}/v1/settings",
+            "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
+          },
+          "response": [
+            {
+              "id": "63960dfe-bec2-4459-be49-fc5ba50d502f",
+              "name": "Successful request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{whitelabelApiUrl}}/v1/settings"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\r\n  \"id\": \"d929d6e2-0b43-4b24-87ef-0dd6c3bcdd02\",\r\n  \"name\": \"Capital Insurance AG\",\r\n  \"address\": {\r\n    \"streetAddress\": \"Suite 19 Argeles Grove\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"London\",\r\n    \"region\": \"Middlesex\",\r\n    \"postCode\": \"SW1 1LA\",\r\n    \"country\": \"GB\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            }
+          ]
         }
       ],
       "event": [
@@ -3380,6 +3380,32 @@
       "name": "Payment Collection API Reference",
       "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
       "item": [
+        {
+          "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+            },
+            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order",
+            "description": "This is the first stage required to collect a payment.\r\n\r\nAn order must be given both a unique `customerRef` and `orderRef`. Both of these values are created and owned by you, the API consumer. In both cases the reference fields can be used query current status, view audit history or to cancel, void or reconcile payments.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\norderRef | string (50 char max) | A unique identifier used to group one or many payment instructions.\r\ncurrency | ISO3 | The currency to collect the payment in.\r\ncountry | ISO2 | The country in which the customer resides to localize payment options.\r\nscheme | string | The identifier of the `Scheme` in which to use.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`CURRENCY_IS_REQUIRED` | Currency is required.\r\n`CURRENCY_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 3 characters.\r\n`COUNTRY_IS_REQUIRED` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`COUNTRY_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 2 characters.\r\n`SCHEME_IS_REQUIRED` | Scheme is required.\r\n`SCHEME_FORMAT_NOT_RECOGNISED` | Scheme was not recognised as a valid `GUID`."
+          },
+          "response": []
+        },
         {
           "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
           "name": "Get Customer",
@@ -3429,32 +3455,6 @@
             },
             "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/audit-history",
             "description": "The following endpoint will return an unstructured list of customer events."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
-          "name": "Create Order",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "type": "text",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
-            },
-            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order",
-            "description": "This is the first stage required to collect a payment.\r\n\r\nAn order must be given both a unique `customerRef` and `orderRef`. Both of these values are created and owned by you, the API consumer. In both cases the reference fields can be used query current status, view audit history or to cancel, void or reconcile payments.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\norderRef | string (50 char max) | A unique identifier used to group one or many payment instructions.\r\ncurrency | ISO3 | The currency to collect the payment in.\r\ncountry | ISO2 | The country in which the customer resides to localize payment options.\r\nscheme | string | The identifier of the `Scheme` in which to use.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`CURRENCY_IS_REQUIRED` | Currency is required.\r\n`CURRENCY_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 3 characters.\r\n`COUNTRY_IS_REQUIRED` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`COUNTRY_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 2 characters.\r\n`SCHEME_IS_REQUIRED` | Scheme is required.\r\n`SCHEME_FORMAT_NOT_RECOGNISED` | Scheme was not recognised as a valid `GUID`."
           },
           "response": []
         },
