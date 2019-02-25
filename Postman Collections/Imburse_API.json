@@ -2413,7 +2413,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`collection-scheme-read`"
+                "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
               },
               "response": [
                 {
