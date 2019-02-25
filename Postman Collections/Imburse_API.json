@@ -1242,15 +1242,15 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "url": "{{orgApiIUrl}}/v1/tenant/keys/{{publicKey}}",
                     "description": "# Description\n\nGets a specific key by its public key.\n\n## Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the specific key"
                   },
                   "response": [
@@ -1290,15 +1290,15 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/keys/{{publicKey}}",
+                    "url": "{{orgApiIUrl}}/v1/tenant/keys/{{publicKey}}",
                     "description": "# Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n## Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
@@ -1349,11 +1349,12 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "{{orgApiIUrl}}v1/tenant/users?from=0&take=20&email=",
+                      "raw": "{{orgApiIUrl}}/v1/tenant/users?from=0&take=20&email=",
                       "host": [
-                        "{{orgApiIUrl}}v1"
+                        "{{orgApiIUrl}}"
                       ],
                       "path": [
+                        "v1",
                         "tenant",
                         "users"
                       ],
@@ -1440,15 +1441,15 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
+                    "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
                     "description": "# Description\n\nGets a user by their id\n\n## Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
                   },
                   "response": [
