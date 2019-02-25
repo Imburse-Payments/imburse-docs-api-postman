@@ -1446,7 +1446,8 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}"
+                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
+                    "description": "# Description\n\nGets a user by their id\n\n## Role required\n\n`acc.t.r`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
                   },
                   "response": [
                     {
@@ -2217,7 +2218,7 @@
                       "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                     },
                     "url": "{{providersApiUrl}}/v1/reward-providers/tangocard",
-                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you"
+                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
                     {
