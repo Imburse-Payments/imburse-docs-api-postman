@@ -3407,6 +3407,32 @@
           "response": []
         },
         {
+          "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
+          "name": "Get Order",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
+            "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
+          },
+          "response": []
+        },
+        {
           "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
           "name": "Get Customer",
           "request": {
@@ -3455,32 +3481,6 @@
             },
             "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/audit-history",
             "description": "The following endpoint will return an unstructured list of customer events."
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
-          "name": "Get Order",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer {{token}}"
-              },
-              {
-                "key": "Content-Type",
-                "type": "text",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
-            "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
           },
           "response": []
         },
