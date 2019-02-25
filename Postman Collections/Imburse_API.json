@@ -3668,7 +3668,7 @@
               "raw": "{\n    \"rewardIds\": []\n}"
             },
             "url": "{{rewardsApiUrl}}/v1/catalog/rewards",
-            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`catalog-read`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
+            "description": "# Description\n\nGets a list of rewards from the catalog by their ID's\n\n## Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
           },
           "response": [
             {
