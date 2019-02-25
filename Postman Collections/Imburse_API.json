@@ -4478,7 +4478,7 @@
     {
       "_postman_id": "23a28563-9813-4641-8c3c-d7caa520815f",
       "name": "Models",
-      "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n\n",
+      "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
       "item": [],
       "event": [
         {
