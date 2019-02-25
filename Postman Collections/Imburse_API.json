@@ -779,7 +779,7 @@
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/",
-                    "description": "Creates a key for a tenant"
+                    "description": "Creates a key for a given tenant"
                   },
                   "response": [
                     {
