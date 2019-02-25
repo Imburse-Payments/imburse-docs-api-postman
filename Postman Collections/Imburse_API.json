@@ -3192,7 +3192,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{notificationsApiUrl}}/v1/webhooks/{{clientWebhookId}}"
+                "url": "{{notificationsApiUrl}}/v1/webhooks/{{id}}"
               },
               "status": "No Content",
               "code": 204,
@@ -3968,7 +3968,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{rewardId}}",
+            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
             "description": "Submit a payout instruction for processing."
           },
           "response": []
