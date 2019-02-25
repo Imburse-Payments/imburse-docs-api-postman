@@ -2684,7 +2684,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/payout",
-                "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`payout-scheme-read`"
+                "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
               },
               "response": [
                 {
