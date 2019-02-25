@@ -2354,7 +2354,7 @@
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`collection-scheme-read`"
+                "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`t.sch.a`"
               },
               "response": [
                 {
