@@ -1706,6 +1706,50 @@
                   ]
                 },
                 {
+                  "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
+                  "name": "Get a Braintree SDK Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}",
+                    "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                  },
+                  "response": [
+                    {
+                      "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"BRAINTREE\",\r\n\t\t\"name\": \"Braintree\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"BRAINTREE_SDK\",\r\n\t\t\"name\": \"Braintree SDK\",\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
                   "name": "Update a Braintree SDK Configuration",
                   "request": {
@@ -1757,50 +1801,6 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": ""
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
-                  "name": "Get a Braintree SDK Configuration",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}",
-                    "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                  },
-                  "response": [
-                    {
-                      "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"BRAINTREE\",\r\n\t\t\"name\": \"Braintree\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"BRAINTREE_SDK\",\r\n\t\t\"name\": \"Braintree SDK\",\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
                     }
                   ]
                 }
