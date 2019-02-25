@@ -1286,7 +1286,7 @@
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/keys",
-                    "description": "Gets all the keys for the account\n"
+                    "description": "Create a key for the current tenant"
                   },
                   "response": [
                     {
