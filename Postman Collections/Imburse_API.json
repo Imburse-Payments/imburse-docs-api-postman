@@ -2123,7 +2123,7 @@
                       "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                     },
                     "url": "{{providersApiUrl}}/v1/reward-providers/tangocard",
-                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n## Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration"
+                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n## Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you."
                   },
                   "response": [
                     {
