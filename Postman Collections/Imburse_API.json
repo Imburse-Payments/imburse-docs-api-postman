@@ -4265,7 +4265,7 @@
               "raw": ""
             },
             "url": "{{transactionsApiUrl}}/v1/payout/options",
-            "description": "Gets the payout options for a Payment Token\n\n#### Response object"
+            "description": "Gets the payout options for a Payment Token"
           },
           "response": [
             {
