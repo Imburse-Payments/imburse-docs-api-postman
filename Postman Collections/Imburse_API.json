@@ -2476,6 +2476,28 @@
               ]
             }
           ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "f945d9aa-d04f-4e56-9fe8-cb016c7e43d8",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed826af3-096a-47e7-976d-bade58701796",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         }
       ],
@@ -4397,7 +4419,7 @@
               "raw": ""
             },
             "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
-            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-|-\nexternalOrderRef | string |\namountCharged | \ndenomination | \nrewardId | \nrewardName | \nstatus |\ncreatedAt |\nrewardDetails |"
+            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
           },
           "response": [
             {
