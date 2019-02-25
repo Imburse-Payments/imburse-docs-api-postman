@@ -280,7 +280,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/account/keys/{{accountKeyToDelete}}",
-                    "description": "Removes a key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
+                    "description": "# Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n## Role required\n\n`acc.key.r`\n\n### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                   },
                   "response": [
                     {
