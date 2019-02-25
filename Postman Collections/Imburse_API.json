@@ -2248,12 +2248,12 @@
         {
           "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
           "name": "Reward Providers",
-          "description": "",
+          "description": "The Reward Providers allow you to administer reward provider configurations. \n\n\n## Common Models \n\nListed below are the common models used throught this API.\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
           "item": [
             {
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
               "name": "Tangocard",
-              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
               "item": [
                 {
                   "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
@@ -4376,7 +4376,7 @@
               "raw": ""
             },
             "url": "{{transactionsApiUrl}}/v1/payout/options",
-            "description": "Gets the payout options for a Payment Token"
+            "description": "Gets the payout options for a Payment Token\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of rewards options\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | \ncountries | string array |\ncreatedDate | date time |\ncredentialTypes | - |\ncurrencyCode | string |\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time |\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string |\nrewardId | guid |\nrewardName | string |\nrewardType | - |\nstatus | - |\ntags | string |\nvalue | [Reward Value](#the-reward-value-object) |\nvalueType | - |\n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string |\nbrandName | string | \ncreatedDate | date time | \ndescription | string |\ndisclaimer | string | \nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time |\nrequirements | [Reward Requirements](#the-reward-requirements-object) | \nshortDescription | string | \nstatus | - | \nterms | |\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | \ndisclaimerInstructions | bool |\ndisplayInstructions | bool |\ntermsAndConditionsInstructions | string |\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int |\ngreaterThanOrEqualTo | int |\nlessThan | int |\nlessThanOrEqualTo | int |"
           },
           "response": [
             {
