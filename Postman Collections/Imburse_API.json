@@ -422,7 +422,7 @@
                         }
                       ]
                     },
-                    "description": "Gets all the tenants for this account.\n\nOptional query paramenters used for paging are:\n- from - starting index. Default is 0.\n- take - the amount of results in the page. Default us 20.\n- name - filters by a name."
+                    "description": "# Description\n\nGets all the tenants for this account.\n\n## Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | starting index. Default is 0.\ntake | the amount of results in the page. Default us 20.\nname | filters by a name."
                   },
                   "response": [
                     {
@@ -935,7 +935,8 @@
                           "description": "Email to filter by"
                         }
                       ]
-                    }
+                    },
+                    "description": "# Description\n\nGets a list of users associated to the account.\n\n## Role required\n\n`acc.usr.r`\n\n### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | starting index. Default is 0.\ntake | the amount of results in the page. Default us 20.\nname | filters by a name."
                   },
                   "response": [
                     {
