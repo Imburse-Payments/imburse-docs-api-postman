@@ -2733,7 +2733,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/payout/{schemeId}",
-                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`payout-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
+                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
               },
               "response": [
                 {
