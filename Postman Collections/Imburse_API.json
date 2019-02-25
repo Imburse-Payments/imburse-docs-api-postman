@@ -833,7 +833,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "Removes a tenat's key from the system. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
+                    "description": "Removes a tenat's key from the system by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone."
                   },
                   "response": [
                     {
