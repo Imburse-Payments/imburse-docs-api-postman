@@ -4286,7 +4286,7 @@
               "raw": ""
             },
             "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
-            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Request object"
+            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-|-\nexternalOrderRef | string |\namountCharged | \ndenomination | \nrewardId | \nrewardName | \nstatus |\ncreatedAt |\nrewardDetails |"
           },
           "response": [
             {
