@@ -2635,7 +2635,7 @@
                   "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                 },
                 "url": "{{schemesApiUrl}}/v1/payout",
-                "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`payout-scheme-read`"
+                "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`"
               },
               "response": [
                 {
