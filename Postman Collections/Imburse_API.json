@@ -2560,7 +2560,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                "url": "{{schemesApiUrl}}/v1/collect/{{id}}",
                 "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
               },
               "response": [
