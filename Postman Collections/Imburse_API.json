@@ -2248,7 +2248,7 @@
         {
           "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
           "name": "Reward Providers",
-          "description": "",
+          "description": "## Reward Models\n\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
           "item": [
             {
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
@@ -2384,7 +2384,7 @@
                       "raw": ""
                     },
                     "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}",
-                    "description": "#### Description\r\n\r\nGets a Reward Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
+                    "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
                     {
@@ -2405,7 +2405,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t}\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
                     }
                   ]
                 }
@@ -2453,7 +2453,7 @@
                   "raw": ""
                 },
                 "url": "{{providersApiUrl}}/v1/reward-providers",
-                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nAn array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
               },
               "response": [
                 {
@@ -4478,7 +4478,7 @@
     {
       "_postman_id": "23a28563-9813-4641-8c3c-d7caa520815f",
       "name": "Models",
-      "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
+      "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n\n",
       "item": [],
       "event": [
         {
