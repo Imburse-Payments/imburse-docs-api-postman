@@ -3672,7 +3672,7 @@
     },
     {
       "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
-      "name": "Catalog API Reference",
+      "name": "Rewards Catalog API Reference",
       "description": "",
       "item": [
         {
@@ -3924,6 +3924,28 @@
             }
           ]
         }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "89c4dfe8-1a09-47c5-b5e5-70ac9b0dfa64",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8870720e-117d-424a-b05c-933b3c345864",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
       ]
     },
     {
@@ -3971,7 +3993,32 @@
             "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
             "description": "Submit a payout instruction for processing."
           },
-          "response": []
+          "response": [
+            {
+              "id": "d69c8c41-05f3-4ef4-a39a-cabe5e7c35b9",
+              "name": "Process Reward Payout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"externalOrderRef\": \"\",\n    \"amountCharged\": {\n        \"value\": 25,\n        \"currencyCode\": \"USD\",\n        \"total\": 25\n    },\n    \"denomination\": {\n        \"value\": 25,\n        \"currencyCode\": \"USD\"\n    },\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"status\": \"\",\n    \"createdAt\": \"\",\n    \"rewardDetails\": {\n        \"credentials\": {\n            \"Redemption URL\": \"http://amc.tangocard.com/10/D1B3D8Cz5j7c9q98PR\"\n        },\n        \"credentialList\": [\n            {\n                \"label\": \"Redemption URL\",\n                \"value\": \"http://amc.tangocard.com/10/D1B3D8Cz5j7c9q98PR\",\n                \"type\": \"url\",\n                \"credentialType\": \"redemptionUrl\"\n            }\n        ],\n        \"redemptionInstructions\": \"<p>Click on the Redemption URL provided above to access your AMC Gift Card. Your Gift Card is redeemable at AMC theatres in the US (including AMC Showplace, Loew&#39;s, Magic Johnson, Cineplex Odeon &amp; Star).&nbsp;Location information is available at <a href=\\\"http://amctheatres.com\\\">amctheatres.com</a>.</p>\\r\\n\"\n    }\n}"
+            }
+          ]
         }
       ],
       "event": [
