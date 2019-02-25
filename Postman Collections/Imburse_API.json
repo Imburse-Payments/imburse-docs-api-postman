@@ -76,7 +76,7 @@
     },
     {
       "_postman_id": "c7a00e71-a093-41c7-a084-5bfbafb0fd00",
-      "name": "Organisation API Reference",
+      "name": "####Organisation API Reference",
       "description": "",
       "item": [
         {
@@ -1376,7 +1376,7 @@
                         }
                       ]
                     },
-                    "description": "# Description\n\nGets a list of users associated to the tenant.\n\n## Role required\n\n`t.usr.r`\n\n### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
+                    "description": "# Description\n\nGets a list of users associated to the tenant.\n\n## Role required\n\n`t.usr.r`\n\n#### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
                   },
                   "response": [
                     {
@@ -1447,7 +1447,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
-                    "description": "# Description\n\nGets a user by their id\n\n## Role required\n\n`acc.t.r`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
+                    "description": "# Description\n\nGets a user by their id\n\n## Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
                   },
                   "response": [
                     {
@@ -1501,7 +1501,7 @@
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
-                    "description": "# Description\n\nUpdates an associated users roles for the tenant.\n\n## Role required\n\n`t.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
+                    "description": "# Description\n\nUpdates an associated users roles for the tenant.\n\n## Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
                   },
                   "response": [
                     {
@@ -1555,7 +1555,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
-                    "description": "# Description\n\nRemoves a user from the tenant.\n\n## Role required\n\n`t.usr.a`\n\n### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
+                    "description": "# Description\n\nRemoves a user from the tenant.\n\n## Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                   },
                   "response": [
                     {
@@ -2195,7 +2195,7 @@
             {
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
               "name": "Tangocard",
-              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\n\n\n\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Payment Provider](#the-payment-provider-object) | The payment provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
               "item": [
                 {
                   "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
