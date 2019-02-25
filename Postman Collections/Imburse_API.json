@@ -2209,6 +2209,50 @@
                       "body": ""
                     }
                   ]
+                },
+                {
+                  "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
+                  "name": "Get a Reward Provider Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardProviderConfigurationId}}",
+                    "description": "#### Description\r\n\r\nGets a Reward Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to retrieve\r\n\r\n##### Response Object\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. See the response object documentation for your particular provider ie. Tangocard etc."
+                  },
+                  "response": [
+                    {
+                      "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardConfigurationId}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t}\r\n\t\"rewardConfigurationId\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                    }
+                  ]
                 }
               ],
               "_postman_isSubFolder": true
@@ -2253,51 +2297,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"rewardConfigurationId\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-              "name": "Get a Reward Provider Configuration",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardProviderConfigurationId}}",
-                "description": "#### Description\r\n\r\nGets a Reward Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nrewardProviderConfigurationId | The id of the reward provider configuration to retrieve\r\n\r\n##### Response Object\r\nPlease note. The response object shape will vary depending on the type of provider configuration you requested. See the response object documentation for your particular provider ie. Tangocard etc."
-              },
-              "response": [
-                {
-                  "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{providersApiUrl}}/v1/reward-providers/{{rewardConfigurationId}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t}\r\n\t\"rewardConfigurationId\": \"\",\r\n    \"name\": \"\"\r\n}"
+                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"rewardConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"customerIdentifier\": \"\",\n\t    \"customerDisplayName\": \"\",\n\t    \"accountIdentifier\": \"\",\n\t\t\"accountDisplayName\": \"\"\n\t    \"accountContactEmail\": \"\"\n\t}\n]"
                 }
               ]
             }
