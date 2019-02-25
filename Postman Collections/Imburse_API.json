@@ -67,7 +67,8 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}v1/auth/hmac"
+            "url": "{{identityApiUrl}}v1/auth/hmac",
+            "description": "# Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#HMAC-Authentication) for more details."
           },
           "response": []
         }
