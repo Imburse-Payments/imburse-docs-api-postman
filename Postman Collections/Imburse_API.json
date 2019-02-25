@@ -677,7 +677,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys",
-                    "description": "# Description\n\nGets all the keys for a given tenant\n\n## Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
+                    "description": "# Description\n\nGets all the keys for a given tenant\n\n## Role required\n\n`t.key.r`"
                   },
                   "response": [
                     {
