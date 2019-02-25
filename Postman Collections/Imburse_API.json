@@ -2450,7 +2450,7 @@
                   "raw": ""
                 },
                 "url": "{{providersApiUrl}}/v1/reward-providers",
-                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nAn array of \r\n\r\nName | Type | Description\r\n-|-|-\r\npaymentProvider | [Payment Provider](#the-payment-provider-object) | The payment provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name for a configuration"
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nAn array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\npaymentProvider | [Payment Provider](#the-payment-provider-object) | The payment provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name for a configuration"
               },
               "response": [
                 {
