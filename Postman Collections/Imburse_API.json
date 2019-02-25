@@ -725,7 +725,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "# Description\n\nGets a key for a given tenant by it's public key\n\n## Role required\n\n`t.key.r`"
+                    "description": "# Description\n\nGets a key for a given tenant by it's public key\n\n## Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
                   },
                   "response": [
                     {
@@ -4290,7 +4290,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n\t\"rewards\": [\n\t\t\n\t]\n}"
+              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
             }
           ]
         },
