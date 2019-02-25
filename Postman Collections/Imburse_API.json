@@ -1637,7 +1637,7 @@
     },
     {
       "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
-      "name": "Provider Configurations API Reference",
+      "name": "Provider API Reference",
       "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
       "item": [
         {
