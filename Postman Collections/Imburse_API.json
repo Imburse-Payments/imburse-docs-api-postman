@@ -180,7 +180,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}v1/account"
+                        "url": "{{orgApiIUrl}}/v1/account"
                       },
                       "_postman_previewlanguage": "json",
                       "header": null,
@@ -256,7 +256,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}v1/account/keys"
+                        "url": "{{orgApiIUrl}}/v1/account/keys"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2450,7 +2450,7 @@
                   "raw": ""
                 },
                 "url": "{{providersApiUrl}}/v1/reward-providers",
-                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nAn array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Payment Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nAn array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
               },
               "response": [
                 {
