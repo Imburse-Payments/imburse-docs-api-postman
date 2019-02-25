@@ -2574,7 +2574,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
-                "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`collection-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
+                "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
               },
               "response": [
                 {
