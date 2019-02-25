@@ -320,20 +320,20 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
+                        "type": "text",
+                        "value": "application/json"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": "[ \n\t\"{{role1}}\", \n\t\"{{role2}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/account/keys/",
+                    "url": "{{orgApiIUrl}}/v1/account/keys/",
                     "description": "# Description\n\nCreates a new account key to access account level API's.\n\n## Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
                   },
                   "response": [
@@ -393,11 +393,12 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "{{orgApiIUrl}}v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
+                      "raw": "{{orgApiIUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
                       "host": [
-                        "{{orgApiIUrl}}v1"
+                        "{{orgApiIUrl}}"
                       ],
                       "path": [
+                        "v1",
                         "account",
                         "tenants"
                       ],
@@ -498,7 +499,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/account/tenants/{{tenantId}}",
+                    "url": "{{orgApiIUrl}}/v1/account/tenants/{{tenantId}}",
                     "description": "# Description\n\nGets a tenant by id\n\n## Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
                   },
                   "response": [
