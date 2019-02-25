@@ -67,10 +67,62 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}v1/auth/hmac",
-            "description": "# Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#HMAC-Authentication) for more details."
+            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "description": "# Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
-          "response": []
+          "response": [
+            {
+              "id": "453f82d4-8c86-4aa7-8789-f7119068c8a6",
+              "name": "Create Bearer Token",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{identityApiUrl}}/v1/auth/hmac"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Mon, 25 Feb 2019 16:00:49 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "532"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"accessToken\": \"\",\n    \"expires\": \"\"\n}"
+            }
+          ]
         }
       ]
     },
@@ -1489,21 +1541,21 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       },
                       {
                         "key": "Content-Type",
                         "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
+                        "type": "text",
+                        "value": "application/json"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": "[\n\t\"{{role1}}\"\n]"
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
+                    "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
                     "description": "# Description\n\nUpdates an associated users roles for the tenant.\n\n## Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
                   },
                   "response": [
@@ -1549,15 +1601,15 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
-                        "type": "text"
+                        "type": "text",
+                        "value": "Bearer {{token}}"
                       }
                     ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{orgApiIUrl}}v1/tenant/users/{{userId}}",
+                    "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
                     "description": "# Description\n\nRemoves a user from the tenant.\n\n## Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                   },
                   "response": [
@@ -2312,7 +2364,7 @@
                 },
                 {
                   "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-                  "name": "Get a Tangocard Provider Configuration",
+                  "name": "Get a Tangocard Configuration",
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -4397,6 +4449,12 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "23a28563-9813-4641-8c3c-d7caa520815f",
+      "name": "Models",
+      "description": "Common models used throughout the API.\n\n#### Payment Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this payment provider. ie. BRAINTREE\nname | string | The friendly name of this provider. ie. Braintree Payments\n",
+      "item": []
     }
   ],
   "event": [
