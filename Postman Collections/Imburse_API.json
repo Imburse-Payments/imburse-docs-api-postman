@@ -2561,7 +2561,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
-                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to get"
+                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
               },
               "response": [
                 {
