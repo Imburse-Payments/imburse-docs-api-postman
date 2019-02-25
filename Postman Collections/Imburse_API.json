@@ -936,7 +936,7 @@
                         }
                       ]
                     },
-                    "description": "# Description\n\nGets a list of users associated to the account.\n\n## Role required\n\n`acc.usr.r`\n\n### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | starting index. Default is 0.\ntake | the amount of results in the page. Default us 20.\nname | filters by a name."
+                    "description": "# Description\n\nGets a list of users associated to the account.\n\n## Role required\n\n`acc.usr.r`\n\n### Optional Params\n\nParameter | Description\n--------- | -----------\nfrom | The index to take from. Default is 0.\ntake | Amount of results to return. Default us 20.\nemail | Email to filter by."
                   },
                   "response": [
                     {
