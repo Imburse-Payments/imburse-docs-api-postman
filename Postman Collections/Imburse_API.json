@@ -232,7 +232,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}v1/account/keys/{{publicKey}}",
-                    "description": "Gets a key for the account by it's public key"
+                    "description": "# Description\n\nGets a certain account key by its public key.\n\n## Role required\n\n`acc.key.r`"
                   },
                   "response": [
                     {
