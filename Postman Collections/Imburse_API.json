@@ -68,7 +68,7 @@
               "raw": ""
             },
             "url": "{{identityApiUrl}}/v1/auth/hmac",
-            "description": "# Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
+            "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
             {
@@ -161,7 +161,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}/v1/account",
-                    "description": "# Description\n\nGets the current account assigned to the access token.\n\n## Role required\n\n`acc.r`"
+                    "description": "#### Description\n\nGets the current account assigned to the access token.\n\n#### Role required\n\n`acc.r`"
                   },
                   "response": [
                     {
@@ -237,7 +237,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}/v1/account/keys",
-                    "description": "# Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n## Role required\n\n`acc.key.r`"
+                    "description": "#### Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n#### Role required\n\n`acc.key.r`"
                   },
                   "response": [
                     {
@@ -285,7 +285,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}/v1/account/keys/{{publicKey}}",
-                    "description": "# Description\n\nGets a certain account key by its public key.\n\n## Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
+                    "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
                   },
                   "response": [
                     {
@@ -333,7 +333,7 @@
                       "raw": ""
                     },
                     "url": "{{orgApiIUrl}}/v1/account/keys/{{publicKey}}",
-                    "description": "# Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n## Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
+                    "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                   },
                   "response": [
                     {
