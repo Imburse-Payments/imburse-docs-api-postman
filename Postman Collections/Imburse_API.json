@@ -1934,7 +1934,7 @@
                       "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                     },
                     "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{paymentProviderConfigurationId}}",
-                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nnname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
+                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
                   },
                   "response": [
                     {
@@ -2171,7 +2171,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentProviderConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"merchantId\": \"\",\n\t    \"publicKey\": \"\",\n\t    \"merchantAccountId\": \"\"\n\t}, \n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"PAYDIREKT\",\n\t\t\t\"name\": \"Paydirekt\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"PAYDIREKT_MERCHANT\",\n\t\t\t\"name\": \"Paydirekt Merchant\"\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"paymentProviderConfigurationId\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": [],\n\t    \"publicKey\": \"\",\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
             }
