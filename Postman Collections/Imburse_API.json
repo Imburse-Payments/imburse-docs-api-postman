@@ -239,7 +239,7 @@
         },
         {
           "_postman_id": "0a64a4a2-db8f-4503-9de8-592c03255bc3",
-          "name": "Create Management API Bearer Token Copy",
+          "name": "Create Payout API Bearer Token",
           "event": [
             {
               "listen": "prerequest",
