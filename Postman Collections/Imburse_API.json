@@ -59,15 +59,15 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
-                "type": "text"
+                "type": "text",
+                "value": "Hmac {{token}}"
               }
             ],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "url": "{{identityApiUrl}}/v1/hmac/management",
             "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
