@@ -126,7 +126,7 @@
         },
         {
           "_postman_id": "1ddd267b-89d2-462e-9227-a0ee94e86805",
-          "name": "Create Bearer Token Copy",
+          "name": "Create Management API Bearer Token",
           "event": [
             {
               "listen": "prerequest",
