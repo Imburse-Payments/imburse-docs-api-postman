@@ -13,7 +13,7 @@
       "item": [
         {
           "_postman_id": "7c24f4b5-5d1c-423a-a717-575943781e07",
-          "name": "Create Bearer Token",
+          "name": "Create Collect Bearer Token",
           "event": [
             {
               "listen": "prerequest",
