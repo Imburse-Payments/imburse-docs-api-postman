@@ -181,7 +181,7 @@
               "raw": ""
             },
             "url": "{{identityApiUrl}}/v1/hmac/collect",
-            "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
+            "description": "#### Description\n\nCreates a new Collect API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
             {
