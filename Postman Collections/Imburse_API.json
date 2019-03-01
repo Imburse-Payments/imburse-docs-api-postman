@@ -125,119 +125,6 @@
           ]
         },
         {
-          "_postman_id": "12c1dc70-8cf4-4c76-a18b-2f00992af758",
-          "name": "Create Bearer Token Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "bebb259f-e09d-4eef-87ce-010ad3c573fd",
-                "exec": [
-                  "var CryptoJS = require(\"crypto-js\");\r",
-                  "\r",
-                  "var publicKey = pm.environment.get(\"publicKey\");\r",
-                  "var privateKey = CryptoJS.enc.Base64.parse(pm.environment.get(\"privateKey\"));\r",
-                  "\r",
-                  "var timestamp = (new Date).getTime() / 1000;\r",
-                  "\r",
-                  "var nonce = timestamp;\r",
-                  "    \r",
-                  "var body = request.data;\r",
-                  "\r",
-                  "if (body.length > 0){\r",
-                  "    var utf8Body = CryptoJS.enc.Utf8.parse(body);\r",
-                  "    var hashedBody = CryptoJS.SHA256(utf8Body);\r",
-                  "    var bodySignature = CryptoJS.enc.Base64.stringify(hashedBody);\r",
-                  "}\r",
-                  "else {\r",
-                  "    var bodySignature = \"\";\r",
-                  "}\r",
-                  "\r",
-                  "var unsignedSignature = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + bodySignature;\r",
-                  "\r",
-                  "var utf8Signature = CryptoJS.enc.Utf8.parse(unsignedSignature);\r",
-                  "var hashedSignature = CryptoJS.HmacSHA256(utf8Signature, privateKey);\r",
-                  "var signedSignature = CryptoJS.enc.Base64.stringify(hashedSignature);\r",
-                  "\r",
-                  "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;\r",
-                  "\r",
-                  "pm.variables.set(\"token\", hmac);"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Hmac {{token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{identityApiUrl}}/v1/auth/hmac",
-            "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
-          },
-          "response": [
-            {
-              "id": "f6fb7c74-ad04-490c-a7d0-e3c1b7c6549f",
-              "name": "Create Bearer Token",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Hmac {{token}}",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{identityApiUrl}}/v1/auth/hmac"
-              },
-              "status": "Created",
-              "code": 201,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "date",
-                  "value": "Mon, 25 Feb 2019 16:00:49 GMT"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "server",
-                  "value": "envoy"
-                },
-                {
-                  "key": "api-supported-versions",
-                  "value": "1.0"
-                },
-                {
-                  "key": "x-envoy-upstream-service-time",
-                  "value": "532"
-                },
-                {
-                  "key": "transfer-encoding",
-                  "value": "chunked"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"accessToken\": \"\",\n    \"expires\": \"\"\n}"
-            }
-          ]
-        },
-        {
           "_postman_id": "1ddd267b-89d2-462e-9227-a0ee94e86805",
           "name": "Create Bearer Token Copy",
           "event": [
@@ -299,6 +186,119 @@
           "response": [
             {
               "id": "3365b3a8-75da-44db-9502-f9bc4aa40d87",
+              "name": "Create Bearer Token",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Hmac {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{identityApiUrl}}/v1/auth/hmac"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "date",
+                  "value": "Mon, 25 Feb 2019 16:00:49 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "server",
+                  "value": "envoy"
+                },
+                {
+                  "key": "api-supported-versions",
+                  "value": "1.0"
+                },
+                {
+                  "key": "x-envoy-upstream-service-time",
+                  "value": "532"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"accessToken\": \"\",\n    \"expires\": \"\"\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "12c1dc70-8cf4-4c76-a18b-2f00992af758",
+          "name": "Create Bearer Token Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "bebb259f-e09d-4eef-87ce-010ad3c573fd",
+                "exec": [
+                  "var CryptoJS = require(\"crypto-js\");\r",
+                  "\r",
+                  "var publicKey = pm.environment.get(\"publicKey\");\r",
+                  "var privateKey = CryptoJS.enc.Base64.parse(pm.environment.get(\"privateKey\"));\r",
+                  "\r",
+                  "var timestamp = (new Date).getTime() / 1000;\r",
+                  "\r",
+                  "var nonce = timestamp;\r",
+                  "    \r",
+                  "var body = request.data;\r",
+                  "\r",
+                  "if (body.length > 0){\r",
+                  "    var utf8Body = CryptoJS.enc.Utf8.parse(body);\r",
+                  "    var hashedBody = CryptoJS.SHA256(utf8Body);\r",
+                  "    var bodySignature = CryptoJS.enc.Base64.stringify(hashedBody);\r",
+                  "}\r",
+                  "else {\r",
+                  "    var bodySignature = \"\";\r",
+                  "}\r",
+                  "\r",
+                  "var unsignedSignature = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + bodySignature;\r",
+                  "\r",
+                  "var utf8Signature = CryptoJS.enc.Utf8.parse(unsignedSignature);\r",
+                  "var hashedSignature = CryptoJS.HmacSHA256(utf8Signature, privateKey);\r",
+                  "var signedSignature = CryptoJS.enc.Base64.stringify(hashedSignature);\r",
+                  "\r",
+                  "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;\r",
+                  "\r",
+                  "pm.variables.set(\"token\", hmac);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Hmac {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
+          },
+          "response": [
+            {
+              "id": "f6fb7c74-ad04-490c-a7d0-e3c1b7c6549f",
               "name": "Create Bearer Token",
               "originalRequest": {
                 "method": "POST",
