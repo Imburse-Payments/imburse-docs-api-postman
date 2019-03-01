@@ -186,7 +186,7 @@
           "response": [
             {
               "id": "453f82d4-8c86-4aa7-8789-f7119068c8a6",
-              "name": "Create Bearer Token",
+              "name": "Create Collect API Bearer Token",
               "originalRequest": {
                 "method": "POST",
                 "header": [
@@ -200,7 +200,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{identityApiUrl}}/v1/auth/hmac"
+                "url": "{{identityApiUrl}}/v1/hmac/collect"
               },
               "status": "Created",
               "code": 201,
@@ -293,7 +293,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "url": "{{identityApiUrl}}/v1/hmac/payout",
             "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
