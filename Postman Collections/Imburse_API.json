@@ -73,7 +73,7 @@
           "response": [
             {
               "id": "3365b3a8-75da-44db-9502-f9bc4aa40d87",
-              "name": "Create Bearer Token",
+              "name": "Create Management API Bearer Token",
               "originalRequest": {
                 "method": "POST",
                 "header": [
@@ -87,7 +87,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{identityApiUrl}}/v1/auth/hmac"
+                "url": "{{identityApiUrl}}/v1/hmac/management"
               },
               "status": "Created",
               "code": 201,
@@ -180,7 +180,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/v1/auth/hmac",
+            "url": "{{identityApiUrl}}/v1/hmac/collect",
             "description": "#### Description\n\nCreates a new bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
