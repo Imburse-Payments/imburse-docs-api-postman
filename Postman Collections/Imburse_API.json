@@ -2016,7 +2016,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}",
+                    "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
                   "response": [
@@ -2030,7 +2030,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/{{id}}"
+                        "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2634,6 +2634,50 @@
                       "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
                     }
                   ]
+                },
+                {
+                  "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
+                  "name": "Get a Tangocard Configuration Copy",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                    "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
+                  },
+                  "response": [
+                    {
+                      "id": "ab0dc51d-2a0c-4677-a4fc-e762da2037f3",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{providersApiUrl}}/v1/reward-providers/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                    }
+                  ]
                 }
               ],
               "event": [
@@ -3142,7 +3186,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"name\": \"\",\r\n\t\t\"currencies\": [],\r\n\t\t\"rewardProviders\": [],\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 130\r\n\t\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 200\r\n\t\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 278\r\n\t\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 300\r\n\t\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 1200\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"value\": {\r\n\t\t\t\t\t\t\t        \"greaterThan\": null,\r\n\t\t\t\t\t\t\t        \"greaterThanOrEqualTo\": 0,\r\n\t\t\t\t\t\t\t        \"lessThan\": null,\r\n\t\t\t\t\t\t\t        \"lessThanOrEqualTo\": 0\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
+                  "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"name\": \"\",\r\n\t\t\"currencies\": [],\r\n\t\t\"rewardProviders\": [],\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
                 }
               ]
             },
@@ -3191,7 +3235,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 130\r\n\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 200\r\n\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 278\r\n\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 300\r\n\t\t\t\t\t\t            },\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 1200\r\n\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t    \"value\": {\r\n\t\t\t\t\t\t        \"greaterThan\": null,\r\n\t\t\t\t\t\t        \"greaterThanOrEqualTo\": 0,\r\n\t\t\t\t\t\t        \"lessThan\": null,\r\n\t\t\t\t\t\t        \"lessThanOrEqualTo\": 0\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                 }
               ]
             },
@@ -4700,6 +4744,12 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
+      "name": "DELETE",
+      "description": "",
+      "item": []
     }
   ],
   "event": [
