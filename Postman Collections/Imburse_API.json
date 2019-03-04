@@ -4677,7 +4677,7 @@
         },
         {
           "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
-          "name": "Get Payout Options Copy",
+          "name": "Get Collect Options",
           "request": {
             "method": "GET",
             "header": [
