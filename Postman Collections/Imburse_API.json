@@ -2479,7 +2479,7 @@
             {
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
               "name": "Tangocard",
-              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
               "item": [
                 {
                   "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
@@ -2637,7 +2637,7 @@
                 },
                 {
                   "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
-                  "name": "Get a Tangocard Configuration Copy",
+                  "name": "Get Tangocard Account",
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2653,8 +2653,8 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}",
-                    "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
+                    "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
+                    "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
                   },
                   "response": [
                     {
@@ -2667,7 +2667,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/reward-providers/{{id}}"
+                        "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}/account"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2675,7 +2675,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                      "body": "{\r\n\t\"accountIdentifier\": \"\",\r\n\t\"accountNumber\": \"\",\r\n    \"contactEmail\": \"\",\r\n    \"currencyCode\": \"\",\r\n    \"currentBalance\": 0.00,\r\n    \"displayName\": \"\",\r\n\t\"status\": \"\"\r\n}"
                     }
                   ]
                 }
@@ -2744,7 +2744,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"rewardProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
             }
@@ -3021,8 +3021,8 @@
                     },
                     "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
                   },
-                  "status": "Accepted",
-                  "code": 202,
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": "json",
                   "header": [],
                   "cookie": [],
@@ -3282,8 +3282,8 @@
                     },
                     "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
                   },
-                  "status": "Accepted",
-                  "code": 202,
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": "json",
                   "header": [],
                   "cookie": [],
@@ -4651,6 +4651,52 @@
           "response": [
             {
               "id": "816caa62-b875-41c8-9787-5454473ef6d7",
+              "name": "Get Payout Options",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/options"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
+          "name": "Get Payout Options Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{transactionsApiUrl}}/v1/payout/options",
+            "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
+          },
+          "response": [
+            {
+              "id": "2646a803-5275-4874-9abb-c22758e06b92",
               "name": "Get Payout Options",
               "originalRequest": {
                 "method": "GET",
