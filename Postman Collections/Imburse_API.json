@@ -2868,7 +2868,7 @@
             },
             {
               "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
-              "name": "Get list of Schemes",
+              "name": "Get List of Schemes",
               "request": {
                 "auth": {
                   "type": "noauth"
