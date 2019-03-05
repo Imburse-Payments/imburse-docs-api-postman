@@ -3584,6 +3584,54 @@
               "body": null
             }
           ]
+        },
+        {
+          "_postman_id": "a5ea5c32-7522-4c55-8d01-76724a2beb19",
+          "name": "Get list of Webhooks Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{notificationsApiUrl}}/v1/webhooks",
+            "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
+          },
+          "response": [
+            {
+              "id": "71b47a9c-aeca-4b0c-a719-91569e2ebd3a",
+              "name": "Successful Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{notificationsApiUrl}}/v1/webhooks"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "[\n    {\n        \"id\": \"\",\n        \"eventType\": \"\",\n        \"url\": \"\",\n        \"isEnabled\": true\n    }\n]"
+            }
+          ]
         }
       ]
     },
