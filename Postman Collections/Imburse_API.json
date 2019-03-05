@@ -3496,7 +3496,7 @@
               "raw": ""
             },
             "url": "{{notificationsApiUrl}}v1/webhooks/{{id}}",
-            "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
+            "description": "#### Description\r\n\r\nGets a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
           },
           "response": [
             {
