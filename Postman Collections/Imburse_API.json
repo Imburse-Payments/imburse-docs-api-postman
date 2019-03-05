@@ -3495,7 +3495,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{notificationsApiUrl}}/v1/webhooks/{{id}}",
+            "url": "{{notificationsApiUrl}}v1/webhooks/{{id}}",
             "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
           },
           "response": [
@@ -3515,7 +3515,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{notificationsApiUrl}}/v1/webhooks"
+                "url": "{{notificationsApiUrl}}v1/webhooks/{{id}}"
               },
               "status": "OK",
               "code": 200,
@@ -3523,7 +3523,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "[\n    {\n        \"id\": \"\",\n        \"eventType\": \"\",\n        \"url\": \"\",\n        \"isEnabled\": true\n    }\n]"
+              "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}\n"
             }
           ]
         },
