@@ -4348,7 +4348,7 @@
                   "mode": "raw",
                   "raw": "{\r\n\t\"instructionRef\": \"testinstruction\",\r\n\t\"amount\": \"5.00\",\r\n\t\"openDate\": \"2019-03-08\",\r\n\t\"dueDate\": \"2019-03-08\"\r\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}/instruction",
+                "url": "{{managementApiUrl}}/v1/collect//customer/{{customerRef}}/order/{{orderRef}}/instruction",
                 "description": "An order requires one or many payment instructions to be set up. These instructions act as a payment schedule and contain the amount to be collected, the open date and the due date of the collection.\r\n\r\nAn instruction must be given a unique `instructionRef` (unique to the customer's order). This reference can be used in the future to look up or make amendments to an instruction.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\ninstructionRef | string (50 char max) | A unique identifier used to represent a single payment instruction.\r\namount | Decimal | The amount to collect.\r\nopenDate | Date (YYYY-MM-DD) | The date in which a manual payment can be made from.\r\ndueDate | Date (YYYY-MM-DD) | The date in which a manual payment is to be settled by, or if automated will be taken on.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`INSTRUCTION_REF_IS_REQUIRED` | Reference is required.\r\n`INSTRUCTION_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`INSTRUCTION_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`AMOUNT_IS_REQUIRED` | Amount is required.\r\n`AMOUNT_FORMAT_NOT_RECOGNISED` | Amount must be in decimal form.\r\n`AMOUNT_OUT_OF_RANGE` | Amount must be greater than zero.\r\n`OPEN_DATE_IS_REQUIRED` | Open Date is required.\r\n`OPEN_DATE_FORMAT_NOT_RECOGNISED` | Due Date could not be read as a valid date.\r\n`DUE_DATE_IS_REQUIRED` | Due Date is required.\r\n`DUE_DATE_FORMAT_NOT_RECOGNISED` | Due Date could not be read as a valid date."
               },
               "response": []
@@ -4374,7 +4374,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
+                "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "The following endpoint will return the current state of an instruction.\n\nInstructions must be created before they can be queried.\n\nThe instruction is identified by a `customerRef`, an `orderRef` and an `instructionRef`. These values are provided from your own system to ours.\n\nAn `instructionRef` needs to be unique to the order but does not need to be globally unique."
               },
               "response": []
@@ -4400,7 +4400,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
+                "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return an unstructured list of instruction events."
               },
               "response": []
