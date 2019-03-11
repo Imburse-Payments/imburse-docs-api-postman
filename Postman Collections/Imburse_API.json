@@ -1319,7 +1319,7 @@
                               "mode": "raw",
                               "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/users/{{userId}}"
+                            "url": "{{managementApiUrl}}/v1/account/users/{{userId}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -1347,7 +1347,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/users/{{userId}}",
+                        "url": "{{managementApiUrl}}/v1/account/users/{{userId}}",
                         "description": "#### Description\n\nRemoves a user from the account.\n\n#### Role required\n\n`acc.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                       },
                       "response": [
@@ -1367,7 +1367,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/users/{{userId}}"
+                            "url": "{{managementApiUrl}}/v1/account/users/{{userId}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -1439,7 +1439,7 @@
                           "mode": "raw",
                           "raw": "[\n\t\"{{role1}}\"\n]"
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/keys",
+                        "url": "{{managementApiUrl}}/v1/tenant/keys",
                         "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`t.key.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
                       },
                       "response": [
