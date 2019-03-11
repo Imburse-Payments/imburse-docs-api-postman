@@ -2867,7 +2867,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{schemesApiUrl}}/v1/collect"
+                        "url": "{{managementApiUrl}}/v1/collect"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2901,7 +2901,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{schemesApiUrl}}/v1/collect",
+                    "url": "{{managementApiUrl}}/v1/collect",
                     "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
                   },
                   "response": [
@@ -2920,7 +2920,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{schemesApiUrl}}/v1/collect"
+                        "url": "{{managementApiUrl}}/v1/collect"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2954,7 +2954,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/collect/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
                   "response": [
