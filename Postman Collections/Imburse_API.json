@@ -359,173 +359,6 @@
       ]
     },
     {
-      "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
-      "name": "Transactions API Reference",
-      "description": "Use this API for getting the payment options to present to your users and to process the payment instructions.",
-      "item": [
-        {
-          "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
-          "name": "Get Payout Options",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{transactionsApiUrl}}/v1/payout/options",
-            "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
-          },
-          "response": [
-            {
-              "id": "816caa62-b875-41c8-9787-5454473ef6d7",
-              "name": "Get Payout Options",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{transactionsApiUrl}}/v1/payout/options"
-              },
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
-          "name": "Get Collect Options",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{transactionsApiUrl}}/v1/payout/options",
-            "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
-          },
-          "response": [
-            {
-              "id": "2646a803-5275-4874-9abb-c22758e06b92",
-              "name": "Get Payout Options",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{transactionsApiUrl}}/v1/payout/options"
-              },
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
-            }
-          ]
-        },
-        {
-          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
-          "name": "Process Reward Payout",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer {{token}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
-            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
-            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
-          },
-          "response": [
-            {
-              "id": "d69c8c41-05f3-4ef4-a39a-cabe5e7c35b9",
-              "name": "Process Reward Payout",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}"
-              },
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"externalOrderRef\": \"\",\n    \"amountCharged\": {\n        \"value\": 0,\n        \"currencyCode\": \"\",\n        \"total\": 0\n    },\n    \"denomination\": {\n        \"value\": 0,\n        \"currencyCode\": \"\"\n    },\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"status\": \"\",\n    \"createdAt\": \"\",\n    \"rewardDetails\": {\n        \"credentials\": {\n            \"Redemption URL\": \"\"\n        },\n        \"credentialList\": [\n            {\n                \"label\": \"\",\n                \"value\": \"\",\n                \"type\": \"\",\n                \"credentialType\": \"\"\n            }\n        ],\n        \"redemptionInstructions\": \"\"\n    }\n}"
-            }
-          ]
-        }
-      ],
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "6b830cb6-c43e-457a-80f6-cf0878582b3c",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "4248736c-140b-42fe-b8cb-97c97ac87565",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        }
-      ]
-    },
-    {
       "_postman_id": "6ccbe271-e09d-4ed2-9599-7a0531e9e57f",
       "name": "Management API Reference",
       "description": "",
@@ -564,7 +397,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/account",
+                        "url": "{{managementApi}}/v1/account",
                         "description": "#### Description\n\nGets the current account assigned to the access token.\n\n#### Role required\n\n`acc.r`"
                       },
                       "response": [
@@ -4848,6 +4681,173 @@
             }
           ],
           "_postman_isSubFolder": true
+        }
+      ]
+    },
+    {
+      "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
+      "name": "Transactions API Reference",
+      "description": "Use this API for getting the payment options to present to your users and to process the payment instructions.",
+      "item": [
+        {
+          "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
+          "name": "Get Payout Options",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{transactionsApiUrl}}/v1/payout/options",
+            "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
+          },
+          "response": [
+            {
+              "id": "816caa62-b875-41c8-9787-5454473ef6d7",
+              "name": "Get Payout Options",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/options"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
+          "name": "Get Collect Options",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{transactionsApiUrl}}/v1/payout/options",
+            "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
+          },
+          "response": [
+            {
+              "id": "2646a803-5275-4874-9abb-c22758e06b92",
+              "name": "Get Payout Options",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/options"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n\t\"rewards\": [\n\t    \"brand\": {\n\t        \"brandKey\": \"\",\n\t        \"brandName\": \"\",\n\t        \"createdDate\": \"\",\n\t        \"description\": \"\",\n\t        \"disclaimer\": \"\",\n\t        \"imageUrls\": [\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 80\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 130\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 200\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 278\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 300\n\t            },\n\t            {\n\t                \"ppi\": 326,\n\t                \"ratioHeight\": 5,\n\t                \"ratioWidth\": 8,\n\t                \"url\": \"\",\n\t                \"width\": 1200\n\t            }\n\t        ],\n\t        \"lastUpdateDate\": \"\",\n\t        \"requirements\": {\n\t            \"alwaysShowDisclaimer\": false,\n\t            \"disclaimerInstructions\": \"\",\n\t            \"displayInstructions\": \"\",\n\t            \"termsAndConditionsInstructions\": \"\"\n\t        },\n\t        \"shortDescription\": \"\",\n\t        \"status\": \"\",\n\t        \"terms\": \"\"\n\t    },\n\t    \"countries\": [],\n\t    \"createdDate\": \"\",\n\t    \"credentialTypes\": [],\n\t    \"currencyCode\": \"\",\n\t    \"exchangeRateRule\": \"\",\n\t    \"isWholeAmountValueRequired\": false,\n\t    \"lastUpdateDate\": \"\",\n\t    \"provider\": {\n\t        \"id\": \"\",\n\t        \"name\": \"\"\n\t    },\n\t    \"redemptionInstructions\": \"\",\n\t    \"rewardId\": \"\",\n\t    \"rewardName\": \"\",\n\t    \"rewardType\": \"\",\n\t    \"status\": \"\",\n\t    \"tags\": [],\n\t    \"value\": {\n\t        \"greaterThan\": null,\n\t        \"greaterThanOrEqualTo\": 0,\n\t        \"lessThan\": null,\n\t        \"lessThanOrEqualTo\": 0\n\t    },\n\t    \"valueType\": \"\"\n\t]\n}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
+          "name": "Process Reward Payout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
+            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
+          },
+          "response": [
+            {
+              "id": "d69c8c41-05f3-4ef4-a39a-cabe5e7c35b9",
+              "name": "Process Reward Payout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}"
+              },
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"externalOrderRef\": \"\",\n    \"amountCharged\": {\n        \"value\": 0,\n        \"currencyCode\": \"\",\n        \"total\": 0\n    },\n    \"denomination\": {\n        \"value\": 0,\n        \"currencyCode\": \"\"\n    },\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"status\": \"\",\n    \"createdAt\": \"\",\n    \"rewardDetails\": {\n        \"credentials\": {\n            \"Redemption URL\": \"\"\n        },\n        \"credentialList\": [\n            {\n                \"label\": \"\",\n                \"value\": \"\",\n                \"type\": \"\",\n                \"credentialType\": \"\"\n            }\n        ],\n        \"redemptionInstructions\": \"\"\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "6b830cb6-c43e-457a-80f6-cf0878582b3c",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "4248736c-140b-42fe-b8cb-97c97ac87565",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     }
