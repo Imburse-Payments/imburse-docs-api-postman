@@ -1513,7 +1513,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/keys"
+                            "url": "{{managementApiUrl}}/v1/tenant/keys"
                           },
                           "status": "OK",
                           "code": 200,
@@ -1541,7 +1541,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/keys/{{publicKey}}",
+                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a specific key by its public key.\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the specific key"
                       },
                       "response": [
