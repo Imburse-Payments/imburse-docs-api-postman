@@ -1609,7 +1609,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/keys/{{publicKey}}"
+                            "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -1640,9 +1640,9 @@
                           "raw": ""
                         },
                         "url": {
-                          "raw": "{{orgApiIUrl}}/v1/tenant/users?from=0&take=20&email=",
+                          "raw": "{{managementApiUrl}}/v1/tenant/users?from=0&take=20&email=",
                           "host": [
-                            "{{orgApiIUrl}}"
+                            "{{managementApiUrl}}"
                           ],
                           "path": [
                             "v1",
