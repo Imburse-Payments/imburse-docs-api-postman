@@ -4067,7 +4067,7 @@
                       "mode": "file",
                       "file": {}
                     },
-                    "url": "{{whitelabelApiUrl}}/v1/settings/styling"
+                    "url": "{{managementApiUrl}}/v1/settings/styling"
                   },
                   "status": "OK",
                   "code": 200,
@@ -4097,7 +4097,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{whitelabelApiUrl}}/v1/settings",
+                "url": "{{managementApiUrl}}/v1/settings",
                 "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
               },
               "response": [
