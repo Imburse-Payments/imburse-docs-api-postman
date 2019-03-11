@@ -4244,7 +4244,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}",
+                "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
               },
               "response": []
