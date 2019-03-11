@@ -1465,7 +1465,7 @@
                               "mode": "raw",
                               "raw": "[\n\t\"{{role1}}\"\n]"
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/keys"
+                            "url": "{{managementApiUrl}}/v1/tenant/keys"
                           },
                           "status": "OK",
                           "code": 200,
@@ -1493,7 +1493,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/keys",
+                        "url": "{{managementApiUrl}}/v1/tenant/keys",
                         "description": "#### Description\n\nGets the Api keys for the tenant to define in the bearer token.\n\n#### Role required\n\n`t.key.r`"
                       },
                       "response": [
