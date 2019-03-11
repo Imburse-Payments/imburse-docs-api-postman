@@ -1935,626 +1935,6 @@
       ]
     },
     {
-      "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
-      "name": "Schemes API Reference",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "8ad29eec-f6ef-4c78-ad91-d57dba5f3843",
-          "name": "Collection Schemes",
-          "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
-          "item": [
-            {
-              "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
-              "name": "Create a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                },
-                "url": "{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`t.sch.a`"
-              },
-              "response": [
-                {
-                  "id": "b4335f8a-6052-45aa-af91-d27beee91254",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{schemesApiUrl}}/v1/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
-              "name": "Get List of Schemes",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/collect",
-                "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
-              },
-              "response": [
-                {
-                  "id": "21b0f487-db0c-4df5-ac98-9a49f7d5f08b",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\n    {\n    \t\"id\": \"\",\n        \"name\": \"\",\n        \"paymentProviderConfigurations\": [],\n        \"collectSchemeOverrides\": [\n            {\n                \"isGlobal\": \"\",\n                \"country\": \"\",\n                \"paymentProviderConfigurationId\": \"\",\n                \"paymentMethod\": \"\",\n                \"enabled\": \"\"\n            }\n        ]\n    }\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "f7472dd1-2841-4e99-978b-a6bb91297c66",
-              "name": "Get a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/collect/{{id}}",
-                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
-              },
-              "response": [
-                {
-                  "id": "ea7263ae-2781-4db0-b20b-7b67232964a7",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}\r\n"
-                }
-              ]
-            },
-            {
-              "_postman_id": "3ecf0965-9615-4242-b441-10f2d476496c",
-              "name": "Update a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                },
-                "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
-                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
-              },
-              "response": [
-                {
-                  "id": "ca194e66-3b2d-4af3-a926-9fe11ddf42b7",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "96bda309-4b05-426a-8efe-0537d03f7c4e",
-              "name": "Delete a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
-                "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
-              },
-              "response": [
-                {
-                  "id": "3380f369-5032-46ca-8caf-13bdb5ab4d4a",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
-                }
-              ]
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
-          "name": "Payout Schemes",
-          "description": "Payout Scheme objects are where you define the payout options for your various applications. We group these together into a payout scheme.\r\n\r\n## The Payout Scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of [Reward Configuration](#the-reward-configuration-object) objects defining the rewards for this scheme \r\n\r\n## The Reward Configuration object\r\n\r\nThe reward configuration object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ngeneralRewards | guid array | An array of reward ids that could apply to any country.\r\ncountryRewards | country reward array | An array of [Country Reward](#the-country-reward-object) objects\r\n\r\n## The Country Reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n\r\n## General Rewards vs Country Rewards\r\n\r\nThe [Reward Object](#the-reward-configuration-object) above defines both **General** and **Country** rewards. \r\n\r\nWe offer these guidelines when setting up scheme rewards:\r\n\r\n- Setup your **General Rewards** to contain rewards that you would like to be made available to **any** user, irrespective of the country the reward would normally be used in.\r\n- Setup **Country Rewards** to contain rewards that will only be available in a specific country. \r\n\r\nThe Whitelabel API has endpoints that allow you to request payout scheme payment options based on a currency and country and it is these API endpoints that will filter the General and Country rewards accordingly.\r\n",
-          "item": [
-            {
-              "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
-              "name": "Create a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                },
-                "url": "{{schemesApiUrl}}/v1/payout",
-                "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
-              },
-              "response": [
-                {
-                  "id": "bddcd0fe-28fb-417f-b736-941da7fedd8d",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
-              "name": "Get List of Schemes",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/payout",
-                "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
-              },
-              "response": [
-                {
-                  "id": "cc23e532-4f07-4ea8-bea9-f517602a9e3c",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"name\": \"\",\r\n\t\t\"currencies\": [],\r\n\t\t\"rewardProviders\": [],\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
-              "name": "Get a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
-                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
-              },
-              "response": [
-                {
-                  "id": "ca089b62-52a4-46b4-9b90-ecd1c0d4accb",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
-              "name": "Get List of Payout Options for Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options",
-                "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
-              },
-              "response": [
-                {
-                  "id": "6d9828c4-9c0d-4b2a-8241-e37b61908b09",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
-                }
-              ]
-            },
-            {
-              "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
-              "name": "Update a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                },
-                "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
-                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
-              },
-              "response": [
-                {
-                  "id": "eeb75375-25cd-4b52-b855-8eefbe51476b",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
-              "name": "Delete a Scheme",
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
-                "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to delete"
-              },
-              "response": [
-                {
-                  "id": "342f2685-1982-49f3-82d6-faa5ca14e8f4",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
-                }
-              ]
-            }
-          ],
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "63085b5b-7027-4e15-95aa-185f185ced79",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "b09366f8-89a3-464b-b986-774493cacf0a",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        }
-      ]
-    },
-    {
       "_postman_id": "2d3ce1f5-408c-461c-ab73-f2ffb2f3cf35",
       "name": "Notifications API Reference",
       "description": "",
@@ -4838,6 +4218,627 @@
                   ""
                 ]
               }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
+          "name": "Schemes API Reference",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "8ad29eec-f6ef-4c78-ad91-d57dba5f3843",
+              "name": "Collection Schemes",
+              "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
+              "item": [
+                {
+                  "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
+                  "name": "Create a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                    },
+                    "url": "{{schemesApiUrl}}/v1/collect",
+                    "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`t.sch.a`"
+                  },
+                  "response": [
+                    {
+                      "id": "b4335f8a-6052-45aa-af91-d27beee91254",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                        },
+                        "url": "{{schemesApiUrl}}/v1/collect"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
+                  "name": "Get List of Schemes",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/collect",
+                    "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
+                  },
+                  "response": [
+                    {
+                      "id": "21b0f487-db0c-4df5-ac98-9a49f7d5f08b",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/collect"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n    \t\"id\": \"\",\n        \"name\": \"\",\n        \"paymentProviderConfigurations\": [],\n        \"collectSchemeOverrides\": [\n            {\n                \"isGlobal\": \"\",\n                \"country\": \"\",\n                \"paymentProviderConfigurationId\": \"\",\n                \"paymentMethod\": \"\",\n                \"enabled\": \"\"\n            }\n        ]\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "f7472dd1-2841-4e99-978b-a6bb91297c66",
+                  "name": "Get a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/collect/{{id}}",
+                    "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
+                  },
+                  "response": [
+                    {
+                      "id": "ea7263ae-2781-4db0-b20b-7b67232964a7",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/collect/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}\r\n"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "3ecf0965-9615-4242-b441-10f2d476496c",
+                  "name": "Update a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                    },
+                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                    "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
+                  },
+                  "response": [
+                    {
+                      "id": "ca194e66-3b2d-4af3-a926-9fe11ddf42b7",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                        },
+                        "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "96bda309-4b05-426a-8efe-0537d03f7c4e",
+                  "name": "Delete a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                    "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
+                  },
+                  "response": [
+                    {
+                      "id": "3380f369-5032-46ca-8caf-13bdb5ab4d4a",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
+              "name": "Payout Schemes",
+              "description": "Payout Scheme objects are where you define the payout options for your various applications. We group these together into a payout scheme.\r\n\r\n## The Payout Scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of [Reward Configuration](#the-reward-configuration-object) objects defining the rewards for this scheme \r\n\r\n## The Reward Configuration object\r\n\r\nThe reward configuration object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ngeneralRewards | guid array | An array of reward ids that could apply to any country.\r\ncountryRewards | country reward array | An array of [Country Reward](#the-country-reward-object) objects\r\n\r\n## The Country Reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n\r\n## General Rewards vs Country Rewards\r\n\r\nThe [Reward Object](#the-reward-configuration-object) above defines both **General** and **Country** rewards. \r\n\r\nWe offer these guidelines when setting up scheme rewards:\r\n\r\n- Setup your **General Rewards** to contain rewards that you would like to be made available to **any** user, irrespective of the country the reward would normally be used in.\r\n- Setup **Country Rewards** to contain rewards that will only be available in a specific country. \r\n\r\nThe Whitelabel API has endpoints that allow you to request payout scheme payment options based on a currency and country and it is these API endpoints that will filter the General and Country rewards accordingly.\r\n",
+              "item": [
+                {
+                  "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
+                  "name": "Create a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout",
+                    "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
+                  },
+                  "response": [
+                    {
+                      "id": "bddcd0fe-28fb-417f-b736-941da7fedd8d",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
+                  "name": "Get List of Schemes",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout",
+                    "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
+                  },
+                  "response": [
+                    {
+                      "id": "cc23e532-4f07-4ea8-bea9-f517602a9e3c",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"name\": \"\",\r\n\t\t\"currencies\": [],\r\n\t\t\"rewardProviders\": [],\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
+                  "name": "Get a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
+                    "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
+                  },
+                  "response": [
+                    {
+                      "id": "ca089b62-52a4-46b4-9b90-ecd1c0d4accb",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
+                  "name": "Get List of Payout Options for Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options",
+                    "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
+                  },
+                  "response": [
+                    {
+                      "id": "6d9828c4-9c0d-4b2a-8241-e37b61908b09",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"generalRewards\": [],\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
+                  "name": "Update a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
+                    "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
+                  },
+                  "response": [
+                    {
+                      "id": "eeb75375-25cd-4b52-b855-8eefbe51476b",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
+                  "name": "Delete a Scheme",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
+                    "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to delete"
+                  },
+                  "response": [
+                    {
+                      "id": "342f2685-1982-49f3-82d6-faa5ca14e8f4",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Hmac {{token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                }
+              ],
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "63085b5b-7027-4e15-95aa-185f185ced79",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "b09366f8-89a3-464b-b986-774493cacf0a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
             }
           ],
           "_postman_isSubFolder": true
