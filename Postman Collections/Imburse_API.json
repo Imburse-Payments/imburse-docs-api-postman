@@ -4717,7 +4717,7 @@
             },
             {
               "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
-              "name": "Get Currency List Copy",
+              "name": "Get Reward Providers",
               "request": {
                 "method": "GET",
                 "header": [],
