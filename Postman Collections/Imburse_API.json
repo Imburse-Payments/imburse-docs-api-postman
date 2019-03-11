@@ -4697,7 +4697,21 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/references/currencies"
+              },
+              "response": []
+            },
+            {
+              "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
+              "name": "Get Currency List Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{managementApiUrl}}/v1/references/currencies"
               },
               "response": []
             }
