@@ -3191,7 +3191,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{schemesApiUrl}}/v1/payout"
+                        "url": "{{managementApiUrl}}/v1/payout"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3221,7 +3221,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/payout/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
                   "response": [
