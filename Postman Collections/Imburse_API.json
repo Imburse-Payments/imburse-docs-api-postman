@@ -4711,6 +4711,9 @@
               "_postman_id": "ce02bd26-38c9-4188-9362-a0f3fa34ac80",
               "name": "Get Payment Providers",
               "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
                 "header": [],
                 "body": {
