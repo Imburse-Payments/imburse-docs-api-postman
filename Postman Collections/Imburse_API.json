@@ -2454,7 +2454,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-providers/",
+                    "url": "{{managementApiUrl}}/v1/payment-providers",
                     "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
                   },
                   "response": [
@@ -2468,7 +2468,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/"
+                        "url": "{{managementApiUrl}}/v1/payment-providers"
                       },
                       "status": "OK",
                       "code": 200,
