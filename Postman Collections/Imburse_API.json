@@ -1998,7 +1998,7 @@
                               "mode": "raw",
                               "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                             },
-                            "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk"
+                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2028,7 +2028,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
@@ -2042,7 +2042,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2076,7 +2076,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
                         "description": "#### Description\r\n\r\nUpdates a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
                       },
                       "response": [
@@ -2097,7 +2097,7 @@
                               "mode": "raw",
                               "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                             },
-                            "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -2139,7 +2139,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant",
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant",
                         "description": "# Description\r\n\r\nCreate a Paydirekt Merchant configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
                       },
                       "response": [
@@ -2160,7 +2160,7 @@
                               "mode": "raw",
                               "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
                             },
-                            "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant"
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2190,7 +2190,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
