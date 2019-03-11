@@ -2591,7 +2591,7 @@
                               "mode": "raw",
                               "raw": "{\n\t\"name\": \"\"\n}"
                             },
-                            "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -2621,7 +2621,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                       },
                       "response": [
@@ -2635,7 +2635,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{providersApiUrl}}/v1/reward-providers/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/reward-providers/{{id}}"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2665,7 +2665,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{providersApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
                         "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
                       },
                       "response": [
