@@ -3263,7 +3263,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{schemesApiUrl}}/v1/payout",
+                "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options",
                 "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
               },
               "response": [
