@@ -2734,7 +2734,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{providersApiUrl}}/v1/reward-providers",
+                    "url": "{{managementApiUrl}}/v1/reward-providers",
                     "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
                   },
                   "response": [
