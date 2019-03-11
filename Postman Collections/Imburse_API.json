@@ -4270,7 +4270,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
+                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of order events."
               },
               "response": []
@@ -4296,7 +4296,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "https://{{collectApiUrl}}/v1/customer/{{customerRef}}",
+                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}",
                 "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
               },
               "response": []
