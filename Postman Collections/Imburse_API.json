@@ -3391,7 +3391,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}"
+                        "url": "{{managementApiUrl}}/v1/payout/{{schemeId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -3457,7 +3457,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{rewardsApiUrl}}/v1/catalog/{rewardId}",
+                "url": "{{managementApiUrl}}/v1/catalog/{rewardId}",
                 "description": "#### Description\n\nGets a reward from the catalog by it's ID\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
               },
               "response": [
