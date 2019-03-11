@@ -4270,7 +4270,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
+                "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of order events."
               },
               "response": []
