@@ -493,7 +493,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{managementApiUrl}}/v1/account/keys"
+                            "url": "{{orgApiIUrl}}/v1/account/keys"
                           },
                           "status": "OK",
                           "code": 200,
@@ -521,7 +521,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}",
+                        "url": "{{orgApiIUrl}}/v1/account/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
                       },
                       "response": [
