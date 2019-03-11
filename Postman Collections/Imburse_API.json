@@ -2421,7 +2421,7 @@
                               "mode": "raw",
                               "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                             },
-                            "url": "{{providersApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -2454,7 +2454,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{providersApiUrl}}/v1/payment-providers/",
+                    "url": "{{managementApiUrl}}/v1/payment-providers/",
                     "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
                   },
                   "response": [
