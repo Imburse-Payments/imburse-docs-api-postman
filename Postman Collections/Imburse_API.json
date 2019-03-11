@@ -647,7 +647,7 @@
                               "mode": "raw",
                               "raw": "[ \n\t\"{{role1}}\", \n\t\"{{role2}}\"\n]"
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/keys/"
+                            "url": "{{managementApiUrl}}/v1/account/keys"
                           },
                           "_postman_previewlanguage": "json",
                           "header": null,
@@ -682,9 +682,9 @@
                           "raw": ""
                         },
                         "url": {
-                          "raw": "{{orgApiIUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
+                          "raw": "{{managementApiUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
                           "host": [
-                            "{{orgApiIUrl}}"
+                            "{{managementApiUrl}}"
                           ],
                           "path": [
                             "v1",
@@ -732,9 +732,9 @@
                               "raw": ""
                             },
                             "url": {
-                              "raw": "{{orgApiIUrl}}/v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
+                              "raw": "{{managementApiUrl}}/v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
                               "host": [
-                                "{{orgApiIUrl}}"
+                                "{{managementApiUrl}}"
                               ],
                               "path": [
                                 "v1",
@@ -789,7 +789,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/tenants/{{tenantId}}",
+                        "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
                         "description": "#### Description\n\nGets a tenant by id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
                       },
                       "response": [
