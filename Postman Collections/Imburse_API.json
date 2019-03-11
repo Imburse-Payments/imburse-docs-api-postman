@@ -3549,7 +3549,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"rewardIds\": []\n}"
                     },
-                    "url": "{{rewardsApiUrl}}/v1/catalog/rewards"
+                    "url": "{{managementApiUrl}}/v1/catalog/rewards"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3590,9 +3590,9 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{rewardsApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                  "raw": "{{managementApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
                   "host": [
-                    "{{rewardsApiUrl}}"
+                    "{{managementApiUrl}}"
                   ],
                   "path": [
                     "v1",
@@ -3641,9 +3641,9 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "{{rewardsApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                      "raw": "{{managementApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
                       "host": [
-                        "{{rewardsApiUrl}}"
+                        "{{managementApiUrl}}"
                       ],
                       "path": [
                         "v1",
@@ -3736,7 +3736,7 @@
                   "mode": "raw",
                   "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                 },
-                "url": "{{notificationsApiUrl}}/v1/webhooks",
+                "url": "{{managementApiUrl}}/v1/webhooks",
                 "description": "#### Description\r\n\r\nCreates a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
               },
               "response": [
@@ -3761,7 +3761,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                     },
-                    "url": "https://{{notificationsApiUrl}}/v1/webhooks"
+                    "url": "{{managementApiUrl}}/v1/webhooks"
                   },
                   "status": "Created",
                   "code": 201,
@@ -3789,7 +3789,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{notificationsApiUrl}}v1/webhooks/{{id}}",
+                "url": "{{managementApiUrl}}/v1/webhooks/{{id}}",
                 "description": "#### Description\r\n\r\nGets a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to retrieve."
               },
               "response": [
@@ -3809,7 +3809,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{notificationsApiUrl}}v1/webhooks/{{id}}"
+                    "url": "{{notificationsApiUrl}}/v1/webhooks/{{id}}"
                   },
                   "status": "OK",
                   "code": 200,
