@@ -4725,7 +4725,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/references/currencies"
+                "url": "{{managementApiUrl}}/v1/references/reward-providers"
               },
               "response": []
             }
