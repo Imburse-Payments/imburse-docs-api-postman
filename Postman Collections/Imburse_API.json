@@ -4667,6 +4667,13 @@
             }
           ],
           "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
+          "name": "Reference Data",
+          "description": "",
+          "item": [],
+          "_postman_isSubFolder": true
         }
       ]
     },
@@ -4757,7 +4764,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{transactionsApiUrl}}/v1/payout/options"
+                "url": "{{transactionsApiUrl}}/v1/collect/options"
               },
               "_postman_previewlanguage": "json",
               "header": null,
