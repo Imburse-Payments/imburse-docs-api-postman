@@ -3240,7 +3240,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{schemesApiUrl}}/v1/payout/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/payout/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3270,7 +3270,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{schemesApiUrl}}/v1/payout/{{schemeId}}/options",
+                    "url": "{{managementApiUrl}}/v1/payout/{{schemeId}}/options",
                     "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
                   },
                   "response": [
