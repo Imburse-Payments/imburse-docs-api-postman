@@ -2973,7 +2973,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{schemesApiUrl}}/v1/collect/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/collect/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3007,7 +3007,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                    "url": "{{managementApiUrl}}/v1/collect/{{schemeId}}",
                     "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
                   },
                   "response": [
