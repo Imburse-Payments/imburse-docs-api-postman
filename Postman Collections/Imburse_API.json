@@ -3247,7 +3247,7 @@
             },
             {
               "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
-              "name": "Get List of Schemes Copy",
+              "name": "Get List of Payout Options for Scheme",
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -3264,7 +3264,7 @@
                   "raw": ""
                 },
                 "url": "{{schemesApiUrl}}/v1/payout",
-                "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
+                "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
               },
               "response": [
                 {
