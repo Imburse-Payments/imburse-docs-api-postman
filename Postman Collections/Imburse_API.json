@@ -1684,9 +1684,9 @@
                               "raw": ""
                             },
                             "url": {
-                              "raw": "{{orgApiIUrl}}/v1/tenant/users?from=0&take=20&email=",
+                              "raw": "{{managementApiUrl}}/v1/tenant/users?from=0&take=20&email=",
                               "host": [
-                                "{{orgApiIUrl}}"
+                                "{{managementApiUrl}}"
                               ],
                               "path": [
                                 "v1",
@@ -1741,7 +1741,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
+                        "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nGets a user by their id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
                       },
                       "response": [
@@ -1761,7 +1761,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}"
+                            "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}"
                           },
                           "status": "OK",
                           "code": 200,
@@ -1795,7 +1795,7 @@
                           "mode": "raw",
                           "raw": "[\n\t\"{{role1}}\"\n]"
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
+                        "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nUpdates an associated users roles for the tenant.\n\n#### Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
                       },
                       "response": [
