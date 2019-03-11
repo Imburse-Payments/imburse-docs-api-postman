@@ -3032,7 +3032,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}"
+                        "url": "{{managementApiUrl}}/v1/collect/{{schemeId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3062,7 +3062,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{schemesApiUrl}}/v1/collect/{{schemeId}}",
+                    "url": "{{managementApiUrl}}}/v1/collect/{{schemeId}}",
                     "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
                   },
                   "response": [
