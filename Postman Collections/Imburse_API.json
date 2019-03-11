@@ -941,7 +941,7 @@
                               "mode": "raw",
                               "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/tenants/{{tenantId}}"
+                            "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -969,7 +969,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/{{tenantId}}/keys",
+                        "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys",
                         "description": "#### Description\n\nGets the keys for a specific tenant. \n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
                       },
                       "response": [
