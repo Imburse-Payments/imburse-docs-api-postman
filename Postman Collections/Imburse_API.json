@@ -4714,6 +4714,20 @@
                 "url": "{{managementApiUrl}}/v1/references/currencies"
               },
               "response": []
+            },
+            {
+              "_postman_id": "ce02bd26-38c9-4188-9362-a0f3fa34ac80",
+              "name": "Get Currency List Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{managementApiUrl}}/v1/references/currencies"
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
