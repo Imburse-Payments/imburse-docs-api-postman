@@ -8,8 +8,8 @@
   "item": [
     {
       "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
-      "name": "Authentication API Reference",
-      "description": "This API describes how to create a Bearer token for API.\n\nIt is based on the HMAC authentication scheme.",
+      "name": "Identity API Reference",
+      "description": "This API describes how to create the three types of Bearer Token for our API's.\n\nThey are all based on the HMAC authentication scheme.",
       "item": [
         {
           "_postman_id": "1ddd267b-89d2-462e-9227-a0ee94e86805",
@@ -355,6 +355,28 @@
               "body": "{\n    \"accessToken\": \"\",\n    \"expires\": \"\"\n}"
             }
           ]
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "db9eddb4-5296-437c-bbec-91b623ccc3c3",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "7d90fbcd-bd8c-45f3-8d34-f3780fdeed47",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     },
@@ -4728,6 +4750,9 @@
               "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
               "name": "Get Reward Providers",
               "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
                 "header": [],
                 "body": {
