@@ -809,7 +809,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/tenants/{{tenantId}}"
+                            "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}"
                           },
                           "status": "OK",
                           "code": 200,
@@ -855,7 +855,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/tenants",
+                        "url": "{{managementApiUrl}}/v1/account/tenants",
                         "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
                       },
                       "response": [
@@ -881,7 +881,7 @@
                               "mode": "raw",
                               "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/tenants"
+                            "url": "{{managementApiUrl}}/v1/account/tenants"
                           },
                           "status": "Created",
                           "code": 201,
@@ -915,7 +915,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/tenants/{{tenantId}}",
+                        "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
                         "description": "#### Description\n\nUpdates a tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to update\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the tenant.\naddress | No | An [address](address-object) for the tenant."
                       },
                       "response": [
