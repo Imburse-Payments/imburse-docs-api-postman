@@ -4677,13 +4677,16 @@
               "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
               "name": "Get Country List",
               "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
                 "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/references/countries"
               },
               "response": []
             },
