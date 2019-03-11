@@ -4686,6 +4686,20 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
+              "name": "Get Country List Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
