@@ -417,7 +417,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/account"
+                            "url": "{{managementApiUrl}}/v1/account"
                           },
                           "_postman_previewlanguage": "json",
                           "header": null,
@@ -473,7 +473,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/keys",
+                        "url": "{{managementApiUrl}}/v1/account/keys",
                         "description": "#### Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n#### Role required\n\n`acc.key.r`"
                       },
                       "response": [
@@ -493,7 +493,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/account/keys"
+                            "url": "{{managementApiUrl}}/v1/account/keys"
                           },
                           "status": "OK",
                           "code": 200,
@@ -521,7 +521,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/account/keys/{{publicKey}}",
+                        "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
                       },
                       "response": [
