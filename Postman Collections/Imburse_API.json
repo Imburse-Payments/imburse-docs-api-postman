@@ -365,7 +365,7 @@
       "item": [
         {
           "_postman_id": "c7a00e71-a093-41c7-a084-5bfbafb0fd00",
-          "name": "Organisation API Reference",
+          "name": "Accounts and Tenants",
           "description": "",
           "item": [
             {
@@ -1942,7 +1942,7 @@
         },
         {
           "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
-          "name": "Provider API Reference",
+          "name": "Providers",
           "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "item": [
             {
@@ -2812,7 +2812,7 @@
         },
         {
           "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
-          "name": "Schemes API Reference",
+          "name": "Schemes",
           "description": "",
           "item": [
             {
@@ -3429,11 +3429,33 @@
               "_postman_isSubFolder": true
             }
           ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "420ca972-d2ae-496f-9e16-ddfbccc26ebb",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "67468f37-c46e-4d32-a803-419637a2c940",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
           "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
-          "name": "Rewards Catalog API Reference",
+          "name": "Rewards Catalog",
           "description": "",
           "item": [
             {
@@ -4111,7 +4133,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{whitelabelApiUrl}}/v1/settings"
+                    "url": "{{managementApiUrl}}/v1/settings"
                   },
                   "status": "OK",
                   "code": 200,
