@@ -1821,7 +1821,7 @@
                               "mode": "raw",
                               "raw": "[\n\t\"{{role1}}\"\n]"
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}"
+                            "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -1849,7 +1849,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}",
+                        "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nRemoves a user from the tenant.\n\n#### Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                       },
                       "response": [
@@ -1869,7 +1869,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{orgApiIUrl}}/v1/tenant/users/{{userId}}"
+                            "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -1977,7 +1977,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "{{providersApiUrl}}/v1/payment-providers/braintree-sdk",
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk",
                         "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
                       },
                       "response": [
