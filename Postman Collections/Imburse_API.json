@@ -3734,7 +3734,7 @@
         },
         {
           "_postman_id": "2d3ce1f5-408c-461c-ab73-f2ffb2f3cf35",
-          "name": "Notifications API Reference",
+          "name": "Notifications",
           "description": "",
           "item": [
             {
@@ -3998,11 +3998,33 @@
               ]
             }
           ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "277d68da-ac25-49cc-8ab0-f5bff65f34c7",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "40670cbf-5237-4526-a97a-fde0ab6ba1e1",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
           "_postman_id": "cf290393-bf52-4b01-adf9-7273a3e3795a",
-          "name": "Whitelabel Settings API Reference",
+          "name": "Whitelabel Settings",
           "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
           "item": [
             {
