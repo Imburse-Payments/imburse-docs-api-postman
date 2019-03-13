@@ -2991,7 +2991,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{managementApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                  "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
                   "host": [
                     "{{managementApiUrl}}"
                   ],
@@ -3000,6 +3000,11 @@
                     "catalog"
                   ],
                   "query": [
+                    {
+                      "key": "ProviderId",
+                      "value": "{{providerId}}",
+                      "equals": true
+                    },
                     {
                       "key": "brandName",
                       "value": "{{brandNames}}",
