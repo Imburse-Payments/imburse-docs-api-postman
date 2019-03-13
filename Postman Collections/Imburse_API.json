@@ -2991,7 +2991,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                  "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}&tags={{tags}}&amount={{amount}}",
                   "host": [
                     "{{managementApiUrl}}"
                   ],
@@ -3018,6 +3018,16 @@
                     {
                       "key": "currencies",
                       "value": "{{currencies}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "tags",
+                      "value": "{{tags}}",
+                      "equals": true
+                    },
+                    {
+                      "key": "amount",
+                      "value": "{{amount}}",
                       "equals": true
                     }
                   ]
