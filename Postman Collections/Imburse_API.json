@@ -3032,7 +3032,7 @@
                     }
                   ]
                 },
-                "description": "#### Description\n\nSearches the catalog for rewards that match the given parameters\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for."
+                "description": "#### Description\n\nSearches the catalog for rewards that match the given parameters\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nproviderId | The Id of the Provider to filter on. ie. TANGOCARD\nbrandNames | A comma seperated string of the brand names to search for.\ncountries | A comma seperated string of the countries to search for.\ncurrencies | A comma seperated string of the currencies to search for.\ntags | Not currently used.\nAmount | Filter the rewards that support the specified amount. ie 5, 10, 20 etc. Leave empty to search for all."
               },
               "response": [
                 {
@@ -3057,7 +3057,7 @@
                       "raw": ""
                     },
                     "url": {
-                      "raw": "{{managementApiUrl}}/v1/catalog?brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}",
+                      "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}&tags={{tags}}&amount={{amount}}",
                       "host": [
                         "{{managementApiUrl}}"
                       ],
@@ -3066,6 +3066,11 @@
                         "catalog"
                       ],
                       "query": [
+                        {
+                          "key": "ProviderId",
+                          "value": "{{providerId}}",
+                          "equals": true
+                        },
                         {
                           "key": "brandName",
                           "value": "{{brandNames}}",
@@ -3079,6 +3084,16 @@
                         {
                           "key": "currencies",
                           "value": "{{currencies}}",
+                          "equals": true
+                        },
+                        {
+                          "key": "tags",
+                          "value": "{{tags}}",
+                          "equals": true
+                        },
+                        {
+                          "key": "amount",
+                          "value": "{{amount}}",
                           "equals": true
                         }
                       ]
