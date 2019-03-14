@@ -3883,7 +3883,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/webhooks/{{id}}"
+                    "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3911,7 +3911,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/webhooks",
+                "url": "{{managementApiUrl}}/v1/notifications/webhooks",
                 "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
               },
               "response": [
