@@ -3833,7 +3833,65 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                      "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/notifications/webhooks"
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"\",\n    \"eventTypes\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
+                }
+              ]
+            },
+            {
+              "_postman_id": "70166801-d89f-42cc-9012-ca4412b38638",
+              "name": "Create a Webhook Copy",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                },
+                "url": "{{managementApiUrl}}/v1/notifications/webhooks",
+                "description": "#### Description\r\n\r\nCreates a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
+              },
+              "response": [
+                {
+                  "id": "1af2930a-b937-497f-8dd0-cc7670efccf7",
+                  "name": "Succesful Request",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/notifications/webhooks"
                   },
@@ -3891,7 +3949,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}\n"
+                  "body": "{\n    \"id\": \"\",\n    \"eventTypes\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}\n"
                 }
               ]
             },
@@ -3939,7 +3997,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n    {\n        \"id\": \"\",\n        \"eventType\": \"\",\n        \"url\": \"\",\n        \"isEnabled\": true\n    }\n]"
+                  "body": "[\n    {\n        \"id\": \"\",\n        \"eventTypes\": \"\",\n        \"url\": \"\",\n        \"isEnabled\": true\n    }\n]"
                 }
               ]
             },
@@ -3962,7 +4020,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                  "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": trues\n}"
                 },
                 "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}",
                 "description": "#### Description\r\n\r\nUpdates a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
@@ -3997,7 +4055,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
+                  "body": "{\n    \"id\": \"\",\n    \"eventTypes\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
                 }
               ]
             },
