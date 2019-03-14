@@ -3808,7 +3808,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
+                  "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                 },
                 "url": "{{managementApiUrl}}/v1/notifications/webhooks",
                 "description": "#### Description\r\n\r\nCreates a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
@@ -3843,7 +3843,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"id\": \"\",\n    \"eventType\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
+                  "body": "{\n    \"id\": \"\",\n    \"eventTypes\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
                 }
               ]
             },
@@ -4037,7 +4037,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/webhooks/{{id}}"
+                    "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}"
                   },
                   "status": "No Content",
                   "code": 204,
