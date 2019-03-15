@@ -2075,15 +2075,8 @@
                       "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
                       "name": "Update a Braintree SDK Configuration",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "PUT",
                         "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
