@@ -3529,9 +3529,6 @@
                   "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
                   "name": "Get List of Payout Options for Scheme",
                   "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
                     "method": "GET",
                     "header": [],
                     "body": {
