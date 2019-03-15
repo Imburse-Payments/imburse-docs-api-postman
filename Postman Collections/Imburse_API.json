@@ -4397,7 +4397,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Bearer {{token}}"
+                    "value": "Bearer {{management-token}}"
                   },
                   {
                     "key": "Content-Type",
@@ -4941,7 +4941,13 @@
                   "type": "noauth"
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
