@@ -1942,12 +1942,6 @@
               "_postman_isSubFolder": true
             }
           ],
-          "auth": {
-            "type": "bearer",
-            "bearer": {
-              "token": "{{management-token}}"
-            }
-          },
           "event": [
             {
               "listen": "prerequest",
