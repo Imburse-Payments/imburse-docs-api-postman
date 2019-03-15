@@ -4530,17 +4530,8 @@
               "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
               "name": "Get Reward Providers",
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
