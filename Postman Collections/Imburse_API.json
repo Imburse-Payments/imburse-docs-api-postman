@@ -1159,7 +1159,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               }
                             ],
@@ -1213,8 +1213,17 @@
                       "_postman_id": "379663a6-4847-41b5-b5b4-d3afe24914d5",
                       "name": "Get Users",
                       "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
                         "method": "GET",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -1258,7 +1267,13 @@
                           "name": "Get Users",
                           "originalRequest": {
                             "method": "GET",
-                            "header": [],
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              }
+                            ],
                             "body": {
                               "mode": "raw",
                               "raw": ""
@@ -1309,6 +1324,11 @@
                       "request": {
                         "method": "PUT",
                         "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
                           {
                             "key": "Content-Type",
                             "name": "Content-Type",
