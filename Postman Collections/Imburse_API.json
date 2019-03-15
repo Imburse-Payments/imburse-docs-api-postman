@@ -1406,7 +1406,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               }
                             ],
@@ -1473,7 +1473,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           },
                           {
                             "key": "Content-Type",
@@ -1484,7 +1484,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\"\n]"
+                          "raw": "{\n\t\"roles\": []\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/tenant/keys",
                         "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`t.key.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
@@ -1498,7 +1498,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               },
                               {
@@ -1510,7 +1510,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "[\n\t\"{{role1}}\"\n]"
+                              "raw": "{\n\t\"roles\": []\n}"
                             },
                             "url": "{{managementApiUrl}}/v1/tenant/keys"
                           },
@@ -1533,7 +1533,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
@@ -1552,7 +1552,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               }
                             ],
@@ -1581,7 +1581,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
