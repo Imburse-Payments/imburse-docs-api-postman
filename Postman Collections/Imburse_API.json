@@ -2136,15 +2136,8 @@
                       "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
                       "name": "Create a Paydirekt Merchant Configuration",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "POST",
                         "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
