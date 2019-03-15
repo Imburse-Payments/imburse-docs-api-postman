@@ -67,7 +67,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/identity/v1/hmac/management",
+            "url": "{{identityApiUrl}}/v1/hmac/management",
             "description": "#### Description\n\nCreates a new Management API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
@@ -297,9 +297,9 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"customerRef\": \"democustomer\",\n\t\"orderRef\": \"testorder\",\n\t\"instructionRef\": \"testinstruction\"\n}"
+              "raw": "{\n\t\"customerRef\": \"democustomer\",\n\t\"orderRef\": \"demoorderforimburse1\",\n\t\"instructionRef\": \"demoorderforimburseinstruction1\"\n}"
             },
-            "url": "{{identityApiUrl}}/identity/v1/hmac/payout",
+            "url": "{{identityApiUrl}}/v1/hmac/payout",
             "description": "#### Description\n\nCreates a new Payout API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
