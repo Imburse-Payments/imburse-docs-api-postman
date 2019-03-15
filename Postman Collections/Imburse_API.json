@@ -700,13 +700,7 @@
                       "name": "Get Tenants",
                       "request": {
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -808,13 +802,7 @@
                       "name": "Get Tenant by Id",
                       "request": {
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
