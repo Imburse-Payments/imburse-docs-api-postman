@@ -858,11 +858,6 @@
                         "method": "POST",
                         "header": [
                           {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          },
-                          {
                             "key": "Content-Type",
                             "name": "Content-Type",
                             "type": "text",
@@ -918,11 +913,6 @@
                         "method": "PUT",
                         "header": [
                           {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          },
-                          {
                             "key": "Content-Type",
                             "name": "Content-Type",
                             "type": "text",
@@ -976,13 +966,7 @@
                       "name": "Get All Keys",
                       "request": {
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
