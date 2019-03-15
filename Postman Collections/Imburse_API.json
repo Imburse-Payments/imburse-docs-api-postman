@@ -3621,16 +3621,8 @@
                   "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
                   "name": "Delete a Scheme",
                   "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
                     "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
+                    "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
