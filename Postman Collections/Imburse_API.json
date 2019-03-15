@@ -2399,15 +2399,8 @@
                           "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
                           "name": "Update a Paydirekt OneKlick Configuration",
                           "request": {
-                            "auth": {
-                              "type": "noauth"
-                            },
                             "method": "PUT",
                             "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}"
-                              },
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
