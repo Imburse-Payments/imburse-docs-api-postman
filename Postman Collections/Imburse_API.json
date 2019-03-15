@@ -2033,16 +2033,8 @@
                       "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
                       "name": "Get a Braintree SDK Configuration",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
