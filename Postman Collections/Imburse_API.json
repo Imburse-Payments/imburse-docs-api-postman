@@ -3813,13 +3813,7 @@
               "name": "Get list of Webhooks",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
@@ -3862,11 +3856,6 @@
               "request": {
                 "method": "PUT",
                 "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  },
                   {
                     "key": "Content-Type",
                     "value": "application/json",
