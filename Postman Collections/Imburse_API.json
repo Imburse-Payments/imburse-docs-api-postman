@@ -866,7 +866,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                          "raw": "{\n\t\"name\": \"Marks test\"\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/account/tenants",
                         "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
@@ -1052,6 +1052,11 @@
                         "method": "POST",
                         "header": [
                           {
+                            "key": "Authorization",
+                            "type": "text",
+                            "value": "Bearer {{management-token}}"
+                          },
+                          {
                             "key": "Content-Type",
                             "name": "Content-Type",
                             "type": "text",
@@ -1060,9 +1065,9 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": []\n}"
+                          "raw": "[\n\t\"{{role1}}\"\n]"
                         },
-                        "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys/",
+                        "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys",
                         "description": "#### Description\n\nCreates a new key for a specific tenant.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the specific tenant.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
                       },
                       "response": [
@@ -1937,6 +1942,12 @@
               "_postman_isSubFolder": true
             }
           ],
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "{{management-token}}"
+            }
+          },
           "event": [
             {
               "listen": "prerequest",
@@ -2838,6 +2849,12 @@
               "_postman_isSubFolder": true
             }
           ],
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "{{management-token}}"
+            }
+          },
           "event": [
             {
               "listen": "prerequest",
