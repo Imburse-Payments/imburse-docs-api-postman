@@ -4064,7 +4064,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}",
+                        "value": "Bearer {{management-token}}",
                         "type": "text"
                       },
                       {
@@ -4098,7 +4098,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Bearer {{token}}"
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
                 "body": {
@@ -4118,7 +4118,7 @@
                       {
                         "key": "Authorization",
                         "type": "text",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       }
                     ],
                     "body": {
@@ -4178,7 +4178,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{token}}"
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
                 "body": {
@@ -4196,7 +4196,13 @@
                   "name": "Successful request",
                   "originalRequest": {
                     "method": "POST",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "body": {
                       "mode": "file",
                       "file": {}
@@ -4224,7 +4230,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{token}}"
+                    "value": "Bearer {{management-token}}"
                   },
                   {
                     "key": "Content-Type",
