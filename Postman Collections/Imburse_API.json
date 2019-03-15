@@ -3598,7 +3598,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Hmac {{token}}"
+                            "value": "Hmac {{management-token}}"
                           }
                         ],
                         "body": {
@@ -3628,7 +3628,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       }
                     ],
                     "body": {
@@ -3647,7 +3647,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
@@ -3677,7 +3677,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       }
                     ],
                     "body": {
@@ -3696,7 +3696,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Hmac {{token}}"
+                            "value": "Hmac {{management-token}}"
                           }
                         ],
                         "body": {
@@ -3726,7 +3726,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       },
                       {
                         "key": "Content-Type",
