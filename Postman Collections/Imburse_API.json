@@ -2231,15 +2231,8 @@
                       "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
                       "name": "Update a Paydirekt Merchant Configuration",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "PUT",
                         "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
@@ -2311,15 +2304,8 @@
                           "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
                           "name": "Create a Paydirekt OneKlick Configuration",
                           "request": {
-                            "auth": {
-                              "type": "noauth"
-                            },
                             "method": "POST",
                             "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}"
-                              },
                               {
                                 "key": "Content-Type",
                                 "value": "application/json"
