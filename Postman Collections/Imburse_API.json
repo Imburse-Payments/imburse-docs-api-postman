@@ -2309,6 +2309,13 @@
                       "_postman_isSubFolder": true
                     },
                     {
+                      "_postman_id": "e59593b9-75ec-47bf-bb4a-49f4444eb70b",
+                      "name": "Tenant",
+                      "description": "",
+                      "item": [],
+                      "_postman_isSubFolder": true
+                    },
+                    {
                       "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
                       "name": "Create a Paydirekt OneKlick Configuration",
                       "request": {
