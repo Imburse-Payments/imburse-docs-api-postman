@@ -621,11 +621,6 @@
                         "method": "POST",
                         "header": [
                           {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          },
-                          {
                             "key": "Content-Type",
                             "type": "text",
                             "value": "application/json"
@@ -669,6 +664,28 @@
                           "body": "{\n\t\"primaryGroupSid\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
                         }
                       ]
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "id": "9b480cc3-5544-4953-a237-c89314b1f884",
+                        "type": "text/javascript",
+                        "exec": [
+                          ""
+                        ]
+                      }
+                    },
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "6bf6a158-ad2a-414b-8106-89c25d786454",
+                        "type": "text/javascript",
+                        "exec": [
+                          ""
+                        ]
+                      }
                     }
                   ],
                   "_postman_isSubFolder": true
