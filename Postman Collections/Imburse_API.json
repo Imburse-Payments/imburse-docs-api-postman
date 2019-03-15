@@ -4652,12 +4652,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Bearer {{token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "type": "text",
-                    "value": "application/json"
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
                 "body": {
