@@ -4077,9 +4077,6 @@
               "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
               "name": "Get Whitelabel Settings",
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "GET",
                 "header": [],
                 "body": {
@@ -4155,11 +4152,6 @@
                 "method": "POST",
                 "header": [
                   {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  },
-                  {
                     "key": "Content-Type",
                     "type": "text",
                     "value": "application/json"
@@ -4200,13 +4192,7 @@
               "name": "Get Order Audit History",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
