@@ -3570,15 +3570,8 @@
                   "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
                   "name": "Update a Scheme",
                   "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
                     "method": "PUT",
                     "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
                       {
                         "key": "Content-Type",
                         "value": "application/json"
