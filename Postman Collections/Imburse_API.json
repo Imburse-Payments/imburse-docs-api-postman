@@ -3148,15 +3148,8 @@
                   "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
                   "name": "Create a Scheme",
                   "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
                     "method": "POST",
                     "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
                       {
                         "key": "Content-Type",
                         "value": "application/json"
