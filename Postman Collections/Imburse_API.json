@@ -1980,9 +1980,6 @@
                       "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
                       "name": "Create a Braintree SDK Configuration",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "POST",
                         "header": [
                           {
