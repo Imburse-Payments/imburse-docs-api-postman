@@ -4420,13 +4420,7 @@
               "name": "Get Instruction",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
@@ -4441,13 +4435,7 @@
               "name": "Get Instruction Audit History",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
@@ -4491,17 +4479,8 @@
               "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
               "name": "Get Country List",
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
@@ -4514,17 +4493,8 @@
               "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
               "name": "Get Currency List",
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
