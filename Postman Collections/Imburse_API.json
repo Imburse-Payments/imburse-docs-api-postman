@@ -60,7 +60,7 @@
               {
                 "key": "Authorization",
                 "type": "text",
-                "value": "Hmac {{token}}"
+                "value": "Hmac {{hmac-token}}"
               }
             ],
             "body": {
@@ -419,7 +419,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApi}}/v1/account",
+                        "url": "{{managementApiUrl}}/v1/account",
                         "description": "#### Description\n\nGets the current account assigned to the access token.\n\n#### Role required\n\n`acc.r`"
                       },
                       "response": [
