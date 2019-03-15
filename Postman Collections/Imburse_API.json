@@ -3201,12 +3201,7 @@
                   "name": "Get List of Schemes",
                   "request": {
                     "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
+                    "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
@@ -3250,12 +3245,7 @@
                       "type": "noauth"
                     },
                     "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
+                    "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
