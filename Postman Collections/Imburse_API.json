@@ -3488,16 +3488,8 @@
                   "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
                   "name": "Get a Scheme",
                   "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
                     "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
+                    "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
