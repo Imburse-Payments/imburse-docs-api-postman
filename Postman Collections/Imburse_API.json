@@ -3848,64 +3848,6 @@
               ]
             },
             {
-              "_postman_id": "70166801-d89f-42cc-9012-ca4412b38638",
-              "name": "Create a Webhook Copy",
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{token}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
-                },
-                "url": "{{managementApiUrl}}/v1/notifications/webhooks",
-                "description": "#### Description\r\n\r\nCreates a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n- | - | -\r\neventType | Yes | The event type that the webhook will be subscribing to.\r\nurl | Yes | The url of the webhook.\r\nisEnabled | Yes | Sets if the webhook is enabled or not."
-              },
-              "response": [
-                {
-                  "id": "1af2930a-b937-497f-8dd0-cc7670efccf7",
-                  "name": "Succesful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"eventTypes\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/notifications/webhooks"
-                  },
-                  "status": "Created",
-                  "code": 201,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"id\": \"\",\n    \"eventTypes\": \"\",\n    \"url\": \"\",\n    \"isEnabled\": true\n}"
-                }
-              ]
-            },
-            {
               "_postman_id": "a5ea5c32-7522-4c55-8d01-76724a2beb19",
               "name": "Get a Webhook",
               "request": {
@@ -5022,12 +4964,6 @@
           }
         }
       ]
-    },
-    {
-      "_postman_id": "525d7f63-8cf2-4ec8-9241-b4e05a14ce26",
-      "name": "DELETE",
-      "description": "",
-      "item": []
     }
   ],
   "event": [
