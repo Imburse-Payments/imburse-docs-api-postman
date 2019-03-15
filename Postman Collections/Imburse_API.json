@@ -1008,13 +1008,7 @@
                       "name": "Get Key By PublicKey",
                       "request": {
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -1057,11 +1051,6 @@
                       "request": {
                         "method": "POST",
                         "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          },
                           {
                             "key": "Content-Type",
                             "name": "Content-Type",
@@ -1116,13 +1105,7 @@
                       "name": "Remove Key by Public Key",
                       "request": {
                         "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -1405,6 +1388,28 @@
                           "body": null
                         }
                       ]
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "prerequest",
+                      "script": {
+                        "id": "a0b28695-8c1d-4c92-a0f1-e6aaf17a4808",
+                        "type": "text/javascript",
+                        "exec": [
+                          ""
+                        ]
+                      }
+                    },
+                    {
+                      "listen": "test",
+                      "script": {
+                        "id": "7a3c628e-0b64-4028-9da6-1c617685b175",
+                        "type": "text/javascript",
+                        "exec": [
+                          ""
+                        ]
+                      }
                     }
                   ],
                   "_postman_isSubFolder": true
