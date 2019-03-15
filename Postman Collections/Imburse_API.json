@@ -4384,13 +4384,7 @@
               "name": "Get Customer Audit History",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
