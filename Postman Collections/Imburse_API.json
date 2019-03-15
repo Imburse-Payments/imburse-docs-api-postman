@@ -4023,9 +4023,6 @@
               "_postman_id": "106629ab-3716-4fd7-ba3b-a44a6c9a9606",
               "name": "Upload Whitelabel Styling",
               "request": {
-                "auth": {
-                  "type": "noauth"
-                },
                 "method": "POST",
                 "header": [
                   {
