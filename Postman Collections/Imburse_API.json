@@ -4918,7 +4918,13 @@
                   "type": "noauth"
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Beare {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
