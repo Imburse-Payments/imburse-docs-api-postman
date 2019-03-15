@@ -3399,10 +3399,6 @@
                     "method": "POST",
                     "header": [
                       {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
                         "key": "Content-Type",
                         "value": "application/json"
                       }
