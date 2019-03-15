@@ -67,7 +67,7 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "{{identityApiUrl}}/v1/hmac/management",
+            "url": "{{identityApiUrl}}/identity/v1/hmac/management",
             "description": "#### Description\n\nCreates a new Management API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
