@@ -642,7 +642,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "[ \n\t\"{{role1}}\", \n\t\"{{role2}}\"\n]"
+                          "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
                         },
                         "url": "{{managementApiUrl}}/v1/account/keys",
                         "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
@@ -656,7 +656,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               },
                               {
@@ -667,7 +667,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "[ \n\t\"{{role1}}\", \n\t\"{{role2}}\"\n]"
+                              "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
                             },
                             "url": "{{managementApiUrl}}/v1/account/keys"
                           },
