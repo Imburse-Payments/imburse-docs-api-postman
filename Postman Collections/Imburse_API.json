@@ -1969,12 +1969,6 @@
               "_postman_isSubFolder": true
             }
           ],
-          "auth": {
-            "type": "bearer",
-            "bearer": {
-              "token": "{{bearerToken}}"
-            }
-          },
           "event": [
             {
               "listen": "prerequest",
@@ -4898,6 +4892,34 @@
             }
           ],
           "_postman_isSubFolder": true
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "{{management-token}}"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "fcb5bc3b-07d3-47df-a32e-bc073d26f3b9",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "a78e404b-c0af-403e-9440-c06da02a17c3",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     },
