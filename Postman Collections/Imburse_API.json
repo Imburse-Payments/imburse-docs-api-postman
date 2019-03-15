@@ -2923,11 +2923,6 @@
                 "method": "POST",
                 "header": [
                   {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  },
-                  {
                     "key": "Content-Type",
                     "name": "Content-Type",
                     "type": "text",
@@ -2988,13 +2983,7 @@
               "name": "Search Catalog for Rewards",
               "request": {
                 "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
+                "header": [],
                 "body": {
                   "mode": "raw",
                   "raw": ""
