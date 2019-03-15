@@ -4401,11 +4401,6 @@
                 "method": "POST",
                 "header": [
                   {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  },
-                  {
                     "key": "Content-Type",
                     "type": "text",
                     "value": "application/json"
