@@ -2357,16 +2357,8 @@
                           "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
                           "name": "Get a Paydirekt OneKlick Configuration",
                           "request": {
-                            "auth": {
-                              "type": "noauth"
-                            },
                             "method": "GET",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}"
-                              }
-                            ],
+                            "header": [],
                             "body": {
                               "mode": "raw",
                               "raw": ""
