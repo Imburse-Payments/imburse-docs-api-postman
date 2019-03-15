@@ -3345,12 +3345,7 @@
                   "name": "Delete a Scheme",
                   "request": {
                     "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
+                    "header": [],
                     "body": {
                       "mode": "raw",
                       "raw": ""
