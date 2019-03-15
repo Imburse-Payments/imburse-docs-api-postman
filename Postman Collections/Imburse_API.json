@@ -2339,6 +2339,11 @@
                                 "name": "Content-Type",
                                 "value": "application/json",
                                 "type": "text"
+                              },
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
                               }
                             ],
                             "body": {
@@ -2388,7 +2393,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}"
+                                "value": "Bearer {{management-token}}"
                               },
                               {
                                 "key": "Content-Type",
@@ -2409,6 +2414,11 @@
                               "originalRequest": {
                                 "method": "POST",
                                 "header": [
+                                  {
+                                    "key": "Authorization",
+                                    "value": "Bearer {{management-token}}",
+                                    "type": "text"
+                                  },
                                   {
                                     "key": "Content-Type",
                                     "name": "Content-Type",
