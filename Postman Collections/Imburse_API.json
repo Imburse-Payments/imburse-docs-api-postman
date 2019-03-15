@@ -4514,7 +4514,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Beare {{management-token}}",
+                    "value": "Bearer {{management-token}}",
                     "type": "text"
                   }
                 ],
@@ -4554,7 +4554,7 @@
         {
           "listen": "prerequest",
           "script": {
-            "id": "fcb5bc3b-07d3-47df-a32e-bc073d26f3b9",
+            "id": "7535bfe1-dcea-4273-a52c-a8f068206cd3",
             "type": "text/javascript",
             "exec": [
               ""
@@ -4564,7 +4564,7 @@
         {
           "listen": "test",
           "script": {
-            "id": "a78e404b-c0af-403e-9440-c06da02a17c3",
+            "id": "5d9d07db-9d10-4383-989e-f317a8666172",
             "type": "text/javascript",
             "exec": [
               ""
