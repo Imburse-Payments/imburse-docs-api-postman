@@ -1338,7 +1338,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
+                          "raw": "{\n\t\"roles\": []\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/account/users/{{userId}}",
                         "description": "#### Description\n\nUpdates an associated users roles for the account.\n\n#### Role required\n\n`acc.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#account-roles) to assign the user."
@@ -1351,6 +1351,11 @@
                             "method": "PUT",
                             "header": [
                               {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              },
+                              {
                                 "key": "Content-Type",
                                 "name": "Content-Type",
                                 "value": "application/json",
@@ -1359,7 +1364,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "[\n\t\"{{role1}}\",\n\t\"{{role2}}\"\n]"
+                              "raw": "{\n\t\"roles\": []\n}"
                             },
                             "url": "{{managementApiUrl}}/v1/account/users/{{userId}}"
                           },
@@ -1382,7 +1387,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
