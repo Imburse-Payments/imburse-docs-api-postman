@@ -404,17 +404,8 @@
                       "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
                       "name": "Get Account",
                       "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
                         "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
