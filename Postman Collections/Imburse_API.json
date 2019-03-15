@@ -172,7 +172,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
+                "value": "Hmac {{hmac-token}}",
                 "type": "text"
               }
             ],
@@ -274,7 +274,7 @@
                   "\r",
                   "var hmac = publicKey + \":\" + nonce + \":\" + timestamp + \":\" + signedSignature;\r",
                   "\r",
-                  "pm.variables.set(\"token\", hmac);"
+                  "pm.variables.set(\"hmac-token\", hmac);"
                 ],
                 "type": "text/javascript"
               }
@@ -285,7 +285,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Hmac {{token}}",
+                "value": "Hmac {{hmac-token}}",
                 "type": "text"
               },
               {
@@ -412,7 +412,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
@@ -431,7 +431,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               }
                             ],
@@ -487,7 +487,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{token}}",
+                            "value": "Bearer {{management-token}}",
                             "type": "text"
                           }
                         ],
@@ -507,7 +507,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}",
+                                "value": "Bearer {{management-token}}",
                                 "type": "text"
                               }
                             ],
@@ -536,7 +536,7 @@
                           {
                             "key": "Authorization",
                             "type": "text",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           }
                         ],
                         "body": {
