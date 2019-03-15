@@ -1282,11 +1282,6 @@
                         "method": "PUT",
                         "header": [
                           {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          },
-                          {
                             "key": "Content-Type",
                             "name": "Content-Type",
                             "type": "text",
@@ -1340,13 +1335,7 @@
                       "name": "Remove user",
                       "request": {
                         "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "type": "text",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
+                        "header": [],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -1996,10 +1985,6 @@
                         },
                         "method": "POST",
                         "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          },
                           {
                             "key": "Content-Type",
                             "value": "application/json"
