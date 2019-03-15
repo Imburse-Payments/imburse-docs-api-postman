@@ -79,7 +79,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}",
+                    "value": "Hmac {{hmac-token}}",
                     "type": "text"
                   }
                 ],
@@ -192,7 +192,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}",
+                    "value": "Hmac {{hmac-token}}",
                     "type": "text"
                   }
                 ],
@@ -311,7 +311,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Hmac {{token}}",
+                    "value": "Hmac {{hmac-token}}",
                     "type": "text"
                   }
                 ],
@@ -2632,7 +2632,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           },
                           {
                             "key": "Content-Type",
@@ -2653,6 +2653,11 @@
                           "originalRequest": {
                             "method": "POST",
                             "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              },
                               {
                                 "key": "Content-Type",
                                 "name": "Content-Type",
@@ -2687,7 +2692,7 @@
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{token}}"
+                            "value": "Bearer {{management-token}}"
                           },
                           {
                             "key": "Content-Type",
@@ -4988,7 +4993,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{token}}",
+                    "value": "Bearer {{collect-token}}",
                     "type": "text"
                   }
                 ],
@@ -5015,7 +5020,7 @@
               {
                 "key": "Authorization",
                 "type": "text",
-                "value": "Bearer {{token}}"
+                "value": "Bearer  {{payout-token}}"
               }
             ],
             "body": {
@@ -5035,7 +5040,7 @@
                   {
                     "key": "Authorization",
                     "type": "text",
-                    "value": "Bearer {{token}}"
+                    "value": "Bearer {{payout-token}}"
                   }
                 ],
                 "body": {
