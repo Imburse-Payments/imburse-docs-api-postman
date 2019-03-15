@@ -2818,7 +2818,13 @@
                           "name": "Sucessful Request",
                           "originalRequest": {
                             "method": "GET",
-                            "header": [],
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              }
+                            ],
                             "body": {
                               "mode": "raw",
                               "raw": ""
@@ -2871,7 +2877,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       }
                     ],
                     "body": {
@@ -2887,7 +2893,13 @@
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "GET",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "{{management-token}}",
+                            "type": "text"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
                           "raw": ""
@@ -4860,7 +4872,13 @@
                   "type": "noauth"
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
@@ -4877,7 +4895,13 @@
                   "type": "noauth"
                 },
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "body": {
                   "mode": "raw",
                   "raw": ""
