@@ -2453,7 +2453,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}"
+                                "value": "Bearer {{management-token}}"
                               }
                             ],
                             "body": {
@@ -2469,7 +2469,13 @@
                               "name": "Sucessful Request",
                               "originalRequest": {
                                 "method": "GET",
-                                "header": [],
+                                "header": [
+                                  {
+                                    "key": "Authorization",
+                                    "value": "Bearer {{management-token}}",
+                                    "type": "text"
+                                  }
+                                ],
                                 "body": {
                                   "mode": "raw",
                                   "raw": ""
@@ -2497,7 +2503,7 @@
                             "header": [
                               {
                                 "key": "Authorization",
-                                "value": "Bearer {{token}}"
+                                "value": "Bearer {{management-token}}"
                               },
                               {
                                 "key": "Content-Type",
@@ -2518,6 +2524,11 @@
                               "originalRequest": {
                                 "method": "PUT",
                                 "header": [
+                                  {
+                                    "key": "Authorization",
+                                    "value": "Bearer {{management-token}}",
+                                    "type": "text"
+                                  },
                                   {
                                     "key": "Content-Type",
                                     "name": "Content-Type",
@@ -2558,7 +2569,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "Bearer {{token}}"
+                        "value": "Bearer {{management-token}}"
                       }
                     ],
                     "body": {
