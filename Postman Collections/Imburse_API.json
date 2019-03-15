@@ -2411,64 +2411,64 @@
                               "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
                             }
                           ]
+                        }
+                      ],
+                      "_postman_isSubFolder": true
+                    },
+                    {
+                      "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
+                      "name": "Update a Paydirekt OneKlick Configuration",
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
                         },
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
+                        "description": "#### Description\r\n\r\nUpdates a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent payment provider configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
+                      },
+                      "response": [
                         {
-                          "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
-                          "name": "Update a Paydirekt OneKlick Configuration",
-                          "request": {
-                            "auth": {
-                              "type": "noauth"
-                            },
+                          "id": "078acf3a-0032-450d-b819-ae86f391f975",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
                             "method": "PUT",
                             "header": [
                               {
-                                "key": "Authorization",
-                                "value": "Bearer {{token}}"
-                              },
-                              {
                                 "key": "Content-Type",
-                                "value": "application/json"
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
                               }
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
+                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
-                            "description": "#### Description\r\n\r\nUpdates a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent payment provider configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
                           },
-                          "response": [
-                            {
-                              "id": "078acf3a-0032-450d-b819-ae86f391f975",
-                              "name": "Sucessful Request",
-                              "originalRequest": {
-                                "method": "PUT",
-                                "header": [
-                                  {
-                                    "key": "Content-Type",
-                                    "name": "Content-Type",
-                                    "value": "application/json",
-                                    "type": "text"
-                                  }
-                                ],
-                                "body": {
-                                  "mode": "raw",
-                                  "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
-                                },
-                                "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
-                              },
-                              "status": "No Content",
-                              "code": 204,
-                              "_postman_previewlanguage": "json",
-                              "header": [],
-                              "cookie": [],
-                              "responseTime": null,
-                              "body": ""
-                            }
-                          ]
+                          "status": "No Content",
+                          "code": 204,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": ""
                         }
-                      ],
-                      "_postman_isSubFolder": true
+                      ]
                     }
                   ],
                   "_postman_isSubFolder": true
