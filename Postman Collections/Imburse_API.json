@@ -1968,7 +1968,7 @@
         },
         {
           "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
-          "name": "Payment Providers",
+          "name": "Payment Provider Configurations",
           "description": "Payment Provider Configuration objects hold the connnection details that Imburse needs to connect to your various payment providers, eg. Braintree, Paydirkt, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "item": [
             {
