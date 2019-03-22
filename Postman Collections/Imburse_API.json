@@ -1996,10 +1996,10 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk",
-                    "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | A currency ISO code. Only 1 currency can be applied to a Braintree SDK configuration.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
+                    "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency codes. NOTE: for Braintree SDK configurations, only a single currency code can be specified.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
                   },
                   "response": [
                     {
@@ -2109,7 +2109,7 @@
                       "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}",
-                    "description": "#### Description\r\n\r\nUpdates a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
+                    "description": "#### Description\r\n\r\nUpdates a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency codes. NOTE: for Braintree SDK configurations, only a single currency code can be specified.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
                   },
                   "response": [
                     {
@@ -2132,7 +2132,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                          "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}"
                       },
