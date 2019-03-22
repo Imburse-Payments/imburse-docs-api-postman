@@ -2393,7 +2393,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
+                          "body": "{\n\t\"paymentProviderId\": \"PAYDIREKT\",\n\t\"paymentApiProductId\": \"PAYDIREKT_ONEKLICK\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
                         }
                       ]
                     },
@@ -2401,13 +2401,21 @@
                       "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
                       "name": "Get a Paydirekt OneKlick Configuration",
                       "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
                         "method": "GET",
-                        "header": [],
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}"
+                          }
+                        ],
                         "body": {
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
