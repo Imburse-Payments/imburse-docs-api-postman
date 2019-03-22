@@ -1980,8 +1980,15 @@
                   "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
                   "name": "Create a Braintree SDK Configuration",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "POST",
                     "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
                       {
                         "key": "Content-Type",
                         "value": "application/json"
@@ -1991,7 +1998,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk",
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk",
                     "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
                   },
                   "response": [
