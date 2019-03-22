@@ -1972,547 +1972,6 @@
           "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "item": [
             {
-              "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
-              "name": "Payment Providers",
-              "description": "",
-              "item": [
-                {
-                  "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
-                  "name": "Braintree SDK",
-                  "description": "",
-                  "item": [
-                    {
-                      "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
-                      "name": "Create a Braintree SDK Configuration",
-                      "request": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk",
-                        "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
-                      },
-                      "response": [
-                        {
-                          "id": "cd15bd41-7063-4806-b4c8-1cbdfd2aad3f",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"BRAINTREE\",\n\t\t\"name\": \"Braintree\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\"name\": \"Braintree SDK\",\n\t\t\"description\": \"\"\n\t},\n\t\"paymentApiProductConfigurationId\": \"\",\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
-                      "name": "Get a Braintree SDK Configuration",
-                      "request": {
-                        "method": "GET",
-                        "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
-                        "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                      },
-                      "response": [
-                        {
-                          "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "GET",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"BRAINTREE\",\r\n\t\t\"name\": \"Braintree\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"BRAINTREE_SDK\",\r\n\t\t\"name\": \"Braintree SDK\",\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
-                      "name": "Update a Braintree SDK Configuration",
-                      "request": {
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
-                        "description": "#### Description\r\n\r\nUpdates a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
-                      },
-                      "response": [
-                        {
-                          "id": "33c37ea9-4b60-4885-bf18-e9cb50b68b36",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "PUT",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
-                          },
-                          "status": "No Content",
-                          "code": 204,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": ""
-                        }
-                      ]
-                    }
-                  ],
-                  "_postman_isSubFolder": true
-                },
-                {
-                  "_postman_id": "14ca8b82-4514-4292-b445-8377ccca6741",
-                  "name": "Paydirekt Merchant",
-                  "description": "",
-                  "item": [
-                    {
-                      "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
-                      "name": "Create a Paydirekt Merchant Configuration",
-                      "request": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant",
-                        "description": "# Description\r\n\r\nCreate a Paydirekt Merchant configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
-                      },
-                      "response": [
-                        {
-                          "id": "7783cfb6-7426-4b24-99a2-5fa499156ccf",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"PAYDIREKT\",\r\n\t\t\"name\": \"Paydirekt\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"PAYDIREKT_MERCHANT\",\r\n\t\t\"name\": \"Paydirekt Merchant\"\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"paymentApiProductConfigurationId\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "8506f1f2-5c8b-432e-9013-35558a20a8a8",
-                      "name": "Get a Paydirekt Merchant Configuration",
-                      "request": {
-                        "method": "GET",
-                        "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
-                        "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                      },
-                      "response": [
-                        {
-                          "id": "59c17bb9-a0cf-47b9-a926-66da1153f8d4",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "GET",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"PAYDIREKT\",\r\n\t\t\"name\": \"Paydirekt\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"PAYDIREKT_MERCHANT\",\r\n\t\t\"name\": \"Paydirekt Merchant\"\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
-                      "name": "Update a Paydirekt Merchant Configuration",
-                      "request": {
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
-                        "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
-                      },
-                      "response": [
-                        {
-                          "id": "8148c7cc-757b-4828-8c7b-4c4952653ab5",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "PUT",
-                            "header": [
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
-                          },
-                          "status": "No Content",
-                          "code": 204,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": ""
-                        }
-                      ]
-                    }
-                  ],
-                  "_postman_isSubFolder": true
-                },
-                {
-                  "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
-                  "name": "Paydirekt OneKlick",
-                  "description": "",
-                  "item": [
-                    {
-                      "_postman_id": "4ceed78c-d5fd-44d1-90e1-64f5bae3e424",
-                      "name": "Account",
-                      "description": "",
-                      "item": [],
-                      "_postman_isSubFolder": true
-                    },
-                    {
-                      "_postman_id": "e59593b9-75ec-47bf-bb4a-49f4444eb70b",
-                      "name": "Tenant",
-                      "description": "",
-                      "item": [
-                        {
-                          "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
-                          "name": "Create a Paydirekt OneKlick Configuration",
-                          "request": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Content-Type",
-                                "value": "application/json"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick",
-                            "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
-                          },
-                          "response": [
-                            {
-                              "id": "0855aab0-9b5c-4eff-861c-fd4f1c12edd7",
-                              "name": "Sucessful Request",
-                              "originalRequest": {
-                                "method": "POST",
-                                "header": [
-                                  {
-                                    "key": "Authorization",
-                                    "value": "Bearer {{management-token}}",
-                                    "type": "text"
-                                  },
-                                  {
-                                    "key": "Content-Type",
-                                    "name": "Content-Type",
-                                    "value": "application/json",
-                                    "type": "text"
-                                  }
-                                ],
-                                "body": {
-                                  "mode": "raw",
-                                  "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentApiProductConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
-                                },
-                                "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick"
-                              },
-                              "status": "OK",
-                              "code": 200,
-                              "_postman_previewlanguage": "json",
-                              "header": [],
-                              "cookie": [],
-                              "responseTime": null,
-                              "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
-                            }
-                          ]
-                        },
-                        {
-                          "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
-                          "name": "Get a Paydirekt OneKlick Configuration",
-                          "request": {
-                            "method": "GET",
-                            "header": [],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
-                            "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                          },
-                          "response": [
-                            {
-                              "id": "b8c3b581-b109-4c7b-8fd1-e56cf867bc7f",
-                              "name": "Sucessful Request",
-                              "originalRequest": {
-                                "method": "GET",
-                                "header": [
-                                  {
-                                    "key": "Authorization",
-                                    "value": "Bearer {{management-token}}",
-                                    "type": "text"
-                                  }
-                                ],
-                                "body": {
-                                  "mode": "raw",
-                                  "raw": ""
-                                },
-                                "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
-                              },
-                              "status": "OK",
-                              "code": 200,
-                              "_postman_previewlanguage": "json",
-                              "header": [],
-                              "cookie": [],
-                              "responseTime": null,
-                              "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
-                            }
-                          ]
-                        },
-                        {
-                          "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
-                          "name": "Update a Paydirekt OneKlick Configuration",
-                          "request": {
-                            "method": "PUT",
-                            "header": [
-                              {
-                                "key": "Content-Type",
-                                "value": "application/json"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
-                            "description": "#### Description\r\n\r\nUpdates a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent payment provider configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
-                          },
-                          "response": [
-                            {
-                              "id": "078acf3a-0032-450d-b819-ae86f391f975",
-                              "name": "Sucessful Request",
-                              "originalRequest": {
-                                "method": "PUT",
-                                "header": [
-                                  {
-                                    "key": "Authorization",
-                                    "value": "Bearer {{management-token}}",
-                                    "type": "text"
-                                  },
-                                  {
-                                    "key": "Content-Type",
-                                    "name": "Content-Type",
-                                    "value": "application/json",
-                                    "type": "text"
-                                  }
-                                ],
-                                "body": {
-                                  "mode": "raw",
-                                  "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
-                                },
-                                "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
-                              },
-                              "status": "No Content",
-                              "code": 204,
-                              "_postman_previewlanguage": "json",
-                              "header": [],
-                              "cookie": [],
-                              "responseTime": null,
-                              "body": ""
-                            }
-                          ]
-                        }
-                      ],
-                      "_postman_isSubFolder": true
-                    }
-                  ],
-                  "_postman_isSubFolder": true
-                },
-                {
-                  "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
-                  "name": "Get list of Payment Provider Configurations",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/payment-providers",
-                    "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
-                  },
-                  "response": [
-                    {
-                      "id": "0ab42881-d03a-452e-9d39-27cb90f4f7ad",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
-                    }
-                  ]
-                }
-              ],
-              "_postman_isSubFolder": true
-            },
-            {
               "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
               "name": "Reward Providers",
               "description": "The Reward Providers allow you to administer reward provider configurations. \n\n\n## Common Models \n\nListed below are the common models used throught this API.\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
@@ -4544,6 +4003,547 @@
                 "url": "{{managementApiUrl}}/v1/references/reward-providers"
               },
               "response": []
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
+          "name": "Payment Providers",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
+              "name": "Braintree SDK",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
+                  "name": "Create a Braintree SDK Configuration",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk",
+                    "description": "# Description\r\n\r\nCreate a Braintree SDK configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
+                  },
+                  "response": [
+                    {
+                      "id": "cd15bd41-7063-4806-b4c8-1cbdfd2aad3f",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"BRAINTREE\",\n\t\t\"name\": \"Braintree\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\"name\": \"Braintree SDK\",\n\t\t\"description\": \"\"\n\t},\n\t\"paymentApiProductConfigurationId\": \"\",\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
+                  "name": "Get a Braintree SDK Configuration",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
+                    "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                  },
+                  "response": [
+                    {
+                      "id": "5e032f4d-a1ab-4955-87df-2317364a2ce9",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"BRAINTREE\",\r\n\t\t\"name\": \"Braintree\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"BRAINTREE_SDK\",\r\n\t\t\"name\": \"Braintree SDK\",\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
+                  "name": "Update a Braintree SDK Configuration",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
+                    "description": "#### Description\r\n\r\nUpdates a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update.\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrency | Yes | A currency ISO code.\r\nmerchantId | Yes | The Merchant Id.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\nmerchantAccountId | Yes | The Merchant Account Id."
+                  },
+                  "response": [
+                    {
+                      "id": "33c37ea9-4b60-4885-bf18-e9cb50b68b36",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "14ca8b82-4514-4292-b445-8377ccca6741",
+              "name": "Paydirekt Merchant",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
+                  "name": "Create a Paydirekt Merchant Configuration",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant",
+                    "description": "# Description\r\n\r\nCreate a Paydirekt Merchant configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
+                  },
+                  "response": [
+                    {
+                      "id": "7783cfb6-7426-4b24-99a2-5fa499156ccf",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"PAYDIREKT\",\r\n\t\t\"name\": \"Paydirekt\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"PAYDIREKT_MERCHANT\",\r\n\t\t\"name\": \"Paydirekt Merchant\"\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"paymentApiProductConfigurationId\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "8506f1f2-5c8b-432e-9013-35558a20a8a8",
+                  "name": "Get a Paydirekt Merchant Configuration",
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                    "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                  },
+                  "response": [
+                    {
+                      "id": "59c17bb9-a0cf-47b9-a926-66da1153f8d4",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"paymentProvider\": {\r\n\t\t\"id\": \"PAYDIREKT\",\r\n\t\t\"name\": \"Paydirekt\"\r\n\t},\r\n\t\"paymentApiProduct\": {\r\n\t\t\"id\": \"PAYDIREKT_MERCHANT\",\r\n\t\t\"name\": \"Paydirekt Merchant\"\r\n\t\t\"description\": \"\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
+                  "name": "Update a Paydirekt Merchant Configuration",
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                    "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
+                  },
+                  "response": [
+                    {
+                      "id": "8148c7cc-757b-4828-8c7b-4c4952653ab5",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
+                    }
+                  ]
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
+              "name": "Paydirekt OneKlick",
+              "description": "",
+              "item": [
+                {
+                  "_postman_id": "4ceed78c-d5fd-44d1-90e1-64f5bae3e424",
+                  "name": "Account",
+                  "description": "",
+                  "item": [],
+                  "_postman_isSubFolder": true
+                },
+                {
+                  "_postman_id": "e59593b9-75ec-47bf-bb4a-49f4444eb70b",
+                  "name": "Tenant",
+                  "description": "",
+                  "item": [
+                    {
+                      "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
+                      "name": "Create a Paydirekt OneKlick Configuration",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick",
+                        "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
+                      },
+                      "response": [
+                        {
+                          "id": "0855aab0-9b5c-4eff-861c-fd4f1c12edd7",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentApiProductConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
+                            },
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick"
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
+                        }
+                      ]
+                    },
+                    {
+                      "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
+                      "name": "Get a Paydirekt OneKlick Configuration",
+                      "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
+                        "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                      },
+                      "response": [
+                        {
+                          "id": "b8c3b581-b109-4c7b-8fd1-e56cf867bc7f",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": ""
+                            },
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"PAYDIREKT\",\n\t\t\"name\": \"Paydirekt\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"PAYDIREKT_ONEKLICK\",\n\t\t\"name\": \"Paydirekt OneKlick\",\n\t\t\"description\": \"\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
+                        }
+                      ]
+                    },
+                    {
+                      "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
+                      "name": "Update a Paydirekt OneKlick Configuration",
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}",
+                        "description": "#### Description\r\n\r\nUpdates a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent payment provider configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
+                      },
+                      "response": [
+                        {
+                          "id": "078acf3a-0032-450d-b819-ae86f391f975",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
+                            },
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick/{{id}}"
+                          },
+                          "status": "No Content",
+                          "code": 204,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "_postman_isSubFolder": true
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
+              "name": "Get list of Payment Provider Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{managementApiUrl}}/v1/payment-providers",
+                "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
+              },
+              "response": [
+                {
+                  "id": "0ab42881-d03a-452e-9d39-27cb90f4f7ad",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-providers"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                }
+              ]
             }
           ],
           "_postman_isSubFolder": true
