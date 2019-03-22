@@ -2531,7 +2531,7 @@
         },
         {
           "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
-          "name": "Reward Providers",
+          "name": "Reward Provider Configurations",
           "description": "Reward Provider Configuration objects hold the connnection details that Imburse needs to connect to your various reward providers, eg. Tangocard, etc. With these details, we will carry out instructions on your behalf.\n\n## Common Models \n\nListed below are the common models used throught this API.\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
           "item": [
             {
