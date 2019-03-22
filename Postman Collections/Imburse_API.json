@@ -1977,6 +1977,56 @@
               "description": "",
               "item": [
                 {
+                  "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
+                  "name": "Get list of Payment Provider Configurations",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations",
+                    "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
+                  },
+                  "response": [
+                    {
+                      "id": "0ab42881-d03a-452e-9d39-27cb90f4f7ad",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n\t{\n\t\t\"paymentProviderId\": \"BRAINTREE\",\n\t\t\"paymentApiProductId\": \"BRAINTREE_SDK\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": []\n\t}\n]"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
                   "name": "Create a Braintree SDK Configuration",
                   "request": {
@@ -2143,56 +2193,6 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": ""
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
-                  "name": "Get list of Payment Provider Configurations",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations",
-                    "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
-                  },
-                  "response": [
-                    {
-                      "id": "0ab42881-d03a-452e-9d39-27cb90f4f7ad",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"paymentProviderId\": \"BRAINTREE\",\n\t\t\"paymentApiProductId\": \"BRAINTREE_SDK\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": []\n\t}\n]"
                     }
                   ]
                 }
