@@ -2551,7 +2551,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations"
+                    "url": "{{managementApiUrl}}/v1/payment-providers"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2559,7 +2559,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProviderId\": \"BRAINTREE\",\n\t\t\"paymentApiProductId\": \"BRAINTREE_SDK\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": []\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
             }
@@ -2618,9 +2618,9 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard",
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard",
                     "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
@@ -2646,7 +2646,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2654,7 +2654,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"rewardProviderId\": \"TANGOCARD\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
+                      "body": "{\n\t\"rewardProvider\": {\n\t\t\"id\": \"TANGOCARD\",\n\t\t\"name\": \"Tangocard\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
                     }
                   ]
                 },
@@ -2680,7 +2680,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"name\": \"\"\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
                     "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
                   },
                   "response": [
@@ -2706,7 +2706,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"name\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -2736,7 +2736,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
@@ -2756,7 +2756,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2764,7 +2764,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"rewardProviderId\": \"TANGOCARD\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
                     }
                   ]
                 },
@@ -2786,7 +2786,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account",
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
                     "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
                   },
                   "response": [
@@ -2806,7 +2806,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2861,7 +2861,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/reward-providers-configurations",
+                "url": "{{managementApiUrl}}/v1/reward-providers",
                 "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
               },
               "response": [
@@ -2881,7 +2881,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations"
+                    "url": "{{managementApiUrl}}/v1/reward-providers"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2889,7 +2889,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"rewardProviderId\": \"TANGOCARD\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"rewardProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
             }
