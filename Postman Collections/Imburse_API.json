@@ -2551,7 +2551,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-providers"
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2559,7 +2559,7 @@
                   "header": [],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                  "body": "[\n\t{\n\t\t\"paymentProviderId\": \"BRAINTREE\",\n\t\t\"paymentApiProductId\": \"BRAINTREE_SDK\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\",\n\t    \"currencies\": []\n\t}\n]"
                 }
               ]
             }
@@ -2861,7 +2861,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": "{{managementApiUrl}}/v1/reward-providers",
+                "url": "{{managementApiUrl}}/v1/reward-providers-configurations",
                 "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
               },
               "response": [
