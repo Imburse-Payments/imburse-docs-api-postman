@@ -2508,268 +2508,138 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
-          "name": "Providers",
-          "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
+          "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
+          "name": "Reward Providers",
+          "description": "The Reward Providers allow you to administer reward provider configurations. \n\n\n## Common Models \n\nListed below are the common models used throught this API.\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
           "item": [
             {
-              "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
-              "name": "Reward Providers",
-              "description": "The Reward Providers allow you to administer reward provider configurations. \n\n\n## Common Models \n\nListed below are the common models used throught this API.\n\n#### Reward Provider object\n\nName | Type | Description\n-|-|-\nid | string | A unique identifier for this reward provider. ie. TANGOCARD\nname | string | The friendly name of this provider. ie. Tangocard\n",
+              "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
+              "name": "Tangocard",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
               "item": [
                 {
-                  "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
-                  "name": "Tangocard",
-                  "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\npaymentProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of this configuration\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
-                  "item": [
+                  "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
+                  "name": "Create a Tangocard Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\"\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard",
+                    "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
+                  },
+                  "response": [
                     {
-                      "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
-                      "name": "Create a Tangocard Configuration",
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
+                      "id": "92796b9e-7d45-4c80-b5a2-803e79b19203",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
                         "method": "POST",
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
                           },
                           {
                             "key": "Content-Type",
-                            "value": "application/json"
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
                           }
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\"\n}"
+                          "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard",
-                        "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard"
                       },
-                      "response": [
-                        {
-                          "id": "92796b9e-7d45-4c80-b5a2-803e79b19203",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/reward-providers/tangocard"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n\t\"rewardProvider\": {\n\t\t\"id\": \"TANGOCARD\",\n\t\t\"name\": \"Tangocard\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
-                        }
-                      ]
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"rewardProvider\": {\n\t\t\"id\": \"TANGOCARD\",\n\t\t\"name\": \"Tangocard\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
+                  "name": "Update a Tangocard Configuration",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
                     },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"name\": \"\"\r\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                    "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
+                  },
+                  "response": [
                     {
-                      "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
-                      "name": "Update a Tangocard Configuration",
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
+                      "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
                         "method": "PUT",
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
                           },
                           {
                             "key": "Content-Type",
-                            "value": "application/json"
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
                           }
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n  \"name\": \"\"\r\n}"
+                          "raw": "{\n\t\"name\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
-                        "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}"
                       },
-                      "response": [
-                        {
-                          "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "PUT",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\n\t\"name\": \"\"\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}"
-                          },
-                          "status": "No Content",
-                          "code": 204,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": ""
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
-                      "name": "Get a Tangocard Configuration",
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
-                        "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
-                      },
-                      "response": [
-                        {
-                          "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "GET",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
-                            "url": "{{managementApiUrl}}/v1/reward-providers/{{id}}"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
-                      "name": "Get Tangocard Account",
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
-                        "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
-                      },
-                      "response": [
-                        {
-                          "id": "ab0dc51d-2a0c-4677-a4fc-e762da2037f3",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "GET",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
-                            "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account"
-                          },
-                          "status": "OK",
-                          "code": 200,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\r\n\t\"accountIdentifier\": \"\",\r\n\t\"accountNumber\": \"\",\r\n    \"contactEmail\": \"\",\r\n    \"currencyCode\": \"\",\r\n    \"currentBalance\": 0.00,\r\n    \"displayName\": \"\",\r\n\t\"status\": \"\"\r\n}"
-                        }
-                      ]
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
                     }
-                  ],
-                  "event": [
-                    {
-                      "listen": "prerequest",
-                      "script": {
-                        "id": "065683dd-0914-4f6e-8f65-be72369c7111",
-                        "type": "text/javascript",
-                        "exec": [
-                          ""
-                        ]
-                      }
-                    },
-                    {
-                      "listen": "test",
-                      "script": {
-                        "id": "bd27e9d5-15fb-491a-bdfe-cde05110c3ba",
-                        "type": "text/javascript",
-                        "exec": [
-                          ""
-                        ]
-                      }
-                    }
-                  ],
-                  "_postman_isSubFolder": true
+                  ]
                 },
                 {
-                  "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
-                  "name": "Get list of Reward Provider Configurations",
+                  "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
+                  "name": "Get a Tangocard Configuration",
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2785,19 +2655,19 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-providers",
-                    "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                    "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
                     {
-                      "id": "e78f003a-d417-4402-bd4d-0e3bcc2ef00c",
+                      "id": "ab7a2d78-9d93-4ba2-908a-e3f05e410ec1",
                       "name": "Sucessful Request",
                       "originalRequest": {
                         "method": "GET",
                         "header": [
                           {
                             "key": "Authorization",
-                            "value": "{{management-token}}",
+                            "value": "Bearer {{management-token}}",
                             "type": "text"
                           }
                         ],
@@ -2805,7 +2675,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers"
+                        "url": "{{managementApiUrl}}/v1/reward-providers/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2813,7 +2683,57 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"rewardProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
+                  "name": "Get Tangocard Account",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
+                    "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
+                  },
+                  "response": [
+                    {
+                      "id": "ab0dc51d-2a0c-4677-a4fc-e762da2037f3",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\r\n\t\"accountIdentifier\": \"\",\r\n\t\"accountNumber\": \"\",\r\n    \"contactEmail\": \"\",\r\n    \"currencyCode\": \"\",\r\n    \"currentBalance\": 0.00,\r\n    \"displayName\": \"\",\r\n\t\"status\": \"\"\r\n}"
                     }
                   ]
                 }
@@ -2822,7 +2742,7 @@
                 {
                   "listen": "prerequest",
                   "script": {
-                    "id": "f945d9aa-d04f-4e56-9fe8-cb016c7e43d8",
+                    "id": "065683dd-0914-4f6e-8f65-be72369c7111",
                     "type": "text/javascript",
                     "exec": [
                       ""
@@ -2832,7 +2752,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "ed826af3-096a-47e7-976d-bade58701796",
+                    "id": "bd27e9d5-15fb-491a-bdfe-cde05110c3ba",
                     "type": "text/javascript",
                     "exec": [
                       ""
@@ -2841,8 +2761,87 @@
                 }
               ],
               "_postman_isSubFolder": true
+            },
+            {
+              "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
+              "name": "Get list of Reward Provider Configurations",
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "{{managementApiUrl}}/v1/reward-providers",
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
+              },
+              "response": [
+                {
+                  "id": "e78f003a-d417-4402-bd4d-0e3bcc2ef00c",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "{{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/reward-providers"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"rewardProvider\": {\n\t\t\t\"id\": \"TANGOCARD\",\n\t\t\t\"name\": \"Tangocard\"\n\t\t}\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                }
+              ]
             }
           ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "f945d9aa-d04f-4e56-9fe8-cb016c7e43d8",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed826af3-096a-47e7-976d-bade58701796",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "_postman_id": "58efe9ec-1cee-4bea-9e64-419f71d32659",
+          "name": "Providers",
+          "description": "Provider configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
+          "item": [],
           "event": [
             {
               "listen": "prerequest",
