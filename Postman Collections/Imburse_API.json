@@ -2706,7 +2706,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"name\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -2736,7 +2736,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
