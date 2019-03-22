@@ -2756,7 +2756,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2764,7 +2764,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"rewardProvider\": {\r\n\t\t\"id\": \"TANGOCARD\",\r\n\t\t\"name\": \"Tangocard\"\r\n\t},\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
+                      "body": "{\r\n\t\"rewardProviderId\": \"TANGOCARD\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"customerIdentifier\": \"\",\r\n    \"customerDisplayName\": \"\",\r\n    \"accountIdentifier\": \"\",\r\n\t\"accountDisplayName\": \"\"\r\n    \"accountContactEmail\": \"\"\r\n}"
                     }
                   ]
                 },
