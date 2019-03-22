@@ -1969,7 +1969,7 @@
         {
           "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
           "name": "Payment Providers",
-          "description": "",
+          "description": "Payment Provider Configuration objects hold the connnection details that Imburse needs to connect to your various payment providers, eg. Braintree, Paydirkt, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "item": [
             {
               "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
@@ -2503,6 +2503,28 @@
                   "body": "[\n\t{\n\t\t\"paymentProvider\": {\n\t\t\t\"id\": \"BRAINTREE\",\n\t\t\t\"name\": \"Braintree\"\n\t\t},\n\t\t\"paymentApiProduct\": {\n\t\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\t\"name\": \"Braintree SDK\",\n\t\t\t\"description\": \"\"\n\t\t},\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "41c5a7b2-3b86-4f3a-bb0a-f6c38b865409",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "e6d89f9f-57b6-4eec-9701-f0d84570ea1b",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
             }
           ],
           "_postman_isSubFolder": true
