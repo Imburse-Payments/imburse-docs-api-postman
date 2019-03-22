@@ -2024,7 +2024,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk"
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2032,7 +2032,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"paymentProvider\": {\n\t\t\"id\": \"BRAINTREE\",\n\t\t\"name\": \"Braintree\"\n\t},\n\t\"paymentApiProduct\": {\n\t\t\"id\": \"BRAINTREE_SDK\",\n\t\t\"name\": \"Braintree SDK\",\n\t\t\"description\": \"\"\n\t},\n\t\"paymentApiProductConfigurationId\": \"\",\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                      "body": "{\n\t\"paymentProviderId\": \"BRAINTREE\",\n\t\"paymentApiProductId\": \"BRAINTREE_SDK\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     }
                   ]
                 },
@@ -2040,13 +2040,21 @@
                   "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
                   "name": "Get a Braintree SDK Configuration",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
                   "response": [
