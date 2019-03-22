@@ -2786,7 +2786,7 @@
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}/account",
+                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account",
                     "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
                   },
                   "response": [
