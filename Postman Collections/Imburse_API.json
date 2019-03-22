@@ -2646,7 +2646,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-providers/tangocard"
+                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2654,7 +2654,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"rewardProvider\": {\n\t\t\"id\": \"TANGOCARD\",\n\t\t\"name\": \"Tangocard\"\n\t},\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
+                      "body": "{\n\t\"rewardProviderId\": \"TANGOCARD\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
                     }
                   ]
                 },
@@ -2680,7 +2680,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"name\": \"\"\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-providers/tangocard/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
                     "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
                   },
                   "response": [
