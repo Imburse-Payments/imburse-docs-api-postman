@@ -2493,7 +2493,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"PAYDIREKT\",\r\n\t\"paymentApiProductId\": \"PAYDIREKT_MERCHANT\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -2543,7 +2543,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"PAYDIREKT\",\r\n\t\"paymentApiProductId\": \"PAYDIREKT_MERCHANT\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -2617,7 +2617,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}",
                         "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
