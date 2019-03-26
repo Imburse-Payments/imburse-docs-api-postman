@@ -2499,7 +2499,7 @@
                     },
                     {
                       "_postman_id": "e295c4b0-c3ed-49fe-b6dc-1e3a1cb9f9b2",
-                      "name": "Get a Paydirekt OneKlick Configuration",
+                      "name": "Get a Paydirekt OneKlick Account Configuration",
                       "request": {
                         "auth": {
                           "type": "noauth"
