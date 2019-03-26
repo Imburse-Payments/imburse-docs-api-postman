@@ -2365,6 +2365,56 @@
                   ]
                 },
                 {
+                  "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
+                  "name": "Get a Paydirekt Merchant Configuration Private Key Copy",
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
+                    "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                  },
+                  "response": [
+                    {
+                      "id": "6defed26-6a9f-4d50-bb6d-2a1aa40b22c5",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}/private-key"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n\t\"privateKey\": \"\"\n}"
+                    }
+                  ]
+                },
+                {
                   "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
                   "name": "Update a Paydirekt Merchant Configuration",
                   "request": {
@@ -2414,56 +2464,6 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": ""
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
-                  "name": "Get a Paydirekt Merchant Configuration Private Key Copy",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
-                    "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                  },
-                  "response": [
-                    {
-                      "id": "6defed26-6a9f-4d50-bb6d-2a1aa40b22c5",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}/private-key"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n\t\"privateKey\": \"\"\n}"
                     }
                   ]
                 }
