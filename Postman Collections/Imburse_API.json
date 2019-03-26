@@ -2452,7 +2452,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{managementApiUrl}}/v1/account-payment-providers-configurations/paydirekt-oneklick",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account",
                         "description": "# Description\r\n\r\nCreate a Paydirekt Merchant configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
                       },
                       "response": [
@@ -2478,7 +2478,7 @@
                               "mode": "raw",
                               "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant"
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2508,7 +2508,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
@@ -2528,7 +2528,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2558,7 +2558,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}/private-key",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
