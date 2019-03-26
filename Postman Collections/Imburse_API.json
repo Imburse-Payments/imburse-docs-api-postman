@@ -2549,7 +2549,7 @@
                     },
                     {
                       "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
-                      "name": "Get a Paydirekt OneKlick Configuration Private Key",
+                      "name": "Get a Paydirekt OneKlick Account Configuration Private Key",
                       "request": {
                         "auth": {
                           "type": "noauth"
