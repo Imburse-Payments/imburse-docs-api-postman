@@ -2439,7 +2439,7 @@
                   "item": [
                     {
                       "_postman_id": "d32acafe-554c-4957-aa36-120d45d6fc4f",
-                      "name": "Create a Paydirekt OneKlick Configuration",
+                      "name": "Create a Paydirekt OneKlick Account Configuration",
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2460,7 +2460,7 @@
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account",
-                        "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick Account configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
+                        "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick Account configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key.\r\ntenantAuthorisations | No | An array of key value pairs where the `Key` is the Tenant Id and the `Value` is Paydirekt Authorisation code for the tenant."
                       },
                       "response": [
                         {
