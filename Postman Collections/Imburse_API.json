@@ -2316,7 +2316,7 @@
                 },
                 {
                   "_postman_id": "def66a24-0548-4405-bb7d-a9c5468b9428",
-                  "name": "Get a Braintree SDK Configuration Private Key Copy",
+                  "name": "Get a Paydirekt Merchant Configuration Private Key",
                   "request": {
                     "auth": {
                       "type": "noauth"
