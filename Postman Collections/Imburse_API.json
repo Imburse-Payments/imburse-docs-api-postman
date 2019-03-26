@@ -2432,7 +2432,7 @@
                   "item": [
                     {
                       "_postman_id": "d32acafe-554c-4957-aa36-120d45d6fc4f",
-                      "name": "Create a Paydirekt Merchant Configuration Copy",
+                      "name": "Create a Paydirekt OneKlick Configuration",
                       "request": {
                         "auth": {
                           "type": "noauth"
