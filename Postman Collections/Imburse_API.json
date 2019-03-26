@@ -2716,7 +2716,7 @@
             },
             {
               "_postman_id": "710279dc-6cd2-4835-8165-d701c79b0d9e",
-              "name": "Get list of Payment Provider Configurations Copy",
+              "name": "Get list of Payment Provider Configurations for Accounts",
               "request": {
                 "auth": {
                   "type": "noauth"
