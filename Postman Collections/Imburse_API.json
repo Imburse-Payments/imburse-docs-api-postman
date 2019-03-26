@@ -2315,56 +2315,6 @@
                   ]
                 },
                 {
-                  "_postman_id": "e295c4b0-c3ed-49fe-b6dc-1e3a1cb9f9b2",
-                  "name": "Get a Paydirekt Merchant Configuration Copy",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}",
-                    "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
-                  },
-                  "response": [
-                    {
-                      "id": "8f98031d-7f04-48e2-afae-85ea777ecee2",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\r\n\t\"paymentProviderId\": \"PAYDIREKT\",\r\n\t\"paymentApiProductId\": \"PAYDIREKT_MERCHANT\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
-                    }
-                  ]
-                },
-                {
                   "_postman_id": "def66a24-0548-4405-bb7d-a9c5468b9428",
                   "name": "Get a Paydirekt Merchant Configuration Private Key",
                   "request": {
@@ -2480,6 +2430,56 @@
                   "name": "Account",
                   "description": "",
                   "item": [
+                    {
+                      "_postman_id": "e295c4b0-c3ed-49fe-b6dc-1e3a1cb9f9b2",
+                      "name": "Get a Paydirekt Merchant Configuration Copy",
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}",
+                        "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                      },
+                      "response": [
+                        {
+                          "id": "8f98031d-7f04-48e2-afae-85ea777ecee2",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": ""
+                            },
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}"
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\r\n\t\"paymentProviderId\": \"PAYDIREKT\",\r\n\t\"paymentApiProductId\": \"PAYDIREKT_MERCHANT\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                        }
+                      ]
+                    },
                     {
                       "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
                       "name": "Get a Paydirekt OneKlick Configuration Private Key",
