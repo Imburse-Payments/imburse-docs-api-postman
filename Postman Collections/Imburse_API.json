@@ -2566,7 +2566,7 @@
                           "raw": ""
                         },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}/private-key",
-                        "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
+                        "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick Account configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
                         {
