@@ -2368,8 +2368,15 @@
                   "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
                   "name": "Update a Paydirekt Merchant Configuration",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "PUT",
                     "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
                       {
                         "key": "Content-Type",
                         "value": "application/json"
@@ -2379,7 +2386,7 @@
                       "mode": "raw",
                       "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                     },
-                    "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}",
                     "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
                   },
                   "response": [
@@ -2405,7 +2412,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -2450,7 +2457,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account",
                         "description": "# Description\r\n\r\nCreate a Paydirekt Merchant configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
@@ -2578,7 +2585,7 @@
                               "mode": "raw",
                               "raw": ""
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}/private-key"
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}/private-key"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2612,7 +2619,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}",
                         "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
                       },
                       "response": [
@@ -2638,7 +2645,7 @@
                               "mode": "raw",
                               "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
