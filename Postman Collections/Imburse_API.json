@@ -2431,66 +2431,6 @@
                   "description": "",
                   "item": [
                     {
-                      "_postman_id": "38a89d0c-b560-4a15-aa2e-45cb568c171f",
-                      "name": "Update a Paydirekt Merchant Configuration Copy",
-                      "request": {
-                        "auth": {
-                          "type": "noauth"
-                        },
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
-                        },
-                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
-                        "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
-                      },
-                      "response": [
-                        {
-                          "id": "c6ccfbb7-084f-4e8c-a8bd-235b37191ab2",
-                          "name": "Sucessful Request",
-                          "originalRequest": {
-                            "method": "PUT",
-                            "header": [
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
-                            },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
-                          },
-                          "status": "No Content",
-                          "code": 204,
-                          "_postman_previewlanguage": "json",
-                          "header": [],
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": ""
-                        }
-                      ]
-                    },
-                    {
                       "_postman_id": "d32acafe-554c-4957-aa36-120d45d6fc4f",
                       "name": "Create a Paydirekt Merchant Configuration Copy",
                       "request": {
@@ -2647,6 +2587,66 @@
                           "cookie": [],
                           "responseTime": null,
                           "body": "{\n\t\"privateKey\": \"\"\n}"
+                        }
+                      ]
+                    },
+                    {
+                      "_postman_id": "38a89d0c-b560-4a15-aa2e-45cb568c171f",
+                      "name": "Update a Paydirekt Merchant Configuration Copy",
+                      "request": {
+                        "auth": {
+                          "type": "noauth"
+                        },
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                        },
+                        "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}",
+                        "description": "#### Description\r\n\r\nUpdates a PSP configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\npaymentProviderConfigurationId | The id of the payment provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\npublicKey | Yes | The Public Key.\r\nprivateKey | Yes | The private Key."
+                      },
+                      "response": [
+                        {
+                          "id": "c6ccfbb7-084f-4e8c-a8bd-235b37191ab2",
+                          "name": "Sucessful Request",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
+                            },
+                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-merchant/{{id}}"
+                          },
+                          "status": "No Content",
+                          "code": 204,
+                          "_postman_previewlanguage": "json",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": ""
                         }
                       ]
                     }
