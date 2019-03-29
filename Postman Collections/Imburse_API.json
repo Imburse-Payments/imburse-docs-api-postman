@@ -3946,7 +3946,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payout"
+                        "url": "{{managementApiUrl}}/v1/schemes/payout"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3962,13 +3962,21 @@
                   "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
                   "name": "Get a Scheme",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payout/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
                   "response": [
@@ -3987,7 +3995,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payout/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -4003,13 +4011,21 @@
                   "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
                   "name": "Get List of Payout Options for Scheme",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payout/{{schemeId}}/options",
+                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{schemeId}}/options",
                     "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
                   },
                   "response": [
