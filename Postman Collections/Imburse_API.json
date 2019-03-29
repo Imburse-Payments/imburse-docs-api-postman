@@ -3723,7 +3723,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/collect/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/collect/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3757,7 +3757,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/collect/{{schemeId}}",
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{schemeId}}",
                     "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to be updated"
                   },
                   "response": [
@@ -3782,7 +3782,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"clientPspConfigurations\": [],\r\n\t\"collectSchemeOverrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"clientPspConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/collect/{{schemeId}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/collect/{{schemeId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3798,13 +3798,21 @@
                   "_postman_id": "96bda309-4b05-426a-8efe-0537d03f7c4e",
                   "name": "Delete a Scheme",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "DELETE",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}}/v1/collect/{{schemeId}}",
+                    "url": "{{managementApiUrl}}}/v1/schemes/collect/{{schemeId}}",
                     "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nschemeId | The id of the scheme to delete"
                   },
                   "response": [
@@ -3823,7 +3831,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/collect/{{schemeId}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/collect/{{schemeId}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -3853,6 +3861,10 @@
                     "method": "POST",
                     "header": [
                       {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
                         "key": "Content-Type",
                         "value": "application/json"
                       }
@@ -3861,7 +3873,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/payout",
+                    "url": "{{managementApiUrl}}/v1/schemes/payout",
                     "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
                   },
                   "response": [
@@ -3885,7 +3897,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/payout"
+                        "url": "{{managementApiUrl}}/v1/schemes/payout"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3901,13 +3913,21 @@
                   "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
                   "name": "Get List of Schemes",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payout",
+                    "url": "{{managementApiUrl}}/v1/schemes/payout",
                     "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
                   },
                   "response": [
