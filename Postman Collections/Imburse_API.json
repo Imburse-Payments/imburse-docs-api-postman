@@ -2483,7 +2483,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"publicKey\": \"\",\r\n\t\"privateKey\": \"\"\r\n}"
+                              "raw": "{\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}"
                             },
                             "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account"
                           },
@@ -2493,7 +2493,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
+                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -2543,7 +2543,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
+                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -2687,7 +2687,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-provider--configurations/paydirekt-oneklick",
+                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick",
                         "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
                       },
                       "response": [
@@ -2713,7 +2713,7 @@
                               "mode": "raw",
                               "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentApiProductConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-providers/paydirekt-oneklick"
+                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick"
                           },
                           "status": "OK",
                           "code": 200,
@@ -3582,8 +3582,15 @@
                   "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
                   "name": "Create a Scheme",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "POST",
                     "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
                       {
                         "key": "Content-Type",
                         "value": "application/json"
@@ -3593,7 +3600,7 @@
                       "mode": "raw",
                       "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/collect",
+                    "url": "{{managementApiUrl}}/v1/schemes/collect",
                     "description": "#### Description \n\nCreates a new collection scheme.\n\n#### Role required\n\n`t.sch.a`"
                   },
                   "response": [
