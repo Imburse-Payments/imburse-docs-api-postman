@@ -3625,7 +3625,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"paymentProviderConfigurations\": [],\r\n\t\"overrides\": [\r\n\t\t{\r\n\t\t\t\"isGlobal\": \"\",\r\n\t\t\t\"country\": \"\",\r\n\t\t\t\"paymentProviderConfigurationId\": \"\",\r\n\t\t\t\"paymentMethod\": \"\",\r\n\t\t\t\"enabled\": \"\"\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/collect"
+                        "url": "{{managementApiUrl}}/v1/schemes/collect"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3641,13 +3641,21 @@
                   "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
                   "name": "Get List of Schemes",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/collect",
+                    "url": "{{managementApiUrl}}/v1/schemes/collect",
                     "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
                   },
                   "response": [
@@ -3666,7 +3674,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/collect"
+                        "url": "{{managementApiUrl}}/v1/schemes/collect"
                       },
                       "status": "OK",
                       "code": 200,
@@ -3686,12 +3694,17 @@
                       "type": "noauth"
                     },
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/collect/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
                   "response": [
