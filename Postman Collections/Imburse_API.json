@@ -436,7 +436,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"Id\": \"\",\n\t\"ImburseAccountRef\": \"\",\n\t\"CompanyName\": \"\",\n\t\"BillingContactFirstName\": \"\",\n\t\"BillingContactLastName\": \"\"\n}"
+                          "body": "{\n\t\"accountId\": \"\",\n\t\"ImburseAccountRef\": \"\",\n\t\"CompanyName\": \"\",\n\t\"BillingContactFirstName\": \"\",\n\t\"BillingContactLastName\": \"\"\n}"
                         }
                       ]
                     }
@@ -470,6 +470,57 @@
                   "name": "Security Keys",
                   "description": "",
                   "item": [
+                    {
+                      "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
+                      "name": "Create a new Key",
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
+                        },
+                        "url": "{{managementApiUrl}}/v1/account/keys",
+                        "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
+                      },
+                      "response": [
+                        {
+                          "id": "01702494-71c9-4993-a112-6d7bd78c2329",
+                          "name": "Create a new Key",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "value": "Bearer {{management-token}}",
+                                "type": "text"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
+                            },
+                            "url": "{{managementApiUrl}}/v1/account/keys"
+                          },
+                          "_postman_previewlanguage": "json",
+                          "header": null,
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n\t\"primaryGroupSid\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
+                        }
+                      ]
+                    },
                     {
                       "_postman_id": "75d7c37d-24f0-48c2-bdd7-48b1ad2fc463",
                       "name": "Get All Keys",
@@ -613,57 +664,6 @@
                           "body": null
                         }
                       ]
-                    },
-                    {
-                      "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
-                      "name": "Create a new Key",
-                      "request": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
-                        },
-                        "url": "{{managementApiUrl}}/v1/account/keys",
-                        "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
-                      },
-                      "response": [
-                        {
-                          "id": "01702494-71c9-4993-a112-6d7bd78c2329",
-                          "name": "Create a new Key",
-                          "originalRequest": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "value": "Bearer {{management-token}}",
-                                "type": "text"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "text"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
-                            },
-                            "url": "{{managementApiUrl}}/v1/account/keys"
-                          },
-                          "_postman_previewlanguage": "json",
-                          "header": null,
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n\t\"primaryGroupSid\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
-                        }
-                      ]
                     }
                   ],
                   "event": [
@@ -695,6 +695,73 @@
                   "name": "Tenants",
                   "description": "",
                   "item": [
+                    {
+                      "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
+                      "name": "Create new Tenant",
+                      "event": [
+                        {
+                          "listen": "prerequest",
+                          "script": {
+                            "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
+                            "exec": [
+                              ""
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"name\": \"Marks test\"\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/account/tenants",
+                        "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
+                      },
+                      "response": [
+                        {
+                          "id": "9d3ce5f9-02ad-4b41-9903-b9a61be375b4",
+                          "name": "Create new Tenant",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Authorization",
+                                "type": "text",
+                                "value": "Bearer {{management-token}}"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "type": "text",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                            },
+                            "url": "{{managementApiUrl}}/v1/account/tenants"
+                          },
+                          "status": "Created",
+                          "code": 201,
+                          "_postman_previewlanguage": "json",
+                          "header": null,
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                        }
+                      ]
+                    },
                     {
                       "_postman_id": "1e482fce-e553-4077-aa21-e7901ba6b85f",
                       "name": "Get Tenants",
@@ -836,73 +903,6 @@
                           "cookie": [],
                           "responseTime": null,
                           "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": \"\"\n}\n"
-                        }
-                      ]
-                    },
-                    {
-                      "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
-                      "name": "Create new Tenant",
-                      "event": [
-                        {
-                          "listen": "prerequest",
-                          "script": {
-                            "id": "e2a46408-c4b5-4525-8c92-e21fe2c58ba2",
-                            "exec": [
-                              ""
-                            ],
-                            "type": "text/javascript"
-                          }
-                        }
-                      ],
-                      "request": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"name\": \"Marks test\"\n}"
-                        },
-                        "url": "{{managementApiUrl}}/v1/account/tenants",
-                        "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
-                      },
-                      "response": [
-                        {
-                          "id": "9d3ce5f9-02ad-4b41-9903-b9a61be375b4",
-                          "name": "Create new Tenant",
-                          "originalRequest": {
-                            "method": "POST",
-                            "header": [
-                              {
-                                "key": "Authorization",
-                                "type": "text",
-                                "value": "Bearer {{management-token}}"
-                              },
-                              {
-                                "key": "Content-Type",
-                                "name": "Content-Type",
-                                "type": "text",
-                                "value": "application/json"
-                              }
-                            ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
-                            },
-                            "url": "{{managementApiUrl}}/v1/account/tenants"
-                          },
-                          "status": "Created",
-                          "code": 201,
-                          "_postman_previewlanguage": "json",
-                          "header": null,
-                          "cookie": [],
-                          "responseTime": null,
-                          "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         }
                       ]
                     },
@@ -4102,7 +4102,7 @@
                           "mode": "raw",
                           "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/payout/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -4118,13 +4118,21 @@
                   "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
                   "name": "Delete a Scheme",
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "DELETE",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "body": {
                       "mode": "raw",
                       "raw": ""
                     },
-                    "url": "{{managementApiUrl}}/v1/payout/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
                     "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to delete"
                   },
                   "response": [
@@ -4143,7 +4151,7 @@
                           "mode": "raw",
                           "raw": ""
                         },
-                        "url": "{{managementApiUrl}}/v1/payout/{{schemeId}}"
+                        "url": "{{managementApiUrl}}/v1/schemes/payout/{{schemeId}}"
                       },
                       "status": "No Content",
                       "code": 204,
