@@ -918,6 +918,11 @@
                         "method": "PUT",
                         "header": [
                           {
+                            "key": "Authorization",
+                            "type": "text",
+                            "value": "Bearer {{management-token}}"
+                          },
+                          {
                             "key": "Content-Type",
                             "name": "Content-Type",
                             "type": "text",
@@ -926,7 +931,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                          "raw": "{\n\t\"name\": \"\",\n\t\"streetAddress\": \"\",\n\t\"extendedStreetAddress\": \"\",\n\t\"locality\": \"\",\n\t\"region\": \"\",\n\t\"postCode\": \"\",\n\t\"country\": \"\"\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
                         "description": "#### Description\n\nUpdates a tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to update\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the tenant.\naddress | No | An [address](address-object) for the tenant."
