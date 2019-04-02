@@ -1835,7 +1835,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "[\n\t\"{{role1}}\"\n]"
+                          "raw": "{\n\t\"roles\": []\n}"
                         },
                         "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nUpdates an associated users roles for the tenant.\n\n#### Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | The new [roles](#tenant-roles) to assign the user."
