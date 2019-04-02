@@ -1817,7 +1817,7 @@
                     },
                     {
                       "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
-                      "name": "Assign User",
+                      "name": "Assign User Roles",
                       "request": {
                         "method": "PUT",
                         "header": [
