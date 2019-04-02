@@ -1292,10 +1292,15 @@
                     },
                     {
                       "_postman_id": "aed6edd9-25f1-45be-9232-da62d9bbdb26",
-                      "name": "Assign User",
+                      "name": "Assign User Roles",
                       "request": {
                         "method": "PUT",
                         "header": [
+                          {
+                            "key": "Authorization",
+                            "type": "text",
+                            "value": "Bearer {{management-token}}"
+                          },
                           {
                             "key": "Content-Type",
                             "name": "Content-Type",
@@ -1843,7 +1848,7 @@
                       "response": [
                         {
                           "id": "b6185b08-f4b4-43e4-84dc-bcce9f10b6cf",
-                          "name": "Assign User",
+                          "name": "Assign User Roles",
                           "originalRequest": {
                             "method": "PUT",
                             "header": [
