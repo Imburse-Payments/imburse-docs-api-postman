@@ -8,7 +8,7 @@
   "item": [
     {
       "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
-      "name": "Authentication API Reference",
+      "name": "Identity API Reference",
       "description": "This API describes how to create the three types of Bearer Token for our API's.\n\nThey are all based on the HMAC authentication scheme.",
       "item": [
         {
@@ -1318,7 +1318,7 @@
                       "response": [
                         {
                           "id": "d50da06d-b4c2-4566-b641-5c601c264170",
-                          "name": "Assign User",
+                          "name": "Assign User Roles",
                           "originalRequest": {
                             "method": "PUT",
                             "header": [
