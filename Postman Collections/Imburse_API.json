@@ -3874,7 +3874,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
                     "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
