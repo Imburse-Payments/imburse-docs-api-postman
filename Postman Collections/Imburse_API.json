@@ -7,12 +7,9 @@
   },
   "item": [
     {
-      "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
       "name": "Identity API Reference",
-      "description": "This API describes how to create the three types of Bearer Token for our API's.\n\nThey are all based on the HMAC authentication scheme.",
       "item": [
         {
-          "_postman_id": "1ddd267b-89d2-462e-9227-a0ee94e86805",
           "name": "Create Management API Bearer Token",
           "event": [
             {
@@ -54,6 +51,10 @@
               }
             }
           ],
+          "_postman_id": "1ddd267b-89d2-462e-9227-a0ee94e86805",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -63,10 +64,6 @@
                 "value": "Hmac {{hmac-token}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{identityApiUrl}}/v1/hmac/management",
             "description": "#### Description\n\nCreates a new Management API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
@@ -83,10 +80,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{identityApiUrl}}/v1/hmac/management"
               },
               "status": "Created",
@@ -125,7 +118,6 @@
           ]
         },
         {
-          "_postman_id": "7c24f4b5-5d1c-423a-a717-575943781e07",
           "name": "Create Collect API Bearer Token",
           "event": [
             {
@@ -167,6 +159,10 @@
               }
             }
           ],
+          "_postman_id": "7c24f4b5-5d1c-423a-a717-575943781e07",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -176,10 +172,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{identityApiUrl}}/v1/hmac/collect",
             "description": "#### Description\n\nCreates a new Collect API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
@@ -196,10 +188,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{identityApiUrl}}/v1/hmac/collect"
               },
               "status": "Created",
@@ -238,7 +226,6 @@
           ]
         },
         {
-          "_postman_id": "0a64a4a2-db8f-4503-9de8-592c03255bc3",
           "name": "Create Payout API Bearer Token",
           "event": [
             {
@@ -280,6 +267,10 @@
               }
             }
           ],
+          "_postman_id": "0a64a4a2-db8f-4503-9de8-592c03255bc3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -315,10 +306,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{identityApiUrl}}/v1/hmac/payout"
               },
               "status": "Created",
@@ -357,6 +344,8 @@
           ]
         }
       ],
+      "_postman_id": "f6bf99b9-ca03-47b5-a667-8e1a5a625b0e",
+      "description": "This API describes how to create the three types of Bearer Token for our API's.\n\nThey are all based on the HMAC authentication scheme.",
       "event": [
         {
           "listen": "prerequest",
@@ -381,35 +370,26 @@
       ]
     },
     {
-      "_postman_id": "6ccbe271-e09d-4ed2-9599-7a0531e9e57f",
       "name": "Management API Reference",
-      "description": "",
       "item": [
         {
-          "_postman_id": "c7a00e71-a093-41c7-a084-5bfbafb0fd00",
           "name": "Accounts and Tenants",
-          "description": "",
           "item": [
             {
-              "_postman_id": "d4a8fee4-7343-464f-9b3f-bf42e81619e2",
               "name": "Accounts",
-              "description": "",
               "item": [
                 {
-                  "_postman_id": "53e94c1d-bcfd-472d-b4e7-14289ab131c6",
                   "name": "General Info",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
                       "name": "Get Account",
+                      "_postman_id": "5add0f2a-961c-4bc0-8eb4-6d8579d3ff14",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account",
                         "description": "#### Description\n\nGets the current account assigned to the access token.\n\n#### Role required\n\n`acc.r`"
                       },
@@ -426,10 +406,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account"
                           },
                           "_postman_previewlanguage": "json",
@@ -441,6 +417,7 @@
                       ]
                     }
                   ],
+                  "_postman_id": "53e94c1d-bcfd-472d-b4e7-14289ab131c6",
                   "event": [
                     {
                       "listen": "prerequest",
@@ -466,13 +443,14 @@
                   "_postman_isSubFolder": true
                 },
                 {
-                  "_postman_id": "09e70593-2a88-4c91-a7cb-1b6d3934b979",
                   "name": "Security Keys",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
                       "name": "Create a new Key",
+                      "_postman_id": "978664ad-7c1e-4f13-b7ce-47cd9f330727",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "POST",
                         "header": [
@@ -527,8 +505,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "75d7c37d-24f0-48c2-bdd7-48b1ad2fc463",
                       "name": "Get All Keys",
+                      "_postman_id": "75d7c37d-24f0-48c2-bdd7-48b1ad2fc463",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -538,10 +519,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account/keys",
                         "description": "#### Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n#### Role required\n\n`acc.key.r`"
                       },
@@ -558,10 +535,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account/keys"
                           },
                           "status": "OK",
@@ -575,8 +548,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "45d621ca-c618-40e9-a4c1-7240d88269b6",
                       "name": "Get Key by Public Key",
+                      "_postman_id": "45d621ca-c618-40e9-a4c1-7240d88269b6",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -586,10 +562,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
                       },
@@ -606,10 +578,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}"
                           },
                           "status": "OK",
@@ -623,8 +591,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
                       "name": "Delete a Key",
+                      "_postman_id": "879a0ffe-7ffa-4308-b378-481b47d866bb",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "DELETE",
                         "header": [
@@ -634,10 +605,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}",
                         "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                       },
@@ -654,10 +621,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account/keys/{{accountKeyToDelete}}"
                           },
                           "status": "No Content",
@@ -671,6 +634,7 @@
                       ]
                     }
                   ],
+                  "_postman_id": "09e70593-2a88-4c91-a7cb-1b6d3934b979",
                   "event": [
                     {
                       "listen": "prerequest",
@@ -696,12 +660,9 @@
                   "_postman_isSubFolder": true
                 },
                 {
-                  "_postman_id": "b195ab08-dd5a-4639-b975-f9842b87e7b5",
                   "name": "Tenants",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
                       "name": "Create new Tenant",
                       "event": [
                         {
@@ -715,6 +676,10 @@
                           }
                         }
                       ],
+                      "_postman_id": "ffe6bc62-fd06-4bce-82f4-768d541ef68b",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "POST",
                         "header": [
@@ -768,15 +733,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "1e482fce-e553-4077-aa21-e7901ba6b85f",
                       "name": "Get Tenants",
+                      "_postman_id": "1e482fce-e553-4077-aa21-e7901ba6b85f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{managementApiUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
                           "host": [
@@ -791,19 +755,16 @@
                             {
                               "key": "from",
                               "value": "{{from}}",
-                              "equals": true,
                               "description": "Index you want to take from. Default is 0."
                             },
                             {
                               "key": "take",
                               "value": "{{take}}",
-                              "equals": true,
                               "description": "How many results to bring back. Default is 20."
                             },
                             {
                               "key": "name",
                               "value": "{{name}}",
-                              "equals": true,
                               "description": "Optional - Filter by a tenant name. Default is nothing."
                             }
                           ]
@@ -823,10 +784,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": {
                               "raw": "{{managementApiUrl}}/v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
                               "host": [
@@ -841,19 +798,16 @@
                                 {
                                   "key": "from",
                                   "value": "{{startingIndex}}",
-                                  "equals": true,
                                   "description": "Index you want to take from. Default is 0."
                                 },
                                 {
                                   "key": "take",
                                   "value": "{{resultsToGet}}",
-                                  "equals": true,
                                   "description": "How many results to bring back. Default is 20."
                                 },
                                 {
                                   "key": "name",
                                   "value": "{{tenantName}}",
-                                  "equals": true,
                                   "description": "Optional - Filter by a tenant name. Default is nothing."
                                 }
                               ]
@@ -870,15 +824,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "b92ec633-349b-4f21-aa35-23983be80ed2",
                       "name": "Get Tenant by Id",
+                      "_postman_id": "b92ec633-349b-4f21-aa35-23983be80ed2",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
                         "description": "#### Description\n\nGets a tenant by id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
                       },
@@ -895,10 +848,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}"
                           },
                           "status": "OK",
@@ -912,8 +861,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "94282eb1-d0e4-4ad4-88a6-10f82b9ba66e",
                       "name": "Update Tenant",
+                      "_postman_id": "94282eb1-d0e4-4ad4-88a6-10f82b9ba66e",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "PUT",
                         "header": [
@@ -972,8 +924,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
                       "name": "Create Key",
+                      "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "POST",
                         "header": [
@@ -1032,15 +987,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "de93b675-8cdd-4084-a530-0d0f80c9aee1",
                       "name": "Get All Keys",
+                      "_postman_id": "de93b675-8cdd-4084-a530-0d0f80c9aee1",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys",
                         "description": "#### Description\n\nGets the keys for a specific tenant. \n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
                       },
@@ -1057,10 +1011,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys"
                           },
                           "status": "OK",
@@ -1074,15 +1024,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
                       "name": "Get Key By PublicKey",
+                      "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
                       },
@@ -1099,10 +1048,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
                           },
                           "status": "OK",
@@ -1116,15 +1061,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
                       "name": "Remove Key by Public Key",
+                      "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "DELETE",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                         "description": "#### Description\n\nRemoves a spefic key set for a specific tenant by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
                       },
@@ -1141,10 +1085,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
                           },
                           "status": "No Content",
@@ -1158,6 +1098,7 @@
                       ]
                     }
                   ],
+                  "_postman_id": "b195ab08-dd5a-4639-b975-f9842b87e7b5",
                   "event": [
                     {
                       "listen": "prerequest",
@@ -1183,23 +1124,20 @@
                   "_postman_isSubFolder": true
                 },
                 {
-                  "_postman_id": "ac94da31-9efc-4702-b3b0-1f2aac7c82a8",
                   "name": "Users",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "379663a6-4847-41b5-b5b4-d3afe24914d5",
                       "name": "Get Users",
+                      "_postman_id": "379663a6-4847-41b5-b5b4-d3afe24914d5",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
                         },
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{managementApiUrl}}/v1/account/users?from=0&take=20&email=",
                           "host": [
@@ -1214,19 +1152,16 @@
                             {
                               "key": "from",
                               "value": "0",
-                              "equals": true,
                               "description": "Amount of results to return"
                             },
                             {
                               "key": "take",
                               "value": "20",
-                              "equals": true,
                               "description": "The index to take from"
                             },
                             {
                               "key": "email",
                               "value": "",
-                              "equals": true,
                               "description": "Email to filter by"
                             }
                           ]
@@ -1246,10 +1181,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": {
                               "raw": "{{managementApiUrl}}/v1/account/users?from=0&take=20&email=",
                               "host": [
@@ -1264,19 +1195,16 @@
                                 {
                                   "key": "from",
                                   "value": "0",
-                                  "equals": true,
                                   "description": "Amount of results to return"
                                 },
                                 {
                                   "key": "take",
                                   "value": "20",
-                                  "equals": true,
                                   "description": "The index to take from"
                                 },
                                 {
                                   "key": "email",
                                   "value": "",
-                                  "equals": true,
                                   "description": "Email to filter by"
                                 }
                               ]
@@ -1291,8 +1219,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "aed6edd9-25f1-45be-9232-da62d9bbdb26",
                       "name": "Assign User Roles",
+                      "_postman_id": "aed6edd9-25f1-45be-9232-da62d9bbdb26",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "PUT",
                         "header": [
@@ -1351,15 +1282,14 @@
                       ]
                     },
                     {
-                      "_postman_id": "7eb50f74-570e-4482-9747-700f69afc9c2",
                       "name": "Remove user",
+                      "_postman_id": "7eb50f74-570e-4482-9747-700f69afc9c2",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "DELETE",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/account/users/{{userId}}",
                         "description": "#### Description\n\nRemoves a user from the account.\n\n#### Role required\n\n`acc.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                       },
@@ -1376,10 +1306,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/account/users/{{userId}}"
                           },
                           "status": "No Content",
@@ -1393,6 +1319,7 @@
                       ]
                     }
                   ],
+                  "_postman_id": "ac94da31-9efc-4702-b3b0-1f2aac7c82a8",
                   "event": [
                     {
                       "listen": "prerequest",
@@ -1418,6 +1345,7 @@
                   "_postman_isSubFolder": true
                 }
               ],
+              "_postman_id": "d4a8fee4-7343-464f-9b3f-bf42e81619e2",
               "event": [
                 {
                   "listen": "prerequest",
@@ -1443,18 +1371,17 @@
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
               "name": "Tenants",
-              "description": "",
               "item": [
                 {
-                  "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
                   "name": "Security Keys",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
                       "name": "Create Key",
+                      "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "POST",
                         "header": [
@@ -1513,8 +1440,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "59d00071-d648-48e0-90e1-1ec41175c862",
                       "name": "Get All Keys",
+                      "_postman_id": "59d00071-d648-48e0-90e1-1ec41175c862",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -1524,10 +1454,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/keys",
                         "description": "#### Description\n\nGets the Api keys for the tenant to define in the bearer token.\n\n#### Role required\n\n`t.key.r`"
                       },
@@ -1544,10 +1470,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys"
                           },
                           "status": "OK",
@@ -1561,8 +1483,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
                       "name": "Get Key By PublicKey",
+                      "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -1572,10 +1497,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
                         "description": "#### Description\n\nGets a specific key by its public key.\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the specific key"
                       },
@@ -1592,10 +1513,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
                           },
                           "status": "OK",
@@ -1609,8 +1526,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
                       "name": "Remove Key by Public Key",
+                      "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "DELETE",
                         "header": [
@@ -1620,10 +1540,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
                         "description": "#### Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
                       },
@@ -1640,10 +1556,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
                           },
                           "status": "No Content",
@@ -1657,16 +1569,18 @@
                       ]
                     }
                   ],
+                  "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
                   "_postman_isSubFolder": true
                 },
                 {
-                  "_postman_id": "ec09be74-4f68-4b14-bad4-631c112467b2",
                   "name": "Users",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "dc71550f-7d85-40e5-987e-5f0579f919bb",
                       "name": "Get Users",
+                      "_postman_id": "dc71550f-7d85-40e5-987e-5f0579f919bb",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -1676,10 +1590,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{managementApiUrl}}/v1/tenant/users?from=0&take=20&email=",
                           "host": [
@@ -1694,19 +1604,16 @@
                             {
                               "key": "from",
                               "value": "0",
-                              "equals": true,
                               "description": "Amount of results to return"
                             },
                             {
                               "key": "take",
                               "value": "20",
-                              "equals": true,
                               "description": "the index to take from"
                             },
                             {
                               "key": "email",
                               "value": "",
-                              "equals": true,
                               "description": "Email to filter by"
                             }
                           ]
@@ -1726,10 +1633,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": {
                               "raw": "{{managementApiUrl}}/v1/tenant/users?from=0&take=20&email=",
                               "host": [
@@ -1744,19 +1647,16 @@
                                 {
                                   "key": "from",
                                   "value": "0",
-                                  "equals": true,
                                   "description": "Amount of results to return"
                                 },
                                 {
                                   "key": "take",
                                   "value": "20",
-                                  "equals": true,
                                   "description": "he index to take from"
                                 },
                                 {
                                   "key": "email",
                                   "value": "",
-                                  "equals": true,
                                   "description": "Email to filter by"
                                 }
                               ]
@@ -1773,8 +1673,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
                       "name": "Get Users By Id",
+                      "_postman_id": "9174dfda-ca00-48e0-b836-7e6f07927ec1",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "GET",
                         "header": [
@@ -1784,10 +1687,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nGets a user by their id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user to get."
                       },
@@ -1804,10 +1703,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}"
                           },
                           "status": "OK",
@@ -1821,8 +1716,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
                       "name": "Assign User Roles",
+                      "_postman_id": "9014c9cd-b7f2-4bac-97a7-e0371c5a917a",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "PUT",
                         "header": [
@@ -1881,8 +1779,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "2537f2ba-d886-40ce-8de2-50b24938d0b8",
                       "name": "Remove user",
+                      "_postman_id": "2537f2ba-d886-40ce-8de2-50b24938d0b8",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "method": "DELETE",
                         "header": [
@@ -1892,10 +1793,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}",
                         "description": "#### Description\n\nRemoves a user from the tenant.\n\n#### Role required\n\n`t.usr.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nuserId | The ID of the user."
                       },
@@ -1912,10 +1809,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/tenant/users/{{userId}}"
                           },
                           "status": "No Content",
@@ -1929,9 +1822,11 @@
                       ]
                     }
                   ],
+                  "_postman_id": "ec09be74-4f68-4b14-bad4-631c112467b2",
                   "_postman_isSubFolder": true
                 }
               ],
+              "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
               "event": [
                 {
                   "listen": "prerequest",
@@ -1957,6 +1852,7 @@
               "_postman_isSubFolder": true
             }
           ],
+          "_postman_id": "c7a00e71-a093-41c7-a084-5bfbafb0fd00",
           "event": [
             {
               "listen": "prerequest",
@@ -1982,18 +1878,17 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
           "name": "Payment Provider Configurations",
-          "description": "Payment Provider Configuration objects hold the connnection details that Imburse needs to connect to your various payment providers, eg. Braintree, Paydirekt, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "item": [
             {
-              "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
               "name": "Braintree SDK",
-              "description": "",
               "item": [
                 {
-                  "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
                   "name": "Create a Braintree SDK Configuration",
+                  "_postman_id": "4d4032a3-573d-412f-ac9d-a0a01f9d8d17",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2052,8 +1947,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
                   "name": "Get a Braintree SDK Configuration",
+                  "_postman_id": "006f4533-4f2c-40bc-ac94-4cb799988576",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2065,10 +1963,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
@@ -2085,10 +1979,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
                       },
                       "status": "OK",
@@ -2102,8 +1992,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "051c754f-f846-477c-9a93-d1ba21f2adec",
                   "name": "Get a Braintree SDK Configuration Private Key",
+                  "_postman_id": "051c754f-f846-477c-9a93-d1ba21f2adec",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2115,10 +2008,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
@@ -2135,10 +2024,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}/private-key"
                       },
                       "status": "OK",
@@ -2152,8 +2037,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
                   "name": "Update a Braintree SDK Configuration",
+                  "_postman_id": "0d50f083-f421-468f-9326-4d8d2d80d1bd",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2212,16 +2100,18 @@
                   ]
                 }
               ],
+              "_postman_id": "3ebf3f13-38dd-45c7-87d4-04a9e9e5b9c9",
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "14ca8b82-4514-4292-b445-8377ccca6741",
               "name": "Paydirekt Merchant",
-              "description": "",
               "item": [
                 {
-                  "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
                   "name": "Create a Paydirekt Merchant Configuration",
+                  "_postman_id": "f20df3e7-5075-4660-ac58-915461af4cb9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2280,8 +2170,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "8506f1f2-5c8b-432e-9013-35558a20a8a8",
                   "name": "Get a Paydirekt Merchant Configuration",
+                  "_postman_id": "8506f1f2-5c8b-432e-9013-35558a20a8a8",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2293,10 +2186,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
@@ -2313,10 +2202,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-merchant/{{id}}"
                       },
                       "status": "OK",
@@ -2330,8 +2215,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "def66a24-0548-4405-bb7d-a9c5468b9428",
                   "name": "Get a Paydirekt Merchant Configuration Private Key",
+                  "_postman_id": "def66a24-0548-4405-bb7d-a9c5468b9428",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2343,10 +2231,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
                     "description": "#### Description\r\n\r\nGets a Paydirekt Merchant configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
@@ -2363,10 +2247,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}/private-key"
                       },
                       "status": "OK",
@@ -2380,8 +2260,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
                   "name": "Update a Paydirekt Merchant Configuration",
+                  "_postman_id": "a8f1b539-f27c-4669-bf16-717c576edca3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -2440,21 +2323,21 @@
                   ]
                 }
               ],
+              "_postman_id": "14ca8b82-4514-4292-b445-8377ccca6741",
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
               "name": "Paydirekt OneKlick",
-              "description": "",
               "item": [
                 {
-                  "_postman_id": "4ceed78c-d5fd-44d1-90e1-64f5bae3e424",
                   "name": "Account",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "d32acafe-554c-4957-aa36-120d45d6fc4f",
                       "name": "Create a Paydirekt OneKlick Account Configuration",
+                      "_postman_id": "d32acafe-554c-4957-aa36-120d45d6fc4f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2513,8 +2396,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "e295c4b0-c3ed-49fe-b6dc-1e3a1cb9f9b2",
                       "name": "Get a Paydirekt OneKlick Account Configuration",
+                      "_postman_id": "e295c4b0-c3ed-49fe-b6dc-1e3a1cb9f9b2",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2526,10 +2412,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick Account configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
@@ -2546,10 +2428,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}"
                           },
                           "status": "OK",
@@ -2563,8 +2441,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
                       "name": "Get a Paydirekt OneKlick Account Configuration Private Key",
+                      "_postman_id": "ec5ecba3-dee7-458a-8f81-1c6453ef27d2",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2576,10 +2457,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}/private-key",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick Account configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
@@ -2596,10 +2473,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}/private-key"
                           },
                           "status": "OK",
@@ -2613,8 +2486,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "38a89d0c-b560-4a15-aa2e-45cb568c171f",
                       "name": "Update a Paydirekt OneKlick Account Configuration",
+                      "_postman_id": "38a89d0c-b560-4a15-aa2e-45cb568c171f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2673,16 +2549,18 @@
                       ]
                     }
                   ],
+                  "_postman_id": "4ceed78c-d5fd-44d1-90e1-64f5bae3e424",
                   "_postman_isSubFolder": true
                 },
                 {
-                  "_postman_id": "e59593b9-75ec-47bf-bb4a-49f4444eb70b",
                   "name": "Tenant",
-                  "description": "",
                   "item": [
                     {
-                      "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
                       "name": "Create a Paydirekt OneKlick Configuration",
+                      "_postman_id": "773cf0fe-5bbf-4a06-b38c-c309becc7231",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2741,8 +2619,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
                       "name": "Get a Paydirekt OneKlick Configuration",
+                      "_postman_id": "cd15e166-91fa-42eb-afab-0735a0ea0b86",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2754,10 +2635,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
@@ -2774,10 +2651,6 @@
                                 "type": "text"
                               }
                             ],
-                            "body": {
-                              "mode": "raw",
-                              "raw": ""
-                            },
                             "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}"
                           },
                           "status": "OK",
@@ -2791,8 +2664,11 @@
                       ]
                     },
                     {
-                      "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
                       "name": "Update a Paydirekt OneKlick Configuration",
+                      "_postman_id": "77547e7f-a691-43ad-b6ee-c6b1c8c890b2",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
                       "request": {
                         "auth": {
                           "type": "noauth"
@@ -2851,14 +2727,19 @@
                       ]
                     }
                   ],
+                  "_postman_id": "e59593b9-75ec-47bf-bb4a-49f4444eb70b",
                   "_postman_isSubFolder": true
                 }
               ],
+              "_postman_id": "2bd8d701-f2d1-4d96-af6e-375e9350c3ae",
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
               "name": "Get list of Payment Provider Configurations",
+              "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -2870,10 +2751,6 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payment-provider-configurations",
                 "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
               },
@@ -2890,10 +2767,6 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/payment-provider-configurations"
                   },
                   "status": "OK",
@@ -2907,8 +2780,11 @@
               ]
             },
             {
-              "_postman_id": "710279dc-6cd2-4835-8165-d701c79b0d9e",
               "name": "Get list of Payment Provider Configurations for Account",
+              "_postman_id": "710279dc-6cd2-4835-8165-d701c79b0d9e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -2920,10 +2796,6 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/account-payment-provider-configurations",
                 "description": "#### Description\r\n\r\nGets a list Payment Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`"
               },
@@ -2940,10 +2812,6 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/account-payment-provider-configurations"
                   },
                   "status": "OK",
@@ -2957,6 +2825,8 @@
               ]
             }
           ],
+          "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
+          "description": "Payment Provider Configuration objects hold the connnection details that Imburse needs to connect to your various payment providers, eg. Braintree, Paydirekt, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "event": [
             {
               "listen": "prerequest",
@@ -2982,18 +2852,17 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
           "name": "Reward Provider Configurations",
-          "description": "Reward Provider Configuration objects hold the connnection details that Imburse needs to connect to your various reward providers, eg. Tangocard, etc. With these details, we will carry out instructions on your behalf.\n",
           "item": [
             {
-              "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
               "name": "Tangocard",
-              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\nrewardProviderId | string | The reward provider id used for this configuration. ie TANGOCARD\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
               "item": [
                 {
-                  "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
                   "name": "Create a Tangocard Configuration",
+                  "_postman_id": "20c7338d-79f9-4e00-970b-40a9d685983e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3052,8 +2921,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
                   "name": "Update a Tangocard Configuration",
+                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3112,8 +2984,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
                   "name": "Get a Tangocard Configuration",
+                  "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3125,10 +3000,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
@@ -3145,10 +3016,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/reward-provider-configurations/{{id}}"
                       },
                       "status": "OK",
@@ -3162,8 +3029,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
                   "name": "Get Tangocard Account",
+                  "_postman_id": "62eb794f-6198-4d55-8924-2992c70ae158",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3175,10 +3045,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account",
                     "description": "#### Description\r\n\r\nGets Tangocard Account.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to retrieve\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Account object](#the-tangocard-account-object)"
                   },
@@ -3195,10 +3061,6 @@
                             "type": "text"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account"
                       },
                       "status": "OK",
@@ -3212,6 +3074,8 @@
                   ]
                 }
               ],
+              "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
+              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\nrewardProviderId | string | The reward provider id used for this configuration. ie TANGOCARD\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
               "event": [
                 {
                   "listen": "prerequest",
@@ -3237,8 +3101,11 @@
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
               "name": "Get list of Reward Provider Configurations",
+              "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -3250,10 +3117,6 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/reward-providers-configurations",
                 "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
               },
@@ -3270,10 +3133,6 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/reward-provider-configurations"
                   },
                   "status": "OK",
@@ -3287,6 +3146,8 @@
               ]
             }
           ],
+          "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
+          "description": "Reward Provider Configuration objects hold the connnection details that Imburse needs to connect to your various reward providers, eg. Tangocard, etc. With these details, we will carry out instructions on your behalf.\n",
           "event": [
             {
               "listen": "prerequest",
@@ -3312,20 +3173,17 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
           "name": "Rewards Catalog",
-          "description": "",
           "item": [
             {
-              "_postman_id": "318f17fc-5c2d-467d-8df9-641874e409da",
               "name": "Get a Reward",
+              "_postman_id": "318f17fc-5c2d-467d-8df9-641874e409da",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/catalog/{rewardId}",
                 "description": "#### Description\n\nGets a reward from the catalog by it's ID\n\n#### Role required\n\n`t.cat.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nrewardId | The id of the reward to get"
               },
@@ -3342,10 +3200,6 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/catalog/{rewardId}"
                   },
                   "status": "OK",
@@ -3366,8 +3220,11 @@
               ]
             },
             {
-              "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
               "name": "Get a list of Rewards by Ids",
+              "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -3428,15 +3285,14 @@
               ]
             },
             {
-              "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
               "name": "Search Catalog for Rewards",
+              "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandNames={{brandNames}}&countries={{countries}}&currencies={{currencies}}&tags={{tags}}&amount={{amount}}",
                   "host": [
@@ -3449,33 +3305,27 @@
                   "query": [
                     {
                       "key": "ProviderId",
-                      "value": "{{providerId}}",
-                      "equals": true
+                      "value": "{{providerId}}"
                     },
                     {
                       "key": "brandNames",
-                      "value": "{{brandNames}}",
-                      "equals": true
+                      "value": "{{brandNames}}"
                     },
                     {
                       "key": "countries",
-                      "value": "{{countries}}",
-                      "equals": true
+                      "value": "{{countries}}"
                     },
                     {
                       "key": "currencies",
-                      "value": "{{currencies}}",
-                      "equals": true
+                      "value": "{{currencies}}"
                     },
                     {
                       "key": "tags",
-                      "value": "{{tags}}",
-                      "equals": true
+                      "value": "{{tags}}"
                     },
                     {
                       "key": "amount",
-                      "value": "{{amount}}",
-                      "equals": true
+                      "value": "{{amount}}"
                     }
                   ]
                 },
@@ -3494,10 +3344,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": {
                       "raw": "{{managementApiUrl}}/v1/catalog?ProviderId={{providerId}}&brandName={{brandNames}}&countries={{countries}}&currencies={{currencies}}&tags={{tags}}&amount={{amount}}",
                       "host": [
@@ -3510,33 +3356,27 @@
                       "query": [
                         {
                           "key": "ProviderId",
-                          "value": "{{providerId}}",
-                          "equals": true
+                          "value": "{{providerId}}"
                         },
                         {
                           "key": "brandName",
-                          "value": "{{brandNames}}",
-                          "equals": true
+                          "value": "{{brandNames}}"
                         },
                         {
                           "key": "countries",
-                          "value": "{{countries}}",
-                          "equals": true
+                          "value": "{{countries}}"
                         },
                         {
                           "key": "currencies",
-                          "value": "{{currencies}}",
-                          "equals": true
+                          "value": "{{currencies}}"
                         },
                         {
                           "key": "tags",
-                          "value": "{{tags}}",
-                          "equals": true
+                          "value": "{{tags}}"
                         },
                         {
                           "key": "amount",
-                          "value": "{{amount}}",
-                          "equals": true
+                          "value": "{{amount}}"
                         }
                       ]
                     }
@@ -3559,6 +3399,7 @@
               ]
             }
           ],
+          "_postman_id": "7fba9a88-e916-43b1-955e-dd2efb7645d6",
           "event": [
             {
               "listen": "prerequest",
@@ -3584,18 +3425,17 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
           "name": "Schemes",
-          "description": "",
           "item": [
             {
-              "_postman_id": "8ad29eec-f6ef-4c78-ad91-d57dba5f3843",
               "name": "Collection Schemes",
-              "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
               "item": [
                 {
-                  "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
                   "name": "Create a Scheme",
+                  "_postman_id": "23d0f3a2-7922-487b-abe6-016e7f6caf8b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3653,8 +3493,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
                   "name": "Get List of Schemes",
+                  "_postman_id": "bd083408-e583-4824-985b-67b902e39437",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3666,10 +3509,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/schemes/collect",
                     "description": "#### Description \n\nGet a list to collection schemes.\n\n#### Role required\n\n`t.sch.r`"
                   },
@@ -3685,10 +3524,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/schemes/collect"
                       },
                       "status": "OK",
@@ -3702,8 +3537,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "f7472dd1-2841-4e99-978b-a6bb91297c66",
                   "name": "Get a Scheme",
+                  "_postman_id": "f7472dd1-2841-4e99-978b-a6bb91297c66",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3715,10 +3553,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/schemes/collect/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
@@ -3734,10 +3568,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/schemes/collect/{{id}}"
                       },
                       "status": "OK",
@@ -3751,8 +3581,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "3ecf0965-9615-4242-b441-10f2d476496c",
                   "name": "Update a Scheme",
+                  "_postman_id": "3ecf0965-9615-4242-b441-10f2d476496c",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3810,8 +3643,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "96bda309-4b05-426a-8efe-0537d03f7c4e",
                   "name": "Delete a Scheme",
+                  "_postman_id": "96bda309-4b05-426a-8efe-0537d03f7c4e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3859,16 +3695,19 @@
                   ]
                 }
               ],
+              "_postman_id": "8ad29eec-f6ef-4c78-ad91-d57dba5f3843",
+              "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
               "_postman_isSubFolder": true
             },
             {
-              "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
               "name": "Payout Schemes",
-              "description": "Payout Scheme objects are where you define the payout options for your various applications. We group these together into a payout scheme.\r\n\r\n## The Payout Scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of [Reward Configuration](#the-reward-configuration-object) objects defining the rewards for this scheme \r\n\r\n## The Reward Configuration object\r\n\r\nThe reward configuration object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ncountryRewards | country reward array | An array of [Country Reward](#the-country-reward-object) objects\r\n\r\n## The Country Reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n\r\n",
               "item": [
                 {
-                  "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
                   "name": "Create a Scheme",
+                  "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3886,7 +3725,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/schemes/payout",
                     "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
@@ -3920,13 +3759,16 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                      "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     }
                   ]
                 },
                 {
-                  "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
                   "name": "Get List of Schemes",
+                  "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3938,10 +3780,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/schemes/payout",
                     "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
                   },
@@ -3957,10 +3795,6 @@
                             "value": "Hmac {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/schemes/payout"
                       },
                       "status": "OK",
@@ -3974,8 +3808,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
                   "name": "Get a Scheme",
+                  "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -3987,10 +3824,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
                     "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
                   },
@@ -4006,10 +3839,6 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}"
                       },
                       "status": "OK",
@@ -4023,57 +3852,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "4cb70c4e-ce82-4f45-a742-1b2f9731c39d",
-                  "name": "Get List of Payout Options for Scheme",
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{schemeId}}/options",
-                    "description": "#### Description \n\nGet a list to payout options for a scheme.\n\n#### Role required\n\n`t.sch.r`"
-                  },
-                  "response": [
-                    {
-                      "id": "6d9828c4-9c0d-4b2a-8241-e37b61908b09",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Hmac {{management-token}}"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
-                        "url": "{{managementApiUrl}}/v1/schemes/payout/{{schemeId}}/options"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
-                    }
-                  ]
-                },
-                {
-                  "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
                   "name": "Update a Scheme",
+                  "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -4130,8 +3913,11 @@
                   ]
                 },
                 {
-                  "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
                   "name": "Delete a Scheme",
+                  "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
                   "request": {
                     "auth": {
                       "type": "noauth"
@@ -4179,6 +3965,8 @@
                   ]
                 }
               ],
+              "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
+              "description": "Payout Scheme objects are where you define the payout options for your various applications. We group these together into a payout scheme.\r\n\r\n## The Payout Scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of [Reward Configuration](#the-reward-configuration-object) objects defining the rewards for this scheme \r\n\r\n## The Reward Configuration object\r\n\r\nThe reward configuration object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ncountryRewards | country reward array | An array of [Country Reward](#the-country-reward-object) objects\r\n\r\n## The Country Reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n\r\n",
               "event": [
                 {
                   "listen": "prerequest",
@@ -4204,6 +3992,7 @@
               "_postman_isSubFolder": true
             }
           ],
+          "_postman_id": "7165de6d-8e1c-40e4-b581-f69c55932177",
           "event": [
             {
               "listen": "prerequest",
@@ -4229,13 +4018,14 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "2d3ce1f5-408c-461c-ab73-f2ffb2f3cf35",
           "name": "Notifications",
-          "description": "",
           "item": [
             {
-              "_postman_id": "541b4c1b-866c-4864-a37b-11448d9f9e9b",
               "name": "Create a Webhook",
+              "_postman_id": "541b4c1b-866c-4864-a37b-11448d9f9e9b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4287,15 +4077,14 @@
               ]
             },
             {
-              "_postman_id": "a5ea5c32-7522-4c55-8d01-76724a2beb19",
               "name": "Get a Webhook",
+              "_postman_id": "a5ea5c32-7522-4c55-8d01-76724a2beb19",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}",
                 "description": "#### Description\r\n\r\nGets a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to retrieve."
               },
@@ -4312,10 +4101,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}"
                   },
                   "status": "OK",
@@ -4329,15 +4114,14 @@
               ]
             },
             {
-              "_postman_id": "fb876542-d4cc-4566-a836-c5e475450690",
               "name": "Get list of Webhooks",
+              "_postman_id": "fb876542-d4cc-4566-a836-c5e475450690",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/notifications/webhooks",
                 "description": "#### Description\r\n\r\nGets a list of Webhooks.\r\n\r\n#### Role required\r\n\r\n`t.whk.r`"
               },
@@ -4354,10 +4138,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/notifications/webhooks"
                   },
                   "status": "OK",
@@ -4371,8 +4151,11 @@
               ]
             },
             {
-              "_postman_id": "385b7c96-3e5b-4151-bef1-024ed0f4b751",
               "name": "Update a Webhook",
+              "_postman_id": "385b7c96-3e5b-4151-bef1-024ed0f4b751",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "PUT",
                 "header": [
@@ -4424,15 +4207,14 @@
               ]
             },
             {
-              "_postman_id": "7006f3b7-5d94-4d6f-bf68-4c3f2532af16",
               "name": "Delete a Webhook",
+              "_postman_id": "7006f3b7-5d94-4d6f-bf68-4c3f2532af16",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "DELETE",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}",
                 "description": "#### Description\r\n\r\nDeletes a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to delete."
               },
@@ -4449,10 +4231,6 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}"
                   },
                   "status": "No Content",
@@ -4466,6 +4244,7 @@
               ]
             }
           ],
+          "_postman_id": "2d3ce1f5-408c-461c-ab73-f2ffb2f3cf35",
           "event": [
             {
               "listen": "prerequest",
@@ -4491,21 +4270,20 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "cf290393-bf52-4b01-adf9-7273a3e3795a",
           "name": "Whitelabel Settings",
-          "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
           "item": [
             {
-              "_postman_id": "dcc42e79-ff65-48ab-ad7e-06496a283320",
               "name": "Upload Whitelabel Logo",
+              "_postman_id": "dcc42e79-ff65-48ab-ad7e-06496a283320",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "file",
-                  "file": {
-                    "src": null
-                  }
+                  "file": {}
                 },
                 "url": "{{managementApiUrl}}/v1/settings/logo",
                 "description": "#### Description\n\nUploads a logo for the tenants white label settings.\n\n#### Role required\n\n`client-write`"
@@ -4540,8 +4318,11 @@
               ]
             },
             {
-              "_postman_id": "106629ab-3716-4fd7-ba3b-a44a6c9a9606",
               "name": "Upload Whitelabel Styling",
+              "_postman_id": "106629ab-3716-4fd7-ba3b-a44a6c9a9606",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4552,9 +4333,7 @@
                 ],
                 "body": {
                   "mode": "file",
-                  "file": {
-                    "src": null
-                  }
+                  "file": {}
                 },
                 "url": "{{managementApiUrl}}/v1/settings/styling",
                 "description": "#### Description\n\nUploads a styling document for the tenant's white label settings.\n\n#### Role required\n\n`client-write`"
@@ -4594,15 +4373,14 @@
               ]
             },
             {
-              "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
               "name": "Get Whitelabel Settings",
+              "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/settings",
                 "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
               },
@@ -4619,10 +4397,6 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
                     "url": "{{managementApiUrl}}/v1/settings"
                   },
                   "status": "OK",
@@ -4636,6 +4410,8 @@
               ]
             }
           ],
+          "_postman_id": "cf290393-bf52-4b01-adf9-7273a3e3795a",
+          "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
           "event": [
             {
               "listen": "prerequest",
@@ -4661,13 +4437,14 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "e431af90-ea5d-468b-838f-64603b97999f",
           "name": "Payment Collection",
-          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "item": [
             {
-              "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
               "name": "Create Order",
+              "_postman_id": "e38f98d3-3555-43b1-89a0-c8fbf6fc2ca6",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4692,8 +4469,11 @@
               "response": []
             },
             {
-              "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
               "name": "Get Order",
+              "_postman_id": "e0078fba-e825-41c2-bb85-ebc07e6f16d5",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
@@ -4703,63 +4483,59 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
               },
               "response": []
             },
             {
-              "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
               "name": "Get Order Audit History",
+              "_postman_id": "7df35700-b39c-4b24-b2f4-e37f3482d2ec",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of order events."
               },
               "response": []
             },
             {
-              "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
               "name": "Get Customer",
+              "_postman_id": "a429d1a1-5f36-4e69-b80d-7203302d6c57",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}",
                 "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
               },
               "response": []
             },
             {
-              "_postman_id": "e459f1de-3fd0-4a99-b365-1034e593fda2",
               "name": "Get Customer Audit History",
+              "_postman_id": "e459f1de-3fd0-4a99-b365-1034e593fda2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of customer events."
               },
               "response": []
             },
             {
-              "_postman_id": "62bfc7fb-172f-4a10-ae9d-1c82be2e413b",
               "name": "Create Instruction",
+              "_postman_id": "62bfc7fb-172f-4a10-ae9d-1c82be2e413b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4784,36 +4560,36 @@
               "response": []
             },
             {
-              "_postman_id": "5ef8499d-5779-408f-9380-eb5190612d35",
               "name": "Get Instruction",
+              "_postman_id": "5ef8499d-5779-408f-9380-eb5190612d35",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "The following endpoint will return the current state of an instruction.\n\nInstructions must be created before they can be queried.\n\nThe instruction is identified by a `customerRef`, an `orderRef` and an `instructionRef`. These values are provided from your own system to ours.\n\nAn `instructionRef` needs to be unique to the order but does not need to be globally unique."
               },
               "response": []
             },
             {
-              "_postman_id": "63f350c1-665a-4010-ab7c-00f30fe89e62",
               "name": "Get Instruction Audit History",
+              "_postman_id": "63f350c1-665a-4010-ab7c-00f30fe89e62",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return an unstructured list of instruction events."
               },
               "response": []
             }
           ],
+          "_postman_id": "e431af90-ea5d-468b-838f-64603b97999f",
+          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "event": [
             {
               "listen": "prerequest",
@@ -4839,13 +4615,14 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "36db645f-b09a-4ef1-9275-d6011cba3ae1",
           "name": "Payment Payout",
-          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "item": [
             {
-              "_postman_id": "f3887367-fe71-4821-94fe-cb56aeb275da",
               "name": "Create Order",
+              "_postman_id": "f3887367-fe71-4821-94fe-cb56aeb275da",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4865,68 +4642,90 @@
               "response": []
             },
             {
-              "_postman_id": "11aa4668-3658-4946-bacb-3eaa00c1bde3",
               "name": "Get Order",
+              "_postman_id": "11aa4668-3658-4946-bacb-3eaa00c1bde3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "62f1d234-8c81-4945-93ea-1a2fac1dd4a5",
+                  "name": "Get Order",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\r\n  \"customerRef\": \"\",\r\n  \"orderRef\": \"\",\r\n  \"status\": \"\",\r\n  \"detail\": {\r\n    \"currency\": \"\",\r\n    \"country\": \"\",\r\n    \"scheme\": \"\",\r\n    \"paymentMethodRef\": \"\"\r\n  },\r\n  \"instructions\": []\r\n}"
+                }
+              ]
             },
             {
-              "_postman_id": "9f47b869-1c03-460e-8455-e732f1746dca",
               "name": "Get Order Audit History",
+              "_postman_id": "9f47b869-1c03-460e-8455-e732f1746dca",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of order events."
               },
               "response": []
             },
             {
-              "_postman_id": "85fd3494-d41e-4f4a-b24c-7bb3937d4144",
               "name": "Get Customer",
+              "_postman_id": "85fd3494-d41e-4f4a-b24c-7bb3937d4144",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}",
                 "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
               },
               "response": []
             },
             {
-              "_postman_id": "6e39f47b-0ec8-4e45-82e1-e7b2eed8d6b8",
               "name": "Get Customer Audit History",
+              "_postman_id": "6e39f47b-0ec8-4e45-82e1-e7b2eed8d6b8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of customer events."
               },
               "response": []
             },
             {
-              "_postman_id": "cf8a2d98-f21b-4b81-8733-c33f5d1b3655",
               "name": "Create Instruction",
+              "_postman_id": "cf8a2d98-f21b-4b81-8733-c33f5d1b3655",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -4946,36 +4745,36 @@
               "response": []
             },
             {
-              "_postman_id": "dd7b93cd-37fc-4b4e-9f85-659f30f4d8a4",
               "name": "Get Instruction",
+              "_postman_id": "dd7b93cd-37fc-4b4e-9f85-659f30f4d8a4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "The following endpoint will return the current state of an instruction.\n\nInstructions must be created before they can be queried.\n\nThe instruction is identified by a `customerRef`, an `orderRef` and an `instructionRef`. These values are provided from your own system to ours.\n\nAn `instructionRef` needs to be unique to the order but does not need to be globally unique."
               },
               "response": []
             },
             {
-              "_postman_id": "bbed1b37-5a4c-47b6-a466-18b2fd33303a",
               "name": "Get Instruction Audit History",
+              "_postman_id": "bbed1b37-5a4c-47b6-a466-18b2fd33303a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return an unstructured list of instruction events."
               },
               "response": []
             }
           ],
+          "_postman_id": "36db645f-b09a-4ef1-9275-d6011cba3ae1",
+          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "event": [
             {
               "listen": "prerequest",
@@ -5001,41 +4800,86 @@
           "_postman_isSubFolder": true
         },
         {
-          "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
           "name": "Reference Data",
-          "description": "",
           "item": [
             {
-              "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
               "name": "Get Country List",
+              "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/references/countries"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "798a54de-947d-46ba-b6e8-460f6ba739fe",
+                  "name": "Get Country List",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/references/countries"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"currency\": \"\"\n\t}\n]"
+                }
+              ]
             },
             {
-              "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
               "name": "Get Currency List",
+              "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/references/currencies"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "8c078558-c697-495b-a5c1-1a50f837f056",
+                  "name": "Get Currency List",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/references/currencies"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"symbol\": \"\"\n\t}\n]"
+                }
+              ]
             },
             {
-              "_postman_id": "ce02bd26-38c9-4188-9362-a0f3fa34ac80",
               "name": "Get Payment Providers",
+              "_postman_id": "ce02bd26-38c9-4188-9362-a0f3fa34ac80",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "auth": {
                   "type": "noauth"
@@ -5048,32 +4892,29 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/references/payment-providers"
               },
               "response": []
             },
             {
-              "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
               "name": "Get Reward Providers",
+              "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{managementApiUrl}}/v1/references/reward-providers"
               },
               "response": []
             }
           ],
+          "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
           "_postman_isSubFolder": true
         }
       ],
+      "_postman_id": "6ccbe271-e09d-4ed2-9599-7a0531e9e57f",
       "auth": {
         "type": "bearer",
         "bearer": {
@@ -5104,13 +4945,14 @@
       ]
     },
     {
-      "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
       "name": "Transactions API Reference",
-      "description": "Use this API for getting the payment options to present to your users and to process the payment instructions.",
       "item": [
         {
-          "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
           "name": "Get Payout Options",
+          "_postman_id": "f346e216-428b-4d94-a054-a3a3b5f342ab",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -5120,10 +4962,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{transactionsApiUrl}}/v1/payout/options",
             "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
           },
@@ -5140,10 +4978,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{transactionsApiUrl}}/v1/payout/options"
               },
               "_postman_previewlanguage": "json",
@@ -5155,8 +4989,11 @@
           ]
         },
         {
-          "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
           "name": "Get Collect Options",
+          "_postman_id": "267e40d0-717e-4463-af91-cac6b1fa999b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
@@ -5166,10 +5003,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{transactionsApiUrl}}/v1/collect/options",
             "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
           },
@@ -5186,10 +5019,6 @@
                     "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{transactionsApiUrl}}/v1/collect/options"
               },
               "_postman_previewlanguage": "json",
@@ -5201,8 +5030,11 @@
           ]
         },
         {
-          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
           "name": "Process Reward Payout",
+          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -5212,10 +5044,6 @@
                 "value": "Bearer  {{payout-token}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
             "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
           },
@@ -5232,10 +5060,6 @@
                     "value": "Bearer {{payout-token}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}"
               },
               "_postman_previewlanguage": "json",
@@ -5247,6 +5071,8 @@
           ]
         }
       ],
+      "_postman_id": "09f68806-2b90-433d-9f6d-684cfef1d890",
+      "description": "Use this API for getting the payment options to present to your users and to process the payment instructions.",
       "event": [
         {
           "listen": "prerequest",
