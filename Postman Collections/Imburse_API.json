@@ -288,7 +288,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"customerRef\": \"democustomer\",\n\t\"orderRef\": \"demoorderforimburse1\",\n\t\"instructionRef\": \"demoorderforimburseinstruction1\"\n}"
+              "raw": "{\n\t\"customerRef\": \"\",\n\t\"orderRef\": \"\",\n\t\"instructionRef\": \"\"\n}"
             },
             "url": "{{identityApiUrl}}/v1/hmac/payout",
             "description": "#### Description\n\nCreates a new Payout API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
@@ -3908,7 +3908,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+                      "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     }
                   ]
                 },
