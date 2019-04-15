@@ -1878,7 +1878,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Payment Provider Configurations",
+          "name": "Provider Configurations",
           "item": [
             {
               "name": "Braintree SDK",
@@ -2735,6 +2735,51 @@
               "_postman_isSubFolder": true
             },
             {
+              "name": "Get list of Reward Provider Configurations",
+              "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/reward-providers-configurations",
+                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
+              },
+              "response": [
+                {
+                  "id": "e78f003a-d417-4402-bd4d-0e3bcc2ef00c",
+                  "name": "Sucessful Request",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "{{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"rewardProviderId\": \"\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
+                }
+              ]
+            },
+            {
               "name": "Get list of Payment Provider Configurations",
               "_postman_id": "d8a0acbb-2f12-49bc-b747-51d90428d74b",
               "protocolProfileBehavior": {
@@ -2823,55 +2868,10 @@
                   "body": "[\n\t{\n\t\t\"paymentProviderId\": \"\",\n\t\t\"paymentApiProductId\": \"\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
                 }
               ]
-            },
-            {
-              "name": "Get list of Reward Provider Configurations",
-              "_postman_id": "cade02ed-ad5d-4d8d-b27e-0333233c12c8",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/reward-providers-configurations",
-                "description": "#### Description\r\n\r\nGets a list Reward Provider configurations.\r\n\r\n#### Role required\r\n\r\n`t.rew.r`\r\n\r\n#### Response object\r\n\r\nThe response is an array of the following object:\r\n\r\nName | Type | Description\r\n-|-|-\r\nrewardProvider | [Reward Provider](#the-reward-provider-object) | The reward provider of a configuration\r\nid | guid | The unique identifier for a configuration\r\nname | string | The name of the configuration"
-              },
-              "response": [
-                {
-                  "id": "e78f003a-d417-4402-bd4d-0e3bcc2ef00c",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "{{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"rewardProviderId\": \"\",\n\t\t\"id\": \"\",\n\t    \"name\": \"\"\n\t}\n]"
-                }
-              ]
             }
           ],
           "_postman_id": "898cf1d0-5846-4398-82aa-901094e172f9",
-          "description": "Payment Provider Configuration objects hold the connnection details that Imburse needs to connect to your various payment providers, eg. Braintree, Paydirekt, etc. With these details, we will carry out instructions on your behalf.\r\n",
+          "description": "Provider Configuration objects hold the connnection details that Imburse needs to connect to your various providers, eg. Braintree, Paydirekt, Tangocard, etc. With these details, we will carry out instructions on your behalf.\r\n",
           "event": [
             {
               "listen": "prerequest",
