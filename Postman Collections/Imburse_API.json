@@ -1505,7 +1505,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/payment-providers/braintree-sdk/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/braintree-sdk/{{id}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -1534,7 +1534,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}/private-key",
+                    "url": "{{managementApiUrl}}/v1/provider-configurations/braintree-sdk/{{id}}/private-key",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration private key\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
                   "response": [
