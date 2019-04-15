@@ -2314,7 +2314,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard"
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2351,7 +2351,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"name\": \"\"\r\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas/{{id}}",
                     "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
                   },
                   "response": [
