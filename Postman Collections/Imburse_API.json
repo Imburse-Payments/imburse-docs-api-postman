@@ -2261,7 +2261,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Tangocard",
+              "name": "Tangocard RaaS",
               "item": [
                 {
                   "name": "Create a Tangocard Configuration",
@@ -2481,7 +2481,7 @@
                 }
               ],
               "_postman_id": "07ac7816-d508-4736-bcd9-6b70aa50013b",
-              "description": "#### The Tangocard Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\nrewardProviderId | string | The reward provider id used for this configuration. ie TANGOCARD\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
+              "description": "#### The Tangocard RaaS Configuration object\n\nThis object holds the details for a Tangocard configuration.\n\nName | Type | Description\n-|-|-\nrewardProviderId | string | The reward provider id used for this configuration. ie TANGOCARD\nid | guid | The unique identifier for this configuration\nname | string | A unique name for this configuration\ncustomerIdentifier | string | The customer identifier \ncustomerDisplayName | string | The customer display name\naccountIdentifier | string | The account identitifier\naccountDisplayName | string | The account display name\naccountContactEmail | string | The contract email address \n\n\n#### The Tangocard Account object\n\nThis object holds the details for a Tangocard Account.\n\nName | Type | Description\n-|-|-\naccountIdentifier | string | The account identitifier\naccountNumber | string | The account number\ncontactEmail | string | The contract email address \ncreatedAt | date/time | Date and time the account was created\ncurrencyCode | string | Currency code this account transacts in\ncurrentBalance | decimal | The current balance of this account\ndisplayName | string | The account display name\nstatus | string | The current status\n",
               "event": [
                 {
                   "listen": "prerequest",
