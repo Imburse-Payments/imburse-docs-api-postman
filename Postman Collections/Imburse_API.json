@@ -2327,69 +2327,6 @@
                   ]
                 },
                 {
-                  "name": "Update a Tangocard Configuration",
-                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "auth": {
-                      "type": "noauth"
-                    },
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\r\n  \"name\": \"\"\r\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas/{{id}}",
-                    "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
-                  },
-                  "response": [
-                    {
-                      "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
-                      "name": "Sucessful Request",
-                      "originalRequest": {
-                        "method": "PUT",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "value": "application/json",
-                            "type": "text"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"name\": \"\"\n}"
-                        },
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}"
-                      },
-                      "status": "No Content",
-                      "code": 204,
-                      "_postman_previewlanguage": "json",
-                      "header": [],
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": ""
-                    }
-                  ]
-                },
-                {
                   "name": "Get a Tangocard Configuration",
                   "_postman_id": "2c7eb2a4-6ffd-4db1-81a7-a18604f6070a",
                   "protocolProfileBehavior": {
@@ -2476,6 +2413,69 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "{\r\n\t\"accountIdentifier\": \"\",\r\n\t\"accountNumber\": \"\",\r\n    \"contactEmail\": \"\",\r\n    \"currencyCode\": \"\",\r\n    \"currentBalance\": 0.00,\r\n    \"displayName\": \"\",\r\n\t\"status\": \"\"\r\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Update a Tangocard Configuration",
+                  "_postman_id": "60597b26-cf2d-4dec-a78c-54debb9a4ab3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n  \"name\": \"\"\r\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas/{{id}}",
+                    "description": "#### Description\r\n\r\nUpdates a Tangocard Provider configuration.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n-|-\r\nid | The id of the reward provider configuration to update\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Type |  Description\r\n-|-|-|-\r\nname | Yes | string | A new name for this reward provider configuration"
+                  },
+                  "response": [
+                    {
+                      "id": "2912f42a-51d2-496f-abdb-58297ae087c1",
+                      "name": "Sucessful Request",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "value": "application/json",
+                            "type": "text"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"name\": \"\"\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/-provider-configurations/tangocard-raas/{{id}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "json",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": ""
                     }
                   ]
                 }
