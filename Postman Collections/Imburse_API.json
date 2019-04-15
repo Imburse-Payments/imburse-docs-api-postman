@@ -1404,7 +1404,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Provider Configurations",
+          "name": "PSP Configurations",
           "item": [
             {
               "name": "Braintree SDK",
