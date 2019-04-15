@@ -2062,7 +2062,7 @@
                               "mode": "raw",
                               "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n    \"privateKey\": \"\"\r\n}\r\n"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick-account/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick-account/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -2106,7 +2106,7 @@
                           "mode": "raw",
                           "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick",
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick",
                         "description": "# Description\r\n\r\nCreate a Paydirekt OneKlick configuration.\r\n\r\n## Role required\r\n\r\n`t.psp.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A name for this configuration. \r\ncurrencies | Yes | An array of currency ISO codes.\r\nparentPaymentProviderConfigurationId | Yes | The account-level parent configuration id.\r\ncompanyName | No | The company name.\r\nstreetAddress | Yes | The street address.\r\nextendedStreetAddress | No | The extended street address if required.\r\nlocale | Yes | The locale.\r\nregion | Yes | The region.\r\npostCode | Yes | The postcode.\r\ncountry | Yes | The country."
                       },
                       "response": [
@@ -2132,7 +2132,7 @@
                               "mode": "raw",
                               "raw": "{\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentApiProductConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick"
+                            "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2161,7 +2161,7 @@
                             "value": "Bearer {{management-token}}"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}",
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick/{{id}}",
                         "description": "#### Description\r\n\r\nGets a Paydirekt OneKlick configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                       },
                       "response": [
