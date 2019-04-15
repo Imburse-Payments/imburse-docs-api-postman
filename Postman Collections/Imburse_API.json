@@ -2897,6 +2897,35 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Reward Provider Configurations",
+          "item": [],
+          "_postman_id": "7b3ea61e-90e6-4e99-959e-a1f82ea69c07",
+          "description": "Reward Provider Configuration objects hold the connnection details that Imburse needs to connect to your various reward providers, eg. Tangocard, etc. With these details, we will carry out instructions on your behalf.\n",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "f945d9aa-d04f-4e56-9fe8-cb016c7e43d8",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed826af3-096a-47e7-976d-bade58701796",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Rewards Catalog",
           "item": [
             {
