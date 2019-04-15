@@ -2240,7 +2240,7 @@
                               "mode": "raw",
                               "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                             },
-                            "url": "{{managementApiUrl}}/v1/payment-provider-configurations/paydirekt-oneklick/{{id}}"
+                            "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick/{{id}}"
                           },
                           "status": "No Content",
                           "code": 204,
@@ -2288,7 +2288,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard",
+                    "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas",
                     "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n*Note*: Only ONE Tangocard Configuration can be created per Tenant.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
                   },
                   "response": [
