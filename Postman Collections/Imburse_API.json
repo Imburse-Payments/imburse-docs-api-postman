@@ -1460,7 +1460,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"currency\": \"\",\n    \"merchantId\": \"\",\n    \"privateKey\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk"
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/braintree-sdk"
                       },
                       "status": "OK",
                       "code": 200,
@@ -1489,7 +1489,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/payment-provider-configurations/braintree-sdk/{{id}}",
+                    "url": "{{managementApiUrl}}/v1/provider-configurations/braintree-sdk/{{id}}",
                     "description": "#### Description\r\n\r\nGets a Braintree SDK configuration.\r\n\r\n#### Role required\r\n\r\n`t.psp.r`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n--------- | -----------\r\nid | The id of the configuration to retrieve"
                   },
                   "response": [
