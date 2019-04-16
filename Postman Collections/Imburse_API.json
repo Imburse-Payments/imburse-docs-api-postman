@@ -1468,7 +1468,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"paymentProviderId\": \"\",\n\t\"paymentApiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
+                      "body": "{\n\t\"providerId\": \"\",\n\t\"apiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"merchantId\": \"\",\n    \"publicKey\": \"\",\n    \"merchantAccountId\": \"\"\n}"
                     }
                   ]
                 },
@@ -1513,7 +1513,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
+                      "body": "{\r\n\t\"providerId\": \"\",\r\n\t\"apiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currency\": \"\",\r\n    \"merchantId\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"merchantAccountId\": \"\"\r\n}"
                     }
                   ]
                 },
@@ -1691,7 +1691,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                      "body": "{\r\n\t\"providerId\": \"\",\r\n\t\"apiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
                     }
                   ]
                 },
@@ -1736,7 +1736,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
+                      "body": "{\r\n\t\"providerId\": \"\",\r\n\t\"apiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"publicKey\": \"\",\r\n}"
                     }
                   ]
                 },
@@ -1917,7 +1917,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
+                          "body": "{\r\n\t\"providerId\": \"\",\r\n\t\"apiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -1962,7 +1962,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\r\n\t\"paymentProviderId\": \"\",\r\n\t\"paymentApiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
+                          "body": "{\r\n\t\"providerId\": \"\",\r\n\t\"apiProductId\": \"\",\r\n\t\"id\": \"\",\r\n    \"name\": \"\",\r\n    \"publicKey\": \"\",\r\n    \"tenantAuthorisations\": [\r\n    \t{\r\n    \t\t\"key\": \"\",\r\n    \t\t\"value\": \"\"\r\n    \t}\r\n    ]\r\n}\r\n"
                         }
                       ]
                     },
@@ -2140,7 +2140,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"paymentProviderId\": \"\",\n\t\"paymentApiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
+                          "body": "{\n\t\"providerId\": \"\",\n\t\"apiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
                         }
                       ]
                     },
@@ -2185,7 +2185,7 @@
                           "header": [],
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"paymentProviderId\": \"\",\n\t\"paymentApiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentPaymentProviderConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
+                          "body": "{\n\t\"providerId\": \"\",\n\t\"apiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"currencies\": [],\n    \"parentConfigurationId\": \"\",\n    \"companyName\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locale\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}\n"
                         }
                       ]
                     },
@@ -2238,7 +2238,7 @@
                             ],
                             "body": {
                               "mode": "raw",
-                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentPaymentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
+                              "raw": "{\r\n    \"name\": \"\",\r\n    \"currencies\": [],\r\n    \"parentProviderConfigurationId\": \"\",\r\n    \"companyName\": \"\",\r\n    \"streetAddress\": \"\",\r\n    \"extendedStreetAddress\": \"\",\r\n    \"locale\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n}\r\n"
                             },
                             "url": "{{managementApiUrl}}/v1/provider-configurations/paydirekt-oneklick/{{id}}"
                           },
@@ -2286,7 +2286,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\"\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"displayName\": \"\",\n    \"contactEmail\": \"\",\n    \"accountIdentifier\": \"\",\n    \"customerIdentifier\": \"\"\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas",
                     "description": "# Description\r\n\r\nCreate a Tangocard Provider configuration.\r\n\r\n*Note*: Only ONE Tangocard Configuration can be created per Tenant.\r\n\r\n#### Role required\r\n\r\n`t.rew.a`\r\n\r\n#### Request body\r\n\r\nA JSON formatted object string.\r\n\r\nKey name | Required | Description\r\n--------- | ----------- | -----------\r\nname | Yes | A unique name of this configuration\r\ncustomerDisplayName | Yes | Your customer name for display purposes\r\naccountContactEmail | Yes | The email address Tangocard will use to contact you\r\n\r\n#### Response object\r\n\r\nThe response is a [Tangocard Configuration object](#the-tangocard-configuration-object)"
@@ -2404,7 +2404,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/reward-provider-configurations/tangocard/{{id}}/account"
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas/{{id}}/account"
                       },
                       "status": "OK",
                       "code": 200,
@@ -2467,7 +2467,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"name\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/-provider-configurations/tangocard-raas/{{id}}"
+                        "url": "{{managementApiUrl}}/v1/provider-configurations/tangocard-raas/{{id}}"
                       },
                       "status": "No Content",
                       "code": 204,
