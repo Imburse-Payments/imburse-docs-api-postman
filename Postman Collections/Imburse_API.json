@@ -3227,7 +3227,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
+                      "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"\",\n            \"defaultCurrency\": \"\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/schemes/payout",
                     "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
