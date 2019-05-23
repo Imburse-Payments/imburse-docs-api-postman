@@ -412,7 +412,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"accountId\": \"\",\n\t\"ImburseAccountRef\": \"\",\n\t\"CompanyName\": \"\",\n\t\"BillingContactFirstName\": \"\",\n\t\"BillingContactLastName\": \"\"\n}"
+                          "body": "{\n\t\"accountId\": \"\",\n\t\"imburseAccountRef\": \"\",\n\t\"companyName\": \"\",\n\t\"billingContactFirstName\": \"\",\n\t\"billingContactLastName\": \"\",\n\t\"billingContactAddress\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         }
                       ]
                     }
@@ -500,7 +500,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"primaryGroupSid\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
+                          "body": "{\n\t\"accountId\": \"\",\n\t\"tenantId\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
                         }
                       ]
                     },
@@ -543,7 +543,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "[\n\t{\n\t\t\"accountId\": \"\",\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
+                          "body": "[\n\t{\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
                         }
                       ]
                     },
@@ -586,7 +586,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"accountId\": \"\",\n\t\"publicKey\": \"\",\n\t\"roles\": []\n}\n"
+                          "body": "{\n\t\"publicKey\": \"\",\n\t\"roles\": []\n}\n"
                         }
                       ]
                     },
@@ -728,7 +728,7 @@
                           "header": null,
                           "cookie": [],
                           "responseTime": null,
-                          "body": "{\n\t\"id\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                          "body": "{\n\t\"tenantId\": \"\",\n\t\"accountId\": \"\",\n\t\"name\": \"\",\n\t\"address\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
                         }
                       ]
                     },
@@ -974,7 +974,7 @@
                               "mode": "raw",
                               "raw": "{\n\t\"roles\": []\n}"
                             },
-                            "url": "{{managementApiUrl}}/v1/tenant/keys"
+                            "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys"
                           },
                           "status": "OK",
                           "code": 200,
@@ -2328,7 +2328,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"providerId\": \"\",\n\t\"apiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\"\n    \"accountContactEmail\": \"\"\n}"
+                      "body": "{\n\t\"providerId\": \"\",\n\t\"apiProductId\": \"\",\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"customerIdentifier\": \"\",\n    \"customerDisplayName\": \"\",\n    \"accountIdentifier\": \"\",\n\t\"accountDisplayName\": \"\",\n    \"accountContactEmail\": \"\"\n}"
                     }
                   ]
                 },
@@ -3261,7 +3261,7 @@
                       "header": [],
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
+                      "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"\",\n            \"defaultCurrency\": \"\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
                     }
                   ]
                 },
@@ -4056,7 +4056,7 @@
                   "mode": "raw",
                   "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/collect//customer/{{customerRef}}/order/{{orderRef}}/instruction",
+                "url": "{{managementApiUrl}}/v1/collect/customer/{{customerRef}}/order/{{orderRef}}/instruction",
                 "description": "An order requires one or many payment instructions to be set up. These instructions act as a payment schedule and contain the amount to be collected, the open date and the due date of the collection.\r\n\r\nAn instruction must be given a unique `instructionRef` (unique to the customer's order). This reference can be used in the future to look up or make amendments to an instruction.\r\n\r\n#### Request Body\r\n\r\nThe following parameters are sent in JSON format.\r\n\r\nParameter | Type | Description\r\n- | - | -\r\ninstructionRef | string (50 char max) | A unique identifier used to represent a single payment instruction.\r\namount | Decimal | The amount to collect.\r\nopenDate | Date (YYYY-MM-DD) | The date in which a manual payment can be made from.\r\ndueDate | Date (YYYY-MM-DD) | The date in which a manual payment is to be settled by, or if automated will be taken on.\r\n\r\n#### Validation errors\r\n\r\nOne or many of the following errors may be returned if there were issues validating the request.\r\n\r\nCode | Description\r\n- | - \r\n`CUSTOMER_REF_IS_REQUIRED` | Reference is required.\r\n`CUSTOMER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`CUSTOMER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`ORDER_REF_IS_REQUIRED` | Reference is required.\r\n`ORDER_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`ORDER_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`INSTRUCTION_REF_IS_REQUIRED` | Reference is required.\r\n`INSTRUCTION_REF_LENGTH_OUT_OF_RANGE` | Reference has a maximum of 50 characters.\r\n`INSTRUCTION_REF_CONTAINS_INVALID_CHARACTERS` | Reference can only contain the following characters `a-z0-9-_.`.\r\n`AMOUNT_IS_REQUIRED` | Amount is required.\r\n`AMOUNT_FORMAT_NOT_RECOGNISED` | Amount must be in decimal form.\r\n`AMOUNT_OUT_OF_RANGE` | Amount must be greater than zero.\r\n`OPEN_DATE_IS_REQUIRED` | Open Date is required.\r\n`OPEN_DATE_FORMAT_NOT_RECOGNISED` | Due Date could not be read as a valid date.\r\n`DUE_DATE_IS_REQUIRED` | Due Date is required.\r\n`DUE_DATE_FORMAT_NOT_RECOGNISED` | Due Date could not be read as a valid date."
               },
               "response": []
@@ -4568,7 +4568,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"externalOrderRef\": \"\",\n    \"amountCharged\": {\n        \"value\": 0,\n        \"currencyCode\": \"\",\n        \"total\": 0\n    },\n    \"denomination\": {\n        \"value\": 0,\n        \"currencyCode\": \"\"\n    },\n    \"rewardId\": \"\",\n    \"rewardName\": \"\",\n    \"status\": \"\",\n    \"createdAt\": \"\",\n    \"rewardDetails\": {\n        \"credentials\": {\n            \"Redemption URL\": \"\"\n        },\n        \"credentialList\": [\n            {\n                \"label\": \"\",\n                \"value\": \"\",\n                \"type\": \"\",\n                \"credentialType\": \"\"\n            }\n        ],\n        \"redemptionInstructions\": \"\"\n    }\n}"
+              "body": "{\n  \"credentials\": {\n    \"Expiration Date\": \"\",\n    \"Claim Code\": \"\"\n  },\n  \"credentialList\": [\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    },\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    }\n  ],\n  \"redemptionInstructions\": \"\"\n}"
             }
           ]
         }
