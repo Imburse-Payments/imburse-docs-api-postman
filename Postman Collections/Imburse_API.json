@@ -2716,10 +2716,31 @@
                 "header": [],
                 "url": "{{managementApiUrl}}/v1/marketplace/{{app-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "445cf9c6-a62f-4aba-8711-6f758731b7a6",
+                  "name": "Get an App",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/marketplace/{{app-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "b95fd47a-8300-4d58-86f5-0c643cb54482",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Apps",
+          "item": [],
+          "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
           "_postman_isSubFolder": true
         },
         {
