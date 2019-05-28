@@ -2749,13 +2749,26 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/apps/installed"
               },
               "response": []
             },
             {
               "name": "Install App",
               "_postman_id": "38ffc66f-518a-4095-8009-19d5544f2e1c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            },
+            {
+              "name": "Uninstall App",
+              "_postman_id": "7fce56cd-b210-4add-b632-f16c73b96000",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
