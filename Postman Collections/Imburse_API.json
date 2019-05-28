@@ -1717,7 +1717,22 @@
                 "header": [],
                 "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "56df0bbf-3d7a-49bc-9bcb-86c1e5cdfc06",
+                  "name": "Update a Voucher Group",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Delete a Voucher Group",
@@ -1728,9 +1743,24 @@
               "request": {
                 "method": "DELETE",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "f5d8124f-810f-4f09-9c4a-35fdb32ecb1e",
+                  "name": "Delete a Voucher Group",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
@@ -1849,7 +1879,7 @@
               ]
             },
             {
-              "name": "Search Catalog for Rewards",
+              "name": "Search Catalog",
               "_postman_id": "f15191e6-1145-489d-9b53-ed214edd84eb",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -3458,6 +3488,12 @@
             }
           ],
           "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Countries",
+          "item": [],
+          "_postman_id": "49358960-105f-43a6-8f2b-2c91df954b4c",
           "_postman_isSubFolder": true
         }
       ],
