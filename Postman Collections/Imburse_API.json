@@ -1675,6 +1675,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Update a Voucher Group",
+              "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
