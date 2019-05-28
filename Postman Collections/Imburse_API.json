@@ -4311,9 +4311,18 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/references/countries"
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/countries"
               },
               "response": [
                 {
@@ -4328,7 +4337,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/references/countries"
+                    "url": "{{managementApiUrl}}/v1/countries"
                   },
                   "status": "OK",
                   "code": 200,
@@ -4347,9 +4356,18 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "noauth"
+                },
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/references/currencies"
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/currencies"
               },
               "response": [
                 {
@@ -4364,7 +4382,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/references/currencies"
+                    "url": "{{managementApiUrl}}/v1/currencies"
                   },
                   "status": "OK",
                   "code": 200,
@@ -4375,41 +4393,6 @@
                   "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"symbol\": \"\"\n\t}\n]"
                 }
               ]
-            },
-            {
-              "name": "Get Payment Providers",
-              "_postman_id": "ce02bd26-38c9-4188-9362-a0f3fa34ac80",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/references/payment-providers"
-              },
-              "response": []
-            },
-            {
-              "name": "Get Reward Providers",
-              "_postman_id": "09c23b50-765d-4fbe-a83a-a99ce0c67523",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/references/reward-providers"
-              },
-              "response": []
             }
           ],
           "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
