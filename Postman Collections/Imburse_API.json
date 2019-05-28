@@ -1688,6 +1688,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Delete a Voucher Group",
+              "_postman_id": "2eb2febf-29b0-4ce8-ba8a-d2f8ebbf92f7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
