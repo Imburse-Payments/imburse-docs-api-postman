@@ -2752,6 +2752,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Install App",
+              "_postman_id": "38ffc66f-518a-4095-8009-19d5544f2e1c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
