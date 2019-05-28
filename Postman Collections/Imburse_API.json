@@ -1532,7 +1532,7 @@
               ]
             },
             {
-              "name": "Uninstall App",
+              "name": "Uninstall an App",
               "_postman_id": "7fce56cd-b210-4add-b632-f16c73b96000",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
