@@ -1621,7 +1621,21 @@
         },
         {
           "name": "Voucher Groups",
-          "item": [],
+          "item": [
+            {
+              "name": "Add a Voucher Group",
+              "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
           "_postman_isSubFolder": true
         },
