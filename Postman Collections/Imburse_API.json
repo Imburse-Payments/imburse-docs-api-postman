@@ -2686,7 +2686,35 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}v1/marketplace"
+              },
+              "response": [
+                {
+                  "id": "5d409ba2-40b4-4f91-952b-aa8032b55928",
+                  "name": "Get all Apps",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}v1/marketplace"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get an App",
+              "_postman_id": "19dc5f35-4b3e-4223-aa83-b9e7aea9586a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/marketplace/{{app-id}}"
               },
               "response": []
             }
