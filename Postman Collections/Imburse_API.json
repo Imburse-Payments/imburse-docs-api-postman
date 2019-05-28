@@ -3455,8 +3455,8 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
                 "url": "{{managementApiUrl}}/v1/currencies"
