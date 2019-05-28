@@ -2805,7 +2805,7 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/uninstall"
+                "url": "{{managementApiUrl}}/v1/apps/installed/{{app-id}}/uninstall"
               },
               "response": [
                 {
@@ -2835,7 +2835,22 @@
                 "header": [],
                 "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "9a927fd6-7c64-4662-b1bf-48db99e1b16d",
+                  "name": "Configure Braintree SDK App",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
