@@ -3679,6 +3679,11 @@
           }
         }
       ]
+    },
+    {
+      "name": "Currencies",
+      "item": [],
+      "_postman_id": "0582a809-dd79-4c46-8a76-c6f8ff4f08eb"
     }
   ],
   "event": [
