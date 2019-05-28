@@ -3395,53 +3395,7 @@
         },
         {
           "name": "Countries",
-          "item": [
-            {
-              "name": "Get Country List",
-              "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/countries"
-              },
-              "response": [
-                {
-                  "id": "798a54de-947d-46ba-b6e8-460f6ba739fe",
-                  "name": "Get Country List",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/countries"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"currency\": \"\"\n\t}\n]"
-                }
-              ]
-            }
-          ],
+          "item": [],
           "_postman_id": "49358960-105f-43a6-8f2b-2c91df954b4c",
           "_postman_isSubFolder": true
         },
@@ -3499,7 +3453,53 @@
         },
         {
           "name": "Miscellaneous",
-          "item": [],
+          "item": [
+            {
+              "name": "Get Country List",
+              "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/countries"
+              },
+              "response": [
+                {
+                  "id": "798a54de-947d-46ba-b6e8-460f6ba739fe",
+                  "name": "Get Country List",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/countries"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"currency\": \"\"\n\t}\n]"
+                }
+              ]
+            }
+          ],
           "_postman_id": "b1eb646e-6cf6-4f8b-b395-5083dd6c1490",
           "_postman_isSubFolder": true
         }
