@@ -2775,7 +2775,7 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
                 "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
               },
@@ -2784,7 +2784,7 @@
                   "id": "496b7a89-8bc7-4c89-bc5f-db68eeaae45f",
                   "name": "Install App",
                   "originalRequest": {
-                    "method": "GET",
+                    "method": "POST",
                     "header": [],
                     "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
                   },
@@ -2806,6 +2806,34 @@
                 "method": "POST",
                 "header": [],
                 "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/uninstall"
+              },
+              "response": [
+                {
+                  "id": "c5d86c78-deee-4e68-bad9-a2fd1daf363f",
+                  "name": "Uninstall App",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/uninstall"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Configure Braintree SDK App",
+              "_postman_id": "6dc5414b-0ce5-4408-87d2-b96bd3909b9b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
               },
               "response": []
             }
