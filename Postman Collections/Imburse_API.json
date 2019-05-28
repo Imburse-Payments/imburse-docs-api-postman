@@ -1560,7 +1560,7 @@
               ]
             },
             {
-              "name": "Configure Braintree SDK App",
+              "name": "Configure the Braintree SDK App",
               "_postman_id": "6dc5414b-0ce5-4408-87d2-b96bd3909b9b",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -1586,9 +1586,43 @@
                   "body": null
                 }
               ]
+            },
+            {
+              "name": "Configure the Tango Card RaaS App",
+              "_postman_id": "d5d4d950-833d-4129-8c41-ed44cc7d90a0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configure"
+              },
+              "response": [
+                {
+                  "id": "f53b8417-8029-4124-b132-0131a4477323",
+                  "name": "Configure the Tango Card RaaS App",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configure"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Voucher Groups",
+          "item": [],
+          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
           "_postman_isSubFolder": true
         },
         {
@@ -3313,12 +3347,6 @@
             }
           ],
           "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Voucher Groups",
-          "item": [],
-          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
           "_postman_isSubFolder": true
         }
       ],
