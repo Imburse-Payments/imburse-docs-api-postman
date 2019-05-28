@@ -3444,6 +3444,58 @@
           ],
           "_postman_id": "49358960-105f-43a6-8f2b-2c91df954b4c",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Currencies",
+          "item": [
+            {
+              "name": "Get Currency List",
+              "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/currencies"
+              },
+              "response": [
+                {
+                  "id": "8c078558-c697-495b-a5c1-1a50f837f056",
+                  "name": "Get Currency List",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/currencies"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"symbol\": \"\"\n\t}\n]"
+                }
+              ]
+            }
+          ],
+          "_postman_id": "0582a809-dd79-4c46-8a76-c6f8ff4f08eb",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "6ccbe271-e09d-4ed2-9599-7a0531e9e57f",
@@ -3627,57 +3679,6 @@
           }
         }
       ]
-    },
-    {
-      "name": "Currencies",
-      "item": [
-        {
-          "name": "Get Currency List",
-          "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{management-token}}",
-                "type": "text"
-              }
-            ],
-            "url": "{{managementApiUrl}}/v1/currencies"
-          },
-          "response": [
-            {
-              "id": "8c078558-c697-495b-a5c1-1a50f837f056",
-              "name": "Get Currency List",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/currencies"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "[\n\t{\n\t\t\"id\": \"\",\n\t\t\"code\": \"\",\n\t\t\"name\": \"\",\n\t\t\"symbol\": \"\"\n\t}\n]"
-            }
-          ]
-        }
-      ],
-      "_postman_id": "0582a809-dd79-4c46-8a76-c6f8ff4f08eb"
     }
   ],
   "event": [
