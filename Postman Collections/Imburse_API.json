@@ -3419,7 +3419,7 @@
               "response": [
                 {
                   "id": "798a54de-947d-46ba-b6e8-460f6ba739fe",
-                  "name": "Get Country List",
+                  "name": "Get list of Countries",
                   "originalRequest": {
                     "method": "GET",
                     "header": [
@@ -3442,7 +3442,7 @@
               ]
             },
             {
-              "name": "Get Currency List",
+              "name": "Get list of Currencies",
               "_postman_id": "62b3df4f-d02e-47b7-a992-599a81c4a86d",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
