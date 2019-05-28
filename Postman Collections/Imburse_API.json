@@ -1620,6 +1620,153 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Voucher Groups",
+          "item": [
+            {
+              "name": "Add a Voucher Group",
+              "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups"
+              },
+              "response": [
+                {
+                  "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
+                  "name": "Add a Voucher Group",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get all Voucher Groups",
+              "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups"
+              },
+              "response": [
+                {
+                  "id": "00a7dfa1-0314-46ea-91fc-1fa02ee4b7ed",
+                  "name": "Get all Voucher Groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get a Voucher Group",
+              "_postman_id": "c61ba6d2-f871-4d09-ad4a-f199b4abaae3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
+                  "name": "Get a Voucher Group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Update a Voucher Group",
+              "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "56df0bbf-3d7a-49bc-9bcb-86c1e5cdfc06",
+                  "name": "Update a Voucher Group",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete a Voucher Group",
+              "_postman_id": "2eb2febf-29b0-4ce8-ba8a-d2f8ebbf92f7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "f5d8124f-810f-4f09-9c4a-35fdb32ecb1e",
+                  "name": "Delete a Voucher Group",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            }
+          ],
+          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Rewards Catalog",
           "item": [
             {
@@ -3348,153 +3495,6 @@
             }
           ],
           "_postman_id": "0582a809-dd79-4c46-8a76-c6f8ff4f08eb",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Voucher Groups",
-          "item": [
-            {
-              "name": "Add a Voucher Group",
-              "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups"
-              },
-              "response": [
-                {
-                  "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
-                  "name": "Add a Voucher Group",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Get all Voucher Groups",
-              "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups"
-              },
-              "response": [
-                {
-                  "id": "00a7dfa1-0314-46ea-91fc-1fa02ee4b7ed",
-                  "name": "Get all Voucher Groups",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Get a Voucher Group",
-              "_postman_id": "c61ba6d2-f871-4d09-ad4a-f199b4abaae3",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
-                  "name": "Get a Voucher Group",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Update a Voucher Group",
-              "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "PUT",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "56df0bbf-3d7a-49bc-9bcb-86c1e5cdfc06",
-                  "name": "Update a Voucher Group",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Delete a Voucher Group",
-              "_postman_id": "2eb2febf-29b0-4ce8-ba8a-d2f8ebbf92f7",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "f5d8124f-810f-4f09-9c4a-35fdb32ecb1e",
-                  "name": "Delete a Voucher Group",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            }
-          ],
-          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
           "_postman_isSubFolder": true
         }
       ],
