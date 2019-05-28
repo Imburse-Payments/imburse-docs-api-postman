@@ -2739,7 +2739,21 @@
         },
         {
           "name": "Apps",
-          "item": [],
+          "item": [
+            {
+              "name": "Get installed Apps",
+              "_postman_id": "0a584ecd-7de8-4688-bc40-1c32fdbc3ff1",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
           "_postman_isSubFolder": true
         },
