@@ -1629,6 +1629,34 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/voucher-groups"
+              },
+              "response": [
+                {
+                  "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
+                  "name": "Add a Voucher Group",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get all Voucher Groups",
+              "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
                 "method": "GET",
                 "header": [],
                 "url": ""
