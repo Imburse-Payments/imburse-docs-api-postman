@@ -3397,7 +3397,7 @@
           "name": "Miscellaneous",
           "item": [
             {
-              "name": "Get Country List",
+              "name": "Get list of Countries",
               "_postman_id": "aab14497-2a50-4982-b565-b25b8dc076a1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -3410,8 +3410,8 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
                 "url": "{{managementApiUrl}}/v1/countries"
