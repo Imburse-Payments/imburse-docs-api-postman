@@ -1659,9 +1659,24 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/voucher-groups"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "00a7dfa1-0314-46ea-91fc-1fa02ee4b7ed",
+                  "name": "Get all Voucher Groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Get a Voucher Group",
@@ -1672,9 +1687,24 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
+                  "name": "Get a Voucher Group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Update a Voucher Group",
@@ -1685,7 +1715,7 @@
               "request": {
                 "method": "PUT",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
               },
               "response": []
             },
@@ -1696,7 +1726,7 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "DELETE",
                 "header": [],
                 "url": ""
               },
