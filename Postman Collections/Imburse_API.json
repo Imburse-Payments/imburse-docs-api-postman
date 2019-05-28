@@ -2831,9 +2831,9 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
               },
               "response": []
             }
