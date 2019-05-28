@@ -3394,12 +3394,6 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Reference Data",
-          "item": [],
-          "_postman_id": "0fa98d60-6103-4d38-8e8f-1c5a25a22bf2",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Countries",
           "item": [
             {
