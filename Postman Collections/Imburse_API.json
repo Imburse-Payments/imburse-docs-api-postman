@@ -1420,7 +1420,13 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}v1/marketplace/apps"
               },
               "response": [
@@ -1429,7 +1435,13 @@
                   "name": "Get all Apps",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}v1/marketplace/apps"
                   },
                   "status": "OK",
@@ -1450,7 +1462,13 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
               },
               "response": [
@@ -3505,7 +3523,7 @@
       "auth": {
         "type": "bearer",
         "bearer": {
-          "token": "Bearer {{management-token}}"
+          "token": "{{management-token}}"
         }
       },
       "event": [
