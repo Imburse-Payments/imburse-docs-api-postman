@@ -1427,7 +1427,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}v1/marketplace/apps"
+                "url": "{{managementApiUrl}}v1/marketplace/apps",
+                "description": "#### Description\n\nGets a list of all Apps.\n\n#### Role required\n\n`t.psp.r`"
               },
               "response": [
                 {
@@ -1469,7 +1470,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
+                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}",
+                "description": "#### Description\n\nGet an App.\n\n#### Role required\n\n`t.psp.r`"
               },
               "response": [
                 {
@@ -1477,7 +1479,13 @@
                   "name": "Get an App",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
                   },
                   "status": "OK",
