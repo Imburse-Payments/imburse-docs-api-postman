@@ -1421,7 +1421,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{managementApiUrl}}v1/marketplace"
+                "url": "{{managementApiUrl}}v1/marketplace/apps"
               },
               "response": [
                 {
@@ -1430,13 +1430,15 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "url": "{{managementApiUrl}}v1/marketplace"
+                    "url": "{{managementApiUrl}}v1/marketplace/apps"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n    \"apps\": [\n        {\n            \"developerId\": \"\",\n            \"developerName\": \"\",\n            \"appId\": \"\",\n            \"name\": \"\"\n        }\n    ]\n}"
                 }
               ]
             },
@@ -1449,7 +1451,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/marketplace/{{app-id}}"
+                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
               },
               "response": [
                 {
@@ -3464,7 +3466,7 @@
               "response": [
                 {
                   "id": "8c078558-c697-495b-a5c1-1a50f837f056",
-                  "name": "Get Currency List",
+                  "name": "Get list of Currencies",
                   "originalRequest": {
                     "method": "GET",
                     "header": [
