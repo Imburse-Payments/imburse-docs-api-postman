@@ -1507,7 +1507,7 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
+                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}/install"
               },
               "response": [
                 {
