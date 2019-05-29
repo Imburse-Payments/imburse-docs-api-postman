@@ -1497,6 +1497,36 @@
                   "body": "{\n    \"developerId\": \"\",\n    \"developerName\": \"\",\n    \"appId\": \"\",\n    \"name\": \"\"\n}"
                 }
               ]
+            },
+            {
+              "name": "Install an App",
+              "_postman_id": "38ffc66f-518a-4095-8009-19d5544f2e1c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
+              },
+              "response": [
+                {
+                  "id": "496b7a89-8bc7-4c89-bc5f-db68eeaae45f",
+                  "name": "Install an App",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "b95fd47a-8300-4d58-86f5-0c643cb54482",
@@ -1532,36 +1562,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n\t\"apps\": [ \"\" ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Install an App",
-              "_postman_id": "38ffc66f-518a-4095-8009-19d5544f2e1c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
-              },
-              "response": [
-                {
-                  "id": "496b7a89-8bc7-4c89-bc5f-db68eeaae45f",
-                  "name": "Install an App",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
                 }
               ]
             },
