@@ -1605,7 +1605,8 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
+                "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure",
+                "description": "#### Description\n\nConfigure the BRAINTREE SDK App\n\n#### Role required\n\n`t.psp.a`"
               },
               "response": [
                 {
