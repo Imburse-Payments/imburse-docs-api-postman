@@ -1460,13 +1460,15 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "url": "{{managementApiUrl}}/v1/marketplace/{{app-id}}"
+                    "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n    \"developerId\": \"\",\n    \"developerName\": \"\",\n    \"appId\": \"\",\n    \"name\": \"\"\n}"
                 }
               ]
             }
@@ -1491,17 +1493,19 @@
               "response": [
                 {
                   "id": "87518bb8-b1b6-41b2-b06b-40b4c3f52bc5",
-                  "name": "Get installed Apps",
+                  "name": "Get installed Apps ",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
                     "url": "{{managementApiUrl}}/v1/apps/installed"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n\t\"apps\": [ \"\" ]\n}"
                 }
               ]
             },
@@ -1519,12 +1523,14 @@
               "response": [
                 {
                   "id": "496b7a89-8bc7-4c89-bc5f-db68eeaae45f",
-                  "name": "Install App",
+                  "name": "Install an App",
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
                     "url": "{{managementApiUrl}}/v1/installed/{{app-id}}/install"
                   },
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": null,
                   "header": null,
                   "cookie": [],
@@ -1553,6 +1559,8 @@
                     "header": [],
                     "url": "{{managementApiUrl}}/v1/apps/installed/{{app-id}}/uninstall"
                   },
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": null,
                   "header": null,
                   "cookie": [],
@@ -3497,7 +3505,7 @@
       "auth": {
         "type": "bearer",
         "bearer": {
-          "token": "{{management-token}}"
+          "token": "Bearer {{management-token}}"
         }
       },
       "event": [
