@@ -1983,11 +1983,11 @@
               "response": [
                 {
                   "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
-                  "name": "Get a Voucher Group",
+                  "name": "Get a Reward Group",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
                   },
                   "_postman_previewlanguage": null,
                   "header": null,
@@ -1998,7 +1998,7 @@
               ]
             },
             {
-              "name": "Update a Voucher Group",
+              "name": "Update a Reward Group",
               "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
