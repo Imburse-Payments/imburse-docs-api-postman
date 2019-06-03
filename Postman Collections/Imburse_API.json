@@ -1931,7 +1931,7 @@
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
-                    "url": "{{managementApiUrl}}/v1/voucher-groups"
+                    "url": "{{managementApiUrl}}/v1/reward-groups"
                   },
                   "_postman_previewlanguage": null,
                   "header": null,
@@ -1942,7 +1942,7 @@
               ]
             },
             {
-              "name": "Get all Voucher Groups",
+              "name": "Get all Reward Groups",
               "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
