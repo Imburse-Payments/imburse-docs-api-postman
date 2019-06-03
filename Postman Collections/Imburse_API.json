@@ -2342,7 +2342,8 @@
                   "mode": "raw",
                   "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft",
+                "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
               },
               "response": [
                 {
@@ -2394,7 +2395,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
+                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
               },
               "response": [
                 {
