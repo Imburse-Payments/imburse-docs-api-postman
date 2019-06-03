@@ -1741,7 +1741,7 @@
               "response": [
                 {
                   "id": "c899a464-a8e1-4c7b-88b6-bb23bfe14f3f",
-                  "name": "Successful request",
+                  "name": "Get a Reward",
                   "originalRequest": {
                     "method": "GET",
                     "header": [
@@ -1751,7 +1751,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/catalog/{rewardId}"
+                    "url": "{{managementApiUrl}}/v1/catalog/{{rewardId}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1780,6 +1780,11 @@
                 "method": "POST",
                 "header": [
                   {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  },
+                  {
                     "key": "Content-Type",
                     "name": "Content-Type",
                     "type": "text",
@@ -1788,7 +1793,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"rewardIds\": []\n}"
+                  "raw": "{\n    \"rewardIds\": [ \"e9e88ea5-7cce-47ec-9649-78dd0f9112b6\", \"3de17228-fd65-46e5-9d7d-1b0f6b8da585\" ]\n}"
                 },
                 "url": "{{managementApiUrl}}/v1/catalog/rewards",
                 "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's\n\n#### Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
