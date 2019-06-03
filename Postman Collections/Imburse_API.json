@@ -373,234 +373,6 @@
       "name": "Management API Reference",
       "item": [
         {
-          "name": "Tenants",
-          "item": [
-            {
-              "name": "Security Keys",
-              "item": [
-                {
-                  "name": "Create Key",
-                  "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"roles\": []\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/tenant/keys",
-                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`t.key.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
-                  },
-                  "response": [
-                    {
-                      "id": "3514510b-3aa1-486d-8c17-cd880d55696d",
-                      "name": "Create Key",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"roles\": []\n}"
-                        },
-                        "url": "{{managementApiUrl}}/v1/tenant/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
-                  "name": "Get All Keys",
-                  "_postman_id": "59d00071-d648-48e0-90e1-1ec41175c862",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/tenant/keys",
-                    "description": "#### Description\n\nGets the Api keys for the tenant to define in the bearer token.\n\n#### Role required\n\n`t.key.r`"
-                  },
-                  "response": [
-                    {
-                      "id": "cee7c56a-c24a-42d9-b71d-9c0a4592f8ee",
-                      "name": "Get All Keys",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "[\n    {\n        \"tenantId\": \"\",\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Get Key By PublicKey",
-                  "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
-                    "description": "#### Description\n\nGets a specific key by its public key.\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the specific key"
-                  },
-                  "response": [
-                    {
-                      "id": "8771bc08-d3a5-42f1-8e8c-ac97442d29ed",
-                      "name": "Get Key By PublicKey",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Key by Public Key",
-                  "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
-                    "description": "#### Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
-                  },
-                  "response": [
-                    {
-                      "id": "6a863216-e618-4b2d-8f0a-a3d6ba2856a6",
-                      "name": "Remove Key by Public Key",
-                      "originalRequest": {
-                        "method": "DELETE",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
-                      },
-                      "status": "No Content",
-                      "code": 204,
-                      "_postman_previewlanguage": null,
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": null
-                    }
-                  ]
-                }
-              ],
-              "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
-              "_postman_isSubFolder": true
-            }
-          ],
-          "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "3d3ef99c-2ae8-4cec-8eab-c2034155fcd1",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "4b1e4156-1309-416d-ba90-fd32a5e0b00c",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Accounts",
           "item": [
             {
@@ -1356,6 +1128,234 @@
             }
           ],
           "_postman_id": "d4a8fee4-7343-464f-9b3f-bf42e81619e2",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "3d3ef99c-2ae8-4cec-8eab-c2034155fcd1",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "4b1e4156-1309-416d-ba90-fd32a5e0b00c",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Tenants",
+          "item": [
+            {
+              "name": "Security Keys",
+              "item": [
+                {
+                  "name": "Create Key",
+                  "_postman_id": "3bbc7e0a-c7b7-4b45-9d21-270b9c0d826a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"roles\": []\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/tenant/keys",
+                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`t.key.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
+                  },
+                  "response": [
+                    {
+                      "id": "3514510b-3aa1-486d-8c17-cd880d55696d",
+                      "name": "Create Key",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"roles\": []\n}"
+                        },
+                        "url": "{{managementApiUrl}}/v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get All Keys",
+                  "_postman_id": "59d00071-d648-48e0-90e1-1ec41175c862",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/tenant/keys",
+                    "description": "#### Description\n\nGets the Api keys for the tenant to define in the bearer token.\n\n#### Role required\n\n`t.key.r`"
+                  },
+                  "response": [
+                    {
+                      "id": "cee7c56a-c24a-42d9-b71d-9c0a4592f8ee",
+                      "name": "Get All Keys",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "url": "{{managementApiUrl}}/v1/tenant/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n        \"tenantId\": \"\",\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get Key By PublicKey",
+                  "_postman_id": "b3a432cb-2cf5-4263-a7d0-f69de94b10a4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
+                    "description": "#### Description\n\nGets a specific key by its public key.\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the specific key"
+                  },
+                  "response": [
+                    {
+                      "id": "8771bc08-d3a5-42f1-8e8c-ac97442d29ed",
+                      "name": "Get Key By PublicKey",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Key by Public Key",
+                  "_postman_id": "77350897-25c9-44f8-a79f-600b890ba378",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}",
+                    "description": "#### Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
+                  },
+                  "response": [
+                    {
+                      "id": "6a863216-e618-4b2d-8f0a-a3d6ba2856a6",
+                      "name": "Remove Key by Public Key",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null
+                    }
+                  ]
+                }
+              ],
+              "_postman_id": "a41b9350-8cff-475e-a747-b242bc1c1a83",
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_id": "2db95add-3a76-4424-ada5-fa1fc865011c",
           "event": [
             {
               "listen": "prerequest",
