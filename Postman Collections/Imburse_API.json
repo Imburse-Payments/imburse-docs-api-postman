@@ -2086,6 +2086,12 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Schemes - Payout",
+          "item": [],
+          "_postman_id": "7a248b7a-0b3d-4f2e-8b64-a432866b202e",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Notifications",
           "item": [
             {
@@ -2328,173 +2334,6 @@
               "listen": "test",
               "script": {
                 "id": "40670cbf-5237-4526-a97a-fde0ab6ba1e1",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Whitelabel Settings",
-          "item": [
-            {
-              "name": "Upload Whitelabel Logo",
-              "_postman_id": "dcc42e79-ff65-48ab-ad7e-06496a283320",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "file",
-                  "file": {}
-                },
-                "url": "{{managementApiUrl}}/v1/settings/logo",
-                "description": "#### Description\n\nUploads a logo for the tenants white label settings.\n\n#### Role required\n\n`client-write`"
-              },
-              "response": [
-                {
-                  "id": "76785518-c5d2-44d0-ae82-ba6fc1953624",
-                  "name": "Successful request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "file",
-                      "file": {}
-                    },
-                    "url": "{{managementApiUrl}}/v1/settings/logo"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"address\": {\r\n    \"streetAddress\": \"\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
-                }
-              ]
-            },
-            {
-              "name": "Upload Whitelabel Styling",
-              "_postman_id": "106629ab-3716-4fd7-ba3b-a44a6c9a9606",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "file",
-                  "file": {}
-                },
-                "url": "{{managementApiUrl}}/v1/settings/styling",
-                "description": "#### Description\n\nUploads a styling document for the tenant's white label settings.\n\n#### Role required\n\n`client-write`"
-              },
-              "response": [
-                {
-                  "id": "dd9435f5-213d-4f2c-a9e4-418d7365ea37",
-                  "name": "Successful request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "file",
-                      "file": {}
-                    },
-                    "url": "{{managementApiUrl}}/v1/settings/styling"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"address\": {\r\n    \"streetAddress\": \"\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n  },\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get Whitelabel Settings",
-              "_postman_id": "fdd9a44f-7dce-4a3c-980c-f748779ef8cb",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/settings",
-                "description": "#### Description\n\nRetrieves the a tenants white label settings.\n\n#### Role Required\n\n`client-read`"
-              },
-              "response": [
-                {
-                  "id": "63960dfe-bec2-4459-be49-fc5ba50d502f",
-                  "name": "Successful request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/settings"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\r\n  \"id\": \"\",\r\n  \"name\": \"\",\r\n  \"address\": {\r\n    \"streetAddress\": \"\",\r\n    \"extendedAddress\": \"\",\r\n    \"locality\": \"\",\r\n    \"region\": \"\",\r\n    \"postCode\": \"\",\r\n    \"country\": \"\"\r\n  }\r\n  \"whiteLabelSettings\": {\r\n    \"logoUri\": \"\",\r\n    \"styling\": {\r\n      \"stylesheet\": \"\",\r\n      \"inputFieldStyles\" : [\r\n        {\r\n          \"styleName\": \"\",\r\n          \"styles\": [\r\n            {\r\n              \"key\": \"\",\r\n              \"value\": \"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
-                }
-              ]
-            }
-          ],
-          "_postman_id": "cf290393-bf52-4b01-adf9-7273a3e3795a",
-          "description": "Client objects allow you to perform updates to clients. The API allows you to create, delete, and update your clients. You can retrieve individual clients as well as a list of all your clients.\r\n\r\n## The client object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The clients name \r\naddress | [address](#the-address-object) object | The client address\r\nwhiteLabelSettings | [White Label document](#the-white-label-settings-object) object | The white label settings for the client. ie. logo, styling document etc.\r\n\r\n## The address object\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nstreetAddress | string | First line of address\r\nextendedAddress | string | Second line of an address if requried\r\nlocality | string | The locality / city\r\nregion | string | The region / state / county\r\npostCode | string | The post code / zip code\r\ncountry | string | The ISO 3166-1 alpha-2 country code",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "fd40b9f6-f0a7-4190-bb93-66e80fd039d8",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "d57342ab-7b4f-4df4-9bc3-eb3adc77d4ad",
                 "type": "text/javascript",
                 "exec": [
                   ""
@@ -2962,12 +2801,6 @@
             }
           ],
           "_postman_id": "b1eb646e-6cf6-4f8b-b395-5083dd6c1490",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Schemes - Payout",
-          "item": [],
-          "_postman_id": "7a248b7a-0b3d-4f2e-8b64-a432866b202e",
           "_postman_isSubFolder": true
         }
       ],
