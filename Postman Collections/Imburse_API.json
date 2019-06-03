@@ -2083,6 +2083,69 @@
           "name": "Schemes - Collection",
           "item": [
             {
+              "name": "Create a Scheme",
+              "_postman_id": "dad3826c-9222-4228-baf5-681bb457279a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                },
+                "url": "{{managementApiUrl}}/v1/schemes/collect",
+                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
+              },
+              "response": [
+                {
+                  "id": "1ac6eb31-22f4-423a-b14b-872d8cb80494",
+                  "name": "Create a Scheme",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
               "name": "Get a Scheme",
               "_postman_id": "146cdf94-47de-4e7e-9739-61514805709c",
               "protocolProfileBehavior": {
@@ -2169,6 +2232,47 @@
               ]
             },
             {
+              "name": "Publish a Draft",
+              "_postman_id": "8d3c0bcb-feb5-4c37-ab7e-96082fed40e7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
+                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
+              },
+              "response": [
+                {
+                  "id": "ab210ed3-ccf6-4e90-ac27-8f2ca886adee",
+                  "name": "Publish a Draft",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
               "name": "Get the Published Draft",
               "_postman_id": "0fa5c054-21f1-4bfc-97cc-05416c6be174",
               "protocolProfileBehavior": {
@@ -2208,69 +2312,6 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
-                }
-              ]
-            },
-            {
-              "name": "Create a Scheme",
-              "_postman_id": "dad3826c-9222-4228-baf5-681bb457279a",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
-                },
-                "url": "{{managementApiUrl}}/v1/schemes/collect",
-                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
-              },
-              "response": [
-                {
-                  "id": "1ac6eb31-22f4-423a-b14b-872d8cb80494",
-                  "name": "Create a Scheme",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/schemes/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
                 }
               ]
             },
@@ -2372,47 +2413,6 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Publish a Draft",
-              "_postman_id": "8d3c0bcb-feb5-4c37-ab7e-96082fed40e7",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
-                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
-              },
-              "response": [
-                {
-                  "id": "ab210ed3-ccf6-4e90-ac27-8f2ca886adee",
-                  "name": "Publish a Draft",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
-                  },
                   "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
