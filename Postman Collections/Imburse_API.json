@@ -2098,7 +2098,7 @@
                   }
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the scheme to get."
+                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get."
               },
               "response": [
                 {
