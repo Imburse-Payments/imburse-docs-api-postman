@@ -1914,7 +1914,7 @@
           "name": "Reward Groups",
           "item": [
             {
-              "name": "Add a Voucher Group",
+              "name": "Add a Reward Group",
               "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
