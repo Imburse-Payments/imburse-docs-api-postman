@@ -2289,7 +2289,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}",
+                "description": "#### Description \n\nGet a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get.\ndraft-id | The id of the Draft to get."
               },
               "response": [
                 {
