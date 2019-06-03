@@ -1950,7 +1950,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups"
+                "url": "{{managementApiUrl}}/v1/reward-groups"
               },
               "response": [
                 {
