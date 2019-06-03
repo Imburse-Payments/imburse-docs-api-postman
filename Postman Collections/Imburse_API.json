@@ -1629,8 +1629,18 @@
                     "key": "Authorization",
                     "value": "Bearer {{management-token}}",
                     "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
+                },
                 "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure",
                 "description": "#### Description\n\nConfigure the BRAINTREE SDK App\n\n#### Role required\n\n`t.psp.a`"
               },
@@ -1640,14 +1650,32 @@
                   "name": "Configure Braintree SDK App",
                   "originalRequest": {
                     "method": "POST",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
+                    },
                     "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
                 }
               ]
             },
