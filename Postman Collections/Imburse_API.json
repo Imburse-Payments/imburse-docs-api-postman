@@ -2083,7 +2083,7 @@
           "name": "Schemes - Collection",
           "item": [
             {
-              "name": "Get a Collect Scheme",
+              "name": "Get a Scheme",
               "_postman_id": "146cdf94-47de-4e7e-9739-61514805709c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2096,7 +2096,7 @@
               "response": []
             },
             {
-              "name": "Get all Collect Schemes",
+              "name": "Get all Schemes",
               "_postman_id": "1b6e3f4f-569a-43e2-bd13-258e4f57effb",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2128,7 +2128,7 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [],
                 "url": ""
               },
