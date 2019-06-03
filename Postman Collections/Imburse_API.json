@@ -2043,14 +2043,22 @@
                   "name": "Get a Reward Group",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
                 }
               ]
             },
@@ -2062,7 +2070,23 @@
               },
               "request": {
                 "method": "PUT",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
+                },
                 "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
               },
               "response": [
