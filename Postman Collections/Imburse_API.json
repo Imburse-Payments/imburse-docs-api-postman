@@ -2252,7 +2252,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Schemes - Collection",
+          "name": " Collect Schemes",
           "item": [
             {
               "name": "Create a Scheme",
@@ -2638,6 +2638,28 @@
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "a05c537b-b783-4a52-ae62-0e084997e581",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "263115c0-6dde-4bc9-8bb8-908a534f909d",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
