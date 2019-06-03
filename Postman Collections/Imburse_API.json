@@ -2172,6 +2172,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Delete Scheme",
+              "_postman_id": "9d884804-266f-49a0-9222-c5c42185b77f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
