@@ -2109,7 +2109,7 @@
               "response": []
             },
             {
-              "name": "Get Published Draft for Collect Scheme",
+              "name": "Get the Published Draft",
               "_postman_id": "0fa5c054-21f1-4bfc-97cc-05416c6be174",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2122,7 +2122,7 @@
               "response": []
             },
             {
-              "name": "Create a Collect Scheme",
+              "name": "Create a Scheme",
               "_postman_id": "dad3826c-9222-4228-baf5-681bb457279a",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2135,7 +2135,7 @@
               "response": []
             },
             {
-              "name": "Get a Draft for a Collect Scheme",
+              "name": "Get a Draft",
               "_postman_id": "24b85fd4-9227-47f8-835f-eaba0f5c7ea0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2148,7 +2148,7 @@
               "response": []
             },
             {
-              "name": "Create a Draft for a Collect Scheme",
+              "name": "Create a Draft",
               "_postman_id": "0b58110b-7c73-498f-8b71-539b0b77a4d4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
