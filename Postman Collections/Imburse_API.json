@@ -2099,7 +2099,30 @@
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "ecdd38bc-9000-405e-8503-c0f6139585bf",
+                  "name": "Get a Scheme",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                }
+              ]
             },
             {
               "name": "Get all Schemes",
@@ -2110,7 +2133,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/schemes/collect"
               },
               "response": []
             },
