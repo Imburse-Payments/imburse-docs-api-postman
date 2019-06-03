@@ -2009,6 +2009,8 @@
                     ],
                     "url": "{{managementApiUrl}}/v1/reward-groups"
                   },
+                  "status": "OK",
+                  "code": 200,
                   "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
@@ -2025,7 +2027,13 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}",
                 "description": "#### Description \r\n\r\nGet a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
               },
