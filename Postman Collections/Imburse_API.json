@@ -2097,7 +2097,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the scheme to get."
               },
               "response": [
                 {
@@ -2391,7 +2392,28 @@
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "ab210ed3-ccf6-4e90-ac27-8f2ca886adee",
+                  "name": "Publish a Draft",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                }
+              ]
             },
             {
               "name": "Delete Scheme",
