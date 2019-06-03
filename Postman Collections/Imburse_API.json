@@ -2436,7 +2436,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the scheme to delete."
               },
               "response": [
                 {
