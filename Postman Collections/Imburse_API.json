@@ -1587,7 +1587,13 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/apps/installed/{{app-id}}/uninstall",
                 "description": "#### Description\n\nUninstall an App.\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to uninstall."
               },
@@ -1618,7 +1624,13 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure",
                 "description": "#### Description\n\nConfigure the BRAINTREE SDK App\n\n#### Role required\n\n`t.psp.a`"
               },
