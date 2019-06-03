@@ -2091,7 +2091,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
               },
               "response": []
             },
