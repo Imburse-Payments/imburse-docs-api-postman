@@ -2141,7 +2141,30 @@
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "6468e140-cd9d-4f2f-b3ef-1b37f06e6f49",
+                  "name": "Get all Schemes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"schemeId\": \"\",\n        \"publishedDraftId\": null,\n        \"drafts\": [\n            {\n                \"draftId\": \"\",\n                \"name\": \"\",\n                \"code\": \"\",\n                \"rules\": [\n                    {\n                        \"priority\": 0,\n                        \"currencies\": [\n                            \"\"\n                        ],\n                        \"countries\": [\n                            \"\"\n                        ],\n                        \"highValueInclusive\": null,\n                        \"lowValueInclusive\": null,\n                        \"apps\": [\n                            {\n                                \"priority\": 0,\n                                \"appId\": \"\",\n                                \"availablePaymentMethods\": [],\n                                \"excludedPaymentMethods\": []\n                            }\n                        ]\n                    }\n                ],\n                \"lastModified\": \"\"\n            }\n        ]\n    }\n]"
+                }
+              ]
             },
             {
               "name": "Get the Published Draft",
@@ -2151,8 +2174,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": ""
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
               },
               "response": []
             },
