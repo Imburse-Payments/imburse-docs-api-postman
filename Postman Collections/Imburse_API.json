@@ -2216,7 +2216,23 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                },
                 "url": ""
               },
               "response": []
@@ -2306,7 +2322,30 @@
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "58bf490e-4ce6-4703-b7ff-c5292591105b",
+                  "name": "Delete Scheme",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
