@@ -2663,9 +2663,31 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Schemes - Payout",
+          "name": "Payout Schemes",
           "item": [],
           "_postman_id": "7a248b7a-0b3d-4f2e-8b64-a432866b202e",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "1aa9e687-1a57-47c4-889c-1548fd995a00",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "f2d1e9c1-cc35-46d9-a79e-e9fd9b945d07",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
