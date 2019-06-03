@@ -2229,10 +2229,33 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "1965e95b-d587-4c41-bda3-d41852f01b2c",
+                  "name": "Get a Draft",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                }
+              ]
             },
             {
               "name": "Create a Draft",
