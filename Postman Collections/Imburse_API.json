@@ -1861,27 +1861,33 @@
                   "query": [
                     {
                       "key": "providerId",
-                      "value": "{{providerId}}"
+                      "value": "{{providerId}}",
+                      "description": "The Id of the Provider to filter on. ie. TANGOCARD"
                     },
                     {
                       "key": "brandName",
-                      "value": "{{brandName}}"
+                      "value": "{{brandName}}",
+                      "description": "The brand name to search for."
                     },
                     {
                       "key": "countries",
-                      "value": "{{countries}}"
+                      "value": "{{countries}}",
+                      "description": "A comma seperated string of the countries to search for."
                     },
                     {
                       "key": "currencies",
-                      "value": "{{currencies}}"
+                      "value": "{{currencies}}",
+                      "description": "A comma seperated string of the currencies to search for."
                     },
                     {
                       "key": "tags",
-                      "value": "{{tags}}"
+                      "value": "{{tags}}",
+                      "description": "Not currently used."
                     },
                     {
                       "key": "amount",
-                      "value": "{{amount}}"
+                      "value": "{{amount}}",
+                      "description": "Filter the rewards that support the specified amount. ie 5, 10, 20 etc. Leave empty to search for all."
                     }
                   ]
                 },
