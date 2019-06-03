@@ -2120,6 +2120,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Create a Collect Scheme",
+              "_postman_id": "dad3826c-9222-4228-baf5-681bb457279a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
