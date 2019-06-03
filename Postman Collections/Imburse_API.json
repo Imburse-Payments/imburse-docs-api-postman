@@ -1687,7 +1687,13 @@
               },
               "request": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configure",
                 "description": "#### Description\n\nConfigure the Tango Card RaaS App.\n\n#### Role required\n\n`t.psp.a`"
               },
