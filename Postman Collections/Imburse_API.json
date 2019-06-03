@@ -1551,7 +1551,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/apps/installed"
+                "url": "{{managementApiUrl}}/v1/apps/installed",
+                "description": "#### Description\n\nGet the installed Apps for your Tenant.\n\n#### Role required\n\n`t.psp.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to uninstall."
               },
               "response": [
                 {
