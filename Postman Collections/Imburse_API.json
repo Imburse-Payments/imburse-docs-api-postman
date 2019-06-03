@@ -1939,7 +1939,7 @@
                   "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"dummy-amazon-reward-id\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                 },
                 "url": "{{managementApiUrl}}/v1/reward-groups",
-                "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`\r\n\r\n#### Request\r\n```json\r\n{\r\n  \"name\": \"\",\r\n  \"rewards\": [\r\n    \"\",\r\n    true\r\n   ]\r\n}\r\n```\r\n\r\nProperty | Type | Mandatory | Description\r\n-|-|-|-\r\n`name` | string | Yes | A unique name for this Reward Group.\r\n`rewards` | Array of [Reward Item Models](#reward-item-model) | Yes | An array of Reward Items representing the Rewards available in this Reward Group.\r\n\r\n\r\n#### Reward Item Model\r\n```json\r\n{\r\n  \"rewardId\": \"\",\r\n  \"enabled\": true\r\n}\r\n```\r\n\r\nProperty | Type | Mandatory | Description\r\n-|-|-|-\r\n`rewardId` | string | Yes | A Reward Id from the Rewards Catalog.\r\n`enabled` | boolean | Yes | Toggles if the reward is available in the reward group.\r\n\r\n#### Response\r\n```json\r\n{\r\n  \"rewardGroupId\": \"\",\r\n  \"name\": \"\",\r\n  \"rewards\": [\r\n    \"\",\r\n    true\r\n   ]\r\n}\r\n```\r\n\r\nThe `rewardGroupId` is the unique id for this new Reward Group."
+                "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
               },
               "response": [
                 {
@@ -1962,7 +1962,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n  \"name\": \"\",\r\n  \"rewards\": [\r\n    \"\",\r\n    true\r\n   ]\r\n}"
+                      "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"dummy-amazon-reward-id\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                     },
                     "url": "{{managementApiUrl}}/v1/reward-groups"
                   },
@@ -1972,7 +1972,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"rewardGroupId\": \"\",\n    \"name\": \"\",\n    \"rewards\": [\n        \"\",\n        true\n    ]\n}"
+                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
                 }
               ]
             },
@@ -1984,8 +1984,15 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups"
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/reward-groups",
+                "description": "#### Description \r\n\r\nGet all Reward Groups.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
               },
               "response": [
                 {
@@ -1993,14 +2000,20 @@
                   "name": "Get all Reward Groups",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}/v1/reward-groups"
                   },
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "[\n    {\n        \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n        \"name\": \"My Amazon Voucher Group\",\n        \"rewards\": [\n            {\n                \"rewardId\": \"dummy-amazon-reward-id\",\n                \"enabled\": true\n            }\n        ]\n    }\n]"
                 }
               ]
             },
@@ -2013,7 +2026,8 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}",
+                "description": "#### Description \r\n\r\nGet a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
               },
               "response": [
                 {
