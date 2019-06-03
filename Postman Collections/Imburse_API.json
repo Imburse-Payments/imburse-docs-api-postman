@@ -1922,7 +1922,8 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups"
+                "url": "{{managementApiUrl}}/v1/reward-groups",
+                "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`\r\n\r\n#### Reward Group Model\r\n\r\nProperty | Type | Mandatory | Description\r\n-|-|-|-\r\n`rewardGroupId` | guid | Yes | Auto generated upon creation.\r\n`name` | string | Yes | A unique name for this Reward Group.\r\n`rewards` | Array of [Reward Item Models](#reward-item-model) | Yes | An array of Reward Items representing the Rewards available in this Reward Group.\r\n\r\n\r\n#### Reward Item Model\r\n```json\r\n{\r\n  \"rewardId\": \"\",\r\n  \"enabled\": true\r\n}\r\n```\r\n\r\nProperty | Type | Mandatory | Description\r\n-|-|-|-\r\n`rewardId` | string | Yes | A Reward Id from the Rewards Catalog.\r\n`enabled` | boolean | Yes | Toggles if the reward is available in the reward group."
               },
               "response": [
                 {
