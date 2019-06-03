@@ -2140,7 +2140,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect"
+                "url": "{{managementApiUrl}}/v1/schemes/collect",
+                "description": "#### Description \n\nGet all Collect Schemes.\n\n#### Role required\n\n`t.sch.r`"
               },
               "response": [
                 {
@@ -2182,7 +2183,8 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/published",
+                "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the scheme to get."
               },
               "response": [
                 {
@@ -2234,7 +2236,8 @@
                   "mode": "raw",
                   "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/schemes/collect"
+                "url": "{{managementApiUrl}}/v1/schemes/collect",
+                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
               },
               "response": [
                 {
