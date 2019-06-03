@@ -1978,7 +1978,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups/{{voucher-group-id}}"
+                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
               },
               "response": [
                 {
