@@ -1922,12 +1922,12 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/voucher-groups"
+                "url": "{{managementApiUrl}}/v1/reward-groups"
               },
               "response": [
                 {
                   "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
-                  "name": "Add a Voucher Group",
+                  "name": "Add a Reward Group",
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
