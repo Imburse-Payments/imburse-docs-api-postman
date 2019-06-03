@@ -373,34 +373,6 @@
       "name": "Management API Reference",
       "item": [
         {
-          "name": "Accounts and Tenants",
-          "item": [],
-          "_postman_id": "c7a00e71-a093-41c7-a084-5bfbafb0fd00",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "f254ad29-49ef-47df-9dac-6a5e8644ebb3",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "6d9d08e4-674c-4145-a716-97057dca1901",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "Tenants",
           "item": [
             {
