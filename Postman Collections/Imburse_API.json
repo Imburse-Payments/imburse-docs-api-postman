@@ -1544,7 +1544,13 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
                 "url": "{{managementApiUrl}}/v1/apps/installed"
               },
               "response": [
@@ -1553,7 +1559,13 @@
                   "name": "Get installed Apps ",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}/v1/apps/installed"
                   },
                   "status": "OK",
@@ -1562,7 +1574,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n\t\"apps\": [ \"\" ]\n}"
+                  "body": "{\n    \"apps\": [\n        \"BRAINTREE_SDK\",\n        \"TANGOCARD_RAAS\"\n    ]\n}"
                 }
               ]
             },
