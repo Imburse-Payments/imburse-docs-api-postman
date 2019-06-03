@@ -1451,7 +1451,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"apps\": [\n        {\n            \"developerId\": \"\",\n            \"developerName\": \"\",\n            \"appId\": \"\",\n            \"name\": \"\"\n        }\n    ]\n}"
+                  "body": "{\n    \"apps\": [\n        {\n            \"developerId\": \"IMBURSE\",\n            \"developerName\": \"Imburse\",\n            \"appId\": \"BRAINTREE_SDK\",\n            \"name\": \"Braintree SDK\"\n        },\n        {\n            \"developerId\": \"IMBURSE\",\n            \"developerName\": \"Imburse\",\n            \"appId\": \"TANGOCARD_RAAS\",\n            \"name\": \"Tango Card RaaS\"\n        }\n    ]\n}"
                 }
               ]
             },
@@ -1494,7 +1494,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"developerId\": \"\",\n    \"developerName\": \"\",\n    \"appId\": \"\",\n    \"name\": \"\"\n}"
+                  "body": "{\n    \"developerId\": \"IMBURSE\",\n    \"developerName\": \"Imburse\",\n    \"appId\": \"BRAINTREE_SDK\",\n    \"name\": \"Braintree SDK\"\n}"
                 }
               ]
             },
@@ -1507,7 +1507,8 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}/install"
+                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}/install",
+                "description": "#### Description\n\nInstall an App\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to install."
               },
               "response": [
                 {
@@ -2393,7 +2394,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                      "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                     },
                     "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
                   },
@@ -2446,7 +2447,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
                 }
               ]
             },
@@ -2487,7 +2488,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
                 }
               ]
             },
@@ -2530,7 +2531,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
                 }
               ]
             },
