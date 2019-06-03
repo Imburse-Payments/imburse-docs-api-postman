@@ -2107,6 +2107,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Get Published Draft for Collect Scheme",
+              "_postman_id": "0fa5c054-21f1-4bfc-97cc-05416c6be174",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
