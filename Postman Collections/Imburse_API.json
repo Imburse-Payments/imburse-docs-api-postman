@@ -1911,6 +1911,175 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": "Reward Groups",
+          "item": [
+            {
+              "name": "Add a Reward Group",
+              "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/reward-groups"
+              },
+              "response": [
+                {
+                  "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
+                  "name": "Add a Reward Group",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/reward-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get all Reward Groups",
+              "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/reward-groups"
+              },
+              "response": [
+                {
+                  "id": "00a7dfa1-0314-46ea-91fc-1fa02ee4b7ed",
+                  "name": "Get all Reward Groups",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/reward-groups"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Get a Reward Group",
+              "_postman_id": "c61ba6d2-f871-4d09-ad4a-f199b4abaae3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
+                  "name": "Get a Reward Group",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Update a Reward Group",
+              "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "56df0bbf-3d7a-49bc-9bcb-86c1e5cdfc06",
+                  "name": "Update a Reward Group",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete a Reward Group",
+              "_postman_id": "2eb2febf-29b0-4ce8-ba8a-d2f8ebbf92f7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+              },
+              "response": [
+                {
+                  "id": "f5d8124f-810f-4f09-9c4a-35fdb32ecb1e",
+                  "name": "Delete a Reward Group",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            }
+          ],
+          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "c5ef8f11-4101-4d3d-9a69-811a261e0cb7",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "20827dcf-380e-4a13-afb3-b9247b9a3882",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Collection Schemes",
           "item": [
             {
@@ -2180,467 +2349,6 @@
           ],
           "_postman_id": "8ad29eec-f6ef-4c78-ad91-d57dba5f3843",
           "description": "\r\nCollection Scheme objects allow you to perform updates to your payment scheme collection settings. The API allows you to create new schemes, and add or update scheme country settings. You can retrieve individual schemes as well as a list of all your schemes for a given client.\r\n\r\n## The collection scheme object\r\n\r\nThe collection scheme object holds details about a collection scheme, and is the parent to one or many scheme settings.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\nname | string | The scheme name \r\nschemeSettings | array | An array of `SchemeSetting` objects \r\n\r\n## The scheme setting object\r\n\r\nThe scheme settings object holds details that concern individual countries' available payment methods. \r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the object\r\ncountry | string | The country code this scheme setting will apply to\r\npaymentMethods | array | An array of `PaymentMethod` objects \r\n\r\n## The payment method object\r\n\r\nThe payment method object holds details that concern a particular payment method's availablilty.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\npspId | guid | The unique identifier of the PSP (Payment Service Provider) providing services to the payment method\r\npaymentMethodType | string | The name of the payment payment. ie. `visa-debit`, `paypal`, etc.\r\nenabled | bool | Boolean value that determines if this payment method is currently enabled. \r\nkey | string | A composite value of `pspId` and `paymentMethodType`\r\n",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Payout Schemes",
-          "item": [
-            {
-              "name": "Create a Scheme",
-              "_postman_id": "f37f0abb-065a-4904-848c-95dd716b36ee",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"\",\n            \"defaultCurrency\": \"\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
-                },
-                "url": "{{managementApiUrl}}/v1/schemes/payout",
-                "description": "#### Description \n\nCreates a new payout scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Request object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
-              },
-              "response": [
-                {
-                  "id": "bddcd0fe-28fb-417f-b736-941da7fedd8d",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/schemes/payout"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"\",\n            \"defaultCurrency\": \"\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get List of Schemes",
-              "_postman_id": "a6ec64f2-ea18-4872-a35e-058fb9fd9878",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/schemes/payout",
-                "description": "#### Description \n\nGet a list to payout schemes.\n\n#### Role required\n\n`t.sch.r`"
-              },
-              "response": [
-                {
-                  "id": "cc23e532-4f07-4ea8-bea9-f517602a9e3c",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Hmac {{management-token}}"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/schemes/payout"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\r\n\t{ \r\n\t\t\"id\": \"\",\r\n\t\t\"name\": \"\",\r\n\t\t\"currencies\": [],\r\n\t\t\"rewardProviders\": [],\r\n\t\t\"rewards\": [\r\n\t\t\t{\r\n\t\t\t\t\"currency\": \"\",\r\n\t\t\t\t\"countryRewards\": [\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n]"
-                }
-              ]
-            },
-            {
-              "name": "Get a Scheme",
-              "_postman_id": "286b1557-3959-4d09-8a18-227b2268da46",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
-                "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
-                "description": "#### Description \n\nGet a collection scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to get"
-              },
-              "response": [
-                {
-                  "id": "ca089b62-52a4-46b4-9b90-ecd1c0d4accb",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{ \r\n\t\"id\": \"\",\r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t    \"brand\": {\r\n\t\t\t\t\t\t        \"brandKey\": \"\",\r\n\t\t\t\t\t\t        \"brandName\": \"\",\r\n\t\t\t\t\t\t        \"createdDate\": \"\",\r\n\t\t\t\t\t\t        \"description\": \"\",\r\n\t\t\t\t\t\t        \"disclaimer\": \"\",\r\n\t\t\t\t\t\t        \"imageUrls\": [\r\n\t\t\t\t\t\t            {\r\n\t\t\t\t\t\t                \"ppi\": 326,\r\n\t\t\t\t\t\t                \"ratioHeight\": 5,\r\n\t\t\t\t\t\t                \"ratioWidth\": 8,\r\n\t\t\t\t\t\t                \"url\": \"\",\r\n\t\t\t\t\t\t                \"width\": 80\r\n\t\t\t\t\t\t            }\r\n\t\t\t\t\t\t        ],\r\n\t\t\t\t\t\t        \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t        \"requirements\": {\r\n\t\t\t\t\t\t            \"alwaysShowDisclaimer\": false,\r\n\t\t\t\t\t\t            \"disclaimerInstructions\": \"\",\r\n\t\t\t\t\t\t            \"displayInstructions\": \"\",\r\n\t\t\t\t\t\t            \"termsAndConditionsInstructions\": \"\"\r\n\t\t\t\t\t\t        },\r\n\t\t\t\t\t\t        \"shortDescription\": \"\",\r\n\t\t\t\t\t\t        \"status\": \"\",\r\n\t\t\t\t\t\t        \"terms\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"countries\": [],\r\n\t\t\t\t\t\t    \"createdDate\": \"\",\r\n\t\t\t\t\t\t    \"credentialTypes\": [],\r\n\t\t\t\t\t\t    \"currencyCode\": \"\",\r\n\t\t\t\t\t\t    \"exchangeRateRule\": \"\",\r\n\t\t\t\t\t\t    \"isWholeAmountValueRequired\": false,\r\n\t\t\t\t\t\t    \"lastUpdateDate\": \"\",\r\n\t\t\t\t\t\t    \"provider\": {\r\n\t\t\t\t\t\t        \"id\": \"\",\r\n\t\t\t\t\t\t        \"name\": \"\"\r\n\t\t\t\t\t\t    },\r\n\t\t\t\t\t\t    \"redemptionInstructions\": \"\",\r\n\t\t\t\t\t\t    \"rewardId\": \"\",\r\n\t\t\t\t\t\t    \"providerRewardId\": \"\",\r\n\t\t\t\t\t\t    \"rewardName\": \"\",\r\n\t\t\t\t\t\t    \"rewardType\": \"\",\r\n\t\t\t\t\t\t    \"status\": \"\",\r\n\t\t\t\t\t\t    \"tags\": [],\r\n\t\t\t\t\t\t    \"minValue\": 0.00,\r\n\t\t\t\t\t\t    \"maxValue\": 0.00,\r\n\t\t\t\t\t\t    \"valueType\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                }
-              ]
-            },
-            {
-              "name": "Update a Scheme",
-              "_postman_id": "1478d3ee-5421-4f6c-8304-db371163e870",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "PUT",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
-                },
-                "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
-                "description": "#### Description \n\nUpdates a scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to be updated\n\n\n#### Request Object\n\nName | Required | Type | Description\n-|-|-|-\nname | Yes | string | The scheme name \ncurrencies | Yes | string array | An array of `currency` codes this scheme supports\nrewardProviders | No | guid array | An array of reward provider configuration ids linked to this scheme\nrewards | No | [Reward Configuration](#the-reward-configuration-object) array | Defines the rewards for this scheme"
-              },
-              "response": [
-                {
-                  "id": "eeb75375-25cd-4b52-b855-8eefbe51476b",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{ \r\n\t\"name\": \"\",\r\n\t\"currencies\": [],\r\n\t\"rewardProviders\": [],\r\n\t\"rewards\": [\r\n\t\t{\r\n\t\t\t\"currency\": \"\",\r\n\t\t\t\"generalRewards\": [],\r\n\t\t\t\"countryRewards\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"country\": \"\",\r\n\t\t\t\t\t\"rewards\": []\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
-                    },
-                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n\t\"id\": \"\",\n    \"name\": \"\",\n    \"providers\": [],\n    \"countrySettings\": [\n        {\n            \"country\": \"GB\",\n            \"defaultCurrency\": \"GBP\",\n            \"rewardSettings\": {\n                \"rewardIds\": []\n            }\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Delete a Scheme",
-              "_postman_id": "81d05a45-db3a-4517-b351-884ad29c64b8",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
-                "url": "{{managementApiUrl}}/v1/schemes/payout/{{id}}",
-                "description": "#### Description \n\nDeletes a collection scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the scheme to delete"
-              },
-              "response": [
-                {
-                  "id": "342f2685-1982-49f3-82d6-faa5ca14e8f4",
-                  "name": "Sucessful Request",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": ""
-                    },
-                    "url": "{{managementApiUrl}}/v1/schemes/payout/{{schemeId}}"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": "json",
-                  "header": [],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": ""
-                }
-              ]
-            }
-          ],
-          "_postman_id": "57551b22-20a1-4c0a-874c-9243c4a9eb10",
-          "description": "Payout Scheme objects are where you define the payout options for your various applications. We group these together into a payout scheme.\r\n\r\n## The Payout Scheme object\r\n\r\nThe payout scheme object holds details about a payout scheme.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\nid | guid | The unique identifier of the scheme\r\nname | string | The scheme name \r\ncurrencies | string array | An array of `currency` codes this scheme supports\r\nrewardProviders | guid array | An array of reward provider configuration ids linked to this scheme\r\nrewards | reward array | An array of [Reward Configuration](#the-reward-configuration-object) objects defining the rewards for this scheme \r\n\r\n## The Reward Configuration object\r\n\r\nThe reward configuration object holds details of the rewards available for a specific currency.\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncurrency | string | The `currency` code the rewards applies to\r\ncountryRewards | country reward array | An array of [Country Reward](#the-country-reward-object) objects\r\n\r\n## The Country Reward object\r\n\r\nThe country reward object holds details of the rewards available for a single country\r\n\r\nAttribute | Type | Description\r\n-|-|-\r\ncountry | string | The `country` code the rewards apply to\r\nrewards | guid array | An array of reward ids that apply to this country\r\n\r\n",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "63085b5b-7027-4e15-95aa-185f185ced79",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "b09366f8-89a3-464b-b986-774493cacf0a",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": "Reward Groups",
-          "item": [
-            {
-              "name": "Add a Reward Group",
-              "_postman_id": "b982e1d4-0b56-4df0-822f-370fb039bb8c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups"
-              },
-              "response": [
-                {
-                  "id": "250dbe20-df49-4a2f-b650-498a640b6e20",
-                  "name": "Add a Reward Group",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/reward-groups"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Get all Reward Groups",
-              "_postman_id": "b448dc89-b259-43f5-9fec-e44d6919de26",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups"
-              },
-              "response": [
-                {
-                  "id": "00a7dfa1-0314-46ea-91fc-1fa02ee4b7ed",
-                  "name": "Get all Reward Groups",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/reward-groups"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Get a Reward Group",
-              "_postman_id": "c61ba6d2-f871-4d09-ad4a-f199b4abaae3",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "afd3cb1a-4dd8-431a-aa5e-2e6a76e12cfc",
-                  "name": "Get a Reward Group",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Update a Reward Group",
-              "_postman_id": "bff914fd-039d-47b2-85c4-c227cb711a0f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "PUT",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "56df0bbf-3d7a-49bc-9bcb-86c1e5cdfc06",
-                  "name": "Update a Reward Group",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
-              "name": "Delete a Reward Group",
-              "_postman_id": "2eb2febf-29b0-4ce8-ba8a-d2f8ebbf92f7",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-              },
-              "response": [
-                {
-                  "id": "f5d8124f-810f-4f09-9c4a-35fdb32ecb1e",
-                  "name": "Delete a Reward Group",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
-                  },
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            }
-          ],
-          "_postman_id": "f88d2826-5b6c-4319-88fa-2769483b15ba",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "c5ef8f11-4101-4d3d-9a69-811a261e0cb7",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "20827dcf-380e-4a13-afb3-b9247b9a3882",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
           "_postman_isSubFolder": true
         },
         {
