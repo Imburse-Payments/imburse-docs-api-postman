@@ -2244,7 +2244,13 @@
                   "name": "Get a Draft",
                   "originalRequest": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
                     "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
                   },
                   "status": "OK",
@@ -2291,8 +2297,14 @@
               },
               "request": {
                 "method": "DELETE",
-                "header": [],
-                "url": ""
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
               },
               "response": []
             }
