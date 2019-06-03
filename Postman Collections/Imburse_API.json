@@ -2183,7 +2183,30 @@
                 ],
                 "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "e520088a-101a-44c5-84ac-ed3cf8a8a858",
+                  "name": "Get the Published Draft",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                }
+              ]
             },
             {
               "name": "Create a Scheme",
@@ -2207,7 +2230,7 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
               },
               "response": []
             },
