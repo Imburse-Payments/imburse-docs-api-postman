@@ -2233,7 +2233,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
                 },
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/schemes/collect"
               },
               "response": []
             },
