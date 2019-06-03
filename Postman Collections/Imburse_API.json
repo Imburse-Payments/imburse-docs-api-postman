@@ -2133,6 +2133,32 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Get a Draft for a Collect Scheme",
+              "_postman_id": "24b85fd4-9227-47f8-835f-eaba0f5c7ea0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
+            },
+            {
+              "name": "Create a Draft for a Collect Scheme",
+              "_postman_id": "0b58110b-7c73-498f-8b71-539b0b77a4d4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
