@@ -2075,18 +2075,8 @@
                     "key": "Authorization",
                     "value": "Bearer {{management-token}}",
                     "type": "text"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
-                },
                 "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
               },
               "response": [
