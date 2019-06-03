@@ -2094,6 +2094,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Get all Collect Schemes",
+              "_postman_id": "1b6e3f4f-569a-43e2-bd13-258e4f57effb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
