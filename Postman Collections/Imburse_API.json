@@ -2159,6 +2159,19 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "name": "Publish a Draft",
+              "_postman_id": "8d3c0bcb-feb5-4c37-ab7e-96082fed40e7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_id": "196bd856-0caa-4bbb-8f64-814d3bd0d885",
