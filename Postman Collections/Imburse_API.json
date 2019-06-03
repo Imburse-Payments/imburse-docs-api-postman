@@ -2162,7 +2162,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n    {\n        \"schemeId\": \"\",\n        \"publishedDraftId\": null,\n        \"drafts\": [\n            {\n                \"draftId\": \"\",\n                \"name\": \"\",\n                \"code\": \"\",\n                \"rules\": [\n                    {\n                        \"priority\": 0,\n                        \"currencies\": [\n                            \"\"\n                        ],\n                        \"countries\": [\n                            \"\"\n                        ],\n                        \"highValueInclusive\": null,\n                        \"lowValueInclusive\": null,\n                        \"apps\": [\n                            {\n                                \"priority\": 0,\n                                \"appId\": \"\",\n                                \"availablePaymentMethods\": [],\n                                \"excludedPaymentMethods\": []\n                            }\n                        ]\n                    }\n                ],\n                \"lastModified\": \"\"\n            }\n        ]\n    }\n]"
+                  "body": "[\n    {\n        \"schemeId\": \"\",\n        \"publishedDraftId\": null,\n        \"drafts\": [\n            {\n                \"draftId\": \"\",\n                \"name\": \"\",\n                \"code\": \"\",\n                \"rules\": [\n                    {\n                        \"currencies\": [\n                            \"\"\n                        ],\n                        \"countries\": [\n                            \"\"\n                        ],\n                        \"highValueInclusive\": null,\n                        \"lowValueInclusive\": null,\n                        \"apps\": [\n                            {\n                                \"appId\": \"\",\n                                \"availablePaymentMethods\": [],\n                                \"excludedPaymentMethods\": []\n                            }\n                        ]\n                    }\n                ],\n                \"lastModified\": \"\"\n            }\n        ]\n    }\n]"
                 }
               ]
             },
@@ -2204,7 +2204,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
                 }
               ]
             },
@@ -2231,11 +2231,44 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{managementApiUrl}}/v1/schemes/collect"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "1ac6eb31-22f4-423a-b14b-872d8cb80494",
+                  "name": "Create a Scheme",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ]\n}"
+                    },
+                    "url": "{{managementApiUrl}}/v1/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"\",\n            \"name\": \"\",\n            \"code\": \"\",\n            \"rules\": [\n                {\n                    \"priority\": 0,\n                    \"currencies\": [\n                        \"\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": null,\n                    \"lowValueInclusive\": null,\n                    \"apps\": [\n                        {\n                            \"priority\": 0,\n                            \"appId\": \"\",\n                            \"availablePaymentMethods\": [],\n                            \"excludedPaymentMethods\": []\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"\"\n        }\n    ]\n}"
+                }
+              ]
             },
             {
               "name": "Get a Draft",
@@ -2275,7 +2308,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"priority\": 0,\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"priority\": 0,\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
+                  "body": "{\n    \"draftId\": \"\",\n    \"name\": \"\",\n    \"code\": \"\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": null,\n            \"lowValueInclusive\": null,\n            \"apps\": [\n                {\n                    \"appId\": \"\",\n                    \"availablePaymentMethods\": [],\n                    \"excludedPaymentMethods\": []\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"\"\n}"
                 }
               ]
             },
@@ -2288,7 +2321,7 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": ""
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}"
               },
               "response": []
             },
