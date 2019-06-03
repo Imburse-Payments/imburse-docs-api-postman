@@ -2389,7 +2389,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                "url": "{{managementApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
               },
               "response": []
             },
