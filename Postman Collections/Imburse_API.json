@@ -3336,7 +3336,7 @@
                 "type": "text"
               }
             ],
-            "url": "{{transactionsApiUrl}}/v1/payout/options",
+            "url": "{{transactionsApiUrl}}/v1/reward/options",
             "description": "Gets the payout options.\n\n\n## Response object\n\nName | Type | Description\n-|-|-\nrewards | [Reward](#the-reward-object) object array | An array of reward objects\n\n\n## The Reward object\nName | Type | Description\n-|-|-\nbrand | [Brand](#the-brand-object) object | The brand object\ncountries | string array | An array of country codes this reward is setup for\ncreatedDate | date time | Date created\ncredentialTypes | - |\ncurrencyCode | string | The currency code of this reward\nexchangeRateRule | - | \nisWholeAmountValueRequired | bool |\nlastUpdateDate | date time | Date updated\nprovider | [Reward Provider](#the-reward-provider-object) object | The reward provider for this reward. For example, Tangocard\nredemptionInstructions | string | Redemtion instructions\nrewardId | guid | The unique reward id\nrewardName | string | The name of the reward\nrewardType | - | - \nstatus | - | - \ntags | string | Not currently used\nvalue | [Reward Value](#the-reward-value-object) | The value of the reward\nvalueType | - | - \n\n\n## The Brand object\nName | Type | Description\n-|-|-\nbrandKey | string | The brand key\nbrandName | string | The brand name\ncreatedDate | date time | Date created\ndescription | string | Brand description\ndisclaimer | string | Brand disclaimer\nimageUrls | [Image Url](#the-image-url-object) array | Brand Images in various sizes\nlastUpdateDate | date time | Date last updated\nrequirements | [Reward Requirements](#the-reward-requirements-object) | Brand requirements\nshortDescription | string | Brandh short description\nstatus | string | -\nterms | string | Brand terms and conditions\n\n\n## The Image Url object\nName | Type | Description\n-|-|-\nppi | int | The Pixels Per Inch of the image\nratioHeight | int | The height ratio factor\nratioWidth | int | The width ratio factor\nurl | string | The url for the image\nwidth | int | The pixel width of the image\n\n\n## The Reward Requirements object\nName | Type | Description\n-|-|-\nalwaysShowDisclaimer | bool | Should the disclaimer always be shown\ndisclaimerInstructions | string  The disclaimer instructions\ndisplayInstructions | bool | The instructions to display to the end user\ntermsAndConditionsInstructions | string | The terms and conditions instructions\n\n\n## The Reward Value object\nName | Type | Description\n-|-|-\ngreaterThan | int | - \ngreaterThanOrEqualTo | int | -\nlessThan | int | - \nlessThanOrEqualTo | int | -"
           },
           "response": [
@@ -3352,7 +3352,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{transactionsApiUrl}}/v1/payout/options"
+                "url": "{{transactionsApiUrl}}/v1/reward/options"
               },
               "_postman_previewlanguage": "json",
               "header": null,
@@ -3377,7 +3377,7 @@
                 "value": "Bearer  {{payout-token}}"
               }
             ],
-            "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}",
+            "url": "{{transactionsApiUrl}}/v1/transaction/reward/{{id}}",
             "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
           },
           "response": [
