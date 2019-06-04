@@ -1745,7 +1745,27 @@
                   "mode": "raw",
                   "raw": "{\n    \"rewardIds\": [\n        \"ffdae9c9-1bfd-55d3-f6cc-9b1de1874241\"\n    ]\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/catalog/rewards",
+                "url": {
+                  "raw": "{{managementApiUrl}}/v1/catalog/rewards?id={{reward-id-1}}&id={{reward-id-2}}",
+                  "host": [
+                    "{{managementApiUrl}}"
+                  ],
+                  "path": [
+                    "v1",
+                    "catalog",
+                    "rewards"
+                  ],
+                  "query": [
+                    {
+                      "key": "id",
+                      "value": "{{reward-id-1}}"
+                    },
+                    {
+                      "key": "id",
+                      "value": "{{reward-id-2}}"
+                    }
+                  ]
+                },
                 "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's\n\n#### Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
               },
               "response": [
