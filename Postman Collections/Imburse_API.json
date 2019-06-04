@@ -3131,8 +3131,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "The following endpoint will return the current state of an instruction.\n\nInstructions must be created before they can be queried.\n\nThe instruction is identified by a `customerRef`, an `orderRef` and an `instructionRef`. These values are provided from your own system to ours.\n\nAn `instructionRef` needs to be unique to the order but does not need to be globally unique."
               },
               "response": []
