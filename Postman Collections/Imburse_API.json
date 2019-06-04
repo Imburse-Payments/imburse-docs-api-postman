@@ -1727,7 +1727,7 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "POST",
+                "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
@@ -1791,7 +1791,23 @@
                       "mode": "raw",
                       "raw": "{\n    \"rewardIds\": [\n        \"ffdae9c9-1bfd-55d3-f6cc-9b1de1874241\"\n    ]\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/catalog/rewards"
+                    "url": {
+                      "raw": "{{managementApiUrl}}/v1/catalog/rewards?id=ffdae9c9-1bfd-55d3-f6cc-9b1de1874241",
+                      "host": [
+                        "{{managementApiUrl}}"
+                      ],
+                      "path": [
+                        "v1",
+                        "catalog",
+                        "rewards"
+                      ],
+                      "query": [
+                        {
+                          "key": "id",
+                          "value": "ffdae9c9-1bfd-55d3-f6cc-9b1de1874241"
+                        }
+                      ]
+                    }
                   },
                   "status": "OK",
                   "code": 200,
