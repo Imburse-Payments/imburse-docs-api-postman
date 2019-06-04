@@ -3062,8 +3062,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}",
                 "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
               },
               "response": []
