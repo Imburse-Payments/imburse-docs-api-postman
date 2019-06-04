@@ -3082,8 +3082,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/audit-history",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of customer events."
               },
               "response": []
