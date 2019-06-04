@@ -2960,7 +2960,7 @@
           "_postman_isSubFolder": true
         },
         {
-          "name": "Payment Payout",
+          "name": "Transactions",
           "item": [
             {
               "name": "Create Order",
