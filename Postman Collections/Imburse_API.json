@@ -2999,8 +2999,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}",
                 "description": "The following endpoint will return the current state of an order.\n\nOrders must be created before they can be queried.\n\nThe order is identified by both a `customerRef` and an `orderRef`. Both of these values are provided from your own system to ours.\n\nAn `orderRef` needs to be unique to the customer but does not need to be globally unique."
               },
               "response": [
