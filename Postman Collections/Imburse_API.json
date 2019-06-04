@@ -1743,7 +1743,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"rewardIds\": [\n        \"ffdae9c9-1bfd-55d3-f6cc-9b1de1874241\"\n    ]\n}"
+                  "raw": ""
                 },
                 "url": {
                   "raw": "{{managementApiUrl}}/v1/catalog/rewards?id={{reward-id-1}}&id={{reward-id-2}}",
@@ -1773,7 +1773,7 @@
                   "id": "6655c8f7-bcfd-4935-83cd-1df70a17ca0c",
                   "name": "Get a list of Rewards by Ids",
                   "originalRequest": {
-                    "method": "POST",
+                    "method": "GET",
                     "header": [
                       {
                         "key": "Authorization",
@@ -1787,10 +1787,6 @@
                         "value": "application/json"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"rewardIds\": [\n        \"ffdae9c9-1bfd-55d3-f6cc-9b1de1874241\"\n    ]\n}"
-                    },
                     "url": {
                       "raw": "{{managementApiUrl}}/v1/catalog/rewards?id=ffdae9c9-1bfd-55d3-f6cc-9b1de1874241",
                       "host": [
