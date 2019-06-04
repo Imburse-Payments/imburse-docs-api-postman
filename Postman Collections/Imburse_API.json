@@ -3022,7 +3022,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}"
+                    "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3042,8 +3042,14 @@
               },
               "request": {
                 "method": "GET",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/payout/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of order events."
               },
               "response": []
