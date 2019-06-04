@@ -1850,7 +1850,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{managementApiUrl}}/v1/catalog?providerId={{providerId}}&brandName={{brandName}}&countries={{countries}}&currencies={{currencies}}&tags={{tags}}&amount={{amount}}",
+                  "raw": "{{managementApiUrl}}/v1/catalog?appId={{appId}}&brandName={{brandName}}&country={{country}}&currencies={{currency}}&amount={{amount}}",
                   "host": [
                     "{{managementApiUrl}}"
                   ],
@@ -1860,9 +1860,8 @@
                   ],
                   "query": [
                     {
-                      "key": "providerId",
-                      "value": "{{providerId}}",
-                      "description": "The Id of the Provider to filter on. ie. TANGOCARD"
+                      "key": "appId",
+                      "value": "{{appId}}"
                     },
                     {
                       "key": "brandName",
@@ -1870,19 +1869,13 @@
                       "description": "The brand name to search for."
                     },
                     {
-                      "key": "countries",
-                      "value": "{{countries}}",
-                      "description": "A comma seperated string of the countries to search for."
+                      "key": "country",
+                      "value": "{{country}}"
                     },
                     {
                       "key": "currencies",
-                      "value": "{{currencies}}",
+                      "value": "{{currency}}",
                       "description": "A comma seperated string of the currencies to search for."
-                    },
-                    {
-                      "key": "tags",
-                      "value": "{{tags}}",
-                      "description": "Not currently used."
                     },
                     {
                       "key": "amount",
@@ -3393,7 +3386,7 @@
                     "value": "Bearer {{payout-token}}"
                   }
                 ],
-                "url": "{{transactionsApiUrl}}/v1/payout/reward/{{id}}"
+                "url": "{{transactionsApiUrl}}/v1/transaction/reward/{{id}}"
               },
               "_postman_previewlanguage": "json",
               "header": null,
