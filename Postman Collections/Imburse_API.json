@@ -304,7 +304,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/account"
+                        "url": "{{baseApiUrl}}/v1/account"
                       },
                       "_postman_previewlanguage": "json",
                       "header": null,
@@ -367,7 +367,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"roles\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/account/keys",
+                    "url": "{{baseApiUrl}}/v1/account/keys",
                     "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
                   },
                   "response": [
