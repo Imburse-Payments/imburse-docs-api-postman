@@ -1563,7 +1563,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configuration"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1600,7 +1600,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configure",
+                "url": "{{baseApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configuration",
                 "description": "#### Description\n\nConfigure the Tango Card RaaS App.\n\n#### Role required\n\n`t.psp.a`"
               },
               "response": [
@@ -1626,7 +1626,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configure"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configuration"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1671,9 +1671,9 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{managementApiUrl}}/v1/catalog/rewards?id={{reward-id-1}}&id={{reward-id-2}}",
+                  "raw": "{{baseApiUrl}}/v1/catalog/rewards?id={{reward-id-1}}&id={{reward-id-2}}",
                   "host": [
-                    "{{managementApiUrl}}"
+                    "{{baseApiUrl}}"
                   ],
                   "path": [
                     "v1",
@@ -1713,9 +1713,9 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{managementApiUrl}}/v1/catalog/rewards?id=ffdae9c9-1bfd-55d3-f6cc-9b1de1874241",
+                      "raw": "{{baseApiUrl}}/v1/catalog/rewards?id=ffdae9c9-1bfd-55d3-f6cc-9b1de1874241",
                       "host": [
-                        "{{managementApiUrl}}"
+                        "{{baseApiUrl}}"
                       ],
                       "path": [
                         "v1",
@@ -1757,9 +1757,9 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{managementApiUrl}}/v1/catalog?appId={{appId}}&brandName={{brandName}}&country={{country}}&currencies={{currency}}&amount={{amount}}",
+                  "raw": "{{baseApiUrl}}/v1/catalog?appId={{appId}}&brandName={{brandName}}&country={{country}}&currencies={{currency}}&amount={{amount}}",
                   "host": [
-                    "{{managementApiUrl}}"
+                    "{{baseApiUrl}}"
                   ],
                   "path": [
                     "v1",
