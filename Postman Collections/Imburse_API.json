@@ -758,7 +758,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}"
+                        "url": "{{baseApiUrl}}/v1/account/tenants/{{tenantId}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -795,7 +795,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"name\": \"\",\n\t\"streetAddress\": \"\",\n\t\"extendedStreetAddress\": \"\",\n\t\"locality\": \"\",\n\t\"region\": \"\",\n\t\"postCode\": \"\",\n\t\"country\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
+                    "url": "{{baseApiUrl}}/v1/account/tenants/{{tenantId}}",
                     "description": "#### Description\n\nUpdates a tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to update\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the tenant.\naddress | No | An [address](address-object) for the tenant."
                   },
                   "response": [
