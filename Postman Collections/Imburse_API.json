@@ -3011,7 +3011,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"orderRef\": \"\",\r\n  \"currency\": \"\",\r\n  \"country\": \"\",\r\n  \"scheme\": \"\",\r\n  \"metadata\": {\r\n    \"additionalProp1\": \"\",\r\n    \"additionalProp2\": \"\",\r\n    \"additionalProp3\": \"\"\r\n  }\r\n}"
+                  "raw": "{\r\n  \"orderRef\": \"string\",\r\n  \"currency\": \"string\",\r\n  \"country\": \"string\",\r\n  \"scheme\": \"guid\",\r\n  \"metadata\": {\r\n    \"additionalProp1\": \"string\",\r\n    \"additionalProp2\": \"string\",\r\n    \"additionalProp3\": \"string\"\r\n  }\r\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order",
                 "description": "#### Description \n\nCreate an Order.\n\n#### Role required\n\n`t.po.a`"
@@ -3036,15 +3036,17 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+                      "raw": "{\r\n  \"orderRef\": \"my-customer-order-ref\",\r\n  \"currency\": \"EUR\",\r\n  \"country\": \"DE\",\r\n  \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"metadata\": {\r\n    \"my-custom-property-name\": \"some-value\",\r\n    \"another-custom-property-name\": \"some-other-value\"\r\n  }\r\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order"
                   },
-                  "_postman_previewlanguage": null,
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": null
+                  "body": "{\n    \"customerRef\": \"my-customer-order-ref\",\n    \"orderRef\": \"1\",\n    \"status\": \"OPEN\",\n    \"detail\": {\n        \"currency\": \"EUR\",\n        \"country\": \"DE\",\n        \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n        \"paymentMethodRef\": \"\"\n    },\n    \"instructions\": null\n}"
                 }
               ]
             },
