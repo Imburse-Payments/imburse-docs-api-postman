@@ -3248,7 +3248,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{transactionsApiUrl}}/v1/reward/options"
+                "url": "{{baseApiUrl}}/v1/reward/options"
               },
               "_postman_previewlanguage": "json",
               "header": null,
@@ -3273,7 +3273,7 @@
                 "value": "Bearer  {{payout-token}}"
               }
             ],
-            "url": "{{transactionsApiUrl}}/v1/transaction/reward/{{id}}",
+            "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}",
             "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process\n\n\n#### Response object\n\nName | Type | Description\n-|-|-\nexternalOrderRef | string | \namountCharged | |\ndenomination | |\nrewardId | |\nrewardName | | \nstatus | |\ncreatedAt | |\nrewardDetails | |"
           },
           "response": [
