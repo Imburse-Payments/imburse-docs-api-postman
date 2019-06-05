@@ -884,7 +884,7 @@
                           "mode": "raw",
                           "raw": "{\n\t\"roles\": []\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys"
+                        "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys"
                       },
                       "status": "OK",
                       "code": 200,
@@ -904,8 +904,14 @@
                   },
                   "request": {
                     "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys",
                     "description": "#### Description\n\nGets the keys for a specific tenant. \n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
                   },
                   "response": [
@@ -921,7 +927,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys"
+                        "url": "{{baseApiUrl}}/v1/tenant/keys"
                       },
                       "status": "OK",
                       "code": 200,
@@ -941,8 +947,14 @@
                   },
                   "request": {
                     "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
                   },
                   "response": [
@@ -958,7 +970,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
                       },
                       "status": "OK",
                       "code": 200,
@@ -985,7 +997,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
+                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
                     "description": "#### Description\n\nRemoves a spefic key set for a specific tenant by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
