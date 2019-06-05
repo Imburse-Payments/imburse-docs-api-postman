@@ -1339,7 +1339,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}v1/marketplace/apps"
+                    "url": "{{baseApiUrl}}v1/marketplace/apps"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1366,7 +1366,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}",
+                "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}",
                 "description": "#### Description\n\nGet an App.\n\n#### Role required\n\n`t.psp.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to get."
               },
               "response": [
@@ -1382,7 +1382,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}"
+                    "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1403,7 +1403,7 @@
               "request": {
                 "method": "POST",
                 "header": [],
-                "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}/install",
+                "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}/install",
                 "description": "#### Description\n\nInstall an App\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to install."
               },
               "response": [
@@ -1413,7 +1413,7 @@
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
-                    "url": "{{managementApiUrl}}/v1/marketplace/apps/{{app-id}}/install"
+                    "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}/install"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1447,7 +1447,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/apps/installed",
+                "url": "{{baseApiUrl}}/v1/apps/installed",
                 "description": "#### Description\n\nGet the installed Apps for your Tenant.\n\n#### Role required\n\n`t.psp.r`"
               },
               "response": [
