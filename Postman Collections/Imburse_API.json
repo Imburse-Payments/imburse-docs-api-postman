@@ -689,9 +689,9 @@
                           }
                         ],
                         "url": {
-                          "raw": "{{managementApiUrl}}/v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
+                          "raw": "{{baseApiUrl}}/v1/account/tenants?from={{startingIndex}}&take={{resultsToGet}}&name={{tenantName}}",
                           "host": [
-                            "{{managementApiUrl}}"
+                            "{{baseApiUrl}}"
                           ],
                           "path": [
                             "v1",
@@ -735,8 +735,14 @@
                   },
                   "request": {
                     "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/account/tenants/{{tenantId}}",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/account/tenants/{{tenantId}}",
                     "description": "#### Description\n\nGets a tenant by id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
                   },
                   "response": [
