@@ -3097,7 +3097,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}",
-                "description": "The following endpoint will return the current state of a customer.\n\nCustomers don't need to be created and as such an authorized API user can query non-existent customers.\n\nThe customer is identified by a `customerRef` - A value provided from your own system to ours."
+                "description": "#### Description \n\nGet a Customer.\n\n#### Role required\n\n`t.po.r`"
               },
               "response": []
             },
