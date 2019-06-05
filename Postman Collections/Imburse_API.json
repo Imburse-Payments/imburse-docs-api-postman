@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "ac65d3ee-04c9-47c8-9319-f7efca0d9cc5",
     "name": "Imburse API",
-    "description": "# Imburse API \r\nWelcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\n\r\n# Endpoints\r\n\r\nThe API urls in the documentation refer to a **{{baseApiUrl}}**. \r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n\r\n- Production API endpoint: **https://api.imbursepayments.com**",
+    "description": "# Imburse API \r\nWelcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\n\r\n# Endpoints\r\nThe API urls in the documentation refer to a **{{baseApiUrl}}**. \r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n- Production API endpoint: **https://api.imbursepayments.com**",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -2261,7 +2261,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2367,7 +2367,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2410,7 +2410,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft/19a659fa-0768-4739-a374-ea05480aba7a"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2453,7 +2453,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft/19a659fa-0768-4739-a374-ea05480aba7a/publish"
                   },
                   "_postman_previewlanguage": "json",
                   "header": null,
@@ -2494,7 +2494,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/published"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2537,7 +2537,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
                   },
                   "status": "No Content",
                   "code": 204,
@@ -2672,7 +2672,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2778,7 +2778,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2821,7 +2821,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft/19a659fa-0768-4739-a374-ea05480aba7a"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2864,7 +2864,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}/publish"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679/draft/19a659fa-0768-4739-a374-ea05480aba7a/publish"
                   },
                   "_postman_previewlanguage": "json",
                   "header": null,
@@ -2905,7 +2905,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/published"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679/published"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2948,7 +2948,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
                   },
                   "status": "No Content",
                   "code": 204,
