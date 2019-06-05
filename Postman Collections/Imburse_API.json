@@ -2022,7 +2022,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                    "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2059,7 +2059,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}",
+                "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}",
                 "description": "#### Description \r\n\r\nUpdate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
               },
               "response": [
