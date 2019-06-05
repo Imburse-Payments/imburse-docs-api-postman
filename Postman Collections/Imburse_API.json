@@ -1263,7 +1263,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -1323,7 +1323,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}v1/marketplace/apps",
+                "url": "{{baseApiUrl}}v1/marketplace/apps",
                 "description": "#### Description\n\nGets a list of all Apps.\n\n#### Role required\n\n`t.psp.r`"
               },
               "response": [
