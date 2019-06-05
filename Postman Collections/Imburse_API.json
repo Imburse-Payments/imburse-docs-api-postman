@@ -1910,7 +1910,7 @@
                   "mode": "raw",
                   "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"dummy-amazon-reward-id\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                 },
-                "url": "{{managementApiUrl}}/v1/reward-groups",
+                "url": "{{baseApiUrl}}/v1/reward-groups",
                 "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
               },
               "response": [
@@ -1936,7 +1936,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"dummy-amazon-reward-id\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                     },
-                    "url": "{{managementApiUrl}}/v1/reward-groups"
+                    "url": "{{baseApiUrl}}/v1/reward-groups"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1963,7 +1963,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/reward-groups",
+                "url": "{{baseApiUrl}}/v1/reward-groups",
                 "description": "#### Description \r\n\r\nGet all Reward Groups.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
               },
               "response": [
@@ -1979,7 +1979,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/reward-groups"
+                    "url": "{{baseApiUrl}}/v1/reward-groups"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2006,7 +2006,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/reward-groups/{{reward-group-id}}",
+                "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}",
                 "description": "#### Description \r\n\r\nGet a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
               },
               "response": [
@@ -3289,7 +3289,7 @@
                     "value": "Bearer {{payout-token}}"
                   }
                 ],
-                "url": "{{transactionsApiUrl}}/v1/transaction/reward/{{id}}"
+                "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}"
               },
               "_postman_previewlanguage": "json",
               "header": null,
