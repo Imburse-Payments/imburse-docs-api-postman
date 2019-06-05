@@ -182,7 +182,7 @@
               "mode": "raw",
               "raw": "{\n\t\"customerRef\": \"\",\n\t\"orderRef\": \"\",\n\t\"instructionRef\": \"\"\n}"
             },
-            "url": "{{identityApiUrl}}/v1/hmac/payout",
+            "url": "{{baseApiUrl}}/v1/identity/hmac/payout",
             "description": "#### Description\n\nCreates a new Payout API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
           },
           "response": [
@@ -198,7 +198,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{identityApiUrl}}/v1/hmac/payout"
+                "url": "{{baseApiUrl}}/v1/identity/hmac/payout"
               },
               "status": "Created",
               "code": 201,
@@ -277,9 +277,18 @@
                     "disableBodyPruning": true
                   },
                   "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
                     "method": "GET",
-                    "header": [],
-                    "url": "{{managementApiUrl}}/v1/account",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/account",
                     "description": "#### Description\n\nGets the current account assigned to the access token.\n\n#### Role required\n\n`acc.r`"
                   },
                   "response": [
