@@ -2576,6 +2576,417 @@
           "_postman_isSubFolder": true
         },
         {
+          "name": " Payout Schemes",
+          "item": [
+            {
+              "name": "Create a Scheme",
+              "_postman_id": "2188bf11-c38b-4005-b1e5-92e1b749dad2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [ \"AMEX\" ]\n                }\n            ]\n        }\n    ]\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/schemes/payout",
+                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
+              },
+              "response": [
+                {
+                  "id": "b13eec8c-f13d-45aa-b092-486a1d76c8e9",
+                  "name": "Create a Scheme",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [ \"AMEX\" ]\n                }\n            ]\n        }\n    ]\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/schemes/payout"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get a Scheme",
+              "_postman_id": "d497f274-3cc9-4b35-b077-1a8f21e673ff",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}",
+                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get."
+              },
+              "response": [
+                {
+                  "id": "db2d7220-38a9-4a5e-8428-d01cd0cb0819",
+                  "name": "Get a Scheme",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get all Schemes",
+              "_postman_id": "6705bef8-9637-4723-9dca-a65291341c0e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/payout",
+                "description": "#### Description \n\nGet all Collect Schemes.\n\n#### Role required\n\n`t.sch.r`"
+              },
+              "response": [
+                {
+                  "id": "ea1e5f52-7a3c-46b5-9bfd-7dd331753eb0",
+                  "name": "Get all Schemes",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n    {\n        \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n        \"publishedDraftId\": null,\n        \"drafts\": [\n            {\n                \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n                \"name\": \"Motor Insurance Scheme - EUROPE\",\n                \"code\": \"MI-EUR\",\n                \"rules\": [\n                    {\n                        \"currencies\": [\n                            \"EUR\"\n                        ],\n                        \"countries\": [\n                            \"\"\n                        ],\n                        \"highValueInclusive\": 1000,\n                        \"lowValueInclusive\": 1,\n                        \"apps\": [\n                            {\n                                \"appId\": \"BRAINTREE_SDK\",\n                                \"excludedPaymentMethods\": [\n                                    \"AMEX\"\n                                ],\n                                \"availablePaymentMethods\": [\n                                    \"VISA\",\n                                    \"MASTERCARD\",\n                                    \"AMEX\",\n                                    \"MAESTRO\",\n                                    \"DISCOVER\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n            }\n        ]\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "Create a Draft",
+              "_postman_id": "c0c6cade-b59c-4974-ae36-45cd37a9dcaf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft",
+                "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
+              },
+              "response": [
+                {
+                  "id": "79faa1f8-1c14-4e82-b977-9e363bf3a78b",
+                  "name": "Create a Draft",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get a Draft",
+              "_postman_id": "00aa7942-cfb8-46a6-88c9-afb1b8a6279b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}",
+                "description": "#### Description \n\nGet a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme that owns the Draft.\ndraft-id | The id of the Draft to get."
+              },
+              "response": [
+                {
+                  "id": "127dd815-114c-48c2-8f4a-5a1bbedf0575",
+                  "name": "Get a Draft",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Publish a Draft",
+              "_postman_id": "6f496243-2bef-4796-aabc-a7f999cbd626",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
+                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
+              },
+              "response": [
+                {
+                  "id": "f9420a22-a0c0-46ab-8bf2-3e13652bb941",
+                  "name": "Publish a Draft",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
+                }
+              ]
+            },
+            {
+              "name": "Get the Published Draft",
+              "_postman_id": "4eca986c-caa8-44df-9982-c0475a31e0ab",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published",
+                "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Sheme to get."
+              },
+              "response": [
+                {
+                  "id": "627d00d9-5e39-42c6-962e-e4cc95f1f671",
+                  "name": "Get the Published Draft",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Scheme",
+              "_postman_id": "4b1d016f-d940-4d33-9882-53f1fa008818",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
+              },
+              "response": [
+                {
+                  "id": "0ddc1ddb-9c7f-401d-8b68-159cc9f0e6b9",
+                  "name": "Delete Scheme",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            }
+          ],
+          "_postman_id": "00834bce-417b-44c1-840c-4901cf26483f",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "a05c537b-b783-4a52-ae62-0e084997e581",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "263115c0-6dde-4bc9-8bb8-908a534f909d",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Notifications",
           "item": [
             {
@@ -3181,417 +3592,6 @@
             }
           ],
           "_postman_id": "b1eb646e-6cf6-4f8b-b395-5083dd6c1490",
-          "_postman_isSubFolder": true
-        },
-        {
-          "name": " Collect Schemes Copy",
-          "item": [
-            {
-              "name": "Create a Scheme",
-              "_postman_id": "2188bf11-c38b-4005-b1e5-92e1b749dad2",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [ \"AMEX\" ]\n                }\n            ]\n        }\n    ]\n}"
-                },
-                "url": "{{baseApiUrl}}/v1/schemes/collect",
-                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
-              },
-              "response": [
-                {
-                  "id": "b13eec8c-f13d-45aa-b092-486a1d76c8e9",
-                  "name": "Create a Scheme",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [ \"AMEX\" ]\n                }\n            ]\n        }\n    ]\n}"
-                    },
-                    "url": "{{baseApiUrl}}/v1/schemes/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get a Scheme",
-              "_postman_id": "d497f274-3cc9-4b35-b077-1a8f21e673ff",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get."
-              },
-              "response": [
-                {
-                  "id": "db2d7220-38a9-4a5e-8428-d01cd0cb0819",
-                  "name": "Get a Scheme",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get all Schemes",
-              "_postman_id": "6705bef8-9637-4723-9dca-a65291341c0e",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect",
-                "description": "#### Description \n\nGet all Collect Schemes.\n\n#### Role required\n\n`t.sch.r`"
-              },
-              "response": [
-                {
-                  "id": "ea1e5f52-7a3c-46b5-9bfd-7dd331753eb0",
-                  "name": "Get all Schemes",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "[\n    {\n        \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n        \"publishedDraftId\": null,\n        \"drafts\": [\n            {\n                \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n                \"name\": \"Motor Insurance Scheme - EUROPE\",\n                \"code\": \"MI-EUR\",\n                \"rules\": [\n                    {\n                        \"currencies\": [\n                            \"EUR\"\n                        ],\n                        \"countries\": [\n                            \"\"\n                        ],\n                        \"highValueInclusive\": 1000,\n                        \"lowValueInclusive\": 1,\n                        \"apps\": [\n                            {\n                                \"appId\": \"BRAINTREE_SDK\",\n                                \"excludedPaymentMethods\": [\n                                    \"AMEX\"\n                                ],\n                                \"availablePaymentMethods\": [\n                                    \"VISA\",\n                                    \"MASTERCARD\",\n                                    \"AMEX\",\n                                    \"MAESTRO\",\n                                    \"DISCOVER\"\n                                ]\n                            }\n                        ]\n                    }\n                ],\n                \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n            }\n        ]\n    }\n]"
-                }
-              ]
-            },
-            {
-              "name": "Create a Draft",
-              "_postman_id": "c0c6cade-b59c-4974-ae36-45cd37a9dcaf",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-                },
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft",
-                "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
-              },
-              "response": [
-                {
-                  "id": "79faa1f8-1c14-4e82-b977-9e363bf3a78b",
-                  "name": "Create a Draft",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-                    },
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": null,\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get a Draft",
-              "_postman_id": "00aa7942-cfb8-46a6-88c9-afb1b8a6279b",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}",
-                "description": "#### Description \n\nGet a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme that owns the Draft.\ndraft-id | The id of the Draft to get."
-              },
-              "response": [
-                {
-                  "id": "127dd815-114c-48c2-8f4a-5a1bbedf0575",
-                  "name": "Get a Draft",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
-                }
-              ]
-            },
-            {
-              "name": "Publish a Draft",
-              "_postman_id": "6f496243-2bef-4796-aabc-a7f999cbd626",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
-                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
-              },
-              "response": [
-                {
-                  "id": "f9420a22-a0c0-46ab-8bf2-3e13652bb941",
-                  "name": "Publish a Draft",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
-                  },
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"schemeId\": \"9f5154c4-d683-4de2-b71c-f4d6d8d90679\",\n    \"publishedDraftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"drafts\": [\n        {\n            \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n            \"name\": \"Motor Insurance Scheme - EUROPE\",\n            \"code\": \"MI-EUR\",\n            \"rules\": [\n                {\n                    \"currencies\": [\n                        \"EUR\"\n                    ],\n                    \"countries\": [\n                        \"\"\n                    ],\n                    \"highValueInclusive\": 1000,\n                    \"lowValueInclusive\": 1,\n                    \"apps\": [\n                        {\n                            \"appId\": \"BRAINTREE_SDK\",\n                            \"excludedPaymentMethods\": [\n                                \"AMEX\"\n                            ],\n                            \"availablePaymentMethods\": [ \"VISA\", \"MASTERCARD\", \"AMEX\", \"MAESTRO\", \"DISCOVER\" ]\n                        }\n                    ]\n                }\n            ],\n            \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n        }\n    ]\n}"
-                }
-              ]
-            },
-            {
-              "name": "Get the Published Draft",
-              "_postman_id": "4eca986c-caa8-44df-9982-c0475a31e0ab",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published",
-                "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Sheme to get."
-              },
-              "response": [
-                {
-                  "id": "627d00d9-5e39-42c6-962e-e4cc95f1f671",
-                  "name": "Get the Published Draft",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ],\n                    \"availablePaymentMethods\": [\n                        \"VISA\",\n                        \"MASTERCARD\",\n                        \"AMEX\",\n                        \"MAESTRO\",\n                        \"DISCOVER\"\n                    ]\n                }\n            ]\n        }\n    ],\n    \"lastModified\": \"2019-06-03T08:48:35.3927629Z\"\n}"
-                }
-              ]
-            },
-            {
-              "name": "Delete Scheme",
-              "_postman_id": "4b1d016f-d940-4d33-9882-53f1fa008818",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
-              },
-              "response": [
-                {
-                  "id": "0ddc1ddb-9c7f-401d-8b68-159cc9f0e6b9",
-                  "name": "Delete Scheme",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            }
-          ],
-          "_postman_id": "00834bce-417b-44c1-840c-4901cf26483f",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "a05c537b-b783-4a52-ae62-0e084997e581",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "test",
-              "script": {
-                "id": "263115c0-6dde-4bc9-8bb8-908a534f909d",
-                "type": "text/javascript",
-                "exec": [
-                  ""
-                ]
-              }
-            }
-          ],
           "_postman_isSubFolder": true
         }
       ],
