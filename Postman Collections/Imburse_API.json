@@ -2715,7 +2715,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2752,7 +2752,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                 },
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft",
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft",
                 "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
               },
               "response": [
@@ -2778,7 +2778,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2805,7 +2805,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}",
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}",
                 "description": "#### Description \n\nGet a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme that owns the Draft.\ndraft-id | The id of the Draft to get."
               },
               "response": [
@@ -2821,7 +2821,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2848,7 +2848,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}/publish",
                 "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
               },
               "response": [
