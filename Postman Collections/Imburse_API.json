@@ -1500,7 +1500,7 @@
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
-                    "url": "{{managementApiUrl}}/v1/apps/installed/{{app-id}}/uninstall"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/uninstall"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1537,7 +1537,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
                 },
-                "url": "{{managementApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configure",
+                "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configuration",
                 "description": "#### Description\n\nConfigure the Braintree SDK App\n\n#### Role required\n\n`t.psp.a`"
               },
               "response": [
