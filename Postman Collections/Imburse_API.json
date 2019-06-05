@@ -1463,7 +1463,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/apps/installed"
+                    "url": "{{baseApiUrl}}/v1/apps/installed"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1490,7 +1490,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/apps/installed/{{app-id}}/uninstall",
+                "url": "{{baseApiUrl}}/v1/apps/installed/{{app-id}}/uninstall",
                 "description": "#### Description\n\nUninstall an App.\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to uninstall."
               },
               "response": [
