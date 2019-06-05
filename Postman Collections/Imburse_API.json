@@ -2802,7 +2802,7 @@
                       "mode": "raw",
                       "raw": "{\n\t\"eventType\": \"\",\n\t\"url\": \"\",\n\t\"isEnabled\": true\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}"
+                    "url": "{{baseApiUrl}}/v1/notifications/webhooks/{{id}}"
                   },
                   "status": "Accepted",
                   "code": 202,
@@ -2822,8 +2822,14 @@
               },
               "request": {
                 "method": "DELETE",
-                "header": [],
-                "url": "{{managementApiUrl}}/v1/notifications/webhooks/{{id}}",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/notifications/webhooks/{{id}}",
                 "description": "#### Description\r\n\r\nDeletes a Webhook.\r\n\r\n#### Role required\r\n\r\n`t.whk.a`\r\n\r\n#### Params\r\n\r\nParameter | Description\r\n- | -\r\nid | The id of the Webhook to delete."
               },
               "response": [
