@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "ac65d3ee-04c9-47c8-9319-f7efca0d9cc5",
     "name": "Imburse API",
-    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, please read the [developers documentation](https://developers.imbursepayments.com) where Core Concepts, a Started Guide, and Tutorials will be found.\r\n\r\n\r\n\r\n",
+    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, please read the [developers documentation](https://developers.imbursepayments.com) where Core Concepts, Getting Started Guide, and Tutorials will be found.\r\n\r\n\r\n\r\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -2946,7 +2946,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}"
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}"
                   },
                   "status": "OK",
                   "code": 200,
