@@ -503,7 +503,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/account/keys/{{publicKey}}",
+                    "url": "{{baseApiUrl}}/v1/account/keys/{{publicKey}}",
                     "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                   },
                   "response": [
@@ -519,7 +519,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{managementApiUrl}}/v1/account/keys/{{accountKeyToDelete}}"
+                        "url": "{{baseApiUrl}}/v1/account/keys/{{accountKeyToDelete}}"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -592,7 +592,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"name\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locality\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
                     },
-                    "url": "{{managementApiUrl}}/v1/account/tenants",
+                    "url": "{{baseApiUrl}}/v1/account/tenants",
                     "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
                   },
                   "response": [
@@ -618,7 +618,7 @@
                           "mode": "raw",
                           "raw": "{\n    \"name\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locality\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
                         },
-                        "url": "{{managementApiUrl}}/v1/account/tenants"
+                        "url": "{{baseApiUrl}}/v1/account/tenants"
                       },
                       "status": "Created",
                       "code": 201,
@@ -638,11 +638,17 @@
                   },
                   "request": {
                     "method": "GET",
-                    "header": [],
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
                     "url": {
-                      "raw": "{{managementApiUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
+                      "raw": "{{baseApiUrl}}/v1/account/tenants?from={{from}}&take={{take}}&name={{name}}",
                       "host": [
-                        "{{managementApiUrl}}"
+                        "{{baseApiUrl}}"
                       ],
                       "path": [
                         "v1",
