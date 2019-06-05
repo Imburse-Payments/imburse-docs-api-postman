@@ -2864,7 +2864,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft/{{draft-id}}/publish"
                   },
                   "_postman_previewlanguage": "json",
                   "header": null,
@@ -2889,7 +2889,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published",
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/published",
                 "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Sheme to get."
               },
               "response": [
