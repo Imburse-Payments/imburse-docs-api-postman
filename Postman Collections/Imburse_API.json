@@ -3011,12 +3011,42 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+                  "raw": "{\r\n  \"orderRef\": \"\",\r\n  \"currency\": \"\",\r\n  \"country\": \"\",\r\n  \"scheme\": \"\",\r\n  \"metadata\": {\r\n    \"additionalProp1\": \"\",\r\n    \"additionalProp2\": \"\",\r\n    \"additionalProp3\": \"\"\r\n  }\r\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order",
                 "description": "#### Description \n\nCreate an Order.\n\n#### Role required\n\n`t.po.a`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "9d9f2c8d-497f-498b-bd84-9bf91bb12a88",
+                  "name": "Create Order",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n\t\"orderRef\": \"\",\r\n\t\"currency\": \"\",\r\n\t\"country\": \"\",\r\n\t\"scheme\": \"\"\r\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order"
+                  },
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Get Order",
