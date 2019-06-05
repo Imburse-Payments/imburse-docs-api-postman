@@ -3013,7 +3013,7 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
+                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of customer events."
               },
               "response": []
