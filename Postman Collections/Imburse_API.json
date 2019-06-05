@@ -3135,7 +3135,7 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/countries"
+                "url": "{{baseApiUrl}}/v1/countries"
               },
               "response": [
                 {
@@ -3150,7 +3150,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{managementApiUrl}}/v1/countries"
+                    "url": "{{baseApiUrl}}/v1/countries"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3180,7 +3180,7 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{managementApiUrl}}/v1/currencies"
+                "url": "{{baseApiUrl}}/v1/currencies"
               },
               "response": [
                 {
