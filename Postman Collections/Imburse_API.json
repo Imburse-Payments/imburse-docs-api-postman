@@ -2601,7 +2601,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [ \"AMEX\" ]\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [],\n            \"rewardGroups\": [\n                {\n                    \"rewardGroupId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/payout",
                 "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
@@ -2905,7 +2905,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/published"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2932,7 +2932,7 @@
                     "type": "text"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}",
                 "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
               },
               "response": [
@@ -2948,7 +2948,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}"
                   },
                   "status": "No Content",
                   "code": 204,
