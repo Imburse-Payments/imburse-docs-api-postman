@@ -3151,6 +3151,35 @@
               "response": []
             },
             {
+              "name": "Update Instruction ",
+              "_postman_id": "4eced8ea-5f5f-4a00-bccb-baef32f321fa",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction",
+                "description": "#### Description \r\n\r\nUpdate an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.a`"
+              },
+              "response": []
+            },
+            {
               "name": "Get Instruction",
               "_postman_id": "dd7b93cd-37fc-4b4e-9f85-659f30f4d8a4",
               "protocolProfileBehavior": {
@@ -3186,7 +3215,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}",
-                "description": "The following endpoint will return an unstructured list of instruction events."
+                "description": "#### Description \r\n\r\nGet the Audit History for an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.r`"
               },
               "response": []
             }
