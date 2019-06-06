@@ -860,7 +860,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Account Tenant Security Keys",
+              "name": "Tenant Security Keys",
               "item": [
                 {
                   "name": "Create Key",
@@ -1056,6 +1056,28 @@
                 }
               ],
               "_postman_id": "66a3dbcb-ea64-4299-9e6c-8b6046191ca3",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "db0e9152-0d53-467f-8cb3-43878422493a",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "877733f3-a5c2-408f-810b-808411daa27b",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
               "_postman_isSubFolder": true
             }
           ],
@@ -1088,7 +1110,7 @@
           "name": "Tenants",
           "item": [
             {
-              "name": "Tenant Security Keys",
+              "name": "Security Keys",
               "item": [
                 {
                   "name": "Create Key",
