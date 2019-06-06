@@ -1909,7 +1909,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
+                  "raw": "{\r\n  \"name\": \"Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                 },
                 "url": "{{baseApiUrl}}/v1/reward-groups",
                 "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
@@ -1935,7 +1935,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n  \"name\": \"My Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"dummy-amazon-reward-id\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
+                      "raw": "{\r\n  \"name\": \"Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                     },
                     "url": "{{baseApiUrl}}/v1/reward-groups"
                   },
@@ -1945,7 +1945,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
+                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
                 }
               ]
             },
@@ -1988,7 +1988,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "[\n    {\n        \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n        \"name\": \"My Amazon Voucher Group\",\n        \"rewards\": [\n            {\n                \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n                \"enabled\": true\n            }\n        ]\n    }\n]"
+                  "body": "[\n    {\n        \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n        \"name\": \"Amazon Voucher Group\",\n        \"rewards\": [\n            {\n                \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n                \"enabled\": true\n            }\n        ]\n    }\n]"
                 }
               ]
             },
@@ -2023,7 +2023,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                    "url": "{{baseApiUrl}}/v1/reward-groups/9dc777db-41e8-4d2d-a89a-ef384bd3202"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2031,7 +2031,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
+                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
                 }
               ]
             },
@@ -2058,7 +2058,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"dummy-amazon-reward-id\",\n            \"enabled\": true\n        }\n    ]\n}"
+                  "raw": "{\n    \"name\": \"string\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"string\",\n            \"enabled\": true\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}",
                 "description": "#### Description \r\n\r\nUpdate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
@@ -2084,9 +2084,9 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
+                      "raw": "{\n    \"name\": \"Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                    "url": "{{baseApiUrl}}/v1/reward-groups/9dc777db-41e8-4d2d-a89a-ef384bd3202"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2094,7 +2094,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"My Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
+                  "body": "{\n    \"rewardGroupId\": \"9dc777db-41e8-4d2d-a89a-ef384bd3202\",\n    \"name\": \"Amazon Voucher Group\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"enabled\": true\n        }\n    ]\n}"
                 }
               ]
             },
@@ -2129,7 +2129,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}"
+                    "url": "{{baseApiUrl}}/v1/reward-groups/9dc777db-41e8-4d2d-a89a-ef384bd3202"
                   },
                   "_postman_previewlanguage": null,
                   "header": null,
