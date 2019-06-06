@@ -310,7 +310,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"accountId\": \"\",\n\t\"imburseAccountRef\": \"\",\n\t\"companyName\": \"\",\n\t\"billingContactFirstName\": \"\",\n\t\"billingContactLastName\": \"\",\n\t\"billingContactAddress\": {\n\t\t\"streetAddress\": \"\",\n\t\t\"extendedStreetAddress\": \"\",\n\t\t\"locality\": \"\",\n\t\t\"region\": \"\",\n\t\t\"postCode\": \"\",\n\t\t\"country\": \"\"\n\t}\n}"
+                      "body": "{\n\t\"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n\t\"imburseAccountRef\": \"XYZ\",\n\t\"companyName\": \"XYZ Corp.\",\n\t\"billingContactFirstName\": \"Mark\",\n\t\"billingContactLastName\": \"David\",\n\t\"billingContactAddress\": {\n\t\t\"streetAddress\": \"Building 1\",\n\t\t\"extendedStreetAddress\": \"Union Street\",\n\t\t\"locality\": \"Westminister\",\n\t\t\"region\": \"London\",\n\t\t\"postCode\": \"SW1 1LA\",\n\t\t\"country\": \"UK\"\n\t}\n}"
                     }
                   ]
                 }
@@ -365,7 +365,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"roles\": \"\"\n}"
+                      "raw": "{\n    \"roles\": [ \"string\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/keys",
                     "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
@@ -1132,7 +1132,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": []\n}"
+                          "raw": "{\n\t\"roles\": [ \"acc.g.super\" ]\n}"
                         },
                         "url": "{{baseApiUrl}}/v1/tenant/keys"
                       },
@@ -1142,7 +1142,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"acc.g.super\" ]\n}"
                     }
                   ]
                 },
@@ -1185,7 +1185,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n    {\n        \"tenantId\": \"\",\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
+                      "body": "[\n    {\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"roles\": [\n            \"acc.g.super\"\n        ]\n    }\n]"
                     }
                   ]
                 },
@@ -1220,7 +1220,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                        "url": "{{baseApiUrl}}/v1/tenant/keys/7ee20820-e416-4c39-839d-43e68946a1b0"
                       },
                       "status": "OK",
                       "code": 200,
@@ -1228,7 +1228,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
+                      "body": "{\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"acc.g.super\"\n    ]\n}"
                     }
                   ]
                 },
@@ -1263,7 +1263,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                        "url": "{{baseApiUrl}}/v1/tenant/keys/7ee20820-e416-4c39-839d-43e68946a1b0"
                       },
                       "status": "No Content",
                       "code": 204,
