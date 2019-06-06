@@ -3574,7 +3574,8 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/currencies"
+                "url": "{{baseApiUrl}}/v1/currencies",
+                "description": "#### Description\n\nGet the list of supported currencies.\n\n#### Role required\n\n(not applicable)"
               },
               "response": [
                 {
