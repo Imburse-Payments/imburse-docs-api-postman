@@ -834,69 +834,6 @@
                   ]
                 },
                 {
-                  "name": "Create Key",
-                  "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "POST",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      },
-                      {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "type": "text",
-                        "value": "application/json"
-                      }
-                    ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n\t\"roles\": []\n}"
-                    },
-                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys",
-                    "description": "#### Description\n\nCreates a new key for a specific tenant.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the specific tenant.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
-                  },
-                  "response": [
-                    {
-                      "id": "317dfa2e-7ce9-44c4-b611-a6cb76f5fbc0",
-                      "name": "Create Key",
-                      "originalRequest": {
-                        "method": "POST",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          },
-                          {
-                            "key": "Content-Type",
-                            "name": "Content-Type",
-                            "type": "text",
-                            "value": "application/json"
-                          }
-                        ],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n\t\"roles\": []\n}"
-                        },
-                        "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
                   "name": "Get All Keys",
                   "_postman_id": "de93b675-8cdd-4084-a530-0d0f80c9aee1",
                   "protocolProfileBehavior": {
@@ -1053,7 +990,71 @@
             },
             {
               "name": "Account Tenant Security Keys",
-              "item": [],
+              "item": [
+                {
+                  "name": "Create Key",
+                  "_postman_id": "87a98404-40fd-4a28-801f-af5eaaa73d27",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"roles\": []\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys",
+                    "description": "#### Description\n\nCreates a new key for a specific tenant.\n\n#### Role required\n\n`t.key.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the specific tenant.\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#tenant-roles) to be assigned to the key."
+                  },
+                  "response": [
+                    {
+                      "id": "317dfa2e-7ce9-44c4-b611-a6cb76f5fbc0",
+                      "name": "Create Key",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "name": "Content-Type",
+                            "type": "text",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n\t\"roles\": []\n}"
+                        },
+                        "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                    }
+                  ]
+                }
+              ],
               "_postman_id": "66a3dbcb-ea64-4299-9e6c-8b6046191ca3",
               "_postman_isSubFolder": true
             }
