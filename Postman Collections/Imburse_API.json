@@ -1535,7 +1535,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
+                  "raw": "{\n    \"merchantId\": \"string\",\n    \"privateKey\": \"string\",\n    \"publicKey\": \"string\",\n    \"settings\": [\n        {\n            \"currency\": \"string\",\n            \"countries\": [],\n            \"merchantAccountId\": \"string\",\n            \"description\": \"string\"\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configuration",
                 "description": "#### Description\n\nConfigure the Braintree SDK App\n\n#### Role required\n\n`t.psp.a`"
@@ -1909,7 +1909,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"name\": \"Amazon Voucher Group\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
+                  "raw": "{\r\n  \"name\": \"string\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"string\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                 },
                 "url": "{{baseApiUrl}}/v1/reward-groups",
                 "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
