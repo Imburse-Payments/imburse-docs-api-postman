@@ -368,7 +368,7 @@
                       "raw": "{\n    \"roles\": [ \"string\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/keys",
-                    "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nroles | Yes | The [roles](#account-roles) to be assigned to the key."
+                    "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`acc.keys.a`"
                   },
                   "response": [
                     {
@@ -1161,7 +1161,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": [ \"acc.g.super\" ]\n}"
+                          "raw": "{\n\t\"roles\": [ \"t.g.super\" ]\n}"
                         },
                         "url": "{{baseApiUrl}}/v1/tenant/keys"
                       },
@@ -1171,7 +1171,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"acc.g.super\" ]\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"t.g.super\" ]\n}"
                     }
                   ]
                 },
@@ -1214,7 +1214,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n    {\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"roles\": [\n            \"acc.g.super\"\n        ]\n    }\n]"
+                      "body": "[\n    {\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"roles\": [\n            \"t.g.super\"\n        ]\n    }\n]"
                     }
                   ]
                 },
@@ -1257,7 +1257,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"acc.g.super\"\n    ]\n}"
+                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"t.g.super\"\n    ]\n}"
                     }
                   ]
                 },
