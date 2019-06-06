@@ -860,7 +860,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Tenant Security Keys",
+              "name": "Tenant API Keys",
               "item": [
                 {
                   "name": "Create Key",
@@ -1110,7 +1110,7 @@
           "name": "Tenants",
           "item": [
             {
-              "name": "Security Keys",
+              "name": "API Keys",
               "item": [
                 {
                   "name": "Create Key",
@@ -3528,7 +3528,8 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/countries"
+                "url": "{{baseApiUrl}}/v1/countries",
+                "description": "#### Description\n\nGet the list of supported countries.\n\n#### Role required\n\n(not applicable)"
               },
               "response": [
                 {
