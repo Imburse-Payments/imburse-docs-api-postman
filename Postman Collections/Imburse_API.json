@@ -268,7 +268,7 @@
           "name": "Accounts",
           "item": [
             {
-              "name": "General Info",
+              "name": "Account Management ",
               "item": [
                 {
                   "name": "Get Account",
@@ -341,7 +341,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Security Keys",
+              "name": "Account Security Keys",
               "item": [
                 {
                   "name": "Create a new Key",
@@ -537,7 +537,7 @@
                 {
                   "listen": "prerequest",
                   "script": {
-                    "id": "9b480cc3-5544-4953-a237-c89314b1f884",
+                    "id": "ffcd28a2-6ae3-4c46-8f41-a461898e05ed",
                     "type": "text/javascript",
                     "exec": [
                       ""
@@ -547,7 +547,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "6bf6a158-ad2a-414b-8106-89c25d786454",
+                    "id": "b3a69193-4cc7-45b3-967c-ee73a92dc43b",
                     "type": "text/javascript",
                     "exec": [
                       ""
@@ -558,7 +558,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Tenants",
+              "name": "Account Tenants",
               "item": [
                 {
                   "name": "Create new Tenant",
