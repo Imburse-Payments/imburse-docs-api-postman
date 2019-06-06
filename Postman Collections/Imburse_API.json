@@ -341,7 +341,7 @@
               "_postman_isSubFolder": true
             },
             {
-              "name": "Account Security Keys",
+              "name": "Account API Keys",
               "item": [
                 {
                   "name": "Create a new Key",
