@@ -398,7 +398,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"accountId\": \"\",\n\t\"tenantId\": \"\",\n\t\"publicKey\": \"\",\n\t\"privateKey\": \"\",\n\t\"roles\": []\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"acc.g.super\" ]\n}"
                     }
                   ]
                 },
@@ -441,7 +441,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"publicKey\": \"\",\n\t\t\"roles\": []\n\t}\n]"
+                      "body": "[\n\t{\n\t\t\"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n\t\t\"roles\": [ \"g.super\"]\n\t}\n]\n"
                     }
                   ]
                 },
@@ -476,7 +476,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{baseApiUrl}}/v1/account/keys/{{publicKey}}"
+                        "url": "{{baseApiUrl}}/v1/account/keys/7ee20820-e416-4c39-839d-43e68946a1b0"
                       },
                       "status": "OK",
                       "code": 200,
@@ -484,7 +484,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n\t\"publicKey\": \"\",\n\t\"roles\": []\n}\n"
+                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"g.super\"\n    ]\n}"
                     }
                   ]
                 },
@@ -519,7 +519,7 @@
                             "type": "text"
                           }
                         ],
-                        "url": "{{baseApiUrl}}/v1/account/keys/{{accountKeyToDelete}}"
+                        "url": "{{baseApiUrl}}/v1/account/keys/7ee20820-e416-4c39-839d-43e68946a1b0"
                       },
                       "status": "No Content",
                       "code": 204,
@@ -590,7 +590,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"name\": \"\",\n    \"streetAddress\": \"\",\n    \"extendedStreetAddress\": \"\",\n    \"locality\": \"\",\n    \"region\": \"\",\n    \"postCode\": \"\",\n    \"country\": \"\"\n}"
+                      "raw": "{\n    \"streetAddress\": \"string\",\n    \"extendedStreetAddress\": \"string\",\n    \"locality\": \"string\",\n    \"region\": \"string\",\n    \"postCode\": \"string\",\n    \"country\": \"string\"\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/tenants",
                     "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nname | Yes | The name of the new tenant.\naddress | No | An [address](address-object) for the new tenant."
@@ -911,7 +911,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": []\n}"
+                          "raw": "{\n\t\"roles\": [ \"t.g.super\" ]\n}"
                         },
                         "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys"
                       },
@@ -921,7 +921,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"\",\n    \"tenantId\": \"\",\n    \"publicKey\": \"\",\n    \"privateKey\": \"\",\n    \"roles\": []\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"t.g.super\" ]\n}"
                     }
                   ]
                 },
