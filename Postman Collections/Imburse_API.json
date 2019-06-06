@@ -834,49 +834,6 @@
                   ]
                 },
                 {
-                  "name": "Get Key By PublicKey",
-                  "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
-                  "protocolProfileBehavior": {
-                    "disableBodyPruning": true
-                  },
-                  "request": {
-                    "method": "GET",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "type": "text",
-                        "value": "Bearer {{management-token}}"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
-                  },
-                  "response": [
-                    {
-                      "id": "3850a071-0fbc-4a96-b29a-b04d17b786b8",
-                      "name": "Get Key By PublicKey",
-                      "originalRequest": {
-                        "method": "GET",
-                        "header": [
-                          {
-                            "key": "Authorization",
-                            "value": "Bearer {{management-token}}",
-                            "type": "text"
-                          }
-                        ],
-                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
-                      },
-                      "status": "OK",
-                      "code": 200,
-                      "_postman_previewlanguage": "json",
-                      "header": null,
-                      "cookie": [],
-                      "responseTime": null,
-                      "body": "{\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
-                    }
-                  ]
-                },
-                {
                   "name": "Delete a Key",
                   "_postman_id": "cca92015-0f89-4dc7-ac46-532bd2764bf4",
                   "protocolProfileBehavior": {
@@ -1051,6 +1008,49 @@
                       "cookie": [],
                       "responseTime": null,
                       "body": "[\n    {\n        \"publicKey\": \"\",\n        \"roles\": []\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get Key By PublicKey",
+                  "_postman_id": "5ae170a1-0c7b-4d19-b455-5ca9cca21e2c",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
+                    "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
+                  },
+                  "response": [
+                    {
+                      "id": "3850a071-0fbc-4a96-b29a-b04d17b786b8",
+                      "name": "Get Key By PublicKey",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Authorization",
+                            "value": "Bearer {{management-token}}",
+                            "type": "text"
+                          }
+                        ],
+                        "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": null,
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"publicKey\": \"\",\n    \"roles\": []\n}"
                     }
                   ]
                 }
