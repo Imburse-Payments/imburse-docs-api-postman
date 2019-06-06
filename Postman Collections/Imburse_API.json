@@ -3038,7 +3038,7 @@
                       "mode": "raw",
                       "raw": "{\r\n  \"orderRef\": \"my-customer-order-ref\",\r\n  \"currency\": \"EUR\",\r\n  \"country\": \"DE\",\r\n  \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"metadata\": {\r\n    \"my-custom-property-name\": \"some-value\",\r\n    \"another-custom-property-name\": \"some-other-value\"\r\n  }\r\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order"
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order"
                   },
                   "status": "Created",
                   "code": 201,
@@ -3046,7 +3046,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"customerRef\": \"my-customer-order-ref\",\n    \"orderRef\": \"1\",\n    \"status\": \"OPEN\",\n    \"detail\": {\n        \"currency\": \"EUR\",\n        \"country\": \"DE\",\n        \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n        \"paymentMethodRef\": \"\"\n    },\n    \"instructions\": null\n}"
+                  "body": "{\n    \"customerRef\": \"my-customer-ref\",\n    \"orderRef\": \"1\",\n    \"status\": \"OPEN\",\n    \"detail\": {\n        \"currency\": \"EUR\",\n        \"country\": \"DE\",\n        \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n        \"paymentMethodRef\": \"\"\n    },\n    \"instructions\": null\n}"
                 }
               ]
             },
@@ -3081,7 +3081,7 @@
                         "value": "Bearer {{management-token}}"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}"
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1"
                   },
                   "status": "OK",
                   "code": 200,
@@ -3089,7 +3089,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\r\n  \"customerRef\": \"\",\r\n  \"orderRef\": \"\",\r\n  \"status\": \"\",\r\n  \"detail\": {\r\n    \"currency\": \"\",\r\n    \"country\": \"\",\r\n    \"scheme\": \"\",\r\n    \"paymentMethodRef\": \"\"\r\n  },\r\n  \"instructions\": []\r\n}"
+                  "body": "{\n    \"customerRef\": \"my-customer-ref\",\n    \"orderRef\": \"1\",\n    \"status\": \"OPEN\",\n    \"detail\": {\n        \"currency\": \"EUR\",\n        \"country\": \"DE\",\n        \"scheme\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n        \"paymentMethodRef\": \"\"\n    },\n    \"instructions\": null\n}"
                 }
               ]
             },
@@ -3111,7 +3111,30 @@
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
                 "description": "#### Description \n\nGet the Audit History for an Order.\n\n#### Role required\n\n`t.po.r`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "a09cc88a-bb41-4d26-803c-07f2ee0dbb70",
+                  "name": "Get Order Audit History",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/audit-history"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Get Customer",
@@ -3131,7 +3154,28 @@
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}",
                 "description": "#### Description \n\nGet a Customer.\n\n#### Role required\n\n`t.po.r`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "c7a19802-e89d-4948-b33e-f8d7a1e93b87",
+                  "name": "Get Customer",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref"
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"customerRef\": \"my-customer-ref\",\n    \"orders\": [\n        \"1\"\n    ]\n}"
+                }
+              ]
             },
             {
               "name": "Get Customer Audit History",
@@ -3151,7 +3195,30 @@
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
                 "description": "The following endpoint will return an unstructured list of customer events."
               },
-              "response": []
+              "response": [
+                {
+                  "id": "418e1c99-deca-4735-8987-9f64a3fe7d63",
+                  "name": "Get Customer Audit History",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/audit-history"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             },
             {
               "name": "Create Instruction",
@@ -3180,7 +3247,39 @@
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction",
                 "description": "#### Description \r\n\r\nCreate an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.a`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "8d6f6fda-7250-4da7-8d55-dfe500de9111",
+                  "name": "Create Instruction",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n\t\"instructionRef\": \"01\",\r\n\t\"amount\": \"40.50\",\r\n\t\"openDate\": \"2019-01-01\",\r\n\t\"dueDate\": \"2019-01-31\"\r\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"instructionRef\": \"01\",\n    \"amount\": \"40.50\",\n    \"openDate\": \"2019-01-01\",\n    \"dueDate\": \"2019-01-31\"\n}"
+                }
+              ]
             },
             {
               "name": "Update Instruction ",
@@ -3206,10 +3305,42 @@
                   "mode": "raw",
                   "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
                 },
-                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction",
+                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "#### Description \r\n\r\nUpdate an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.a`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "7f27385e-b19b-408a-b138-10d4bcb837db",
+                  "name": "Update Instruction ",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n\t\"instructionRef\": \"01\",\r\n\t\"amount\": \"41.50\",\r\n\t\"openDate\": \"2019-01-01\",\r\n\t\"dueDate\": \"2019-01-31\"\r\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction/01"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"instructionRef\": \"01\",\n    \"amount\": \"41.50\",\n    \"openDate\": \"2019-01-01\",\n    \"dueDate\": \"2019-01-31\"\n}"
+                }
+              ]
             },
             {
               "name": "Get Instruction",
@@ -3229,7 +3360,30 @@
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "#### Description \r\n\r\nGet an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.r`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "235db84b-9737-48b0-8331-ee83c491c1dc",
+                  "name": "Get Instruction",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction/01"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"instructionRef\": \"01\",\n    \"amount\": \"40.50\",\n    \"openDate\": \"2019-01-01\",\n    \"dueDate\": \"2019-01-31\"\n}"
+                }
+              ]
             },
             {
               "name": "Get Instruction Audit History",
@@ -3246,10 +3400,33 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}",
+                "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
                 "description": "#### Description \r\n\r\nGet the Audit History for an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.r`"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "52328882-365c-458b-b307-ab036b433bc0",
+                  "name": "Get Instruction Audit History",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "Bearer {{management-token}}"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction/01"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
             }
           ],
           "_postman_id": "36db645f-b09a-4ef1-9275-d6011cba3ae1",
