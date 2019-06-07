@@ -2112,7 +2112,7 @@
                   "raw": "{\n    \"name\": \"string\",\n    \"rewards\": [\n        {\n            \"rewardId\": \"string\",\n            \"enabled\": true\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}",
-                "description": "#### Description \r\n\r\nUpdate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
+                "description": "#### Description \r\n\r\nUpdate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`tenant-reward-group-write`"
               },
               "response": [
                 {
