@@ -1455,7 +1455,7 @@
                 "method": "POST",
                 "header": [],
                 "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}/install",
-                "description": "#### Description\n\nInstall an App\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to install."
+                "description": "#### Description\n\nInstall an App\n\n#### Role required\n\n`tenant-app-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to install."
               },
               "response": [
                 {
@@ -1499,7 +1499,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/apps/installed",
-                "description": "#### Description\n\nGet the installed Apps for your Tenant.\n\n#### Role required\n\n`t.psp.r`"
+                "description": "#### Description\n\nGet the installed Apps for your Tenant.\n\n#### Role required\n\n`tenant-app-read`"
               },
               "response": [
                 {
