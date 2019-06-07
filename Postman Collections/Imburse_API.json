@@ -2490,7 +2490,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft/{{draft-id}}/publish",
-                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
+                "description": "#### Description \n\nPublish a Draft for a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme.\ndraft-id | The id of the Draft to publish."
               },
               "response": [
                 {
@@ -2531,7 +2531,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/published",
-                "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Sheme to get."
+                "description": "#### Description \n\nGet a Published Draft for a given Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Sheme to get."
               },
               "response": [
                 {
