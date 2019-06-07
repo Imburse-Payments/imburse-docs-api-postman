@@ -1542,7 +1542,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/apps/installed/{{app-id}}/uninstall",
-                "description": "#### Description\n\nUninstall an App.\n\n#### Role required\n\n`t.psp.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to uninstall."
+                "description": "#### Description\n\nUninstall an App.\n\n#### Role required\n\n`tenant-app-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to uninstall."
               },
               "response": [
                 {
