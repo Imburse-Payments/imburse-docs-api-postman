@@ -1418,7 +1418,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/marketplace/apps/{{app-id}}",
-                "description": "#### Description\n\nGet an App.\n\n#### Role required\n\n`t.psp.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to get."
+                "description": "#### Description\n\nGet an App.\n\n#### Role required\n\n`tenant-app-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\napp-id | The app-id of the App to get."
               },
               "response": [
                 {
