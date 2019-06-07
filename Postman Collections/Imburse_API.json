@@ -743,7 +743,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/account/tenants/{{tenantId}}",
-                    "description": "#### Description\n\nGets a tenant by id\n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
+                    "description": "#### Description\n\nGets a tenant by id\n\n#### Role required\n\n`acc.t.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to get."
                   },
                   "response": [
                     {
@@ -796,7 +796,7 @@
                       "raw": "{\n\t\"name\": \"string\",\n\t\"streetAddress\": \"string\",\n\t\"extendedStreetAddress\": \"string\",\n\t\"locality\": \"string\",\n\t\"region\": \"string\",\n\t\"postCode\": \"string\",\n\t\"country\": \"string\"\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/tenants/{{tenantId}}",
-                    "description": "#### Description\n\nUpdates a tenant.\n\n#### Role required\n\n`account-tenant-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to update"
+                    "description": "#### Description\n\nUpdates a tenant.\n\n#### Role required\n\n`acc.t.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant to update"
                   },
                   "response": [
                     {
