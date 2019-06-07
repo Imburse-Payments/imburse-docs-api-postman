@@ -504,7 +504,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/account/keys/{{publicKey}}",
-                    "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
+                    "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`account-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                   },
                   "response": [
                     {
@@ -593,7 +593,7 @@
                       "raw": "{\r\n\t\"name\": \"string\",\r\n    \"streetAddress\": \"string\",\r\n    \"extendedStreetAddress\": \"string\",\r\n    \"locality\": \"string\",\r\n    \"region\": \"string\",\r\n    \"postCode\": \"string\",\r\n    \"country\": \"string\"\r\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/tenants",
-                    "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`acc.t.a`"
+                    "description": "#### Description\n\nCreates a new tenant.\n\n#### Role required\n\n`account-tenant-write`"
                   },
                   "response": [
                     {
