@@ -1652,7 +1652,7 @@
                   "raw": "{\n    \"customerIdentifier\": \"string\",\n    \"accountIdentifier\": \"string\"\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configuration",
-                "description": "#### Description\n\nConfigure the Tango Card RaaS App.\n\n#### Role required\n\n`t.psp.a`"
+                "description": "#### Description\n\nConfigure the Tango Card RaaS App.\n\n#### Role required\n\n`tenant-app-write`"
               },
               "response": [
                 {
