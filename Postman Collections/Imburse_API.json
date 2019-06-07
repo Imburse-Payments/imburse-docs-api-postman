@@ -3358,7 +3358,7 @@
                   "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
-                "description": "#### Description \r\n\r\nUpdate an Instruction.\r\n\r\n#### Role required\r\n\r\n`transaction-writer`"
+                "description": "#### Description \r\n\r\nUpdate an Instruction.\r\n\r\n#### Role required\r\n\r\n`tenant-transaction-write`"
               },
               "response": [
                 {
