@@ -3161,7 +3161,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/audit-history",
-                "description": "#### Description \n\nGet the Audit History for an Order.\n\n#### Role required\n\n`t.po.r`"
+                "description": "#### Description \n\nGet the Audit History for an Order.\n\n#### Role required\n\n`transaction-reader`"
               },
               "response": [
                 {
@@ -3245,7 +3245,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
-                "description": "The following endpoint will return an unstructured list of customer events."
+                "description": "#### Description \n\nGet an unstructured list of Customer events. \n\n#### Role required\n\n`transaction-reader`"
               },
               "response": [
                 {
