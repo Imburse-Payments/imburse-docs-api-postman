@@ -3245,7 +3245,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
-                "description": "#### Description \n\nGet an unstructured list of Customer events. \n\n#### Role required\n\n`transaction-reader`"
+                "description": "#### Description \n\nGet the Audit History for a Customer.\n\n#### Role required\n\n`transaction-reader`"
               },
               "response": [
                 {
