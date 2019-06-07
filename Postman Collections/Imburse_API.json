@@ -1138,7 +1138,7 @@
                       "raw": "{\n\t\"roles\": [ \"string\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/tenant/keys",
-                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`t.key.a`"
+                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`tenant-api-key-write`"
                   },
                   "response": [
                     {
