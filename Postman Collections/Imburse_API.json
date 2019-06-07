@@ -418,7 +418,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/account/keys",
-                    "description": "#### Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n#### Role required\n\n`acc.key.r`"
+                    "description": "#### Description\n\nGets the existing account public keys and claims assigned to them. Private keys are not returned.\n\n#### Role required\n\n`account-api-key-read`"
                   },
                   "response": [
                     {
@@ -461,7 +461,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/account/keys/{{publicKey}}",
-                    "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`acc.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
+                    "description": "#### Description\n\nGets a certain account key by its public key.\n\n#### Role required\n\n`account-api-key-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the desired account key"
                   },
                   "response": [
                     {
