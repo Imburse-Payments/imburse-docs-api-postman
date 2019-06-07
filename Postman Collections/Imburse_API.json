@@ -1589,7 +1589,7 @@
                   "raw": "{\n    \"merchantId\": \"string\",\n    \"privateKey\": \"string\",\n    \"publicKey\": \"string\",\n    \"settings\": [\n        {\n            \"currency\": \"string\",\n            \"countries\": [],\n            \"merchantAccountId\": \"string\",\n            \"description\": \"string\"\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configuration",
-                "description": "#### Description\n\nConfigure the Braintree SDK App\n\n#### Role required\n\n`t.psp.a`"
+                "description": "#### Description\n\nConfigure the Braintree SDK App\n\n#### Role required\n\n`tenant-app-write`"
               },
               "response": [
                 {
