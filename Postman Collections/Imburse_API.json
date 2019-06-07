@@ -3410,7 +3410,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction/{{instructionRef}}",
-                "description": "#### Description \r\n\r\nGet an Instruction.\r\n\r\n#### Role required\r\n\r\n`t.po.r`"
+                "description": "#### Description \r\n\r\nGet an Instruction.\r\n\r\n#### Role required\r\n\r\n`transaction-reader`"
               },
               "response": [
                 {
