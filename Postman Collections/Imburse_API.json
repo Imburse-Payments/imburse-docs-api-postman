@@ -2574,7 +2574,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
+                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
               },
               "response": [
                 {
