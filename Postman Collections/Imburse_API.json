@@ -1375,7 +1375,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}v1/marketplace/apps",
-                "description": "#### Description\n\nGets a list of all Apps.\n\n#### Role required\n\n`t.psp.r`"
+                "description": "#### Description\n\nGets a list of all Apps.\n\n#### Role required\n\n`tenant-app-read`"
               },
               "response": [
                 {
