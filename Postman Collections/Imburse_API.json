@@ -3204,7 +3204,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}",
-                "description": "#### Description \n\nGet a Customer.\n\n#### Role required\n\n`t.po.r`"
+                "description": "#### Description \n\nGet a Customer.\n\n#### Role required\n\n`transaction-reader`"
               },
               "response": [
                 {
