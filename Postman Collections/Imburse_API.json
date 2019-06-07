@@ -1742,7 +1742,7 @@
                     }
                   ]
                 },
-                "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's\n\n#### Role required\n\n`t.cat.r`\n\n#### Request body\n\nA JSON formatted object string.\n\nKey name | Required | Description\n- | - | -\nrewardIds | Yes | An array of GUID's for the requested rewards."
+                "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's\n\n#### Role required\n\n`tenant-catalog-read`"
               },
               "response": [
                 {
@@ -1843,7 +1843,7 @@
                     }
                   ]
                 },
-                "description": "#### Description\n\nSearches the catalog for rewards that match the given parameters\n\n#### Role required\n\n`t.cat.r`"
+                "description": "#### Description\n\nSearches the catalog for rewards that match the given parameters\n\n#### Role required\n\n`tenant-catalog-read`"
               },
               "response": [
                 {
@@ -1963,7 +1963,7 @@
                   "raw": "{\r\n  \"name\": \"string\",\r\n  \"rewards\": [\r\n  \t{\r\n    \t\"rewardId\": \"string\",\r\n    \t\"enabled\": true\r\n  \t}\r\n  ]\r\n}\r\n"
                 },
                 "url": "{{baseApiUrl}}/v1/reward-groups",
-                "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.a`"
+                "description": "#### Description \r\n\r\nCreate a Reward Group.\r\n\r\n#### Role required\r\n\r\n`tenant-reward-group-write`"
               },
               "response": [
                 {
