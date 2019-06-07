@@ -390,7 +390,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "[ \n\t{\n\t\t\"roles\": \"\"\n\t}\n]"
+                          "raw": "[ \n\t{\n\t\t\"roles\": \"account-admin\"\n\t}\n]"
                         },
                         "url": "{{baseApiUrl}}/v1/account/keys"
                       },
@@ -398,7 +398,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"acc.g.super\" ]\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"account-admin\" ]\n}"
                     }
                   ]
                 },
@@ -441,7 +441,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n\t{\n\t\t\"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n\t\t\"roles\": [ \"g.super\"]\n\t}\n]\n"
+                      "body": "[\n\t{\n\t\t\"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n\t\t\"roles\": [ \"account-admin\"]\n\t}\n]\n"
                     }
                   ]
                 },
@@ -484,7 +484,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"g.super\"\n    ]\n}"
+                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"account-admin\"\n    ]\n}"
                     }
                   ]
                 },
@@ -911,7 +911,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": [ \"t.g.super\" ]\n}"
+                          "raw": "{\n\t\"roles\": [ \"tenant-admin\" ]\n}"
                         },
                         "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys"
                       },
@@ -921,7 +921,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"t.g.super\" ]\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"tenant-admin\" ]\n}"
                     }
                   ]
                 },
@@ -964,7 +964,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n    {\n        \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n        \"roles\": [\n            \"t.g.super\"\n        ]\n    }\n]"
+                      "body": "[\n    {\n        \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n        \"roles\": [\n            \"tenant-admin\"\n        ]\n    }\n]"
                     }
                   ]
                 },
@@ -1007,7 +1007,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n\t  {\n        \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n        \"roles\": [\n            \"t.g.super\"\n        ]\n    }\n\t]"
+                      "body": "[\n\t  {\n        \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n        \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n        \"roles\": [\n            \"tenant-admin\"\n        ]\n    }\n\t]"
                     }
                   ]
                 },
@@ -1027,7 +1027,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "#### Description\n\nRemoves a spefic key set for a specific tenant by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`account-tenant-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
+                    "description": "#### Description\n\nRemoves a key.\n\n#### Role required\n\n`account-tenant-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
                     {
@@ -1138,7 +1138,7 @@
                       "raw": "{\n\t\"roles\": [ \"string\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/tenant/keys",
-                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n##### Role required\n\n`tenant-api-key-write`"
+                    "description": "#### Description\n\nCreates a new key for a tenant.\n\n#### Role required\n\n`tenant-api-key-write`"
                   },
                   "response": [
                     {
@@ -1161,7 +1161,7 @@
                         ],
                         "body": {
                           "mode": "raw",
-                          "raw": "{\n\t\"roles\": [ \"t.g.super\" ]\n}"
+                          "raw": "{\n\t\"roles\": [ \"tenant-admin\" ]\n}"
                         },
                         "url": "{{baseApiUrl}}/v1/tenant/keys"
                       },
@@ -1171,7 +1171,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"t.g.super\" ]\n}"
+                      "body": "{\n    \"accountId\": \"d377d361-c1ba-4823-bec0-95b79e1c63f1\",\n    \"tenantId\": \"4b7221cd-21d8-47c1-a51c-49c95181a614\",\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"privateKey\": \"trTNvwG60wUvvnDbtVXrtakmQxs1yyJkDBAXRaJD+wg=\",\n    \"roles\": [ \"tenant-admin\" ]\n}"
                     }
                   ]
                 },
@@ -1214,7 +1214,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "[\n    {\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"roles\": [\n            \"t.g.super\"\n        ]\n    }\n]"
+                      "body": "[\n    {\n        \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n        \"roles\": [\n            \"tenant-admin\"\n        ]\n    }\n]"
                     }
                   ]
                 },
@@ -1257,7 +1257,7 @@
                       "header": null,
                       "cookie": [],
                       "responseTime": null,
-                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"t.g.super\"\n    ]\n}"
+                      "body": "{\n    \"publicKey\": \"7ee20820-e416-4c39-839d-43e68946a1b0\",\n    \"roles\": [\n        \"tenant-admin\"\n    ]\n}"
                     }
                   ]
                 },
@@ -1277,7 +1277,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}",
-                    "description": "#### Description\n\nRemoves a spefic key set by it's public key. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`tenant-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
+                    "description": "#### Description\n\nRemoves a key.\n\n#### Role required\n\n`tenant-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
                     {
