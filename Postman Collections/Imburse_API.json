@@ -504,7 +504,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/account/keys/{{publicKey}}",
-                    "description": "#### Description\n\nDeletes a public and private key from the account. This is dangerous as it will stop the key from being used for future requests and will not be able to be undone.\n\n#### Role required\n\n`account-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
+                    "description": "#### Description\n\nDelete a Key.\n\n#### Role required\n\n`account-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the account keyset to delete."
                   },
                   "response": [
                     {
@@ -941,7 +941,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys",
-                    "description": "#### Description\n\nGets the keys for a specific tenant. \n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
+                    "description": "#### Description\n\nGets all Keys for a Tenant. \n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant"
                   },
                   "response": [
                     {
@@ -984,7 +984,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
+                    "description": "#### Description\n\nGet a Key by a Tenant Id and Public Key,\n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
                   },
                   "response": [
                     {
@@ -1027,7 +1027,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "#### Description\n\nRemoves a key.\n\n#### Role required\n\n`account-tenant-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
+                    "description": "#### Description\n\nRemove a Key.\n\n#### Role required\n\n`account-tenant-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantID | The ID of the specific tenant.\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
                     {
@@ -1191,7 +1191,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/keys",
-                    "description": "#### Description\n\nGets the Api keys for the tenant to define in the bearer token.\n\n#### Role required\n\n`tenant-api-key-read`"
+                    "description": "#### Description\n\nGet the Keys for the Tenant.\n\n#### Role required\n\n`tenant-api-key-read`"
                   },
                   "response": [
                     {
@@ -1277,7 +1277,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/keys/{{publicKey}}",
-                    "description": "#### Description\n\nRemoves a key.\n\n#### Role required\n\n`tenant-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
+                    "description": "#### Description\n\nRemoves a Key.\n\n#### Role required\n\n`tenant-api-key-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\npublicKey | The public key of the key set to delete."
                   },
                   "response": [
                     {
@@ -1722,7 +1722,7 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{baseApiUrl}}/v1/catalog/rewards?id={{reward-id-1}}&id={{reward-id-2}}",
+                  "raw": "{{baseApiUrl}}/v1/catalog/rewards?id={{reward-id}}",
                   "host": [
                     "{{baseApiUrl}}"
                   ],
@@ -1734,11 +1734,7 @@
                   "query": [
                     {
                       "key": "id",
-                      "value": "{{reward-id-1}}"
-                    },
-                    {
-                      "key": "id",
-                      "value": "{{reward-id-2}}"
+                      "value": "{{reward-id}}"
                     }
                   ]
                 },
