@@ -3245,7 +3245,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/audit-history",
-                "description": "#### Description \n\nGet the Audit History for a Customer.\n\n#### Role required\n\n`transaction-reader`"
+                "description": "#### Description \n\nGet the Audit History for a Customer.\n\n#### Role required\n\n`tenant-transaction-read`"
               },
               "response": [
                 {
@@ -3297,7 +3297,7 @@
                   "raw": "{\r\n\t\"instructionRef\": \"\",\r\n\t\"amount\": \"\",\r\n\t\"openDate\": \"\",\r\n\t\"dueDate\": \"\"\r\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}/instruction",
-                "description": "#### Description \r\n\r\nCreate an Instruction.\r\n\r\n#### Role required\r\n\r\n`transaction-writer`"
+                "description": "#### Description \r\n\r\nCreate an Instruction.\r\n\r\n#### Role required\r\n\r\n`tenant-transaction-write`"
               },
               "response": [
                 {
