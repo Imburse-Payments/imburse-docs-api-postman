@@ -2245,7 +2245,7 @@
                   "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/collect",
-                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`t.sch.a`"
+                "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`"
               },
               "response": [
                 {
@@ -2298,7 +2298,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`t.sch.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get."
+                "description": "#### Description \n\nGet a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to get."
               },
               "response": [
                 {
