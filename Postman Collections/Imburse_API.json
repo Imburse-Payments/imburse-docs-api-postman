@@ -1738,7 +1738,7 @@
                     }
                   ]
                 },
-                "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's.\n\nYou can submit multiple `id` querystring parameters if you need to get back more than one reward at once. The example below will return 3 rewards.\n\n*Example:*\n\n`{{baseApiUrl}}/v1/catalog/rewards?id=<reward-id-1>&id=<reward-id-2>&id=<reward-id-3>`\n\n#### Role required\n\n`tenant-catalog-read`"
+                "description": "#### Description\n\nGets a list of rewards from the catalog by their ID's.\n\nYou can submit multiple `id` querystring parameters if you need to get back more than one reward at once. \n\nFor example below will return 3 rewards.\n\n`{{baseApiUrl}}/v1/catalog/rewards?id=<reward-id-1>&id=<reward-id-2>&id=<reward-id-3>`\n\n#### Role required\n\n`tenant-catalog-read`"
               },
               "response": [
                 {
@@ -2238,7 +2238,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"name\": \"string\",\n    \"code\": \"string\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"string\"\n            ],\n            \"countries\": [\n                \"string\"\n            ],\n            \"highValueInclusive\": 0,\n            \"lowValueInclusive\": 0,\n            \"apps\": [\n                {\n                    \"appId\": \"string\",\n                    \"excludedPaymentMethods\": [\n                        \"string\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/collect",
                 "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`"
@@ -2387,7 +2387,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [\n                {\n                    \"appId\": \"BRAINTREE_SDK\",\n                    \"excludedPaymentMethods\": [\n                        \"AMEX\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"draftId\": \"string\",\n    \"name\": \"string\",\n    \"code\": string\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"string\"\n            ],\n            \"countries\": [\n                \"string\"\n            ],\n            \"highValueInclusive\": 0,\n            \"lowValueInclusive\": 0,\n            \"apps\": [\n                {\n                    \"appId\": \"string\",\n                    \"excludedPaymentMethods\": [\n                        \"string\"\n                    ]\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/draft",
                 "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
