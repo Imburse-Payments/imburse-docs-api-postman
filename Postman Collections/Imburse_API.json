@@ -984,7 +984,7 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/tenant/{{tenantId}}/keys/{{publicKey}}",
-                    "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`t.key.r`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
+                    "description": "#### Description\n\nGets a key by a specific tenant Id and public key\n\n#### Role required\n\n`account-tenant-read`\n\n#### Params\n\nParameter | Description\n--------- | -----------\ntenantId | The ID of the tenant\npublicKey | The public key of the desired tenant key"
                   },
                   "response": [
                     {
