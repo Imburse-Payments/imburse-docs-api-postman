@@ -2649,7 +2649,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [],\n            \"rewardGroups\": [\n                {\n                    \"rewardGroupId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"name\": \"string\",\n    \"code\": \"string\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"string\"\n            ],\n            \"countries\": [\n                \"string\"\n            ],\n            \"highValueInclusive\": 0,\n            \"lowValueInclusive\": 0,\n            \"apps\": [],\n            \"rewardGroups\": [\n                {\n                    \"rewardGroupId\": \"string\"\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/payout",
                 "description": "#### Description \n\nCreate a Collect Scheme.\n\n#### Role required\n\n`tenant-payout-scheme-write`"
@@ -2798,7 +2798,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"draftId\": \"19a659fa-0768-4739-a374-ea05480aba7a\",\n    \"name\": \"Motor Insurance Scheme - EUROPE\",\n    \"code\": \"MI-EUR\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"EUR\"\n            ],\n            \"countries\": [\n                \"\"\n            ],\n            \"highValueInclusive\": 1000,\n            \"lowValueInclusive\": 1,\n            \"apps\": [],\n            \"rewardGroups\": [\n                {\n                    \"rewardGroupId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n                }\n            ]\n        }\n    ]\n}"
+                  "raw": "{\n    \"draftId\": \"string\",\n    \"name\": \"string\",\n    \"code\": \"string\",\n    \"rules\": [\n        {\n            \"currencies\": [\n                \"string\"\n            ],\n            \"countries\": [\n                \"string\"\n            ],\n            \"highValueInclusive\": 0,\n            \"lowValueInclusive\": 0,\n            \"apps\": [],\n            \"rewardGroups\": [\n                {\n                    \"rewardGroupId\": \"string\"\n                }\n            ]\n        }\n    ]\n}"
                 },
                 "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/draft",
                 "description": "#### Description \n\nCreate a new Draft for a Collect Scheme.\n\n#### Role required\n\n`tenant-payout-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to create the Draft for."
@@ -3478,7 +3478,6 @@
             }
           ],
           "_postman_id": "36db645f-b09a-4ef1-9275-d6011cba3ae1",
-          "description": "\r\n##### Request structure\r\n\r\nThe following endpoints to manage customers, with orders and payment instructions. While the style is RESTful in nature, the collect API is not a fully REST service.\r\n\r\nIn most cases entities have an `/audit-history` endpoint which can be used to diagnose changes or problems a customer may have settling a payment.\r\n\r\n##### Error Handling\r\n\r\nValidation errors will return a common `400 Bad Request` HTTP status code with a response body in a common format.\r\n\r\nProperty | Type | Description\r\n- | - | -\r\n`errors` | Array[string] | One or many standardized error codes representing the failure.\r\n\r\n",
           "event": [
             {
               "listen": "prerequest",
