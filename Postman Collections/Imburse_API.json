@@ -2059,7 +2059,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/reward-groups/{{reward-group-id}}",
-                "description": "#### Description \r\n\r\nGet a Reward Group.\r\n\r\n#### Role required\r\n\r\n`t.cat.r`"
+                "description": "#### Description \r\n\r\nGet a Reward Group.\r\n\r\n#### Role required\r\n\r\n`tenant-reward-group-read`"
               },
               "response": [
                 {
