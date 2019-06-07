@@ -3118,7 +3118,7 @@
                   }
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/customer/{{customerRef}}/order/{{orderRef}}",
-                "description": "#### Description \n\nGet an Order.\n\n#### Role required\n\n`transaction-reader`"
+                "description": "#### Description \n\nGet an Order.\n\n#### Role required\n\n`tenant-transaction-read`"
               },
               "response": [
                 {
