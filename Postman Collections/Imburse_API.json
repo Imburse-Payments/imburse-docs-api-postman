@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "ac65d3ee-04c9-47c8-9319-f7efca0d9cc5",
     "name": "Imburse API",
-    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\n\r\n### Endpoints\r\nThe API urls in the documentation refer to a **{{baseApiUrl}}**. \r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n- Production API endpoint: **https://api.imbursepayments.com**",
+    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\n\r\n### Endpoints\r\nThe API urls in the documentation refer to a **{{baseApiUrl}}**. \r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n- Production API endpoint: **https://api.imbursepayments.com**\r\n\r\n### Error Handling\r\nAll `400 - Bad Request` responses will return a structured response containing one or more error codes:\r\n\r\nFor example:\r\n\r\n```json\r\n{\r\n    \"errorCodes\": [\r\n        \"SCHEME_ID_INVALID\",\r\n        \"SCHEME_NAME_REQUIRED\"\r\n    ]\r\n}\r\n``` \r\n\r\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
