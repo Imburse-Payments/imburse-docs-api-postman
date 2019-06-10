@@ -1681,7 +1681,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configuration"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration"
                   },
                   "status": "OK",
                   "code": 200,
@@ -2182,6 +2182,8 @@
                     ],
                     "url": "{{baseApiUrl}}/v1/reward-groups/9dc777db-41e8-4d2d-a89a-ef384bd3202"
                   },
+                  "status": "No Content",
+                  "code": 204,
                   "_postman_previewlanguage": null,
                   "header": null,
                   "cookie": [],
@@ -2579,6 +2581,49 @@
               "response": [
                 {
                   "id": "58bf490e-4ce6-4703-b7ff-c5292591105b",
+                  "name": "Delete Scheme",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete Scheme Copy",
+              "_postman_id": "6cecce22-74b5-4092-9375-0f9c0a016983",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
+              },
+              "response": [
+                {
+                  "id": "5011f7c6-4719-4edf-a0e6-242e00cef978",
                   "name": "Delete Scheme",
                   "originalRequest": {
                     "method": "DELETE",
