@@ -1618,7 +1618,7 @@
                       "mode": "raw",
                       "raw": "{\n    \"merchantId\": \"Ov6Y2kneVSyJSpoXBVnAGw0OTDzl0Jkg\",\n    \"privateKey\": \"gnD1Yrrw6KLes64J5A3Eb8vs4a8Zj2sA\",\n    \"publicKey\": \"NU0uRxhTpvCiF8QdkxFqEgAsOqmpX7i4\",\n    \"settings\": [\n        {\n            \"currency\": \"EUR\",\n            \"countries\": [],\n            \"merchantAccountId\": \"euro-account\",\n            \"description\": \"Euro Account\"\n        }\n    ]\n}"
                     },
-                    "url": "{{baseApiUrl}}/v1/apps/installed/BRAINTREE_SDK/configuration"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/braintree_sdk/configuration"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1655,7 +1655,7 @@
                   "mode": "raw",
                   "raw": "{\n    \"customerIdentifier\": \"string\",\n    \"accountIdentifier\": \"string\"\n}"
                 },
-                "url": "{{baseApiUrl}}/v1/apps/installed/TANGOCARD_RAAS/configuration",
+                "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration",
                 "description": "#### Description\n\nConfigure the Tango Card RaaS App.\n\n#### Role required\n\n`tenant-app-write`"
               },
               "response": [
