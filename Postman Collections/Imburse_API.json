@@ -2561,49 +2561,6 @@
               ]
             },
             {
-              "name": "Delete Scheme",
-              "_postman_id": "9d884804-266f-49a0-9222-c5c42185b77f",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
-              },
-              "response": [
-                {
-                  "id": "58bf490e-4ce6-4703-b7ff-c5292591105b",
-                  "name": "Delete Scheme",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
               "name": "Delete a Draft",
               "_postman_id": "6cecce22-74b5-4092-9375-0f9c0a016983",
               "protocolProfileBehavior": {
@@ -2624,6 +2581,49 @@
               "response": [
                 {
                   "id": "5011f7c6-4719-4edf-a0e6-242e00cef978",
+                  "name": "Delete Scheme",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/drafts/3f59ef8b-a414-485d-b216-ede90de5e2d0"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete Scheme",
+              "_postman_id": "9d884804-266f-49a0-9222-c5c42185b77f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
+                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
+              },
+              "response": [
+                {
+                  "id": "58bf490e-4ce6-4703-b7ff-c5292591105b",
                   "name": "Delete Scheme",
                   "originalRequest": {
                     "method": "DELETE",
