@@ -2604,7 +2604,7 @@
               ]
             },
             {
-              "name": "Delete Scheme Copy",
+              "name": "Delete a Draft",
               "_postman_id": "6cecce22-74b5-4092-9375-0f9c0a016983",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2614,12 +2614,12 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}",
-                "description": "#### Description \n\nDelete a Collect Scheme.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete."
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/drafts/{{draft-id}}",
+                "description": "#### Description \n\nDelete a Draft.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete.\ndraft-id | The id of the Draft to delete."
               },
               "response": [
                 {
