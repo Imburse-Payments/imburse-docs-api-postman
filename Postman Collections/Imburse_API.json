@@ -2604,49 +2604,6 @@
               ]
             },
             {
-              "name": "Delete a Draft Copy",
-              "_postman_id": "68c81ac1-c457-4578-93cd-26cf00e813bf",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{management-token}}"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/drafts/{{draft-id}}",
-                "description": "#### Description \n\nDelete a Draft.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete.\ndraft-id | The id of the Draft to delete."
-              },
-              "response": [
-                {
-                  "id": "ebd7b01e-cc0c-4017-b3d9-9fede4590989",
-                  "name": "Delete Scheme",
-                  "originalRequest": {
-                    "method": "DELETE",
-                    "header": [
-                      {
-                        "key": "Authorization",
-                        "value": "Bearer {{management-token}}",
-                        "type": "text"
-                      }
-                    ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/drafts/3f59ef8b-a414-485d-b216-ede90de5e2d0"
-                  },
-                  "status": "No Content",
-                  "code": 204,
-                  "_postman_previewlanguage": null,
-                  "header": null,
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": null
-                }
-              ]
-            },
-            {
               "name": "Delete Scheme",
               "_postman_id": "9d884804-266f-49a0-9222-c5c42185b77f",
               "protocolProfileBehavior": {
@@ -3089,6 +3046,49 @@
                       }
                     ],
                     "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679"
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": null,
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null
+                }
+              ]
+            },
+            {
+              "name": "Delete a Draft Copy",
+              "_postman_id": "68c81ac1-c457-4578-93cd-26cf00e813bf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/drafts/{{draft-id}}",
+                "description": "#### Description \n\nDelete a Draft.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete.\ndraft-id | The id of the Draft to delete."
+              },
+              "response": [
+                {
+                  "id": "ebd7b01e-cc0c-4017-b3d9-9fede4590989",
+                  "name": "Delete Scheme",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/drafts/3f59ef8b-a414-485d-b216-ede90de5e2d0"
                   },
                   "status": "No Content",
                   "code": 204,
