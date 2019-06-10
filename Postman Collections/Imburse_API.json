@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "ac65d3ee-04c9-47c8-9319-f7efca0d9cc5",
     "name": "Imburse API",
-    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nThe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\nYou can use the Imburse API in sandbox mode, which does not affect your live data.\r\n\r\n# Endpoints\r\nAll API urls refer to a **{{baseApiUrl}}** placeholder value.\r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n- Production API endpoint: **https://api.imbursepayments.com**\r\n\r\n# Error Codes\r\nImburse uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the **2xx** range indicate success, codes in the **4xx** range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.), and codes in the **5xx** range indicate an error with Imburse's servers,\r\n\r\nResponse Code | Meaning\r\n--------------| -------\r\n200 | **OK** - Everything worked as expected.\r\n201 | **Created** - The request created a valid entity.\r\n202 | **Accepted** - The request was accepted.\r\n204 | **No Content** - The request was successful but no content should be expected back.\r\n400 | **Bad Request** - The request was unacceptable, often due to missing a required parameter.\r\n401 | **Unauthorized** - No valid API key provided.\r\n402 | **Request Failed** - The parameters were valid but the request failed.\r\n403 | **Forbidden** -- The requested endpoint is not valid for your user or role.\r\n404 | **Not Found** - The requested resource doesn't exist.\r\n409 | **Conflict** - The request conflicts with another request (perhaps due to using the same idempotent key).\r\n429 | **Too Many Requests**\t- Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.\r\n500, 501, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's end.\r\n\r\n# Error Handling\r\nAll `400 - Bad Request` responses will return a structured response containing one or more error codes:\r\n\r\nFor example:\r\n\r\n```json\r\n{\r\n    \"errorCodes\": [\r\n        \"SCHEME_ID_INVALID\",\r\n        \"SCHEME_NAME_REQUIRED\"\r\n    ]\r\n}\r\n```\r\n\r\nYour original request will need to be fixed before resubmitting.\r\n\r\n# Access Control\r\nEach API method in is decorated with a *Role required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property or a role that gives the eqivalent permissions sush as `tenant-admin` or `account-admin`.\r\n\r\nSee the [Account Management - Account Roles](https://developers.imbursepayments.com/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](https://developers.imbursepayments.com/pages/getting-started/account-management/#tenant-roles) for lists of the available roles.\r\n\r\n# Correlation IDs\r\nEach API request has an associated correlation identifier. You can find this value in the response object under `correlation-id` when errors in the range 500 are returned.\r\n\r\nYou can also pass in your own **custom** correlation identifier into the request header `X-Correlation-ID`.\r\n\r\nIf you need to contact us about a specific request, providing the correlation identifier will ensure the fastest possible resolution.\r\n\r\n# Metadata\r\nThe Payment Order objects have a metadata parameter. You can use this parameter to attach key-value data to these Imburse objects.\r\n\r\nYou can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long.\r\n\r\nMetadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system on a Imburse Payment Order object. Metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Payment Order. You can then use this to give added context to your webhook response.\r\n\r\nDo not store any sensitive information (personally identifiable information, card details, etc.) as metadata.\r\n\r\n# Versioning\r\nWhen we make backwards-incompatible changes to the API, we release new, numbered versions. The current version is **V1**. When a new version is released we will post an API upgrade guide and changelog.\r\n",
+    "description": "Welcome to the Imburse API. You can use our APIs to access Identity, Management, and Transaction API endpoints.\r\n\r\nThe API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.\r\n\r\nFor more information on the API, including Core Concepts, a Getting Started Guide, and Tutorials, please read the [developers documentation](https://developers.imbursepayments.com) \r\n\r\nYou can use the Imburse API in sandbox mode, which does not affect your live data.\r\n\r\n# Endpoints\r\nAll API urls refer to a **{{baseApiUrl}}** placeholder value.\r\n\r\nReplace this with either:\r\n\r\n- Sandbox API endpoint: **https://api-sandbox.imbursepayments.com**\r\n- Production API endpoint: **https://api.imbursepayments.com**\r\n\r\n# Error Codes\r\nImburse uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the **2xx** range indicate success, codes in the **4xx** range indicate an error that failed given the information provided (e.g., a required parameter was omitted, etc.), and codes in the **5xx** range indicate an error with Imburse's servers,\r\n\r\nResponse Code | Meaning\r\n--------------| -------\r\n200 | **OK** - Everything worked as expected.\r\n201 | **Created** - The request created a valid entity.\r\n202 | **Accepted** - The request was accepted.\r\n204 | **No Content** - The request was successful but no content should be expected back.\r\n400 | **Bad Request** - The request was unacceptable, often due to missing a required parameter.\r\n401 | **Unauthorized** - No valid API key provided.\r\n402 | **Request Failed** - The parameters were valid but the request failed.\r\n403 | **Forbidden** -- The requested endpoint is not valid for your user or role.\r\n404 | **Not Found** - The requested resource doesn't exist.\r\n409 | **Conflict** - The request conflicts with another request (perhaps due to using the same idempotent key).\r\n429 | **Too Many Requests**\t- Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.\r\n500, 501, 502, 503, 504 | **Internal Server Error** - Something went wrong on Imburse's end.\r\n\r\n# Error Handling\r\nAll `400 - Bad Request` responses will return a structured response containing one or more error codes:\r\n\r\nFor example:\r\n\r\n```json\r\n{\r\n    \"errorCodes\": [\r\n        \"SCHEME_ID_INVALID\",\r\n        \"SCHEME_NAME_REQUIRED\"\r\n    ]\r\n}\r\n```\r\n\r\nYour original request will need to be fixed before resubmitting.\r\n\r\n# Access Control\r\nEach API method in is decorated with a *Role required* attribute. To execute any API methods successfully, your API Key would need to have the role name specified added to the `roles` property or a role that gives the eqivalent permissions sush as `tenant-admin` or `account-admin`.\r\n\r\nSee the [Account Management - Account Roles](https://developers.imbursepayments.com/pages/getting-started/account-management/#account-roles) and [Account Management - Tenant Roles](https://developers.imbursepayments.com/pages/getting-started/account-management/#tenant-roles) for lists of the available roles.\r\n\r\n# Correlation IDs\r\nEach API request has an associated correlation identifier. You can find this value in the response object under `correlation-id` when errors in the range 500 are returned.\r\n\r\nYou can also pass in your own **custom** correlation identifier into the request header `X-Correlation-ID`.\r\n\r\nIf you need to contact us about a specific request, providing the correlation identifier will ensure the fastest possible resolution.\r\n\r\n# Metadata\r\nThe Payment Order objects have a metadata parameter. You can use this parameter to attach key-value data to these Imburse objects.\r\n\r\nMetadata is useful for storing additional, structured information on an object. As an example, you could store your user's full name and corresponding unique identifier from your system on a Imburse Payment Order object. Metadata is not used by Imburse. We will simply return your metadata to you in webhook responses relating to the Payment Order. You can then use this to give added context to your webhook response.\r\n\r\nDo not store any sensitive information (personally identifiable information, card details, etc.) as metadata.\r\n\r\n# Versioning\r\nWhen we make backwards-incompatible changes to the API, we release new, numbered versions. The current version is **V1**. When a new version is released we will post an API upgrade guide and changelog.\r\n",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -3015,7 +3015,7 @@
               ]
             },
             {
-              "name": "Delete a Draft Copy",
+              "name": "Delete a Draft ",
               "_postman_id": "68c81ac1-c457-4578-93cd-26cf00e813bf",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -3029,8 +3029,8 @@
                     "value": "Bearer {{management-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/schemes/collect/{{scheme-id}}/drafts/{{draft-id}}",
-                "description": "#### Description \n\nDelete a Draft.\n\n#### Role required\n\n`tenant-collect-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Collect Scheme to delete.\ndraft-id | The id of the Draft to delete."
+                "url": "{{baseApiUrl}}/v1/schemes/payout/{{scheme-id}}/drafts/{{draft-id}}",
+                "description": "#### Description \n\nDelete a Draft.\n\n#### Role required\n\n`tenant-payout-scheme-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nscheme-id | The id of the Payout Scheme to delete.\ndraft-id | The id of the Draft to delete."
               },
               "response": [
                 {
@@ -3045,7 +3045,7 @@
                         "type": "text"
                       }
                     ],
-                    "url": "{{baseApiUrl}}/v1/schemes/collect/9f5154c4-d683-4de2-b71c-f4d6d8d90679/drafts/3f59ef8b-a414-485d-b216-ede90de5e2d0"
+                    "url": "{{baseApiUrl}}/v1/schemes/payout/9f5154c4-d683-4de2-b71c-f4d6d8d90679/drafts/3f59ef8b-a414-485d-b216-ede90de5e2d0"
                   },
                   "status": "No Content",
                   "code": 204,
@@ -3411,8 +3411,8 @@
                     },
                     "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction"
                   },
-                  "status": "OK",
-                  "code": 200,
+                  "status": "Created",
+                  "code": 201,
                   "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
@@ -3472,13 +3472,13 @@
                     },
                     "url": "{{baseApiUrl}}/v1/transaction/customer/my-customer-ref/order/1/instruction/01"
                   },
-                  "status": "OK",
-                  "code": 200,
+                  "status": "No Content",
+                  "code": 204,
                   "_postman_previewlanguage": "json",
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"instructionRef\": \"01\",\n    \"amount\": \"41.50\",\n    \"openDate\": \"2019-01-01\",\n    \"dueDate\": \"2019-01-31\"\n}"
+                  "body": ""
                 }
               ]
             },
@@ -3801,6 +3801,8 @@
                 ],
                 "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}"
               },
+              "status": "OK",
+              "code": 200,
               "_postman_previewlanguage": "json",
               "header": null,
               "cookie": [],
