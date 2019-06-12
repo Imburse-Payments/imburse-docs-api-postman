@@ -1725,23 +1725,7 @@
                   "mode": "raw",
                   "raw": ""
                 },
-                "url": {
-                  "raw": "{{baseApiUrl}}/v1/catalog/rewards?id={{reward-id}}",
-                  "host": [
-                    "{{baseApiUrl}}"
-                  ],
-                  "path": [
-                    "v1",
-                    "catalog",
-                    "rewards"
-                  ],
-                  "query": [
-                    {
-                      "key": "id",
-                      "value": "{{reward-id}}"
-                    }
-                  ]
-                },
+                "url": "{{baseApiUrl}}/v1/catalog",
                 "description": "#### Description\n\nGets a list of all the rewards from the catalog.\n\n#### Role required\n\n`tenant-catalog-read`"
               },
               "response": [
