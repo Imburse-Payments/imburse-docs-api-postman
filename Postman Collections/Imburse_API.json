@@ -1701,7 +1701,7 @@
           "name": "Rewards Catalog",
           "item": [
             {
-              "name": "Get a list of Rewards by Ids",
+              "name": "Get all Rewards",
               "_postman_id": "1a4c0368-7977-41b6-9617-bf7eae739ca1",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
