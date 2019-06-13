@@ -3751,7 +3751,7 @@
                 "value": "Bearer  {{payout-token}}"
               }
             ],
-            "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}",
+            "url": "{{baseApiUrl}}/v1/transaction/reward/redeem",
             "description": "#### Description \n\nRedeems a reward that has been previously claimed.\n\n#### Role required\n\n`tenant-transaction-write`\n"
           },
           "response": [
@@ -3767,7 +3767,7 @@
                     "value": "Bearer {{payout-token}}"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}"
+                "url": "{{baseApiUrl}}/v1/transaction/reward/redeem"
               },
               "status": "OK",
               "code": 200,
@@ -3804,7 +3804,7 @@
               "mode": "raw",
               "raw": "{\n\t\"rewardId\": \"\"\t\n}"
             },
-            "url": "{{baseApiUrl}}/v1/transaction/claim",
+            "url": "{{baseApiUrl}}/v1/transaction/reward/claim",
             "description": "#### Description \n\nClaim a reward.\n\n#### Role required\n\n`tenant-transaction-write`\n"
           },
           "response": [
