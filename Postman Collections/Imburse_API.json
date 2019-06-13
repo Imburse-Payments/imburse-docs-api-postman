@@ -3737,7 +3737,7 @@
           ]
         },
         {
-          "name": "Process Reward Payout",
+          "name": "Redeem a Reward",
           "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -3752,7 +3752,7 @@
               }
             ],
             "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}",
-            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Role required\n\n`tenant-transaction-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process"
+            "description": "#### Description \n\nRedeems a reward that has been previously claimed.\n\n#### Role required\n\n`tenant-transaction-write`\n"
           },
           "response": [
             {
@@ -3780,7 +3780,7 @@
           ]
         },
         {
-          "name": "Process Reward Payout Copy",
+          "name": "Claim a Reward",
           "_postman_id": "adbe5228-c13c-4c46-8db0-224ce3def01e",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -3792,10 +3792,20 @@
                 "key": "Authorization",
                 "type": "text",
                 "value": "Bearer  {{payout-token}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               }
             ],
-            "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}",
-            "description": "#### Description \n\nSubmit a payout instruction for processing.\n\n#### Role required\n\n`tenant-transaction-write`\n\n#### Params\n\nParameter | Description\n--------- | -----------\nid | The id of the reward to process"
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"rewardId\": \"\"\t\n}"
+            },
+            "url": "{{baseApiUrl}}/v1/transaction/claim",
+            "description": "#### Description \n\nClaim a reward.\n\n#### Role required\n\n`tenant-transaction-write`\n"
           },
           "response": [
             {
@@ -3808,17 +3818,34 @@
                     "key": "Authorization",
                     "type": "text",
                     "value": "Bearer {{payout-token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
-                "url": "{{baseApiUrl}}/v1/transaction/reward/{{id}}"
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"rewardId\": \"03ad3a28-c35e-4b69-adda-32382a1f0da4\"\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/transaction/reward/claim"
               },
               "status": "OK",
               "code": 200,
               "_postman_previewlanguage": "json",
-              "header": null,
+              "header": [
+                {
+                  "key": "Location",
+                  "value": "{{baseApiUrl}}/v1/transaction/check/8f482020-965f-4e9b-afb2-1e6e4336e6da",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
               "cookie": [],
               "responseTime": null,
-              "body": "{\n  \"credentials\": {\n    \"Expiration Date\": \"\",\n    \"Claim Code\": \"\"\n  },\n  \"credentialList\": [\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    },\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    }\n  ],\n  \"redemptionInstructions\": \"\"\n}"
+              "body": ""
             }
           ]
         }
