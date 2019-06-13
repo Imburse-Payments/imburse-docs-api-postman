@@ -3822,7 +3822,7 @@
               }
             ],
             "url": "{{baseApiUrl}}/v1/transaction/check/{{task-id}}",
-            "description": "#### Description \n\nCheck the status of a previous Claim a Reward task id.\n\n\nUsing the `TaskId` returned from the `Claim a Reward` endpoint, poll this endpoint. Expect the following responses:\n\nResponse Code | Action to take\n-|-\n`200 - OK` | Claim still being processed; Poll this endpoint again.\n`201 - Created` | Claim has been processed successfully. You can now call the `Redeem a Reward` endpoint.\n\n#### Role required\n\n`tenant-transaction-write`"
+            "description": "#### Description \n\nCheck the status of a previous Claim a Reward task id.\n\n\nUsing the `TaskId` returned from the `Claim a Reward` endpoint, poll this endpoint. Expect the following responses:\n\nResponse Code | Action to take\n-|-\n`200 - OK` | Claim still being processed; Poll this endpoint again.\n`201 - Created` | Claim has been processed successfully. You can now call the `Redeem a Reward` endpoint.\n\nWe would recommend polling every 250ms (1/4 of a second) until the `201 -Created` response is returned. \n\nThere will be variances in processing times depending on your rewards provider.\n\n#### Role required\n\n`tenant-transaction-write`"
           },
           "response": [
             {
