@@ -3737,49 +3737,6 @@
           ]
         },
         {
-          "name": "Redeem a Reward",
-          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer  {{payout-token}}"
-              }
-            ],
-            "url": "{{baseApiUrl}}/v1/transaction/reward/redeem",
-            "description": "#### Description \n\nRedeems a reward that has been previously claimed.\n\n#### Role required\n\n`tenant-transaction-write`\n"
-          },
-          "response": [
-            {
-              "id": "d69c8c41-05f3-4ef4-a39a-cabe5e7c35b9",
-              "name": "Process Reward Payout",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{payout-token}}"
-                  }
-                ],
-                "url": "{{baseApiUrl}}/v1/transaction/reward/redeem"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n  \"credentials\": {\n    \"Expiration Date\": \"\",\n    \"Claim Code\": \"\"\n  },\n  \"credentialList\": [\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    },\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    }\n  ],\n  \"redemptionInstructions\": \"\"\n}"
-            }
-          ]
-        },
-        {
           "name": "Claim a Reward",
           "_postman_id": "adbe5228-c13c-4c46-8db0-224ce3def01e",
           "protocolProfileBehavior": {
@@ -3810,7 +3767,120 @@
           "response": [
             {
               "id": "a0b19f1c-acb8-4f3d-b287-52ac6ab8e49f",
-              "name": "Process Reward Payout",
+              "name": "Claim a Reward",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{payout-token}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"rewardId\": \"03ad3a28-c35e-4b69-adda-32382a1f0da4\"\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/transaction/reward/claim"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Location",
+                  "value": "{{baseApiUrl}}/v1/transaction/check/8f482020-965f-4e9b-afb2-1e6e4336e6da",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Redeem a Reward",
+          "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer  {{payout-token}}"
+              }
+            ],
+            "url": "{{baseApiUrl}}/v1/transaction/reward/redeem",
+            "description": "#### Description \n\nRedeems a reward that has been previously claimed.\n\n#### Role required\n\n`tenant-transaction-write`\n"
+          },
+          "response": [
+            {
+              "id": "d69c8c41-05f3-4ef4-a39a-cabe5e7c35b9",
+              "name": "Redeem a Reward",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer {{payout-token}}"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/transaction/reward/redeem"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"credentials\": {\n    \"Expiration Date\": \"\",\n    \"Claim Code\": \"\"\n  },\n  \"credentialList\": [\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    },\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    }\n  ],\n  \"redemptionInstructions\": \"\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Claim a Reward Copy",
+          "_postman_id": "23cb2b1e-589b-4984-bfc2-ea6ed1211439",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer  {{payout-token}}"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"rewardId\": \"\"\t\n}"
+            },
+            "url": "{{baseApiUrl}}/v1/transaction/reward/claim",
+            "description": "#### Description \n\nClaim a reward.\n\n#### Role required\n\n`tenant-transaction-write`\n"
+          },
+          "response": [
+            {
+              "id": "013d96ac-a048-40ea-a650-fdfc3a4c9f9c",
+              "name": "Claim a Reward",
               "originalRequest": {
                 "method": "POST",
                 "header": [
