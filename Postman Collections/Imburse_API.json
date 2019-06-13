@@ -3807,6 +3807,78 @@
           ]
         },
         {
+          "name": "Check Task Status",
+          "_postman_id": "23cb2b1e-589b-4984-bfc2-ea6ed1211439",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer  {{payout-token}}"
+              }
+            ],
+            "url": "{{baseApiUrl}}/v1/transaction/check/{{task-id}}",
+            "description": "#### Description \n\nCheck the status of a previous Claim a Reward task id.\n\n\nUsing the `TaskId` returned from the `Claim a Reward` endpoint, poll this endpoint. Expect the following responses:\n\nResponse Code | Action to take\n-|-\n`200 - OK` | Claim still being processed; Poll this endpoint again.\n`201 - Created` | Claim has been processed successfully. You can now call the `Redeem a Reward` endpoint.\n\n#### Role required\n\n`tenant-transaction-write`"
+          },
+          "response": [
+            {
+              "id": "763151e0-0ec7-475f-817e-b868abfa9c34",
+              "name": "Check Task Status - Not yet processed",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer  {{payout-token}}"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/transaction/check/8f482020-965f-4e9b-afb2-1e6e4336e6da"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "responseTime": null,
+              "body": null
+            },
+            {
+              "id": "c4d3abb7-2711-4b7c-b424-a6b1f798db4e",
+              "name": "Check Task Status - Processing completed",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "type": "text",
+                    "value": "Bearer  {{payout-token}}"
+                  }
+                ],
+                "url": "{{baseApiUrl}}/v1/transaction/check/{{task-id}}"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Location",
+                  "value": "{{baseApiUrl}}/v1/transaction/reward/redeem",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": null
+            }
+          ]
+        },
+        {
           "name": "Redeem a Reward",
           "_postman_id": "dc76a6ca-66a3-4d13-b316-0a687e16c931",
           "protocolProfileBehavior": {
@@ -3846,76 +3918,6 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n  \"credentials\": {\n    \"Expiration Date\": \"\",\n    \"Claim Code\": \"\"\n  },\n  \"credentialList\": [\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    },\n    {\n      \"label\": \"\",\n      \"value\": \"\",\n      \"rewardType\": null,\n      \"credentialType\": \"\"\n    }\n  ],\n  \"redemptionInstructions\": \"\"\n}"
-            }
-          ]
-        },
-        {
-          "name": "Claim a Reward Copy",
-          "_postman_id": "23cb2b1e-589b-4984-bfc2-ea6ed1211439",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "type": "text",
-                "value": "Bearer  {{payout-token}}"
-              },
-              {
-                "key": "Content-Type",
-                "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"rewardId\": \"\"\t\n}"
-            },
-            "url": "{{baseApiUrl}}/v1/transaction/reward/claim",
-            "description": "#### Description \n\nClaim a reward.\n\n#### Role required\n\n`tenant-transaction-write`\n"
-          },
-          "response": [
-            {
-              "id": "013d96ac-a048-40ea-a650-fdfc3a4c9f9c",
-              "name": "Claim a Reward",
-              "originalRequest": {
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "type": "text",
-                    "value": "Bearer {{payout-token}}"
-                  },
-                  {
-                    "key": "Content-Type",
-                    "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
-                  }
-                ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"rewardId\": \"03ad3a28-c35e-4b69-adda-32382a1f0da4\"\n}"
-                },
-                "url": "{{baseApiUrl}}/v1/transaction/reward/claim"
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Location",
-                  "value": "{{baseApiUrl}}/v1/transaction/check/8f482020-965f-4e9b-afb2-1e6e4336e6da",
-                  "description": "",
-                  "type": "text"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": ""
             }
           ]
         }
