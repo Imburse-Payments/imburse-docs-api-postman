@@ -1692,6 +1692,69 @@
                   "body": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
                 }
               ]
+            },
+            {
+              "name": "Get Tango Card Account Balance",
+              "_postman_id": "d11f8de0-ad6c-4149-849a-5d5b09594693",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer {{management-token}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"customerIdentifier\": \"string\",\n    \"accountIdentifier\": \"string\"\n}"
+                },
+                "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration",
+                "description": "#### Description\n\nGet the Tango Card account balance.\n\n#### Role required\n\n`tenant-app-read`"
+              },
+              "response": [
+                {
+                  "id": "345a8f23-ee63-45d2-9e44-bc0f2fc51711",
+                  "name": "Configure the Tango Card RaaS App",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer {{management-token}}",
+                        "type": "text"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
+                    },
+                    "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": null,
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
+                }
+              ]
             }
           ],
           "_postman_id": "1272cb75-3e30-4ac1-8d5e-c38c4aad1f4d",
@@ -1798,11 +1861,12 @@
                     {
                       "key": "country",
                       "value": "{{country}}",
-                      "description": "Optional. The country to search for ie. DE, FR, GB, CH, etc"
+                      "description": "Optional. The country to search for. ie. DE, FR, GB, CH, etc"
                     },
                     {
                       "key": "currency",
-                      "value": "{{currency}}"
+                      "value": "{{currency}}",
+                      "description": "Options. The currency to search for. ie. GBP, EUR, USD, etc."
                     },
                     {
                       "key": "amount",
@@ -1872,7 +1936,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"rewardName\": \"Amazon.de Kupony\",\n            \"rewardType\": \"gift card\",\n            \"status\": \"active\",\n            \"countries\": [\n                \"PL\"\n            ],\n            \"currencyCode\": \"EUR\",\n            \"exchangeRateRule\": null,\n            \"isWholeAmountValueRequired\": false,\n            \"valueType\": \"VARIABLE_VALUE\",\n            \"fixedValue\": null,\n            \"maxValue\": 5000,\n            \"minValue\": 0.01,\n            \"credentialTypes\": [\n                \"cardNumber\",\n                \"expirationDate\"\n            ],\n            \"redemptionInstructions\": \"<p><strong>Aby zrealizowa\u0107 kupon, wykonaj nast\u0119puj\u0105ce czynno\u015bci:</strong></p>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Przejd\u017a na stron\u0119&nbsp;<a href=\\\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=pl&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\\\">www.amazon.de/gp/gc</a>.&nbsp;Kliknij &quot;&nbsp;Wykorzystaj kupon&nbsp;&quot; i&nbsp;po wy\u015bwietleniu monitu&nbsp;wpisz&nbsp;kod&nbsp;kuponu&nbsp;.</li>\\r\\n\\t<li>Kwoty kupon&oacute;w s\u0105 automatycznie dodawane do kwalifikuj\u0105cych si\u0119 zam&oacute;wie\u0144 podczas procesu anulowania subskrypcji.</li>\\r\\n\\t<li>Pozosta\u0142e kwoty r&oacute;\u017cnic w zam&oacute;wieniu nale\u017cy uregulowa\u0107 inn\u0105 metod\u0105 p\u0142atno\u015bci.</li>\\r\\n</ol>\\r\\n\\r\\n<p>Mo\u017cesz&nbsp;tak\u017ce wpisa\u0107 kod&nbsp;kuponu,&nbsp;je\u015bli pojawi si\u0119 monit podczas procesu wypisania si\u0119.&nbsp;Odkupienie vouchera nie jest jednak mo\u017cliwe w przypadku korzystania z us\u0142ugi&nbsp;<a href=\\\"http://www.amazon.de\\\">Amazon.de</a>&nbsp;1-Click&reg;, chyba \u017ce pierwszy raz wykorzystasz kupon za po\u015brednictwem swojego konta.</p>\\r\\n\\r\\n<p><strong>To redeem the code, please proceed as follows:</strong></p>\\r\\n\\r\\n<ol>\\r\\n\\t<li>Go to&nbsp;<a href=\\\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=en&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\\\">www.amazon.de/gp/gc</a>.&nbsp;Click &quot;Redeem Gift Card&quot; and enter the&nbsp;Claim Code when prompted.</li>\\r\\n\\t<li>Gift Card amounts will be applied automatically to eligible orders during the checkout process.</li>\\r\\n\\t<li>You must pay for any remaining balance on your order with another payment method.</li>\\r\\n</ol>\\r\\n\\r\\n<p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>\\r\\n\",\n            \"tags\": [],\n            \"app\": {\n                \"appId\": \"TANGOCARD_RAAS\",\n                \"name\": \"tangocard_raas - todo: schema needs to be defined.\"\n            },\n            \"brand\": {\n                \"brandKey\": \"B050503\",\n                \"brandName\": \"Amazon.de Poland\",\n                \"status\": \"active\",\n                \"description\": \"<p>Kupony&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;mo\u017cna liczy\u0107 na miliony artyku\u0142&oacute;w na stronie&nbsp;<a href=\\\"http://www.amazon.de/\\\">www.amazon.de</a>&nbsp;i niekt&oacute;rych witrynach stowarzyszonych. Ogromny wyb&oacute;r&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;obejmuje produkty w kategoriach ksi\u0105\u017cek, elektroniki, muzyki, plik&oacute;w MP3, film&oacute;w i telewizja, odzie\u017c, gry wideo, oprogramowanie, sport i na zewn\u0105trz, zabawki, niemowl\u0119, komputer i biuro, dom i ogr&oacute;d, bi\u017cuteria, uroda, majsterkowanie, artyku\u0142y biurowe, aparat fotograficzny i fotograficzny, akcesoria dla zwierz\u0105t i nie tylko.&nbsp;<a href=\\\"http://ammazon.com/\\\">A</a><a href=\\\"http://www.Amazon.de\\\">mazon.de</a>&nbsp;to miejsce, w kt&oacute;rym znajduj i odkrywaj prawie wszystko, co chcesz kupi\u0107 online po konkurencyjnej cenie.&nbsp;</p>\\r\\n\\r\\n<p><a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;Gift Cards* can be redeemed towards millions of items at&nbsp;<a href=\\\"http://www.amazon.de/\\\">www.amazon.de</a>.&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&rsquo;s huge selection includes products in Books, Electronics, Music, MP3 Downloads, Film &amp; TV, Clothing, Video Games, Software, Sports &amp; Outdoors, Toys, Baby, Computers &amp; Office, Home &amp; Garden, Jewelry, Beauty, DIY &amp; Home Improvement, Office Products, Camera &amp; Photo, Pet Supplies, and more.&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;is the place to find and discover almost anything you want to buy online at a great price.</p>\\r\\n\",\n                \"shortDescription\": \"<p>Kupony&nbsp;<a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;mo\u017cna zaliczy\u0107 do milion&oacute;w artyku\u0142&oacute;w na stronie&nbsp;<a href=\\\"http://www.amazon.de/\\\">www.amazon.de</a>.</p>\\r\\n\\r\\n<p><a href=\\\"http://amazon.de/\\\">Amazon.de</a>&nbsp;Gift Cards* can be redeemed towards millions of items at&nbsp;<a href=\\\"http://www.amazon.de/\\\">www.amazon.de</a>.</p>\\r\\n\",\n                \"disclaimer\": \"<p>*Obowi\u0105zuj\u0105 ograniczenia. Pe\u0142ne warunki korzystania z us\u0142ugi mo\u017cna znale\u017a\u0107 na stronie: <a href=\\\"http://www.amazon.de/gc-legal\\\">amazon.de/gc-legal</a></p>\\r\\n\\r\\n<p>*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\\\"http://www.amazon.de/gc-legal\\\">amazon.de/gc-legal</a></p>\\r\\n\",\n                \"terms\": \"<p>*Obowi\u0105zuj\u0105 ograniczenia. Pe\u0142ne warunki korzystania z us\u0142ugi mo\u017cna znale\u017a\u0107 na stronie: <a href=\\\"http://www.amazon.de/gc-legal\\\">amazon.de/gc-legal</a></p>\\r\\n\\r\\n<p>*Restrictions apply. For complete terms and conditions, visit:&nbsp;<a href=\\\"http://www.amazon.de/gc-legal\\\">amazon.de/gc-legal</a></p>\\r\\n\",\n                \"imageUrls\": [\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-80w-326ppi.png\",\n                        \"width\": 80\n                    },\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-130w-326ppi.png\",\n                        \"width\": 130\n                    },\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-200w-326ppi.png\",\n                        \"width\": 200\n                    },\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-278w-326ppi.png\",\n                        \"width\": 278\n                    },\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-300w-326ppi.png\",\n                        \"width\": 300\n                    },\n                    {\n                        \"ppi\": 326,\n                        \"url\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-1200w-326ppi.png\",\n                        \"width\": 1200\n                    }\n                ],\n                \"requirements\": {\n                    \"alwaysShowDisclaimer\": false,\n                    \"disclaimerInstructions\": \"\",\n                    \"displayInstructions\": \"\",\n                    \"termsAndConditionsInstructions\": \"\"\n                }\n            },\n            \"createdDate\": \"2019-06-04T16:25:39.4803963\",\n            \"lastUpdateDate\": \"2019-06-04T16:25:39.4803964\"\n        }\n    ]\n}"
+                  "body": "{\n    \"rewards\": [\n        {\n            \"rewardId\": \"6a30bdaa-483a-2b3f-e28e-0158d0cf07c2\",\n            \"rewardName\": \"Amazon.de Kupony\",\n            \"brandName\": \"Amazon.de Poland\",\n            \"appId\": \"TANGOCARD_RAAS\",\n            \"appName\": \"Tango Card RaaS\",\n            \"countries\": [\n                \"PL\"\n            ],\n            \"currencyCode\": \"EUR\",\n            \"isWholeAmountValueRequired\": false,\n            \"valueType\": \"VARIABLE_VALUE\",\n            \"fixedValue\": null,\n            \"maxValue\": 5000,\n            \"minValue\": 0.01,\n            \"imageUrl\": \"https://dwwvg90koz96l.cloudfront.net/images/brands/b050503-80w-326ppi.png\"\n        }\n    ]\n}"
                 }
               ]
             }
@@ -3927,7 +3991,7 @@
               "header": null,
               "cookie": [],
               "responseTime": null,
-              "body": "{\n    \"credentials\": {\n        \"Gutscheincode - Claim Code\": \"2A28-HVZ86C-GABK\",\n        \"Verfallsdatum - Expiration Date\": \"2029-06-14T21:59:59Z\"\n    },\n    \"credentialList\": [\n        {\n            \"label\": \"Gutscheincode - Claim Code\",\n            \"value\": \"2A28-HVZ86C-GABK\",\n            \"rewardType\": null,\n            \"credentialType\": \"cardNumber\"\n        },\n        {\n            \"label\": \"Verfallsdatum - Expiration Date\",\n            \"value\": \"2029-06-14T21:59:59Z\",\n            \"rewardType\": null,\n            \"credentialType\": \"expirationDate\"\n        }\n    ],\n    \"redemptionInstructions\": \"<p><strong>Zur Einl&ouml;sung des Gutscheins gehen Sie bitte wie folgt vor:</strong></p><ol><li>Gehen Sie auf&nbsp;<a href=\\\\\\\"http://www.amazon.de/Geschenkgutscheine/b?ie=UTF8&amp;node=1571256031\\\\\\\">www.amazon.de/gp/gc</a>. Klicken Sie auf &bdquo;Gutschein einl&ouml;sen&ldquo; und geben Sie den Gutscheincode ein, wenn Sie dazu aufgefordert werden.</li><li>Gutscheinbetr&auml;ge werden w&auml;hrend des Abmeldevorgangs automatisch auf zur Teilnahme berechtigte Bestellungen angerechnet.</li><li>Verbleibende Differenzbetr&auml;ge Ihrer Bestellung sind mittels einer anderen Zahlungsmethode zu begleichen.</li></ol><p>Sie k&ouml;nnen die Gutscheincode auch eingeben, wenn Sie w&auml;hrend des Abmeldevorgangs dazu aufgefordert werden. Die Einl&ouml;sung Ihres Gutscheins ist bei der Nutzung des&nbsp;<a href=\\\\\\\"http://amazon.de/\\\\\\\">Amazon.de</a>&nbsp;1-Click&reg; Services jedoch nicht m&ouml;glich, es sei denn, Sie l&ouml;sen den Gutschein zun&auml;chst &uuml;ber Ihr Konto ein.</p><p><strong>To redeem the code, please proceed as follows:</strong></p><ol><li>Go to&nbsp;<a href=\\\\\\\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=en&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\\\\\\\">www.amazon.de/gp/gc</a>.&nbsp;Click &quot;Redeem Gift Card&quot; and enter the&nbsp;Claim Code when prompted.</li><li>Gift Card amounts will be applied automatically to eligible orders during the checkout process.</li><li>You must pay for any remaining balance on your order with another payment method.</li></ol><p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the&nbsp;<a href=\\\\\\\"http://amazon.de/\\\\\\\">Amazon.de</a>&nbsp;1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>\"\n}"
+              "body": "{\n    \"credentialList\": [\n        {\n            \"label\": \"Gutscheincode - Claim Code\",\n            \"value\": \"2A28-HVZ86C-GABK\",\n            \"rewardType\": null,\n            \"credentialType\": \"cardNumber\"\n        },\n        {\n            \"label\": \"Verfallsdatum - Expiration Date\",\n            \"value\": \"2029-06-14T21:59:59Z\",\n            \"rewardType\": null,\n            \"credentialType\": \"expirationDate\"\n        }\n    ],\n    \"redemptionInstructions\": \"<p><strong>Zur Einl&ouml;sung des Gutscheins gehen Sie bitte wie folgt vor:</strong></p><ol><li>Gehen Sie auf&nbsp;<a href=\\\\\\\"http://www.amazon.de/Geschenkgutscheine/b?ie=UTF8&amp;node=1571256031\\\\\\\">www.amazon.de/gp/gc</a>. Klicken Sie auf &bdquo;Gutschein einl&ouml;sen&ldquo; und geben Sie den Gutscheincode ein, wenn Sie dazu aufgefordert werden.</li><li>Gutscheinbetr&auml;ge werden w&auml;hrend des Abmeldevorgangs automatisch auf zur Teilnahme berechtigte Bestellungen angerechnet.</li><li>Verbleibende Differenzbetr&auml;ge Ihrer Bestellung sind mittels einer anderen Zahlungsmethode zu begleichen.</li></ol><p>Sie k&ouml;nnen die Gutscheincode auch eingeben, wenn Sie w&auml;hrend des Abmeldevorgangs dazu aufgefordert werden. Die Einl&ouml;sung Ihres Gutscheins ist bei der Nutzung des&nbsp;<a href=\\\\\\\"http://amazon.de/\\\\\\\">Amazon.de</a>&nbsp;1-Click&reg; Services jedoch nicht m&ouml;glich, es sei denn, Sie l&ouml;sen den Gutschein zun&auml;chst &uuml;ber Ihr Konto ein.</p><p><strong>To redeem the code, please proceed as follows:</strong></p><ol><li>Go to&nbsp;<a href=\\\\\\\"https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=en&amp;u=http://www.amazon.de/Geschenkgutscheine/b%3Fie%3DUTF8%26node%3D1571256031\\\\\\\">www.amazon.de/gp/gc</a>.&nbsp;Click &quot;Redeem Gift Card&quot; and enter the&nbsp;Claim Code when prompted.</li><li>Gift Card amounts will be applied automatically to eligible orders during the checkout process.</li><li>You must pay for any remaining balance on your order with another payment method.</li></ol><p>Your gift card claim code may also be entered when prompted during the checkout process but you will not be able to redeem your gift card using the&nbsp;<a href=\\\\\\\"http://amazon.de/\\\\\\\">Amazon.de</a>&nbsp;1-Click&reg; service or downloadable e-books unless you first redeem the gift card through Your Account.</p>\"\n}"
             }
           ]
         }
