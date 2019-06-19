@@ -1694,7 +1694,7 @@
               ]
             },
             {
-              "name": "Get Tango Card Account Balance",
+              "name": "Get Tango Card account balance",
               "_postman_id": "d11f8de0-ad6c-4149-849a-5d5b09594693",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -1704,27 +1704,23 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "Bearer {{management-token}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "Bearer {{management-token}}"
                   },
                   {
                     "key": "Content-Type",
                     "name": "Content-Type",
-                    "value": "application/json",
-                    "type": "text"
+                    "type": "text",
+                    "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"customerIdentifier\": \"string\",\n    \"accountIdentifier\": \"string\"\n}"
-                },
-                "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration",
+                "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/balance",
                 "description": "#### Description\n\nGet the Tango Card account balance.\n\n#### Role required\n\n`tenant-app-read`"
               },
               "response": [
                 {
                   "id": "345a8f23-ee63-45d2-9e44-bc0f2fc51711",
-                  "name": "Configure the Tango Card RaaS App",
+                  "name": "Get the Tango Card account balance",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -1740,11 +1736,7 @@
                         "type": "text"
                       }
                     ],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
-                    },
-                    "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/configuration"
+                    "url": "{{baseApiUrl}}/v1/apps/installed/tangocard_raas/balance"
                   },
                   "status": "OK",
                   "code": 200,
@@ -1752,7 +1744,7 @@
                   "header": null,
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"customerIdentifier\": \"tangocard-customer-id\",\n    \"accountIdentifier\": \"tangocard-account-id\"\n}"
+                  "body": "{\n    \"accountIdentifier\": \"tangocard-account-id\",\n    \"accoutNumber\": \"ABC123\",\n    \"createdAt\": \"2019-06-01 12:42:00\",\n    \"currencyCode\": \"EUR\",\n    \"currentBalance\": \"1900.44\",\n    \"status\": \"ACTIVE\"\n}"
                 }
               ]
             }
