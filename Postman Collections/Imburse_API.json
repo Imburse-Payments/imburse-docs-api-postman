@@ -180,7 +180,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"customerRef\": \"\",\n\t\"orderRef\": \"\",\n\t\"instructionRef\": \"\"\n}"
+              "raw": "{\n\t\"customerRef\": \"string\",\n\t\"orderRef\": \"string\",\n\t\"instructionRef\": \"string\"\n}"
             },
             "url": "{{baseApiUrl}}/v1/identity/hmac/payout",
             "description": "#### Description\n\nCreates a new Payout API bearer token from a given HMAC token. Please see [HMAC Authentication](#hmac-authentication) for more details."
@@ -1831,19 +1831,20 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "{{baseApiUrl}}/v1/catalog?appId={{appId}}&brandName={{brandName}}&country={{country}}&currency={{currency}}&amount={{amount}}",
+                  "raw": "{{baseApiUrl}}/v1/catalog/search?appId={{appId}}&brandName={{brandName}}&country={{country}}&currency={{currency}}&amount={{amount}}",
                   "host": [
                     "{{baseApiUrl}}"
                   ],
                   "path": [
                     "v1",
-                    "catalog"
+                    "catalog",
+                    "search"
                   ],
                   "query": [
                     {
                       "key": "appId",
                       "value": "{{appId}}",
-                      "description": "Mandatory. The App Id that supplies the rewards. ie. TANGOCARD_RAAS"
+                      "description": "Mandatory. An App Id of an previously installed app that supplies the rewards. ie. TANGOCARD_RAAS"
                     },
                     {
                       "key": "brandName",
@@ -1883,13 +1884,14 @@
                       }
                     ],
                     "url": {
-                      "raw": "{{baseApiUrl}}/v1/catalog?appId=TANGOCARD_RAAS&brandName=Amazon&country=PL&currency=EUR&amount=10",
+                      "raw": "{{baseApiUrl}}/v1/catalog/search?appId=TANGOCARD_RAAS&brandName=Amazon&country=PL&currency=EUR&amount=10",
                       "host": [
                         "{{baseApiUrl}}"
                       ],
                       "path": [
                         "v1",
-                        "catalog"
+                        "catalog",
+                        "search"
                       ],
                       "query": [
                         {
