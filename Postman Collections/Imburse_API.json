@@ -375,14 +375,15 @@
                         "value": "application/json"
                       },
                       {
-                        "key": "X-Account",
-                        "value": "{{accountId}}",
-                        "type": "text"
+                        "key": "",
+                        "value": "",
+                        "type": "text",
+                        "disabled": true
                       }
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"roles\": [ \"account-admin\", \"imburse-admin\" ]\n}"
+                      "raw": "{\n    \"roles\": [ \"string\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/keys",
                     "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`account-api-key-write`"
