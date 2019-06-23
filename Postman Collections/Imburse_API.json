@@ -196,8 +196,18 @@
                     "key": "Authorization",
                     "value": "Hmac {{hmac-token}}",
                     "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
                   }
                 ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"customerRef\": \"my-customer-ref\",\r\n\t\"orderRef\": \"1\",\r\n\t\"instructionRef\": \"1\"\r\n}\r\n"
+                },
                 "url": "{{baseApiUrl}}/v1/identity/hmac/payout"
               },
               "status": "Created",
@@ -363,6 +373,12 @@
                         "key": "Content-Type",
                         "type": "text",
                         "value": "application/json"
+                      },
+                      {
+                        "key": "X-Account",
+                        "value": "{{accountId}}",
+                        "type": "text",
+                        "disabled": true
                       }
                     ],
                     "body": {
