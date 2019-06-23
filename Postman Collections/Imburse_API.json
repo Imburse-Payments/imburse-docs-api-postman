@@ -377,13 +377,12 @@
                       {
                         "key": "X-Account",
                         "value": "{{accountId}}",
-                        "type": "text",
-                        "disabled": true
+                        "type": "text"
                       }
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"roles\": [ \"string\" ]\n}"
+                      "raw": "{\n    \"roles\": [ \"account-admin\", \"imburse-admin\" ]\n}"
                     },
                     "url": "{{baseApiUrl}}/v1/account/keys",
                     "description": "#### Description\n\nCreates a new account key to access account level API's.\n\n#### Role required\n\n`account-api-key-write`"
